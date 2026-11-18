@@ -1,0 +1,1324 @@
+{
+  "units": "meters",
+  "north": "positive Z; mirrored from earlier conceptual sketch",
+  "roads": [
+    {
+      "id": "RD01",
+      "name": "Quay Loop",
+      "width": 18,
+      "points": [
+        {
+          "x": -750,
+          "y": 0,
+          "z": -550
+        },
+        {
+          "x": -100,
+          "y": 0,
+          "z": -550
+        },
+        {
+          "x": -100,
+          "y": 0,
+          "z": -150
+        },
+        {
+          "x": -750,
+          "y": 0,
+          "z": -150
+        },
+        {
+          "x": -750,
+          "y": 0,
+          "z": -550
+        }
+      ]
+    },
+    {
+      "id": "RD02",
+      "name": "Freight Avenue",
+      "width": 16,
+      "points": [
+        {
+          "x": -750,
+          "y": 0,
+          "z": -350
+        },
+        {
+          "x": -100,
+          "y": 0,
+          "z": -350
+        }
+      ]
+    },
+    {
+      "id": "RD03",
+      "name": "Container Street",
+      "width": 14,
+      "points": [
+        {
+          "x": -500,
+          "y": 0,
+          "z": -550
+        },
+        {
+          "x": -500,
+          "y": 0,
+          "z": -150
+        }
+      ]
+    },
+    {
+      "id": "RD04",
+      "name": "Workshop Street",
+      "width": 14,
+      "points": [
+        {
+          "x": -300,
+          "y": 0,
+          "z": -550
+        },
+        {
+          "x": -300,
+          "y": 0,
+          "z": -150
+        }
+      ]
+    },
+    {
+      "id": "RD05",
+      "name": "Harbor Boulevard",
+      "width": 20,
+      "points": [
+        {
+          "x": -100,
+          "y": 0,
+          "z": -350
+        },
+        {
+          "x": 150,
+          "y": 0,
+          "z": -350
+        }
+      ]
+    },
+    {
+      "id": "RD06",
+      "name": "Midtown Ring",
+      "width": 20,
+      "points": [
+        {
+          "x": 150,
+          "y": 0,
+          "z": -550
+        },
+        {
+          "x": 780,
+          "y": 0,
+          "z": -550
+        },
+        {
+          "x": 780,
+          "y": 0,
+          "z": 50
+        },
+        {
+          "x": 150,
+          "y": 0,
+          "z": 50
+        },
+        {
+          "x": 150,
+          "y": 0,
+          "z": -550
+        }
+      ]
+    },
+    {
+      "id": "RD07",
+      "name": "Central Avenue",
+      "width": 18,
+      "points": [
+        {
+          "x": 150,
+          "y": 0,
+          "z": -300
+        },
+        {
+          "x": 780,
+          "y": 0,
+          "z": -300
+        }
+      ]
+    },
+    {
+      "id": "RD08",
+      "name": "Plaza Boulevard",
+      "width": 18,
+      "points": [
+        {
+          "x": 450,
+          "y": 0,
+          "z": -550
+        },
+        {
+          "x": 450,
+          "y": 0,
+          "z": 50
+        }
+      ]
+    },
+    {
+      "id": "RD09",
+      "name": "Market Street",
+      "width": 14,
+      "points": [
+        {
+          "x": 150,
+          "y": 0,
+          "z": -120
+        },
+        {
+          "x": 780,
+          "y": 0,
+          "z": -120
+        }
+      ]
+    },
+    {
+      "id": "RD10",
+      "name": "East Service Street",
+      "width": 14,
+      "points": [
+        {
+          "x": 620,
+          "y": 0,
+          "z": -550
+        },
+        {
+          "x": 620,
+          "y": 0,
+          "z": 50
+        }
+      ]
+    },
+    {
+      "id": "RD11",
+      "name": "Ridgeway Approach",
+      "width": 18,
+      "points": [
+        {
+          "x": 450,
+          "y": 0,
+          "z": 50
+        },
+        {
+          "x": 650,
+          "y": 0,
+          "z": 100
+        },
+        {
+          "x": 650,
+          "y": 25,
+          "z": 200
+        },
+        {
+          "x": 400,
+          "y": 65,
+          "z": 300
+        }
+      ]
+    },
+    {
+      "id": "RD12",
+      "name": "Coastal Bypass",
+      "width": 18,
+      "points": [
+        {
+          "x": -750,
+          "y": 0,
+          "z": -150
+        },
+        {
+          "x": -800,
+          "y": 0,
+          "z": 60
+        },
+        {
+          "x": -700,
+          "y": 30,
+          "z": 190
+        },
+        {
+          "x": -450,
+          "y": 65,
+          "z": 300
+        }
+      ]
+    },
+    {
+      "id": "RD13",
+      "name": "Summit Loop",
+      "width": 16,
+      "points": [
+        {
+          "x": -450,
+          "y": 65,
+          "z": 300
+        },
+        {
+          "x": 400,
+          "y": 65,
+          "z": 300
+        },
+        {
+          "x": 400,
+          "y": 65,
+          "z": 650
+        },
+        {
+          "x": -450,
+          "y": 65,
+          "z": 650
+        },
+        {
+          "x": -450,
+          "y": 65,
+          "z": 300
+        }
+      ]
+    },
+    {
+      "id": "RD14",
+      "name": "Plateau Road",
+      "width": 14,
+      "points": [
+        {
+          "x": -450,
+          "y": 65,
+          "z": 475
+        },
+        {
+          "x": 400,
+          "y": 65,
+          "z": 475
+        }
+      ]
+    },
+    {
+      "id": "RD15",
+      "name": "Lookout Lane",
+      "width": 14,
+      "points": [
+        {
+          "x": -50,
+          "y": 65,
+          "z": 300
+        },
+        {
+          "x": -50,
+          "y": 65,
+          "z": 650
+        }
+      ]
+    }
+  ],
+  "sites": [
+    {
+      "id": "D01",
+      "name": "PLAYER GARAGE / DIY",
+      "district": "Dockside",
+      "kind": "service",
+      "x": -575,
+      "y": 0,
+      "z": -410,
+      "w": 70,
+      "d": 48,
+      "h": 20
+    },
+    {
+      "id": "D02",
+      "name": "QUAYSIDE AUTO / trusted independent",
+      "district": "Dockside",
+      "kind": "service",
+      "x": -430,
+      "y": 0,
+      "z": -410,
+      "w": 55,
+      "d": 34,
+      "h": 16
+    },
+    {
+      "id": "D03",
+      "name": "BUDGET PIT / low-end mechanic",
+      "district": "Dockside",
+      "kind": "service",
+      "x": -220,
+      "y": 0,
+      "z": -410,
+      "w": 50,
+      "d": 35,
+      "h": 14
+    },
+    {
+      "id": "D04",
+      "name": "USED CAR DEALER",
+      "district": "Dockside",
+      "kind": "dealer",
+      "x": -575,
+      "y": 0,
+      "z": -240,
+      "w": 75,
+      "d": 48,
+      "h": 12
+    },
+    {
+      "id": "D05",
+      "name": "SALVAGE YARD",
+      "district": "Dockside",
+      "kind": "market",
+      "x": -645,
+      "y": 0,
+      "z": -470,
+      "w": 90,
+      "d": 55,
+      "h": 10
+    },
+    {
+      "id": "D06",
+      "name": "DOCKSIDE FUEL",
+      "district": "Dockside",
+      "kind": "fuel",
+      "x": -220,
+      "y": 0,
+      "z": -235,
+      "w": 48,
+      "d": 38,
+      "h": 7
+    },
+    {
+      "id": "D07",
+      "name": "AUCTION HALL",
+      "district": "Dockside",
+      "kind": "market",
+      "x": -410,
+      "y": 0,
+      "z": -475,
+      "w": 72,
+      "d": 40,
+      "h": 20
+    },
+    {
+      "id": "D08",
+      "name": "WORKSHOP JOB / LOANER",
+      "district": "Dockside",
+      "kind": "service",
+      "x": -650,
+      "y": 0,
+      "z": -285,
+      "w": 50,
+      "d": 32,
+      "h": 12
+    },
+    {
+      "id": "D09",
+      "name": "DOCK POLICE OUTPOST",
+      "district": "Dockside",
+      "kind": "police",
+      "x": -190,
+      "y": 0,
+      "z": -475,
+      "w": 48,
+      "d": 32,
+      "h": 18
+    },
+    {
+      "id": "M01",
+      "name": "PRECISION WORKS / general mechanic",
+      "district": "Midtown",
+      "kind": "service",
+      "x": 245,
+      "y": 0,
+      "z": -380,
+      "w": 65,
+      "d": 40,
+      "h": 20
+    },
+    {
+      "id": "M02",
+      "name": "PRESTIGE AUTO / showroom",
+      "district": "Midtown",
+      "kind": "dealer",
+      "x": 530,
+      "y": 0,
+      "z": -400,
+      "w": 65,
+      "d": 48,
+      "h": 26
+    },
+    {
+      "id": "M03",
+      "name": "BODY & PANEL SHOP",
+      "district": "Midtown",
+      "kind": "service",
+      "x": 700,
+      "y": 0,
+      "z": -400,
+      "w": 55,
+      "d": 42,
+      "h": 18
+    },
+    {
+      "id": "M04",
+      "name": "CENTRAL POLICE / IMPOUND",
+      "district": "Midtown",
+      "kind": "police",
+      "x": 700,
+      "y": 0,
+      "z": -210,
+      "w": 70,
+      "d": 55,
+      "h": 30
+    },
+    {
+      "id": "M05",
+      "name": "CITY FUEL",
+      "district": "Midtown",
+      "kind": "fuel",
+      "x": 335,
+      "y": 0,
+      "z": -210,
+      "w": 48,
+      "d": 34,
+      "h": 7
+    },
+    {
+      "id": "M06",
+      "name": "PRIVATE SELLER MEET",
+      "district": "Midtown",
+      "kind": "market",
+      "x": 235,
+      "y": 0,
+      "z": -205,
+      "w": 45,
+      "d": 38,
+      "h": 8
+    },
+    {
+      "id": "M07",
+      "name": "PLAZA CAR MEET",
+      "district": "Midtown",
+      "kind": "meet",
+      "x": 535,
+      "y": 0,
+      "z": -205,
+      "w": 65,
+      "d": 45,
+      "h": 3
+    },
+    {
+      "id": "M08",
+      "name": "PARTS & DYNO / tuning",
+      "district": "Midtown",
+      "kind": "service",
+      "x": 535,
+      "y": 0,
+      "z": -35,
+      "w": 65,
+      "d": 42,
+      "h": 17
+    },
+    {
+      "id": "M09",
+      "name": "CITY CENTER / plaza",
+      "district": "Midtown",
+      "kind": "landmark",
+      "x": 330,
+      "y": 0,
+      "z": -40,
+      "w": 100,
+      "d": 65,
+      "h": 4
+    },
+    {
+      "id": "R01",
+      "name": "SUMMIT PERFORMANCE / specialist",
+      "district": "Ridgeway",
+      "kind": "service",
+      "x": 190,
+      "y": 65,
+      "z": 385,
+      "w": 65,
+      "d": 40,
+      "h": 20
+    },
+    {
+      "id": "R02",
+      "name": "RIDGEWAY FUEL",
+      "district": "Ridgeway",
+      "kind": "fuel",
+      "x": 300,
+      "y": 65,
+      "z": 555,
+      "w": 50,
+      "d": 36,
+      "h": 7
+    },
+    {
+      "id": "R03",
+      "name": "ABANDONED PROJECT BARN",
+      "district": "Ridgeway",
+      "kind": "market",
+      "x": -300,
+      "y": 65,
+      "z": 555,
+      "w": 65,
+      "d": 40,
+      "h": 18
+    },
+    {
+      "id": "R04",
+      "name": "SUMMIT CAR MEET / pink-slip area",
+      "district": "Ridgeway",
+      "kind": "meet",
+      "x": 80,
+      "y": 65,
+      "z": 560,
+      "w": 70,
+      "d": 45,
+      "h": 3
+    },
+    {
+      "id": "R05",
+      "name": "RADIO MAST / landmark",
+      "district": "Ridgeway",
+      "kind": "landmark",
+      "x": -300,
+      "y": 65,
+      "z": 385,
+      "w": 22,
+      "d": 22,
+      "h": 70
+    },
+    {
+      "id": "V01",
+      "name": "Harbor lookout",
+      "district": "Dockside",
+      "kind": "lookout",
+      "x": -800,
+      "y": 0,
+      "z": -520,
+      "w": 18,
+      "d": 18,
+      "h": 3
+    },
+    {
+      "id": "V02",
+      "name": "Crane lookout",
+      "district": "Dockside",
+      "kind": "lookout",
+      "x": -690,
+      "y": 0,
+      "z": -190,
+      "w": 18,
+      "d": 18,
+      "h": 3
+    },
+    {
+      "id": "V03",
+      "name": "Plaza viewpoint",
+      "district": "Midtown",
+      "kind": "lookout",
+      "x": 220,
+      "y": 0,
+      "z": 90,
+      "w": 18,
+      "d": 18,
+      "h": 3
+    },
+    {
+      "id": "V04",
+      "name": "East city lookout",
+      "district": "Midtown",
+      "kind": "lookout",
+      "x": 820,
+      "y": 0,
+      "z": -80,
+      "w": 18,
+      "d": 18,
+      "h": 3
+    },
+    {
+      "id": "V05",
+      "name": "Coastal overlook",
+      "district": "Ridgeway",
+      "kind": "lookout",
+      "x": -500,
+      "y": 65,
+      "z": 600,
+      "w": 18,
+      "d": 18,
+      "h": 3
+    },
+    {
+      "id": "V06",
+      "name": "Summit overlook",
+      "district": "Ridgeway",
+      "kind": "lookout",
+      "x": 330,
+      "y": 65,
+      "z": 690,
+      "w": 18,
+      "d": 18,
+      "h": 3
+    },
+    {
+      "id": "evt_dock_01",
+      "name": "First Lap / START",
+      "district": "Dockside",
+      "kind": "event",
+      "x": -700,
+      "y": 1,
+      "z": -550,
+      "w": 7,
+      "d": 7,
+      "h": 4
+    },
+    {
+      "id": "evt_dock_02",
+      "name": "Freight Run / START",
+      "district": "Dockside",
+      "kind": "event",
+      "x": -100,
+      "y": 1,
+      "z": -470,
+      "w": 7,
+      "d": 7,
+      "h": 4
+    },
+    {
+      "id": "evt_dock_03",
+      "name": "Quay Circuit / START",
+      "district": "Dockside",
+      "kind": "event",
+      "x": -500,
+      "y": 1,
+      "z": -550,
+      "w": 7,
+      "d": 7,
+      "h": 4
+    },
+    {
+      "id": "evt_dock_04",
+      "name": "Mika rival / START",
+      "district": "Dockside",
+      "kind": "event",
+      "x": -750,
+      "y": 1,
+      "z": -200,
+      "w": 7,
+      "d": 7,
+      "h": 4
+    },
+    {
+      "id": "evt_dock_05",
+      "name": "Drydock Precision / START",
+      "district": "Dockside",
+      "kind": "event",
+      "x": -300,
+      "y": 1,
+      "z": -150,
+      "w": 7,
+      "d": 7,
+      "h": 4
+    },
+    {
+      "id": "evt_dock_06",
+      "name": "Dockside Cup / START",
+      "district": "Dockside",
+      "kind": "event",
+      "x": -100,
+      "y": 1,
+      "z": -160,
+      "w": 7,
+      "d": 7,
+      "h": 4
+    },
+    {
+      "id": "evt_mid_01",
+      "name": "Boulevard Circuit / START",
+      "district": "Midtown",
+      "kind": "event",
+      "x": 150,
+      "y": 1,
+      "z": -480,
+      "w": 7,
+      "d": 7,
+      "h": 4
+    },
+    {
+      "id": "evt_mid_02",
+      "name": "Cross City / START",
+      "district": "Midtown",
+      "kind": "event",
+      "x": 450,
+      "y": 1,
+      "z": -550,
+      "w": 7,
+      "d": 7,
+      "h": 4
+    },
+    {
+      "id": "evt_mid_03",
+      "name": "Green Lights / START",
+      "district": "Midtown",
+      "kind": "event",
+      "x": 780,
+      "y": 1,
+      "z": -140,
+      "w": 7,
+      "d": 7,
+      "h": 4
+    },
+    {
+      "id": "evt_mid_04",
+      "name": "Sera rival / START",
+      "district": "Midtown",
+      "kind": "event",
+      "x": 150,
+      "y": 1,
+      "z": -120,
+      "w": 7,
+      "d": 7,
+      "h": 4
+    },
+    {
+      "id": "evt_mid_05",
+      "name": "Midtown Cup / START",
+      "district": "Midtown",
+      "kind": "event",
+      "x": 450,
+      "y": 1,
+      "z": 50,
+      "w": 7,
+      "d": 7,
+      "h": 4
+    },
+    {
+      "id": "evt_ridge_01",
+      "name": "Lookout Run / START",
+      "district": "Ridgeway",
+      "kind": "event",
+      "x": -450,
+      "y": 66,
+      "z": 330,
+      "w": 7,
+      "d": 7,
+      "h": 4
+    },
+    {
+      "id": "evt_ridge_02",
+      "name": "Above the City / START",
+      "district": "Ridgeway",
+      "kind": "event",
+      "x": 400,
+      "y": 66,
+      "z": 320,
+      "w": 7,
+      "d": 7,
+      "h": 4
+    },
+    {
+      "id": "evt_ridge_03",
+      "name": "Plateau Circuit / START",
+      "district": "Ridgeway",
+      "kind": "event",
+      "x": -50,
+      "y": 66,
+      "z": 650,
+      "w": 7,
+      "d": 7,
+      "h": 4
+    },
+    {
+      "id": "evt_ridge_04",
+      "name": "Tomas rival / START",
+      "district": "Ridgeway",
+      "kind": "event",
+      "x": 400,
+      "y": 66,
+      "z": 625,
+      "w": 7,
+      "d": 7,
+      "h": 4
+    },
+    {
+      "id": "evt_ridge_05",
+      "name": "Summit Invitational / START",
+      "district": "Ridgeway",
+      "kind": "event",
+      "x": -450,
+      "y": 66,
+      "z": 475,
+      "w": 7,
+      "d": 7,
+      "h": 4
+    },
+    {
+      "id": "BLK_D_1",
+      "name": "Warehouse 1",
+      "district": "Dockside",
+      "kind": "block",
+      "x": -410,
+      "y": 0,
+      "z": -285,
+      "w": 60,
+      "d": 42,
+      "h": 26
+    },
+    {
+      "id": "BLK_D_2",
+      "name": "Warehouse 2",
+      "district": "Dockside",
+      "kind": "block",
+      "x": -410,
+      "y": 0,
+      "z": -200,
+      "w": 60,
+      "d": 42,
+      "h": 34
+    },
+    {
+      "id": "BLK_D_3",
+      "name": "Warehouse 3",
+      "district": "Dockside",
+      "kind": "block",
+      "x": -210,
+      "y": 0,
+      "z": -285,
+      "w": 60,
+      "d": 42,
+      "h": 18
+    },
+    {
+      "id": "BLK_M_1",
+      "name": "Urban block 1",
+      "district": "Midtown",
+      "kind": "block",
+      "x": 220,
+      "y": 0,
+      "z": -485,
+      "w": 48,
+      "d": 40,
+      "h": 38
+    },
+    {
+      "id": "BLK_M_2",
+      "name": "Urban block 2",
+      "district": "Midtown",
+      "kind": "block",
+      "x": 220,
+      "y": 0,
+      "z": -55,
+      "w": 48,
+      "d": 40,
+      "h": 51
+    },
+    {
+      "id": "BLK_M_3",
+      "name": "Urban block 3",
+      "district": "Midtown",
+      "kind": "block",
+      "x": 330,
+      "y": 0,
+      "z": -485,
+      "w": 48,
+      "d": 40,
+      "h": 64
+    },
+    {
+      "id": "BLK_M_4",
+      "name": "Urban block 4",
+      "district": "Midtown",
+      "kind": "block",
+      "x": 330,
+      "y": 0,
+      "z": -385,
+      "w": 48,
+      "d": 40,
+      "h": 77
+    },
+    {
+      "id": "BLK_M_5",
+      "name": "Urban block 5",
+      "district": "Midtown",
+      "kind": "block",
+      "x": 530,
+      "y": 0,
+      "z": -485,
+      "w": 48,
+      "d": 40,
+      "h": 25
+    },
+    {
+      "id": "BLK_M_6",
+      "name": "Urban block 6",
+      "district": "Midtown",
+      "kind": "block",
+      "x": 700,
+      "y": 0,
+      "z": -485,
+      "w": 48,
+      "d": 40,
+      "h": 38
+    },
+    {
+      "id": "BLK_M_7",
+      "name": "Urban block 7",
+      "district": "Midtown",
+      "kind": "block",
+      "x": 700,
+      "y": 0,
+      "z": -55,
+      "w": 48,
+      "d": 40,
+      "h": 51
+    },
+    {
+      "id": "BLK_R_1",
+      "name": "Hillside building 1",
+      "district": "Ridgeway",
+      "kind": "block",
+      "x": -350,
+      "y": 65,
+      "z": 360,
+      "w": 42,
+      "d": 30,
+      "h": 19
+    },
+    {
+      "id": "BLK_R_2",
+      "name": "Hillside building 2",
+      "district": "Ridgeway",
+      "kind": "block",
+      "x": -180,
+      "y": 65,
+      "z": 360,
+      "w": 42,
+      "d": 30,
+      "h": 26
+    },
+    {
+      "id": "BLK_R_3",
+      "name": "Hillside building 3",
+      "district": "Ridgeway",
+      "kind": "block",
+      "x": -180,
+      "y": 65,
+      "z": 565,
+      "w": 42,
+      "d": 30,
+      "h": 12
+    },
+    {
+      "id": "BLK_R_4",
+      "name": "Hillside building 4",
+      "district": "Ridgeway",
+      "kind": "block",
+      "x": 100,
+      "y": 65,
+      "z": 360,
+      "w": 42,
+      "d": 30,
+      "h": 19
+    },
+    {
+      "id": "BLK_R_5",
+      "name": "Hillside building 5",
+      "district": "Ridgeway",
+      "kind": "block",
+      "x": 300,
+      "y": 65,
+      "z": 360,
+      "w": 42,
+      "d": 30,
+      "h": 26
+    },
+    {
+      "id": "FILL_1",
+      "name": "Warehouse 1",
+      "district": "Dockside",
+      "kind": "block",
+      "x": -170,
+      "y": 0,
+      "z": -215,
+      "w": 38,
+      "d": 32,
+      "h": 18
+    },
+    {
+      "id": "FILL_2",
+      "name": "City block 2",
+      "district": "Midtown",
+      "kind": "block",
+      "x": 210,
+      "y": 0,
+      "z": -440,
+      "w": 38,
+      "d": 32,
+      "h": 52
+    },
+    {
+      "id": "FILL_3",
+      "name": "City block 3",
+      "district": "Midtown",
+      "kind": "block",
+      "x": 210,
+      "y": 0,
+      "z": 0,
+      "w": 38,
+      "d": 32,
+      "h": 64
+    },
+    {
+      "id": "FILL_4",
+      "name": "City block 4",
+      "district": "Midtown",
+      "kind": "block",
+      "x": 275,
+      "y": 0,
+      "z": -500,
+      "w": 38,
+      "d": 32,
+      "h": 76
+    },
+    {
+      "id": "FILL_5",
+      "name": "City block 5",
+      "district": "Midtown",
+      "kind": "block",
+      "x": 275,
+      "y": 0,
+      "z": -440,
+      "w": 38,
+      "d": 32,
+      "h": 28
+    },
+    {
+      "id": "FILL_6",
+      "name": "City block 6",
+      "district": "Midtown",
+      "kind": "block",
+      "x": 340,
+      "y": 0,
+      "z": -440,
+      "w": 38,
+      "d": 32,
+      "h": 40
+    },
+    {
+      "id": "FILL_7",
+      "name": "City block 7",
+      "district": "Midtown",
+      "kind": "block",
+      "x": 680,
+      "y": 0,
+      "z": 0,
+      "w": 38,
+      "d": 32,
+      "h": 52
+    },
+    {
+      "id": "FILL_8",
+      "name": "City block 8",
+      "district": "Midtown",
+      "kind": "block",
+      "x": 730,
+      "y": 0,
+      "z": 0,
+      "w": 38,
+      "d": 32,
+      "h": 64
+    },
+    {
+      "id": "FILL_9",
+      "name": "Hillside house 9",
+      "district": "Ridgeway",
+      "kind": "block",
+      "x": -360,
+      "y": 65,
+      "z": 410,
+      "w": 38,
+      "d": 32,
+      "h": 12
+    },
+    {
+      "id": "FILL_10",
+      "name": "Hillside house 10",
+      "district": "Ridgeway",
+      "kind": "block",
+      "x": -360,
+      "y": 65,
+      "z": 540,
+      "w": 38,
+      "d": 32,
+      "h": 18
+    },
+    {
+      "id": "FILL_11",
+      "name": "Hillside house 11",
+      "district": "Ridgeway",
+      "kind": "block",
+      "x": -360,
+      "y": 65,
+      "z": 605,
+      "w": 38,
+      "d": 32,
+      "h": 24
+    },
+    {
+      "id": "FILL_12",
+      "name": "Hillside house 12",
+      "district": "Ridgeway",
+      "kind": "block",
+      "x": -240,
+      "y": 65,
+      "z": 355,
+      "w": 38,
+      "d": 32,
+      "h": 12
+    },
+    {
+      "id": "FILL_13",
+      "name": "Hillside house 13",
+      "district": "Ridgeway",
+      "kind": "block",
+      "x": -240,
+      "y": 65,
+      "z": 410,
+      "w": 38,
+      "d": 32,
+      "h": 18
+    },
+    {
+      "id": "FILL_14",
+      "name": "Hillside house 14",
+      "district": "Ridgeway",
+      "kind": "block",
+      "x": -240,
+      "y": 65,
+      "z": 540,
+      "w": 38,
+      "d": 32,
+      "h": 24
+    },
+    {
+      "id": "FILL_15",
+      "name": "Hillside house 15",
+      "district": "Ridgeway",
+      "kind": "block",
+      "x": -240,
+      "y": 65,
+      "z": 605,
+      "w": 38,
+      "d": 32,
+      "h": 12
+    },
+    {
+      "id": "FILL_16",
+      "name": "Hillside house 16",
+      "district": "Ridgeway",
+      "kind": "block",
+      "x": -140,
+      "y": 65,
+      "z": 410,
+      "w": 38,
+      "d": 32,
+      "h": 18
+    },
+    {
+      "id": "FILL_17",
+      "name": "Hillside house 17",
+      "district": "Ridgeway",
+      "kind": "block",
+      "x": -140,
+      "y": 65,
+      "z": 605,
+      "w": 38,
+      "d": 32,
+      "h": 24
+    },
+    {
+      "id": "FILL_18",
+      "name": "Hillside house 18",
+      "district": "Ridgeway",
+      "kind": "block",
+      "x": 70,
+      "y": 65,
+      "z": 410,
+      "w": 38,
+      "d": 32,
+      "h": 12
+    },
+    {
+      "id": "FILL_19",
+      "name": "Hillside house 19",
+      "district": "Ridgeway",
+      "kind": "block",
+      "x": 70,
+      "y": 65,
+      "z": 605,
+      "w": 38,
+      "d": 32,
+      "h": 18
+    },
+    {
+      "id": "FILL_20",
+      "name": "Hillside house 20",
+      "district": "Ridgeway",
+      "kind": "block",
+      "x": 190,
+      "y": 65,
+      "z": 540,
+      "w": 38,
+      "d": 32,
+      "h": 24
+    },
+    {
+      "id": "FILL_21",
+      "name": "Hillside house 21",
+      "district": "Ridgeway",
+      "kind": "block",
+      "x": 190,
+      "y": 65,
+      "z": 605,
+      "w": 38,
+      "d": 32,
+      "h": 12
+    },
+    {
+      "id": "FILL_22",
+      "name": "Hillside house 22",
+      "district": "Ridgeway",
+      "kind": "block",
+      "x": 300,
+      "y": 65,
+      "z": 410,
+      "w": 38,
+      "d": 32,
+      "h": 18
+    },
+    {
+      "id": "FILL_23",
+      "name": "Hillside house 23",
+      "district": "Ridgeway",
+      "kind": "block",
+      "x": 300,
+      "y": 65,
+      "z": 605,
+      "w": 38,
+      "d": 32,
+      "h": 24
+    }
+  ]
+}

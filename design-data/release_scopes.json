@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "default_build_scope": "slice",
+  "scopes": [
+    {
+      "id": "slice",
+      "district_ids": ["dockside"],
+      "car_ids": ["car_finch", "car_courier", "car_lynx"],
+      "event_ids": ["evt_dock_01", "evt_dock_02", "evt_dock_03", "evt_dock_04"],
+      "rival_ids": ["rival_mika"],
+      "used_listing_ids": ["listing_finch_001", "listing_courier_001", "listing_courier_002", "listing_lynx_001"],
+      "recovery_activity_ids": ["act_workshop_recovery"],
+      "upgrade_stages": [1, 2],
+      "campaign_ending_enabled": false
+    },
+    {
+      "id": "v1",
+      "district_ids": ["dockside", "midtown", "ridgeway"],
+      "car_ids": ["car_finch", "car_courier", "car_lynx", "car_switch", "car_sable", "car_quarry", "car_vela", "car_apex"],
+      "event_ids": ["evt_dock_01", "evt_dock_02", "evt_dock_03", "evt_dock_04", "evt_dock_05", "evt_dock_06", "evt_mid_01", "evt_mid_02", "evt_mid_03", "evt_mid_04", "evt_mid_05", "evt_ridge_01", "evt_ridge_02", "evt_ridge_03", "evt_ridge_04", "evt_ridge_05"],
+      "rival_ids": ["rival_mika", "rival_rook", "rival_sera", "rival_vale", "rival_tomas", "rival_ash"],
+      "used_listing_ids": ["listing_finch_001", "listing_courier_001", "listing_courier_002", "listing_lynx_001", "listing_switch_001", "listing_sable_001", "listing_quarry_001", "listing_vela_001", "listing_apex_001", "listing_sable_002"],
+      "recovery_activity_ids": ["act_workshop_recovery"],
+      "upgrade_stages": [1, 2, 3],
+      "campaign_ending_enabled": true
+    }
+  ]
+}

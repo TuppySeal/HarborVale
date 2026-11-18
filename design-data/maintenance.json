@@ -1,0 +1,283 @@
+{
+  "schema_version": 1,
+  "status": "proposed_fictional_game_rules_not_measured_vehicle_reliability",
+  "condition_scale": 10000,
+  "roadworthy_minimum": 2000,
+  "hard_failure_at_or_below": 1000,
+  "minimum_service_restores_to": 4500,
+  "full_restore_condition": 10000,
+  "mileage_tracking": {
+    "canonical_unit": "metres",
+    "metres_per_kilometre": 1000,
+    "metres_per_mile": 1609.344,
+    "display_units": ["miles", "kilometres"],
+    "round_display_only": true,
+    "lifetime_odometer_never_resets": true,
+    "trip_reset_changes_lifetime_odometer_or_wear": false,
+    "component_replacement_resets_chassis_odometer": false,
+    "last_service_source": "latest_documented_scoped_maintenance_repair_or_actual_component_replacement_receipt_else_null",
+    "inspection_is_not_a_service": true,
+    "reminder_type": "advisory_component_check_due",
+    "reminder_baseline": "latest_scoped_assessment_or_service_odometer_or_current_ownership_acquisition_odometer_whichever_is_newest",
+    "check_interval_m_by_component": {
+      "engine": 250000,
+      "cooling": 300000,
+      "transmission": 300000,
+      "brakes": 100000,
+      "tires": 80000,
+      "suspension": 200000
+    },
+    "intervals_are_fictional_gameplay_check_reminders_not_real_service_specifications": true,
+    "reminder_adds_wear_power_penalty_fee_or_entry_gate": false,
+    "raw_odometer_adds_extra_resale_factor": false,
+    "history_consistency": "documented_incomplete_or_inconsistent_never_silently_correct_or_certify_unknown_records"
+  },
+  "inspection_price": 100,
+  "inspection_scope": "optional_pre_purchase_full_component_reveal_for_this_vehicle_and_condition_revision",
+  "owned_roadworthy_quote_price": 0,
+  "service_quote_revision_source": "vehicle.condition_revision_not_continuously_changing_thermal_load",
+  "condition_revision_increments_on": "component_condition_change_or_paid_component_renewal",
+  "condition_warning_thresholds": {
+    "service_soon_below": 6000,
+    "urgent_below": 3000,
+    "race_entry_blocked_below": 2000,
+    "hard_failure_at_or_below": 1000
+  },
+  "components": [
+    {
+      "id": "engine",
+      "wear_points_per_km": 4,
+      "minimum_roadworthy_repair_price": 300,
+      "full_restore_price": 600
+    },
+    {
+      "id": "cooling",
+      "wear_points_per_km": 5,
+      "minimum_roadworthy_repair_price": 150,
+      "full_restore_price": 300
+    },
+    {
+      "id": "transmission",
+      "wear_points_per_km": 6,
+      "minimum_roadworthy_repair_price": 250,
+      "full_restore_price": 500
+    },
+    {
+      "id": "brakes",
+      "wear_points_per_km": 18,
+      "minimum_roadworthy_repair_price": 150,
+      "full_restore_price": 300
+    },
+    {
+      "id": "tires",
+      "wear_points_per_km": 30,
+      "minimum_roadworthy_repair_price": 200,
+      "full_restore_price": 400
+    },
+    {
+      "id": "suspension",
+      "wear_points_per_km": 8,
+      "minimum_roadworthy_repair_price": 150,
+      "full_restore_price": 300
+    }
+  ],
+  "upgrade_renewal_by_category": {
+    "engine": [],
+    "transmission": [],
+    "weight": [],
+    "tires": [
+      "tires"
+    ],
+    "brakes": [
+      "brakes"
+    ],
+    "suspension": [
+      "suspension"
+    ]
+  },
+  "upgrade_readiness": {
+    "other_than_replaced_components_minimum": 4500,
+    "engine_and_transmission_categories_core_components": [
+      "engine",
+      "cooling",
+      "transmission"
+    ],
+    "engine_and_transmission_categories_core_minimum": 8000,
+    "thermal_load_must_be_below": 8000,
+    "renewal_condition_on_successful_paid_stage": 10000,
+    "repeat_same_stage_cannot_renew": true
+  },
+  "wear_rules": {
+    "distance_source": "actual_unpaused_driven_ground_path_metres_excluding_teleport_tow_recovery",
+    "condition_loss_formula": "pending_fraction += distance_m/1000 * wear_points_per_km * component_stress; loss=floor(pending_fraction); condition=max(0,condition-loss); pending_fraction-=loss",
+    "persisted_fraction_fields": "vehicle.wear_fraction_by_component; vehicle.odometer_fraction_m",
+    "base_stress_multiplier": 1,
+    "output_stress": {
+      "components": [
+        "engine",
+        "cooling",
+        "transmission"
+      ],
+      "ratio": "installed_healthy_peak_kw/stock_healthy_peak_kw",
+      "coefficient": 0.25,
+      "maximum_multiplier": 1.35
+    },
+    "high_rpm_stress": {
+      "component": "engine",
+      "rpm_fraction_threshold": 0.97,
+      "throttle_threshold": 0.8,
+      "multiplier": 1.8
+    },
+    "hard_braking_stress": {
+      "component": "brakes",
+      "brake_input_threshold": 0.7,
+      "maximum_additional_multiplier": 0.75
+    },
+    "wheelspin_stress": {
+      "component": "tires",
+      "absolute_slip_ratio_threshold": 0.35,
+      "throttle_threshold": 0.6,
+      "multiplier": 2
+    },
+    "combined_component_multiplier_cap": 3,
+    "hot_engine_stress": {
+      "component": "engine",
+      "thermal_load_threshold": 8000,
+      "maximum_additional_multiplier": 0.75
+    },
+    "offline_wear": false,
+    "paused_wear": false,
+    "stationary_rev_wear": false,
+    "transaction_commit_includes_wear_and_odometer": true,
+    "free_roam_autosave_interval_seconds": 30
+  },
+  "live_derating": {
+    "normalize_to_full_at_condition": 4500,
+    "engine_torque_multiplier_minimum": 0.55,
+    "transmission_drive_multiplier_minimum": 0.65,
+    "transmission_shift_latency_multiplier_maximum": 1.8,
+    "brakes_deceleration_multiplier_minimum": 0.35,
+    "tires_grip_multiplier_minimum": 0.7,
+    "suspension_response_multiplier_minimum": 0.7,
+    "limp_speed_target_kph": 25,
+    "hard_failure_action": "disable_positive_throttle_allow_coast_and_residual_braking_mark_race_dnf_offer_free_tow",
+    "failure_labels": {
+      "engine": "engine_will_not_run",
+      "cooling": "cooling_failure_engine_protection_cut",
+      "transmission": "drive_not_transmitted",
+      "brakes": "unsafe_brakes",
+      "tires": "flat_tire",
+      "suspension": "unsafe_suspension"
+    },
+    "pi_rule": "healthy_installed_build_potential_pi_unchanged_show_condition_and_current_derating_separately"
+  },
+  "thermal_model": {
+    "enabled": true,
+    "scale": 10000,
+    "persisted_field": "vehicle.thermal_load",
+    "normalized_load": "clamp(throttle * engine_rpm/redline_rpm,0,1) while engine_running",
+    "running_target_base": 2000,
+    "running_load_gain": 4000,
+    "cooling_deficit_reference": 6000,
+    "cooling_deficit_gain": 1.8,
+    "running_target_formula": "clamp(2000+4000*normalized_load+1.8*max(0,6000-cooling_condition),0,10000)",
+    "rise_tau_seconds": 45,
+    "fall_tau_seconds": 30,
+    "engine_off_target": 0,
+    "engine_off_tau_seconds": 40,
+    "warning_at": 8000,
+    "protection_cut_at": 9500,
+    "protection_releases_below": 7500,
+    "persist_protection_latch_until_release": true,
+    "protection_cut_race_policy": "cut_positive_drive_keep_race_clock_allow_engine_off_cooling_or_abandon",
+    "derating_at_warning": 1,
+    "minimum_torque_multiplier_before_cut": 0.6,
+    "offline_cooling": false,
+    "paused_cooling": false,
+    "tow_or_reset_instant_cooling": false,
+    "paid_cooling_service_resets_heat": true,
+    "free_cooling_action": "stop_engine_in_live_unpaused_world_garage_or_roadside_ui_until_below_release_threshold",
+    "unpaused_garage_and_roadside_ui_tick_engine_off_cooling": true,
+    "explicit_escape_pause_freezes_cooling": true,
+    "heat_only_never_requires_paid_repair": true
+  },
+  "impact_wear": {
+    "severity_measure": "normal_collision_impulse_divided_by_vehicle_mass_as_delta_v_mps_exclude_regular_suspension_support_forces",
+    "minor_delta_v_threshold": 4,
+    "major_delta_v_threshold": 8,
+    "duplicate_contact_cooldown_seconds": 2,
+    "minor_condition_loss": {
+      "engine": 0,
+      "cooling": 100,
+      "transmission": 0,
+      "brakes": 0,
+      "tires": 100,
+      "suspension": 250
+    },
+    "major_condition_loss": {
+      "engine": 500,
+      "cooling": 1200,
+      "transmission": 500,
+      "brakes": 400,
+      "tires": 700,
+      "suspension": 1800
+    },
+    "history_rule": "append_one_incident_receipt_per_impact_episode_preserve_worst_severity",
+    "healthy_car_single_major_impact_is_not_instant_engine_failure": true
+  },
+  "roadside": {
+    "tow_price": 0,
+    "destination": "owned_garage",
+    "restores_condition": false,
+    "clears_failure_without_repair": false,
+    "distance_wear_during_tow": false,
+    "active_hard_failure_race_result": "dnf_no_race_reward",
+    "race_entry_requires_all_components_at_least": 2000
+  },
+  "workshop_recovery_activity": {
+    "id": "act_workshop_recovery",
+    "route_id": "route_dock_01",
+    "format": "loaner_time_trial",
+    "loaner_car_id": "car_finch",
+    "loaner_build": "stock_healthy_temporary_non_owned",
+    "eligibility": "all_owned_vehicles_have_some_component_below2000 AND wallet<minimum_of_owned_minimum_roadworthy_repair_quotes",
+    "reward_credits": 300,
+    "reputation_reward": 0,
+    "first_clear_bonus": 0,
+    "entry_fee": 0,
+    "valid_finish_required": true,
+    "timeout_seconds": null,
+    "loaner_wear": false,
+    "owned_vehicle_wear": false,
+    "upgrades_or_sale_allowed": false,
+    "settlement_rule": "once_per_unique_activity_run_id",
+    "exit_state": "garage_with_existing_owned_car_and_build_unchanged",
+    "maximum_minimum_repair_quote": 1200,
+    "maximum_valid_jobs_from_zero_cash": 4
+  },
+  "resale_factors": {
+    "scale": 10000,
+    "condition_floor_bps": 4000,
+    "condition_span_bps": 6000,
+    "condition_component_count": 6,
+    "condition_factor_formula": "4000+floor(6000*sum(component_conditions)/(6*10000))",
+    "history_factor_by_worst_recorded_accident": {
+      "none": 10000,
+      "minor": 9500,
+      "major": 8500
+    },
+    "quote_formula": "floor(paid_basis*condition_factor_bps*history_factor_bps/100000000)",
+    "paid_basis_source": "economy.json resale using current ownership paid purchase and current ownership actual upgrade investment",
+    "service_or_inspection_spend_adds_resale_investment": false
+  },
+  "buyback": {
+    "preserves_vehicle_id_history_condition_build_and_path": true,
+    "quote_formula": "max(last_purchase_price_paid,sale_quote+500)",
+    "resets_current_ownership_upgrade_investment_to": 0,
+    "previous_installed_stages_included_in_purchase": true,
+    "history_investment_receipts_are_not_current_ownership_resale_investment": true,
+    "nonengine_next_stage_price_rule": "rounded_catalog_total(next_stage)-rounded_catalog_total(current_installed_stage)",
+    "engine_next_stage_price_rule": "individually_rounded_full_next_engine_step_price",
+    "rerolls_or_free_repairs_on_relisting": false
+  }
+}

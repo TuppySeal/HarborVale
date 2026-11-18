@@ -1,0 +1,97 @@
+{
+  "schema_version": 2,
+  "status": "proposed_design_baseline",
+  "currency": "credits",
+  "starting_wallet": 8000,
+  "initial_starter_ids": ["car_finch", "car_courier"],
+  "maximum_owned_per_catalog_id": 1,
+  "minimum_owned_after_initial_purchase": 1,
+  "used_car_inventory_source": "used_car_listings.json",
+  "used_vehicle_buyback": {
+    "preserve_vehicle_id_build_condition_mileage_path_and_history": true,
+    "price_rule": "max_last_actual_purchase_price_or_current_resale_quote_plus_margin",
+    "margin": 500,
+    "reacquisition_purchase_basis": "actual_buyback_price_paid",
+    "reset_current_ownership_upgrade_investment_on_acquisition": true,
+    "preserve_lifetime_payments_and_records": true,
+    "preinstalled_stage_confirmation": "acquisition_receipt_includes_existing_hardware"
+  },
+  "upgrade_price_basis": "cars_json_catalog_purchase_price_msrp_not_instance_listing_price_paid",
+  "entry_fee": 0,
+  "maintenance": {
+    "definition_source": "maintenance.json",
+    "service_charge_rule": "quoted_condition_based_service_transaction",
+    "minimum_roadworthy_quote_rule": "minimum_quote_across_owned_cars_for_all_components_below_roadworthy_threshold",
+    "owned_car_minimum_quote_fee": 0,
+    "service_spending_counts_as_upgrade_investment": false,
+    "upgrade_component_renewal_definition_source": "maintenance.json",
+    "service_spending_adds_separate_resale_value": false,
+    "tow_fee": 0,
+    "heat_only_cooldown_fee": 0
+  },
+  "emergency_income": {
+    "id": "act_workshop_recovery",
+    "definition_source": "maintenance.json:workshop_recovery_activity",
+    "type": "loaner_time_trial",
+    "eligibility": "owns_at_least_one_car_and_no_owned_roadworthy_car_and_wallet_below_minimum_owned_roadworthy_repair_quote",
+    "payout_on_valid_finish": 300,
+    "reputation": 0,
+    "first_clear_bonus": 0,
+    "entry_fee": 0,
+    "invalid_or_abandoned_payout": 0,
+    "career_event": false,
+    "loaner_is_owned_or_sellable": false,
+    "loaner_can_be_upgraded": false,
+    "loaner_wear_and_breakdowns": false,
+    "settlement_rule": "unique_verified_run_id_once",
+    "recheck_eligibility_before_each_run": true,
+    "minimum_roadworthy_repair_quote_cap": 1200,
+    "maximum_successful_runs_from_zero_to_quote_cap": 4
+  },
+  "tiers": [
+    {"id": "rookie", "minimum_reputation": 0},
+    {"id": "club", "minimum_reputation": 150},
+    {"id": "pro", "minimum_reputation": 500},
+    {"id": "elite", "minimum_reputation": 1100}
+  ],
+  "result_multipliers": [
+    {"result": "first_or_gold", "credit": 1.0, "reputation": 1.0},
+    {"result": "second_or_silver", "credit": 0.8, "reputation": 0.8},
+    {"result": "third_or_bronze", "credit": 0.65, "reputation": 0.6},
+    {"result": "fourth_or_below_bronze_finish", "credit": 0.5, "reputation": 0.4},
+    {"result": "dnf_abandon_invalid", "credit": 0.0, "reputation": 0.0}
+  ],
+  "credit_rounding": "floor_after_multiplication",
+  "reputation_rule": "positive_difference_from_event_best_result_only",
+  "first_clear_rule": "once_per_event_on_any_valid_finish",
+  "replay_credit_rewards": true,
+  "resale": {
+    "base_price_paid_fraction": 0.7,
+    "installed_investment_fraction": 0.5,
+    "round_each_component_down": true,
+    "valuation_factor_definition_source": "maintenance.json",
+    "condition_and_history_factors_maximum": 1.0,
+    "final_rounding": "floor_paid_basis_times_condition_bps_times_history_bps_divided_by_100000000",
+    "maintenance_spend_included": false,
+    "paid_basis_is_instance_purchase_price_not_catalog_msrp": true
+  },
+  "wealth_rule": "wallet_plus_sum_current_owned_car_resale",
+  "pi_formula": {
+    "constant": 100,
+    "power_to_weight_kw_per_tonne": {"weight": 2.2, "baseline": 60},
+    "grip": {"weight": 250, "baseline": 0.85},
+    "chassis": {"weight": 1.2, "baseline": 40},
+    "brake_deceleration": {"weight": 6, "baseline": 6},
+    "shift_seconds": {"weight": -30, "baseline": 0.45},
+    "rounding": "floor_raw_plus_0_5",
+    "minimum": 100,
+    "maximum": 999
+  },
+  "pi_classes": [
+    {"id": "D", "minimum": 100, "maximum": 249},
+    {"id": "C", "minimum": 250, "maximum": 399},
+    {"id": "B", "minimum": 400, "maximum": 549},
+    {"id": "A", "minimum": 550, "maximum": 699},
+    {"id": "S", "minimum": 700, "maximum": 999}
+  ]
+}

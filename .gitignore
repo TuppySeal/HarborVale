@@ -13,3 +13,7 @@
 *.log
 .DS_Store
 Thumbs.db
+
+# Local editor logs and scene backups
+/Verification/
+

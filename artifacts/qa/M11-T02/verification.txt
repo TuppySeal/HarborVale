@@ -1,0 +1,1 @@
+PASS Unity 6000.6.0f1: scene saved/reopened, materials valid, starter prefab found, 4.05 m length collider checked. Actual visual model bounds (including mirrors/plates) (2.00, 1.46, 4.10) m. 288 road collider raycasts passed. Four actual Unity renders generated. Road geometry scale/grade checks in source-report.json. No driving, input or performance playtest claimed.

@@ -1,0 +1,691 @@
+{
+  "schema_version": 1,
+  "project_title": "Redline: From Rust to Riches",
+  "project_stage": "implementation",
+  "updated_at": "2026-11-18T19:28:30.8578321Z",
+  "current_task_id": null,
+  "next_task_id": null,
+  "status_values": [
+    "not_started",
+    "in_progress",
+    "blocked",
+    "done"
+  ],
+  "tasks": [
+    {
+      "id": "M00-T01",
+      "title": "Verify engine and environment",
+      "milestone": "M00",
+      "depends_on": [],
+      "status": "not_started",
+      "spec_ref": "docs/05_BUILD_ROADMAP.md",
+      "acceptance_key": "M00-T01",
+      "evidence": [],
+      "remaining_steps": [
+        "Locate the standard Godot executable and verify its exact stable version.",
+        "Record executable path, engine/export-template versions and reference PC in project/ENVIRONMENT.md.",
+        "Run the environment checks and record actual outcomes before marking setup done."
+      ],
+      "blockers": [],
+      "updated_at": "2026-11-18T03:10:31Z"
+    },
+    {
+      "id": "M00-T02",
+      "title": "Create minimal project and smoke scene",
+      "milestone": "M00",
+      "depends_on": [
+        "M00-T01"
+      ],
+      "status": "not_started",
+      "spec_ref": "docs/05_BUILD_ROADMAP.md",
+      "acceptance_key": "M00-T02",
+      "evidence": [],
+      "remaining_steps": [],
+      "blockers": [],
+      "updated_at": "2026-11-18T03:10:31Z"
+    },
+    {
+      "id": "M00-T03",
+      "title": "Establish records and repeatable check",
+      "milestone": "M00",
+      "depends_on": [
+        "M00-T02"
+      ],
+      "status": "not_started",
+      "spec_ref": "docs/05_BUILD_ROADMAP.md",
+      "acceptance_key": "M00-T03",
+      "evidence": [],
+      "remaining_steps": [],
+      "blockers": [],
+      "updated_at": "2026-11-18T03:10:31Z"
+    },
+    {
+      "id": "M01-T01",
+      "title": "Build driving test ground",
+      "milestone": "M01",
+      "depends_on": [
+        "M00-T03"
+      ],
+      "status": "not_started",
+      "spec_ref": "docs/05_BUILD_ROADMAP.md",
+      "acceptance_key": "M01-T01",
+      "evidence": [],
+      "remaining_steps": [],
+      "blockers": [],
+      "updated_at": "2026-11-18T03:10:31Z"
+    },
+    {
+      "id": "M01-T02",
+      "title": "Implement first car controller",
+      "milestone": "M01",
+      "depends_on": [
+        "M01-T01"
+      ],
+      "status": "not_started",
+      "spec_ref": "docs/05_BUILD_ROADMAP.md",
+      "acceptance_key": "M01-T02",
+      "evidence": [],
+      "remaining_steps": [],
+      "blockers": [],
+      "updated_at": "2026-11-18T03:10:31Z"
+    },
+    {
+      "id": "M01-T03",
+      "title": "Add camera input and recovery",
+      "milestone": "M01",
+      "depends_on": [
+        "M01-T02"
+      ],
+      "status": "not_started",
+      "spec_ref": "docs/05_BUILD_ROADMAP.md",
+      "acceptance_key": "M01-T03",
+      "evidence": [],
+      "remaining_steps": [],
+      "blockers": [],
+      "updated_at": "2026-11-18T03:10:31Z"
+    },
+    {
+      "id": "M01-T04",
+      "title": "Review handling baseline",
+      "milestone": "M01",
+      "depends_on": [
+        "M01-T03"
+      ],
+      "status": "not_started",
+      "spec_ref": "docs/05_BUILD_ROADMAP.md",
+      "acceptance_key": "M01-T04",
+      "evidence": [],
+      "remaining_steps": [],
+      "blockers": [],
+      "updated_at": "2026-11-18T03:10:31Z"
+    },
+    {
+      "id": "M01-T05",
+      "title": "Prove RPM torque and induction response",
+      "milestone": "M01",
+      "depends_on": [
+        "M01-T04"
+      ],
+      "status": "not_started",
+      "spec_ref": "docs/05_BUILD_ROADMAP.md",
+      "acceptance_key": "M01-T05",
+      "evidence": [],
+      "remaining_steps": [],
+      "blockers": [],
+      "updated_at": "2026-11-18T03:26:03Z"
+    },
+    {
+      "id": "M02-T01",
+      "title": "Add validated content definitions",
+      "milestone": "M02",
+      "depends_on": [
+        "M01-T05"
+      ],
+      "status": "not_started",
+      "spec_ref": "docs/05_BUILD_ROADMAP.md",
+      "acceptance_key": "M02-T01",
+      "evidence": [],
+      "remaining_steps": [],
+      "blockers": [],
+      "updated_at": "2026-11-18T03:26:03Z"
+    },
+    {
+      "id": "M02-T02",
+      "title": "Implement game states and boundaries",
+      "milestone": "M02",
+      "depends_on": [
+        "M02-T01"
+      ],
+      "status": "not_started",
+      "spec_ref": "docs/05_BUILD_ROADMAP.md",
+      "acceptance_key": "M02-T02",
+      "evidence": [],
+      "remaining_steps": [],
+      "blockers": [],
+      "updated_at": "2026-11-18T03:10:31Z"
+    },
+    {
+      "id": "M02-T03",
+      "title": "Implement versioned saves and recovery",
+      "milestone": "M02",
+      "depends_on": [
+        "M02-T02"
+      ],
+      "status": "not_started",
+      "spec_ref": "docs/05_BUILD_ROADMAP.md",
+      "acceptance_key": "M02-T03",
+      "evidence": [],
+      "remaining_steps": [],
+      "blockers": [],
+      "updated_at": "2026-11-18T03:10:31Z"
+    },
+    {
+      "id": "M02-T04",
+      "title": "Build transaction and settlement rules",
+      "milestone": "M02",
+      "depends_on": [
+        "M02-T03"
+      ],
+      "status": "not_started",
+      "spec_ref": "docs/05_BUILD_ROADMAP.md",
+      "acceptance_key": "M02-T04",
+      "evidence": [],
+      "remaining_steps": [],
+      "blockers": [],
+      "updated_at": "2026-11-18T03:10:31Z"
+    },
+    {
+      "id": "M02-T05",
+      "title": "Model condition, wear and append-only vehicle records",
+      "milestone": "M02",
+      "depends_on": [
+        "M02-T04"
+      ],
+      "status": "not_started",
+      "spec_ref": "docs/05_BUILD_ROADMAP.md",
+      "acceptance_key": "M02-T05",
+      "evidence": [],
+      "remaining_steps": [],
+      "blockers": [],
+      "updated_at": "2026-11-18T03:50:23Z"
+    },
+    {
+      "id": "M03-T01",
+      "title": "Implement routes and checkpoints",
+      "milestone": "M03",
+      "depends_on": [
+        "M02-T05"
+      ],
+      "status": "not_started",
+      "spec_ref": "docs/05_BUILD_ROADMAP.md",
+      "acceptance_key": "M03-T01",
+      "evidence": [],
+      "remaining_steps": [],
+      "blockers": [],
+      "updated_at": "2026-11-18T03:50:23Z"
+    },
+    {
+      "id": "M03-T02",
+      "title": "Implement timed race loop",
+      "milestone": "M03",
+      "depends_on": [
+        "M03-T01"
+      ],
+      "status": "not_started",
+      "spec_ref": "docs/05_BUILD_ROADMAP.md",
+      "acceptance_key": "M03-T02",
+      "evidence": [],
+      "remaining_steps": [],
+      "blockers": [],
+      "updated_at": "2026-11-18T03:10:31Z"
+    },
+    {
+      "id": "M03-T03",
+      "title": "Add opponents and placement",
+      "milestone": "M03",
+      "depends_on": [
+        "M03-T02"
+      ],
+      "status": "not_started",
+      "spec_ref": "docs/05_BUILD_ROADMAP.md",
+      "acceptance_key": "M03-T03",
+      "evidence": [],
+      "remaining_steps": [],
+      "blockers": [],
+      "updated_at": "2026-11-18T03:10:31Z"
+    },
+    {
+      "id": "M03-T04",
+      "title": "Add remaining slice race types",
+      "milestone": "M03",
+      "depends_on": [
+        "M03-T03"
+      ],
+      "status": "not_started",
+      "spec_ref": "docs/05_BUILD_ROADMAP.md",
+      "acceptance_key": "M03-T04",
+      "evidence": [],
+      "remaining_steps": [],
+      "blockers": [],
+      "updated_at": "2026-11-18T03:10:31Z"
+    },
+    {
+      "id": "M04-T01",
+      "title": "Build Dockside road graybox",
+      "milestone": "M04",
+      "depends_on": [
+        "M03-T04"
+      ],
+      "status": "not_started",
+      "spec_ref": "docs/05_BUILD_ROADMAP.md",
+      "acceptance_key": "M04-T01",
+      "evidence": [],
+      "remaining_steps": [],
+      "blockers": [],
+      "updated_at": "2026-11-18T03:10:31Z"
+    },
+    {
+      "id": "M04-T02",
+      "title": "Add navigation and interactions",
+      "milestone": "M04",
+      "depends_on": [
+        "M04-T01"
+      ],
+      "status": "not_started",
+      "spec_ref": "docs/05_BUILD_ROADMAP.md",
+      "acceptance_key": "M04-T02",
+      "evidence": [],
+      "remaining_steps": [],
+      "blockers": [],
+      "updated_at": "2026-11-18T03:10:31Z"
+    },
+    {
+      "id": "M04-T03",
+      "title": "Integrate routes and world recovery",
+      "milestone": "M04",
+      "depends_on": [
+        "M04-T02"
+      ],
+      "status": "not_started",
+      "spec_ref": "docs/05_BUILD_ROADMAP.md",
+      "acceptance_key": "M04-T03",
+      "evidence": [],
+      "remaining_steps": [],
+      "blockers": [],
+      "updated_at": "2026-11-18T03:10:31Z"
+    },
+    {
+      "id": "M04-T04",
+      "title": "Add used-car inspection and persistent listings",
+      "milestone": "M04",
+      "depends_on": [
+        "M04-T03"
+      ],
+      "status": "not_started",
+      "spec_ref": "docs/05_BUILD_ROADMAP.md",
+      "acceptance_key": "M04-T04",
+      "evidence": [],
+      "remaining_steps": [],
+      "blockers": [],
+      "updated_at": "2026-11-18T03:50:23Z"
+    },
+    {
+      "id": "M05-T01",
+      "title": "Implement dealer and owned cars",
+      "milestone": "M05",
+      "depends_on": [
+        "M04-T04"
+      ],
+      "status": "not_started",
+      "spec_ref": "docs/05_BUILD_ROADMAP.md",
+      "acceptance_key": "M05-T01",
+      "evidence": [],
+      "remaining_steps": [],
+      "blockers": [],
+      "updated_at": "2026-11-18T03:50:23Z"
+    },
+    {
+      "id": "M05-T02",
+      "title": "Implement upgrades and classes",
+      "milestone": "M05",
+      "depends_on": [
+        "M05-T01"
+      ],
+      "status": "not_started",
+      "spec_ref": "docs/05_BUILD_ROADMAP.md",
+      "acceptance_key": "M05-T02",
+      "evidence": [],
+      "remaining_steps": [],
+      "blockers": [],
+      "updated_at": "2026-11-18T03:10:31Z"
+    },
+    {
+      "id": "M05-T03",
+      "title": "Implement resale and recovery income",
+      "milestone": "M05",
+      "depends_on": [
+        "M05-T02"
+      ],
+      "status": "not_started",
+      "spec_ref": "docs/05_BUILD_ROADMAP.md",
+      "acceptance_key": "M05-T03",
+      "evidence": [],
+      "remaining_steps": [],
+      "blockers": [],
+      "updated_at": "2026-11-18T03:10:31Z"
+    },
+    {
+      "id": "M05-T04",
+      "title": "Connect progression and garage UI",
+      "milestone": "M05",
+      "depends_on": [
+        "M05-T03"
+      ],
+      "status": "not_started",
+      "spec_ref": "docs/05_BUILD_ROADMAP.md",
+      "acceptance_key": "M05-T04",
+      "evidence": [],
+      "remaining_steps": [],
+      "blockers": [],
+      "updated_at": "2026-11-18T03:10:31Z"
+    },
+    {
+      "id": "M05-T05",
+      "title": "Verify sequential engine builds and dyno preview",
+      "milestone": "M05",
+      "depends_on": [
+        "M05-T04"
+      ],
+      "status": "not_started",
+      "spec_ref": "docs/05_BUILD_ROADMAP.md",
+      "acceptance_key": "M05-T05",
+      "evidence": [],
+      "remaining_steps": [],
+      "blockers": [],
+      "updated_at": "2026-11-18T03:26:03Z"
+    },
+    {
+      "id": "M05-T06",
+      "title": "Integrate servicing, breakdowns and workshop recovery",
+      "milestone": "M05",
+      "depends_on": [
+        "M05-T05"
+      ],
+      "status": "not_started",
+      "spec_ref": "docs/05_BUILD_ROADMAP.md",
+      "acceptance_key": "M05-T06",
+      "evidence": [],
+      "remaining_steps": [],
+      "blockers": [],
+      "updated_at": "2026-11-18T03:50:23Z"
+    },
+    {
+      "id": "M06-T01",
+      "title": "Add first-session tutorial",
+      "milestone": "M06",
+      "depends_on": [
+        "M05-T06"
+      ],
+      "status": "not_started",
+      "spec_ref": "docs/05_BUILD_ROADMAP.md",
+      "acceptance_key": "M06-T01",
+      "evidence": [],
+      "remaining_steps": [],
+      "blockers": [],
+      "updated_at": "2026-11-18T03:50:23Z"
+    },
+    {
+      "id": "M06-T02",
+      "title": "Validate slice and repair failures",
+      "milestone": "M06",
+      "depends_on": [
+        "M06-T01"
+      ],
+      "status": "not_started",
+      "spec_ref": "docs/05_BUILD_ROADMAP.md",
+      "acceptance_key": "M06-T02",
+      "evidence": [],
+      "remaining_steps": [],
+      "blockers": [],
+      "updated_at": "2026-11-18T03:10:31Z"
+    },
+    {
+      "id": "M06-T03",
+      "title": "Package and review slice",
+      "milestone": "M06",
+      "depends_on": [
+        "M06-T02"
+      ],
+      "status": "not_started",
+      "spec_ref": "docs/05_BUILD_ROADMAP.md",
+      "acceptance_key": "M06-T03",
+      "evidence": [],
+      "remaining_steps": [],
+      "blockers": [],
+      "updated_at": "2026-11-18T03:10:31Z"
+    },
+    {
+      "id": "M07-T01",
+      "title": "Add Midtown and Ridgeway",
+      "milestone": "M07",
+      "depends_on": [
+        "M06-T03"
+      ],
+      "status": "not_started",
+      "spec_ref": "docs/05_BUILD_ROADMAP.md",
+      "acceptance_key": "M07-T01",
+      "evidence": [],
+      "remaining_steps": [],
+      "blockers": [],
+      "updated_at": "2026-11-18T03:10:31Z"
+    },
+    {
+      "id": "M07-T02",
+      "title": "Add remaining cars and events",
+      "milestone": "M07",
+      "depends_on": [
+        "M07-T01"
+      ],
+      "status": "not_started",
+      "spec_ref": "docs/05_BUILD_ROADMAP.md",
+      "acceptance_key": "M07-T02",
+      "evidence": [],
+      "remaining_steps": [],
+      "blockers": [],
+      "updated_at": "2026-11-18T03:10:31Z"
+    },
+    {
+      "id": "M07-T03",
+      "title": "Add rivals and campaign completion",
+      "milestone": "M07",
+      "depends_on": [
+        "M07-T02"
+      ],
+      "status": "not_started",
+      "spec_ref": "docs/05_BUILD_ROADMAP.md",
+      "acceptance_key": "M07-T03",
+      "evidence": [],
+      "remaining_steps": [],
+      "blockers": [],
+      "updated_at": "2026-11-18T03:10:31Z"
+    },
+    {
+      "id": "M08-T01",
+      "title": "Integrate visual assets",
+      "milestone": "M08",
+      "depends_on": [
+        "M07-T03"
+      ],
+      "status": "not_started",
+      "spec_ref": "docs/05_BUILD_ROADMAP.md",
+      "acceptance_key": "M08-T01",
+      "evidence": [],
+      "remaining_steps": [],
+      "blockers": [],
+      "updated_at": "2026-11-18T03:10:31Z"
+    },
+    {
+      "id": "M08-T02",
+      "title": "Integrate audio and feedback",
+      "milestone": "M08",
+      "depends_on": [
+        "M08-T01"
+      ],
+      "status": "not_started",
+      "spec_ref": "docs/05_BUILD_ROADMAP.md",
+      "acceptance_key": "M08-T02",
+      "evidence": [],
+      "remaining_steps": [],
+      "blockers": [],
+      "updated_at": "2026-11-18T03:10:31Z"
+    },
+    {
+      "id": "M08-T03",
+      "title": "Finish menus HUD and settings",
+      "milestone": "M08",
+      "depends_on": [
+        "M08-T02"
+      ],
+      "status": "not_started",
+      "spec_ref": "docs/05_BUILD_ROADMAP.md",
+      "acceptance_key": "M08-T03",
+      "evidence": [],
+      "remaining_steps": [],
+      "blockers": [],
+      "updated_at": "2026-11-18T03:10:31Z"
+    },
+    {
+      "id": "M09-T01",
+      "title": "Measure and tune progression",
+      "milestone": "M09",
+      "depends_on": [
+        "M08-T03"
+      ],
+      "status": "not_started",
+      "spec_ref": "docs/05_BUILD_ROADMAP.md",
+      "acceptance_key": "M09-T01",
+      "evidence": [],
+      "remaining_steps": [],
+      "blockers": [],
+      "updated_at": "2026-11-18T03:10:31Z"
+    },
+    {
+      "id": "M09-T02",
+      "title": "Profile and improve frame pacing",
+      "milestone": "M09",
+      "depends_on": [
+        "M09-T01"
+      ],
+      "status": "not_started",
+      "spec_ref": "docs/05_BUILD_ROADMAP.md",
+      "acceptance_key": "M09-T02",
+      "evidence": [],
+      "remaining_steps": [],
+      "blockers": [],
+      "updated_at": "2026-11-18T03:10:31Z"
+    },
+    {
+      "id": "M09-T03",
+      "title": "Run full regression",
+      "milestone": "M09",
+      "depends_on": [
+        "M09-T02"
+      ],
+      "status": "not_started",
+      "spec_ref": "docs/05_BUILD_ROADMAP.md",
+      "acceptance_key": "M09-T03",
+      "evidence": [],
+      "remaining_steps": [],
+      "blockers": [],
+      "updated_at": "2026-11-18T03:10:31Z"
+    },
+    {
+      "id": "M10-T01",
+      "title": "Prepare release export",
+      "milestone": "M10",
+      "depends_on": [
+        "M09-T03"
+      ],
+      "status": "not_started",
+      "spec_ref": "docs/05_BUILD_ROADMAP.md",
+      "acceptance_key": "M10-T01",
+      "evidence": [],
+      "remaining_steps": [],
+      "blockers": [],
+      "updated_at": "2026-11-18T03:10:31Z"
+    },
+    {
+      "id": "M10-T02",
+      "title": "Test clean release installation",
+      "milestone": "M10",
+      "depends_on": [
+        "M10-T01"
+      ],
+      "status": "not_started",
+      "spec_ref": "docs/05_BUILD_ROADMAP.md",
+      "acceptance_key": "M10-T02",
+      "evidence": [],
+      "remaining_steps": [],
+      "blockers": [],
+      "updated_at": "2026-11-18T03:10:31Z"
+    },
+    {
+      "id": "M10-T03",
+      "title": "Package final handoff",
+      "milestone": "M10",
+      "depends_on": [
+        "M10-T02"
+      ],
+      "status": "not_started",
+      "spec_ref": "docs/05_BUILD_ROADMAP.md",
+      "acceptance_key": "M10-T03",
+      "evidence": [],
+      "remaining_steps": [],
+      "blockers": [],
+      "updated_at": "2026-11-18T03:10:31Z"
+    },
+    {
+      "id": "M11-T01",
+      "title": "Author and verify labeled Unity city greybox",
+      "milestone": "M11",
+      "depends_on": [],
+      "status": "done",
+      "spec_ref": "docs/05_BUILD_ROADMAP.md",
+      "acceptance_key": "M11-T01",
+      "evidence": [
+        "artifacts/qa/M11-T01/editor_verification.txt",
+        "artifacts/qa/M11-T01/unity-map-final.log",
+        "artifacts/qa/M11-T01/City_Overview.png",
+        "project/GITHUB_CONNECTION.json",
+        "project/UNITY_IMPORT_AND_GITHUB_HANDOFF.md"
+      ],
+      "remaining_steps": [],
+      "blockers": [],
+      "updated_at": "2026-11-18T19:06:05.4323531Z"
+    },
+    {
+      "id": "M11-T02",
+      "title": "Expand and scale curved street map with starter-car model",
+      "milestone": "M11",
+      "depends_on": [
+        "M11-T01"
+      ],
+      "status": "done",
+      "spec_ref": "docs/05_BUILD_ROADMAP.md",
+      "acceptance_key": "M11-T02",
+      "evidence": [
+        "artifacts/qa/M11-T02/source-report.json",
+        "artifacts/qa/M11-T02/verification.txt",
+        "artifacts/qa/M11-T02/City_Expanded.png",
+        "artifacts/qa/M11-T02/Starter_Finch.png",
+        "project/EXPANSION_HANDOFF.md"
+      ],
+      "remaining_steps": [],
+      "blockers": [],
+      "updated_at": "2026-11-18T19:28:30.8578321Z"
+    }
+  ],
+  "implementation_authorized": true,
+  "current_design_amendment": "docs/12_CONFIRMED_FEATURE_CHOICES.md",
+  "authorization_scope": "Unity map expansion, world scale and starter-car visual model"
+}

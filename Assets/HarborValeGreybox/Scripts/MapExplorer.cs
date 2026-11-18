@@ -8,7 +8,7 @@ public class MapExplorer : MonoBehaviour
 
 #if ENABLE_INPUT_SYSTEM
     static UnityEngine.InputSystem.Key ConvertKey(KeyCode key) {
-        if(key>=KeyCode.Alpha1 && key<=KeyCode.Alpha4)return (UnityEngine.InputSystem.Key)((int)UnityEngine.InputSystem.Key.Digit1+(key-KeyCode.Alpha1));
+        if(key>=KeyCode.Alpha1 && key<=KeyCode.Alpha6)return (UnityEngine.InputSystem.Key)((int)UnityEngine.InputSystem.Key.Digit1+(key-KeyCode.Alpha1));
         switch(key) {
             case KeyCode.W:return UnityEngine.InputSystem.Key.W;case KeyCode.A:return UnityEngine.InputSystem.Key.A;
             case KeyCode.S:return UnityEngine.InputSystem.Key.S;case KeyCode.D:return UnityEngine.InputSystem.Key.D;
@@ -38,18 +38,20 @@ public class MapExplorer : MonoBehaviour
     Vector3 lastMouse;
     float Horizontal => (KeyHeld(KeyCode.D)||KeyHeld(KeyCode.RightArrow)?1:0)-(KeyHeld(KeyCode.A)||KeyHeld(KeyCode.LeftArrow)?1:0);
     float Vertical => (KeyHeld(KeyCode.W)||KeyHeld(KeyCode.UpArrow)?1:0)-(KeyHeld(KeyCode.S)||KeyHeld(KeyCode.DownArrow)?1:0);
-    void Start() { view = GetComponent<Camera>(); Overview(Vector3.zero, 820); }
+    void Start() { view = GetComponent<Camera>(); Overview(new Vector3(0, 0, 250), 1650); }
     void Overview(Vector3 center, float size)
     {
         overview = true; view.orthographic = true; view.orthographicSize = size;
-        transform.SetPositionAndRotation(center + Vector3.up * 1800, Quaternion.Euler(90, 0, 0));
+        transform.SetPositionAndRotation(center + Vector3.up * 4000, Quaternion.Euler(90, 0, 0));
     }
     void Update()
     {
-        if (KeyDown(KeyCode.Alpha1)) Overview(Vector3.zero, 820);
-        if (KeyDown(KeyCode.Alpha2)) Overview(new Vector3(-430, 0, -370), 340);
-        if (KeyDown(KeyCode.Alpha3)) Overview(new Vector3(430, 0, -280), 380);
-        if (KeyDown(KeyCode.Alpha4)) Overview(new Vector3(-50, 0, 450), 390);
+        if (KeyDown(KeyCode.Alpha1)) Overview(new Vector3(0, 0, 250), 1650);
+        if (KeyDown(KeyCode.Alpha2)) Overview(new Vector3(-840, 0, -400), 620);
+        if (KeyDown(KeyCode.Alpha3)) Overview(new Vector3(550, 0, -190), 700);
+        if (KeyDown(KeyCode.Alpha4)) Overview(new Vector3(-100, 0, 1000), 750);
+        if (KeyDown(KeyCode.Alpha5)) CarView(false);
+        if (KeyDown(KeyCode.Alpha6)) CarView(true);
         if (KeyDown(KeyCode.F)) {
             overview = false; view.orthographic = false;
             transform.SetPositionAndRotation(new Vector3(0, 700, -900), Quaternion.Euler(35, 0, 0)); yaw = 0; pitch = 35;
@@ -63,7 +65,7 @@ public class MapExplorer : MonoBehaviour
         if (overview) {
             Vector3 d = new Vector3(Horizontal, 0, Vertical);
             transform.position += d * speed;
-            view.orthographicSize = Mathf.Clamp(view.orthographicSize - Scroll * 40, 65, 1200);
+            view.orthographicSize = Mathf.Clamp(view.orthographicSize - Scroll * 40, 3, 2200);
         } else {
             if (RightHeld) {
                 Vector3 delta=MousePosition-lastMouse;
@@ -75,11 +77,20 @@ public class MapExplorer : MonoBehaviour
         }
         lastMouse=MousePosition;
     }
+    void CarView(bool street) {
+        var car=FindFirstObjectByType<StarterCarSpecification>(); if(car==null)return;
+        overview=false; view.orthographic=false; view.fieldOfView=street?55:38;
+        Vector3 offset=street?new Vector3(14,4,22):new Vector3(5.5f,2.8f,6);
+        transform.position=car.transform.TransformPoint(offset);
+        transform.LookAt(car.transform.position+Vector3.up*.75f);
+        yaw=transform.eulerAngles.y; pitch=transform.eulerAngles.x;
+    }
     void OnGUI()
     {
-        GUI.Box(new Rect(14, 14, 530, 114), "HARBOR VALE / UNITY GREYBOX");
-        GUI.Label(new Rect(28, 42, 510, 90), "1 City  |  2 Dockside  |  3 Midtown  |  4 Ridgeway\nF Fly mode: hold RMB to look, WASD move, Q/E height, Shift faster\nOverview: WASD pan, wheel zoom. L labels on/off\nTeal services / amber fuel / blue police / purple events / gray blocks");
+        GUI.Box(new Rect(14, 14, 670, 136), "HARBOR VALE / UNITY GREYBOX");
+        GUI.Label(new Rect(28, 42, 650, 110), "1 City  |  2 Dockside  |  3 Midtown  |  4 Ridgeway | 5 Starter car | 6 Street\nF Fly mode: hold RMB to look, WASD move, Q/E height, Shift faster\nOverview: WASD pan, wheel zoom. L labels on/off\nTeal services / amber fuel / blue police / purple events / gray blocks\nScale: 1 unit = 1 m. Finch: 4.05 m. Two-lane road: 7.2 m.");
     }
 }
 
 }
+

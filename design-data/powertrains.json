@@ -1,0 +1,3810 @@
+{
+  "schema_version": 1,
+  "status": "proposed_fictional_game_tuning_not_measured_vehicle_data",
+  "units": {
+    "rpm": "revolutions_per_minute",
+    "torque": "net_crankshaft_newton_metres",
+    "power": "kilowatts_derived_from_torque_times_rpm_divided_by_9549_2966",
+    "length": "metres",
+    "time": "seconds"
+  },
+  "curve_interpolation": "piecewise_linear_torque_over_rpm",
+  "peak_power_rule": "maximum_over_all_knots_and_in_segment_stationary_points",
+  "path_purchase_rule": "choose_path_with_stage_1_then_lock_path_for_v1",
+  "engine_stage_purchase_rule": "next_stage_only_individually_paid_step",
+  "engine_stage_price_scaling_source": "upgrades.json:price_scaling",
+  "boost_rule": "steady_curves_already_include_rpm_threshold_no_second_rpm_boost_multiplier",
+  "supercharger_rule": "net_curve_includes_drive_losses_no_second_parasitic_deduction",
+  "shift_latency_source": "cars.json:shift_seconds_times_installed_transmission_stage_effect",
+  "powertrains": [
+    {
+      "id": "pt_finch",
+      "car_id": "car_finch",
+      "display_name": "1.4 L inline-four",
+      "displacement_l": 1.4,
+      "cylinder_count": 4,
+      "authored_peak_power_limit_kw": 90,
+      "gearbox": {
+        "forward_ratios": [
+          3.55,
+          2,
+          1.36,
+          1.03,
+          0.82
+        ],
+        "reverse_ratio": 3.2,
+        "final_drive": 4.1,
+        "wheel_radius_m": 0.29,
+        "drivetrain_efficiency": 0.9,
+        "base_shift_seconds_source": "cars.json:shift_seconds"
+      },
+      "stock": {
+        "id": "cfg_finch_stock",
+        "aspiration": "naturally_aspirated",
+        "idle_rpm": 900,
+        "redline_rpm": 6500,
+        "soft_limiter_rpm": 6400,
+        "upshift_rpm": 6200,
+        "downshift_rpm": 2200,
+        "launch_target_rpm": 1800,
+        "steady_wot_torque_curve_nm": [
+          [
+            900,
+            74
+          ],
+          [
+            1500,
+            95
+          ],
+          [
+            2500,
+            111
+          ],
+          [
+            3500,
+            116
+          ],
+          [
+            4500,
+            119
+          ],
+          [
+            5500,
+            113
+          ],
+          [
+            6200,
+            100
+          ],
+          [
+            6500,
+            90
+          ]
+        ]
+      },
+      "paths": [
+        {
+          "id": "path_finch_na",
+          "display_name": "Naturally aspirated response",
+          "path_type": "naturally_aspirated",
+          "conversion_begins_at_stage": null,
+          "choice_locked_after_stage_1": true,
+          "stages": [
+            {
+              "stage": 1,
+              "paid_reference_price": 550,
+              "min_reputation": 0,
+              "required_transmission_stage": 0,
+              "included_hardware": [
+                "Baseline core-readiness check; repairs quoted separately",
+                "ECU and ignition calibration",
+                "Intake/exhaust breathing package"
+              ],
+              "configuration": {
+                "id": "cfg_finch_na_s1",
+                "aspiration": "naturally_aspirated",
+                "idle_rpm": 900,
+                "redline_rpm": 6500,
+                "soft_limiter_rpm": 6400,
+                "upshift_rpm": 6200,
+                "downshift_rpm": 2200,
+                "launch_target_rpm": 1800,
+                "steady_wot_torque_curve_nm": [
+                  [
+                    900,
+                    76
+                  ],
+                  [
+                    1500,
+                    99
+                  ],
+                  [
+                    2500,
+                    115
+                  ],
+                  [
+                    3500,
+                    121
+                  ],
+                  [
+                    4500,
+                    125
+                  ],
+                  [
+                    5500,
+                    120
+                  ],
+                  [
+                    6200,
+                    108
+                  ],
+                  [
+                    6500,
+                    97
+                  ]
+                ]
+              }
+            },
+            {
+              "stage": 2,
+              "paid_reference_price": 800,
+              "min_reputation": 150,
+              "required_transmission_stage": 0,
+              "included_hardware": [
+                "Matched intake/exhaust and mild cam package",
+                "Fueling calibration"
+              ],
+              "configuration": {
+                "id": "cfg_finch_na_s2",
+                "aspiration": "naturally_aspirated",
+                "idle_rpm": 900,
+                "redline_rpm": 6500,
+                "soft_limiter_rpm": 6400,
+                "upshift_rpm": 6200,
+                "downshift_rpm": 2200,
+                "launch_target_rpm": 1800,
+                "steady_wot_torque_curve_nm": [
+                  [
+                    900,
+                    78
+                  ],
+                  [
+                    1500,
+                    102
+                  ],
+                  [
+                    2500,
+                    119
+                  ],
+                  [
+                    3500,
+                    127
+                  ],
+                  [
+                    4500,
+                    132
+                  ],
+                  [
+                    5500,
+                    129
+                  ],
+                  [
+                    6200,
+                    118
+                  ],
+                  [
+                    6500,
+                    108
+                  ]
+                ]
+              }
+            },
+            {
+              "stage": 3,
+              "paid_reference_price": 1600,
+              "min_reputation": 500,
+              "required_transmission_stage": 1,
+              "included_hardware": [
+                "High-lift cams and valvetrain package",
+                "Head-flow improvement",
+                "Matched fueling calibration"
+              ],
+              "configuration": {
+                "id": "cfg_finch_na_s3",
+                "aspiration": "naturally_aspirated",
+                "idle_rpm": 900,
+                "redline_rpm": 6500,
+                "soft_limiter_rpm": 6400,
+                "upshift_rpm": 6200,
+                "downshift_rpm": 2200,
+                "launch_target_rpm": 1800,
+                "steady_wot_torque_curve_nm": [
+                  [
+                    900,
+                    79
+                  ],
+                  [
+                    1500,
+                    103
+                  ],
+                  [
+                    2500,
+                    121
+                  ],
+                  [
+                    3500,
+                    132
+                  ],
+                  [
+                    4500,
+                    141
+                  ],
+                  [
+                    5500,
+                    141
+                  ],
+                  [
+                    6200,
+                    133
+                  ],
+                  [
+                    6500,
+                    124
+                  ]
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pt_courier",
+      "car_id": "car_courier",
+      "display_name": "2.0 L inline-four",
+      "displacement_l": 2,
+      "cylinder_count": 4,
+      "authored_peak_power_limit_kw": 170,
+      "gearbox": {
+        "forward_ratios": [
+          3.5,
+          2.1,
+          1.4,
+          1,
+          0.81
+        ],
+        "reverse_ratio": 3.2,
+        "final_drive": 3.9,
+        "wheel_radius_m": 0.305,
+        "drivetrain_efficiency": 0.88,
+        "base_shift_seconds_source": "cars.json:shift_seconds"
+      },
+      "stock": {
+        "id": "cfg_courier_stock",
+        "aspiration": "naturally_aspirated",
+        "idle_rpm": 900,
+        "redline_rpm": 6500,
+        "soft_limiter_rpm": 6400,
+        "upshift_rpm": 6200,
+        "downshift_rpm": 2200,
+        "launch_target_rpm": 1800,
+        "steady_wot_torque_curve_nm": [
+          [
+            900,
+            95
+          ],
+          [
+            1500,
+            120
+          ],
+          [
+            2500,
+            145
+          ],
+          [
+            3500,
+            155
+          ],
+          [
+            4500,
+            163
+          ],
+          [
+            5500,
+            147
+          ],
+          [
+            6200,
+            128
+          ],
+          [
+            6500,
+            115
+          ]
+        ]
+      },
+      "paths": [
+        {
+          "id": "path_courier_na",
+          "display_name": "Naturally aspirated response",
+          "path_type": "naturally_aspirated",
+          "conversion_begins_at_stage": null,
+          "choice_locked_after_stage_1": true,
+          "stages": [
+            {
+              "stage": 1,
+              "paid_reference_price": 550,
+              "min_reputation": 0,
+              "required_transmission_stage": 0,
+              "included_hardware": [
+                "Baseline core-readiness check; repairs quoted separately",
+                "ECU and ignition calibration",
+                "Intake/exhaust breathing package"
+              ],
+              "configuration": {
+                "id": "cfg_courier_na_s1",
+                "aspiration": "naturally_aspirated",
+                "idle_rpm": 900,
+                "redline_rpm": 6500,
+                "soft_limiter_rpm": 6400,
+                "upshift_rpm": 6200,
+                "downshift_rpm": 2200,
+                "launch_target_rpm": 1800,
+                "steady_wot_torque_curve_nm": [
+                  [
+                    900,
+                    98
+                  ],
+                  [
+                    1500,
+                    126
+                  ],
+                  [
+                    2500,
+                    151
+                  ],
+                  [
+                    3500,
+                    163
+                  ],
+                  [
+                    4500,
+                    171
+                  ],
+                  [
+                    5500,
+                    158
+                  ],
+                  [
+                    6200,
+                    139
+                  ],
+                  [
+                    6500,
+                    125
+                  ]
+                ]
+              }
+            },
+            {
+              "stage": 2,
+              "paid_reference_price": 800,
+              "min_reputation": 150,
+              "required_transmission_stage": 0,
+              "included_hardware": [
+                "Matched intake/exhaust and mild cam package",
+                "Fueling calibration"
+              ],
+              "configuration": {
+                "id": "cfg_courier_na_s2",
+                "aspiration": "naturally_aspirated",
+                "idle_rpm": 900,
+                "redline_rpm": 6500,
+                "soft_limiter_rpm": 6400,
+                "upshift_rpm": 6200,
+                "downshift_rpm": 2200,
+                "launch_target_rpm": 1800,
+                "steady_wot_torque_curve_nm": [
+                  [
+                    900,
+                    100
+                  ],
+                  [
+                    1500,
+                    128
+                  ],
+                  [
+                    2500,
+                    155
+                  ],
+                  [
+                    3500,
+                    170
+                  ],
+                  [
+                    4500,
+                    181
+                  ],
+                  [
+                    5500,
+                    173
+                  ],
+                  [
+                    6200,
+                    156
+                  ],
+                  [
+                    6500,
+                    143
+                  ]
+                ]
+              }
+            },
+            {
+              "stage": 3,
+              "paid_reference_price": 1600,
+              "min_reputation": 500,
+              "required_transmission_stage": 1,
+              "included_hardware": [
+                "High-lift cams and valvetrain package",
+                "Head-flow improvement",
+                "Matched fueling calibration"
+              ],
+              "configuration": {
+                "id": "cfg_courier_na_s3",
+                "aspiration": "naturally_aspirated",
+                "idle_rpm": 900,
+                "redline_rpm": 6500,
+                "soft_limiter_rpm": 6400,
+                "upshift_rpm": 6200,
+                "downshift_rpm": 2200,
+                "launch_target_rpm": 1800,
+                "steady_wot_torque_curve_nm": [
+                  [
+                    900,
+                    100
+                  ],
+                  [
+                    1500,
+                    130
+                  ],
+                  [
+                    2500,
+                    157
+                  ],
+                  [
+                    3500,
+                    175
+                  ],
+                  [
+                    4500,
+                    190
+                  ],
+                  [
+                    5500,
+                    188
+                  ],
+                  [
+                    6200,
+                    174
+                  ],
+                  [
+                    6500,
+                    160
+                  ]
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "path_courier_turbo",
+          "display_name": "Turbo conversion",
+          "path_type": "turbocharged",
+          "conversion_begins_at_stage": 2,
+          "choice_locked_after_stage_1": true,
+          "stages": [
+            {
+              "stage": 1,
+              "paid_reference_price": 550,
+              "min_reputation": 0,
+              "required_transmission_stage": 0,
+              "included_hardware": [
+                "Baseline core-readiness check; repairs quoted separately",
+                "ECU and ignition calibration",
+                "Intake/exhaust breathing package"
+              ],
+              "configuration": {
+                "id": "cfg_courier_turbo_s1",
+                "aspiration": "naturally_aspirated",
+                "idle_rpm": 900,
+                "redline_rpm": 6500,
+                "soft_limiter_rpm": 6400,
+                "upshift_rpm": 6200,
+                "downshift_rpm": 2200,
+                "launch_target_rpm": 1800,
+                "steady_wot_torque_curve_nm": [
+                  [
+                    900,
+                    98
+                  ],
+                  [
+                    1500,
+                    126
+                  ],
+                  [
+                    2500,
+                    151
+                  ],
+                  [
+                    3500,
+                    163
+                  ],
+                  [
+                    4500,
+                    171
+                  ],
+                  [
+                    5500,
+                    158
+                  ],
+                  [
+                    6200,
+                    139
+                  ],
+                  [
+                    6500,
+                    125
+                  ]
+                ]
+              }
+            },
+            {
+              "stage": 2,
+              "paid_reference_price": 2500,
+              "min_reputation": 150,
+              "required_transmission_stage": 1,
+              "included_hardware": [
+                "Low-boost turbo conversion and manifold",
+                "Intercooler and intake plumbing",
+                "Fuel pump/injector package",
+                "Matched ECU calibration"
+              ],
+              "configuration": {
+                "id": "cfg_courier_turbo_s2",
+                "aspiration": "turbocharged",
+                "idle_rpm": 900,
+                "redline_rpm": 6500,
+                "soft_limiter_rpm": 6400,
+                "upshift_rpm": 6200,
+                "downshift_rpm": 2200,
+                "launch_target_rpm": 1800,
+                "steady_wot_torque_curve_nm": [
+                  [
+                    900,
+                    98
+                  ],
+                  [
+                    1500,
+                    126
+                  ],
+                  [
+                    2000,
+                    138.5
+                  ],
+                  [
+                    2500,
+                    170
+                  ],
+                  [
+                    3500,
+                    215
+                  ],
+                  [
+                    4500,
+                    238
+                  ],
+                  [
+                    5500,
+                    225
+                  ],
+                  [
+                    6200,
+                    200
+                  ],
+                  [
+                    6500,
+                    180
+                  ]
+                ],
+                "off_boost_torque_curve_nm": [
+                  [
+                    900,
+                    98
+                  ],
+                  [
+                    1500,
+                    126
+                  ],
+                  [
+                    2000,
+                    138.5
+                  ],
+                  [
+                    2500,
+                    151
+                  ],
+                  [
+                    3500,
+                    163
+                  ],
+                  [
+                    4500,
+                    171
+                  ],
+                  [
+                    5500,
+                    158
+                  ],
+                  [
+                    6200,
+                    139
+                  ],
+                  [
+                    6500,
+                    125
+                  ]
+                ],
+                "boost_threshold_rpm": 2000,
+                "full_boost_rpm": 3500,
+                "spool_rise_seconds": 0.55,
+                "spool_fall_seconds": 0.25
+              }
+            },
+            {
+              "stage": 3,
+              "paid_reference_price": 4500,
+              "min_reputation": 500,
+              "required_transmission_stage": 2,
+              "included_hardware": [
+                "Larger turbo and boost-control package",
+                "Forged internals",
+                "Higher-capacity intercooler and fueling",
+                "Final ECU calibration"
+              ],
+              "configuration": {
+                "id": "cfg_courier_turbo_s3",
+                "aspiration": "turbocharged",
+                "idle_rpm": 900,
+                "redline_rpm": 6500,
+                "soft_limiter_rpm": 6400,
+                "upshift_rpm": 6200,
+                "downshift_rpm": 2200,
+                "launch_target_rpm": 1800,
+                "steady_wot_torque_curve_nm": [
+                  [
+                    900,
+                    98
+                  ],
+                  [
+                    1500,
+                    126
+                  ],
+                  [
+                    2400,
+                    148.5
+                  ],
+                  [
+                    2500,
+                    165
+                  ],
+                  [
+                    3500,
+                    240
+                  ],
+                  [
+                    4500,
+                    285
+                  ],
+                  [
+                    5500,
+                    280
+                  ],
+                  [
+                    6200,
+                    250
+                  ],
+                  [
+                    6500,
+                    225
+                  ]
+                ],
+                "off_boost_torque_curve_nm": [
+                  [
+                    900,
+                    98
+                  ],
+                  [
+                    1500,
+                    126
+                  ],
+                  [
+                    2400,
+                    148.5
+                  ],
+                  [
+                    2500,
+                    151
+                  ],
+                  [
+                    3500,
+                    163
+                  ],
+                  [
+                    4500,
+                    171
+                  ],
+                  [
+                    5500,
+                    158
+                  ],
+                  [
+                    6200,
+                    139
+                  ],
+                  [
+                    6500,
+                    125
+                  ]
+                ],
+                "boost_threshold_rpm": 2400,
+                "full_boost_rpm": 4500,
+                "spool_rise_seconds": 0.85,
+                "spool_fall_seconds": 0.3
+              }
+            }
+          ]
+        },
+        {
+          "id": "path_courier_supercharger",
+          "display_name": "Positive-displacement supercharger conversion",
+          "path_type": "positive_displacement_supercharged",
+          "conversion_begins_at_stage": 2,
+          "choice_locked_after_stage_1": true,
+          "stages": [
+            {
+              "stage": 1,
+              "paid_reference_price": 550,
+              "min_reputation": 0,
+              "required_transmission_stage": 0,
+              "included_hardware": [
+                "Baseline core-readiness check; repairs quoted separately",
+                "ECU and ignition calibration",
+                "Intake/exhaust breathing package"
+              ],
+              "configuration": {
+                "id": "cfg_courier_supercharger_s1",
+                "aspiration": "naturally_aspirated",
+                "idle_rpm": 900,
+                "redline_rpm": 6500,
+                "soft_limiter_rpm": 6400,
+                "upshift_rpm": 6200,
+                "downshift_rpm": 2200,
+                "launch_target_rpm": 1800,
+                "steady_wot_torque_curve_nm": [
+                  [
+                    900,
+                    98
+                  ],
+                  [
+                    1500,
+                    126
+                  ],
+                  [
+                    2500,
+                    151
+                  ],
+                  [
+                    3500,
+                    163
+                  ],
+                  [
+                    4500,
+                    171
+                  ],
+                  [
+                    5500,
+                    158
+                  ],
+                  [
+                    6200,
+                    139
+                  ],
+                  [
+                    6500,
+                    125
+                  ]
+                ]
+              }
+            },
+            {
+              "stage": 2,
+              "paid_reference_price": 2500,
+              "min_reputation": 150,
+              "required_transmission_stage": 1,
+              "included_hardware": [
+                "Positive-displacement supercharger conversion and belt drive",
+                "Charge cooler",
+                "Fuel pump/injector package",
+                "Matched ECU calibration"
+              ],
+              "configuration": {
+                "id": "cfg_courier_supercharger_s2",
+                "aspiration": "positive_displacement_supercharged",
+                "idle_rpm": 900,
+                "redline_rpm": 6500,
+                "soft_limiter_rpm": 6400,
+                "upshift_rpm": 6200,
+                "downshift_rpm": 2200,
+                "launch_target_rpm": 1800,
+                "steady_wot_torque_curve_nm": [
+                  [
+                    900,
+                    125
+                  ],
+                  [
+                    1500,
+                    160
+                  ],
+                  [
+                    2500,
+                    190
+                  ],
+                  [
+                    3500,
+                    205
+                  ],
+                  [
+                    4500,
+                    220
+                  ],
+                  [
+                    5500,
+                    218
+                  ],
+                  [
+                    6200,
+                    195
+                  ],
+                  [
+                    6500,
+                    178
+                  ]
+                ]
+              }
+            },
+            {
+              "stage": 3,
+              "paid_reference_price": 4500,
+              "min_reputation": 500,
+              "required_transmission_stage": 2,
+              "included_hardware": [
+                "Higher-output positive-displacement supercharger/pulley package",
+                "Forged internals",
+                "Higher-capacity charge cooling and fueling",
+                "Final ECU calibration"
+              ],
+              "configuration": {
+                "id": "cfg_courier_supercharger_s3",
+                "aspiration": "positive_displacement_supercharged",
+                "idle_rpm": 900,
+                "redline_rpm": 6500,
+                "soft_limiter_rpm": 6400,
+                "upshift_rpm": 6200,
+                "downshift_rpm": 2200,
+                "launch_target_rpm": 1800,
+                "steady_wot_torque_curve_nm": [
+                  [
+                    900,
+                    137
+                  ],
+                  [
+                    1500,
+                    180
+                  ],
+                  [
+                    2500,
+                    225
+                  ],
+                  [
+                    3500,
+                    250
+                  ],
+                  [
+                    4500,
+                    267
+                  ],
+                  [
+                    5500,
+                    262
+                  ],
+                  [
+                    6200,
+                    238
+                  ],
+                  [
+                    6500,
+                    215
+                  ]
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pt_lynx",
+      "car_id": "car_lynx",
+      "display_name": "1.6 L factory-turbo inline-four",
+      "displacement_l": 1.6,
+      "cylinder_count": 4,
+      "authored_peak_power_limit_kw": 200,
+      "gearbox": {
+        "forward_ratios": [
+          3.36,
+          2.09,
+          1.47,
+          1.1,
+          0.87,
+          0.72
+        ],
+        "reverse_ratio": 3.2,
+        "final_drive": 4.1,
+        "wheel_radius_m": 0.31,
+        "drivetrain_efficiency": 0.9,
+        "base_shift_seconds_source": "cars.json:shift_seconds"
+      },
+      "stock": {
+        "id": "cfg_lynx_stock",
+        "aspiration": "turbocharged",
+        "idle_rpm": 900,
+        "redline_rpm": 6500,
+        "soft_limiter_rpm": 6400,
+        "upshift_rpm": 6200,
+        "downshift_rpm": 2200,
+        "launch_target_rpm": 1800,
+        "steady_wot_torque_curve_nm": [
+          [
+            900,
+            85
+          ],
+          [
+            1500,
+            105
+          ],
+          [
+            2200,
+            210
+          ],
+          [
+            3000,
+            235
+          ],
+          [
+            4000,
+            240
+          ],
+          [
+            5000,
+            240
+          ],
+          [
+            6000,
+            205
+          ],
+          [
+            6500,
+            180
+          ]
+        ],
+        "off_boost_torque_curve_nm": [
+          [
+            900,
+            85
+          ],
+          [
+            1500,
+            105
+          ],
+          [
+            2200,
+            130
+          ],
+          [
+            3000,
+            150
+          ],
+          [
+            4000,
+            165
+          ],
+          [
+            5000,
+            165
+          ],
+          [
+            6000,
+            150
+          ],
+          [
+            6500,
+            135
+          ]
+        ],
+        "boost_threshold_rpm": 1500,
+        "full_boost_rpm": 2500,
+        "spool_rise_seconds": 0.35,
+        "spool_fall_seconds": 0.18
+      },
+      "paths": [
+        {
+          "id": "path_lynx_turbo",
+          "display_name": "Factory turbo development",
+          "path_type": "turbocharged",
+          "conversion_begins_at_stage": null,
+          "choice_locked_after_stage_1": true,
+          "stages": [
+            {
+              "stage": 1,
+              "paid_reference_price": 550,
+              "min_reputation": 0,
+              "required_transmission_stage": 0,
+              "included_hardware": [
+                "ECU calibration within stock turbo range",
+                "Charge-air and fueling calibration"
+              ],
+              "configuration": {
+                "id": "cfg_lynx_turbo_s1",
+                "aspiration": "turbocharged",
+                "idle_rpm": 900,
+                "redline_rpm": 6500,
+                "soft_limiter_rpm": 6400,
+                "upshift_rpm": 6200,
+                "downshift_rpm": 2200,
+                "launch_target_rpm": 1800,
+                "steady_wot_torque_curve_nm": [
+                  [
+                    900,
+                    85
+                  ],
+                  [
+                    1500,
+                    105
+                  ],
+                  [
+                    2200,
+                    225
+                  ],
+                  [
+                    3000,
+                    252
+                  ],
+                  [
+                    4000,
+                    258
+                  ],
+                  [
+                    5000,
+                    256
+                  ],
+                  [
+                    6000,
+                    218
+                  ],
+                  [
+                    6500,
+                    190
+                  ]
+                ],
+                "off_boost_torque_curve_nm": [
+                  [
+                    900,
+                    85
+                  ],
+                  [
+                    1500,
+                    105
+                  ],
+                  [
+                    2200,
+                    130
+                  ],
+                  [
+                    3000,
+                    150
+                  ],
+                  [
+                    4000,
+                    165
+                  ],
+                  [
+                    5000,
+                    165
+                  ],
+                  [
+                    6000,
+                    150
+                  ],
+                  [
+                    6500,
+                    135
+                  ]
+                ],
+                "boost_threshold_rpm": 1500,
+                "full_boost_rpm": 2500,
+                "spool_rise_seconds": 0.35,
+                "spool_fall_seconds": 0.18
+              }
+            },
+            {
+              "stage": 2,
+              "paid_reference_price": 1500,
+              "min_reputation": 150,
+              "required_transmission_stage": 1,
+              "included_hardware": [
+                "Higher-capacity intercooler",
+                "Fuel pump/injector package",
+                "Revised boost control"
+              ],
+              "configuration": {
+                "id": "cfg_lynx_turbo_s2",
+                "aspiration": "turbocharged",
+                "idle_rpm": 900,
+                "redline_rpm": 6500,
+                "soft_limiter_rpm": 6400,
+                "upshift_rpm": 6200,
+                "downshift_rpm": 2200,
+                "launch_target_rpm": 1800,
+                "steady_wot_torque_curve_nm": [
+                  [
+                    900,
+                    85
+                  ],
+                  [
+                    1500,
+                    105
+                  ],
+                  [
+                    1600,
+                    108.57142857142857
+                  ],
+                  [
+                    2200,
+                    235
+                  ],
+                  [
+                    3000,
+                    280
+                  ],
+                  [
+                    4000,
+                    295
+                  ],
+                  [
+                    5000,
+                    292
+                  ],
+                  [
+                    6000,
+                    255
+                  ],
+                  [
+                    6500,
+                    225
+                  ]
+                ],
+                "off_boost_torque_curve_nm": [
+                  [
+                    900,
+                    85
+                  ],
+                  [
+                    1500,
+                    105
+                  ],
+                  [
+                    1600,
+                    108.57142857142857
+                  ],
+                  [
+                    2200,
+                    130
+                  ],
+                  [
+                    3000,
+                    150
+                  ],
+                  [
+                    4000,
+                    165
+                  ],
+                  [
+                    5000,
+                    165
+                  ],
+                  [
+                    6000,
+                    150
+                  ],
+                  [
+                    6500,
+                    135
+                  ]
+                ],
+                "boost_threshold_rpm": 1600,
+                "full_boost_rpm": 3000,
+                "spool_rise_seconds": 0.4,
+                "spool_fall_seconds": 0.2
+              }
+            },
+            {
+              "stage": 3,
+              "paid_reference_price": 3000,
+              "min_reputation": 500,
+              "required_transmission_stage": 2,
+              "included_hardware": [
+                "Larger turbo package",
+                "Forged bottom-end package",
+                "Higher-capacity intercooling and matched fueling"
+              ],
+              "configuration": {
+                "id": "cfg_lynx_turbo_s3",
+                "aspiration": "turbocharged",
+                "idle_rpm": 900,
+                "redline_rpm": 6500,
+                "soft_limiter_rpm": 6400,
+                "upshift_rpm": 6200,
+                "downshift_rpm": 2200,
+                "launch_target_rpm": 1800,
+                "steady_wot_torque_curve_nm": [
+                  [
+                    900,
+                    85
+                  ],
+                  [
+                    1500,
+                    105
+                  ],
+                  [
+                    1900,
+                    119.28571428571429
+                  ],
+                  [
+                    2200,
+                    225
+                  ],
+                  [
+                    3000,
+                    295
+                  ],
+                  [
+                    4000,
+                    335
+                  ],
+                  [
+                    5000,
+                    340
+                  ],
+                  [
+                    6000,
+                    300
+                  ],
+                  [
+                    6500,
+                    265
+                  ]
+                ],
+                "off_boost_torque_curve_nm": [
+                  [
+                    900,
+                    85
+                  ],
+                  [
+                    1500,
+                    105
+                  ],
+                  [
+                    1900,
+                    119.28571428571429
+                  ],
+                  [
+                    2200,
+                    130
+                  ],
+                  [
+                    3000,
+                    150
+                  ],
+                  [
+                    4000,
+                    165
+                  ],
+                  [
+                    5000,
+                    165
+                  ],
+                  [
+                    6000,
+                    150
+                  ],
+                  [
+                    6500,
+                    135
+                  ]
+                ],
+                "boost_threshold_rpm": 1900,
+                "full_boost_rpm": 4000,
+                "spool_rise_seconds": 0.6,
+                "spool_fall_seconds": 0.25
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pt_switch",
+      "car_id": "car_switch",
+      "display_name": "2.0 L factory-turbo inline-four",
+      "displacement_l": 2,
+      "cylinder_count": 4,
+      "authored_peak_power_limit_kw": 240,
+      "gearbox": {
+        "forward_ratios": [
+          3.5,
+          2.15,
+          1.5,
+          1.15,
+          0.92,
+          0.76
+        ],
+        "reverse_ratio": 3.2,
+        "final_drive": 3.9,
+        "wheel_radius_m": 0.32,
+        "drivetrain_efficiency": 0.85,
+        "base_shift_seconds_source": "cars.json:shift_seconds"
+      },
+      "stock": {
+        "id": "cfg_switch_stock",
+        "aspiration": "turbocharged",
+        "idle_rpm": 900,
+        "redline_rpm": 6500,
+        "soft_limiter_rpm": 6400,
+        "upshift_rpm": 6200,
+        "downshift_rpm": 2200,
+        "launch_target_rpm": 1800,
+        "steady_wot_torque_curve_nm": [
+          [
+            900,
+            100
+          ],
+          [
+            1500,
+            125
+          ],
+          [
+            2200,
+            255
+          ],
+          [
+            3000,
+            280
+          ],
+          [
+            4000,
+            285
+          ],
+          [
+            5000,
+            285
+          ],
+          [
+            6000,
+            245
+          ],
+          [
+            6500,
+            215
+          ]
+        ],
+        "off_boost_torque_curve_nm": [
+          [
+            900,
+            100
+          ],
+          [
+            1500,
+            125
+          ],
+          [
+            2200,
+            155
+          ],
+          [
+            3000,
+            180
+          ],
+          [
+            4000,
+            195
+          ],
+          [
+            5000,
+            195
+          ],
+          [
+            6000,
+            180
+          ],
+          [
+            6500,
+            160
+          ]
+        ],
+        "boost_threshold_rpm": 1500,
+        "full_boost_rpm": 2700,
+        "spool_rise_seconds": 0.32,
+        "spool_fall_seconds": 0.18
+      },
+      "paths": [
+        {
+          "id": "path_switch_turbo",
+          "display_name": "Factory turbo development",
+          "path_type": "turbocharged",
+          "conversion_begins_at_stage": null,
+          "choice_locked_after_stage_1": true,
+          "stages": [
+            {
+              "stage": 1,
+              "paid_reference_price": 550,
+              "min_reputation": 0,
+              "required_transmission_stage": 0,
+              "included_hardware": [
+                "ECU calibration within stock turbo range",
+                "Charge-air and fueling calibration"
+              ],
+              "configuration": {
+                "id": "cfg_switch_turbo_s1",
+                "aspiration": "turbocharged",
+                "idle_rpm": 900,
+                "redline_rpm": 6500,
+                "soft_limiter_rpm": 6400,
+                "upshift_rpm": 6200,
+                "downshift_rpm": 2200,
+                "launch_target_rpm": 1800,
+                "steady_wot_torque_curve_nm": [
+                  [
+                    900,
+                    100
+                  ],
+                  [
+                    1500,
+                    125
+                  ],
+                  [
+                    2200,
+                    270
+                  ],
+                  [
+                    3000,
+                    300
+                  ],
+                  [
+                    4000,
+                    310
+                  ],
+                  [
+                    5000,
+                    305
+                  ],
+                  [
+                    6000,
+                    263
+                  ],
+                  [
+                    6500,
+                    230
+                  ]
+                ],
+                "off_boost_torque_curve_nm": [
+                  [
+                    900,
+                    100
+                  ],
+                  [
+                    1500,
+                    125
+                  ],
+                  [
+                    2200,
+                    155
+                  ],
+                  [
+                    3000,
+                    180
+                  ],
+                  [
+                    4000,
+                    195
+                  ],
+                  [
+                    5000,
+                    195
+                  ],
+                  [
+                    6000,
+                    180
+                  ],
+                  [
+                    6500,
+                    160
+                  ]
+                ],
+                "boost_threshold_rpm": 1500,
+                "full_boost_rpm": 2700,
+                "spool_rise_seconds": 0.32,
+                "spool_fall_seconds": 0.18
+              }
+            },
+            {
+              "stage": 2,
+              "paid_reference_price": 1500,
+              "min_reputation": 150,
+              "required_transmission_stage": 1,
+              "included_hardware": [
+                "Higher-capacity intercooler",
+                "Fuel pump/injector package",
+                "Revised boost control"
+              ],
+              "configuration": {
+                "id": "cfg_switch_turbo_s2",
+                "aspiration": "turbocharged",
+                "idle_rpm": 900,
+                "redline_rpm": 6500,
+                "soft_limiter_rpm": 6400,
+                "upshift_rpm": 6200,
+                "downshift_rpm": 2200,
+                "launch_target_rpm": 1800,
+                "steady_wot_torque_curve_nm": [
+                  [
+                    900,
+                    100
+                  ],
+                  [
+                    1500,
+                    125
+                  ],
+                  [
+                    1700,
+                    133.57142857142858
+                  ],
+                  [
+                    2200,
+                    280
+                  ],
+                  [
+                    3000,
+                    330
+                  ],
+                  [
+                    4000,
+                    355
+                  ],
+                  [
+                    5000,
+                    355
+                  ],
+                  [
+                    6000,
+                    315
+                  ],
+                  [
+                    6500,
+                    275
+                  ]
+                ],
+                "off_boost_torque_curve_nm": [
+                  [
+                    900,
+                    100
+                  ],
+                  [
+                    1500,
+                    125
+                  ],
+                  [
+                    1700,
+                    133.57142857142858
+                  ],
+                  [
+                    2200,
+                    155
+                  ],
+                  [
+                    3000,
+                    180
+                  ],
+                  [
+                    4000,
+                    195
+                  ],
+                  [
+                    5000,
+                    195
+                  ],
+                  [
+                    6000,
+                    180
+                  ],
+                  [
+                    6500,
+                    160
+                  ]
+                ],
+                "boost_threshold_rpm": 1700,
+                "full_boost_rpm": 3100,
+                "spool_rise_seconds": 0.4,
+                "spool_fall_seconds": 0.2
+              }
+            },
+            {
+              "stage": 3,
+              "paid_reference_price": 3000,
+              "min_reputation": 500,
+              "required_transmission_stage": 2,
+              "included_hardware": [
+                "Larger turbo package",
+                "Forged bottom-end package",
+                "Higher-capacity intercooling and matched fueling"
+              ],
+              "configuration": {
+                "id": "cfg_switch_turbo_s3",
+                "aspiration": "turbocharged",
+                "idle_rpm": 900,
+                "redline_rpm": 6500,
+                "soft_limiter_rpm": 6400,
+                "upshift_rpm": 6200,
+                "downshift_rpm": 2200,
+                "launch_target_rpm": 1800,
+                "steady_wot_torque_curve_nm": [
+                  [
+                    900,
+                    100
+                  ],
+                  [
+                    1500,
+                    125
+                  ],
+                  [
+                    2000,
+                    146.42857142857142
+                  ],
+                  [
+                    2200,
+                    265
+                  ],
+                  [
+                    3000,
+                    345
+                  ],
+                  [
+                    4000,
+                    395
+                  ],
+                  [
+                    5000,
+                    405
+                  ],
+                  [
+                    6000,
+                    360
+                  ],
+                  [
+                    6500,
+                    320
+                  ]
+                ],
+                "off_boost_torque_curve_nm": [
+                  [
+                    900,
+                    100
+                  ],
+                  [
+                    1500,
+                    125
+                  ],
+                  [
+                    2000,
+                    146.42857142857142
+                  ],
+                  [
+                    2200,
+                    155
+                  ],
+                  [
+                    3000,
+                    180
+                  ],
+                  [
+                    4000,
+                    195
+                  ],
+                  [
+                    5000,
+                    195
+                  ],
+                  [
+                    6000,
+                    180
+                  ],
+                  [
+                    6500,
+                    160
+                  ]
+                ],
+                "boost_threshold_rpm": 2000,
+                "full_boost_rpm": 4200,
+                "spool_rise_seconds": 0.62,
+                "spool_fall_seconds": 0.25
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pt_sable",
+      "car_id": "car_sable",
+      "display_name": "3.0 L naturally aspirated six-cylinder",
+      "displacement_l": 3,
+      "cylinder_count": 6,
+      "authored_peak_power_limit_kw": 380,
+      "gearbox": {
+        "forward_ratios": [
+          3.2,
+          2.05,
+          1.5,
+          1.16,
+          0.93,
+          0.78
+        ],
+        "reverse_ratio": 3.2,
+        "final_drive": 3.7,
+        "wheel_radius_m": 0.325,
+        "drivetrain_efficiency": 0.88,
+        "base_shift_seconds_source": "cars.json:shift_seconds"
+      },
+      "stock": {
+        "id": "cfg_sable_stock",
+        "aspiration": "naturally_aspirated",
+        "idle_rpm": 800,
+        "redline_rpm": 7000,
+        "soft_limiter_rpm": 6900,
+        "upshift_rpm": 6700,
+        "downshift_rpm": 2200,
+        "launch_target_rpm": 1800,
+        "steady_wot_torque_curve_nm": [
+          [
+            800,
+            170
+          ],
+          [
+            1500,
+            220
+          ],
+          [
+            2500,
+            265
+          ],
+          [
+            3500,
+            305
+          ],
+          [
+            4500,
+            330
+          ],
+          [
+            5500,
+            340
+          ],
+          [
+            6500,
+            294
+          ],
+          [
+            7000,
+            255
+          ]
+        ]
+      },
+      "paths": [
+        {
+          "id": "path_sable_na",
+          "display_name": "Naturally aspirated response",
+          "path_type": "naturally_aspirated",
+          "conversion_begins_at_stage": null,
+          "choice_locked_after_stage_1": true,
+          "stages": [
+            {
+              "stage": 1,
+              "paid_reference_price": 550,
+              "min_reputation": 0,
+              "required_transmission_stage": 0,
+              "included_hardware": [
+                "Baseline core-readiness check; repairs quoted separately",
+                "ECU and ignition calibration",
+                "Intake/exhaust breathing package"
+              ],
+              "configuration": {
+                "id": "cfg_sable_na_s1",
+                "aspiration": "naturally_aspirated",
+                "idle_rpm": 800,
+                "redline_rpm": 7000,
+                "soft_limiter_rpm": 6900,
+                "upshift_rpm": 6700,
+                "downshift_rpm": 2200,
+                "launch_target_rpm": 1800,
+                "steady_wot_torque_curve_nm": [
+                  [
+                    800,
+                    175
+                  ],
+                  [
+                    1500,
+                    228
+                  ],
+                  [
+                    2500,
+                    275
+                  ],
+                  [
+                    3500,
+                    318
+                  ],
+                  [
+                    4500,
+                    345
+                  ],
+                  [
+                    5500,
+                    355
+                  ],
+                  [
+                    6500,
+                    310
+                  ],
+                  [
+                    7000,
+                    270
+                  ]
+                ]
+              }
+            },
+            {
+              "stage": 2,
+              "paid_reference_price": 800,
+              "min_reputation": 150,
+              "required_transmission_stage": 0,
+              "included_hardware": [
+                "Matched intake/exhaust and mild cam package",
+                "Fueling calibration"
+              ],
+              "configuration": {
+                "id": "cfg_sable_na_s2",
+                "aspiration": "naturally_aspirated",
+                "idle_rpm": 800,
+                "redline_rpm": 7000,
+                "soft_limiter_rpm": 6900,
+                "upshift_rpm": 6700,
+                "downshift_rpm": 2200,
+                "launch_target_rpm": 1800,
+                "steady_wot_torque_curve_nm": [
+                  [
+                    800,
+                    178
+                  ],
+                  [
+                    1500,
+                    233
+                  ],
+                  [
+                    2500,
+                    282
+                  ],
+                  [
+                    3500,
+                    330
+                  ],
+                  [
+                    4500,
+                    365
+                  ],
+                  [
+                    5500,
+                    380
+                  ],
+                  [
+                    6500,
+                    340
+                  ],
+                  [
+                    7000,
+                    300
+                  ]
+                ]
+              }
+            },
+            {
+              "stage": 3,
+              "paid_reference_price": 1600,
+              "min_reputation": 500,
+              "required_transmission_stage": 1,
+              "included_hardware": [
+                "High-lift cams and valvetrain package",
+                "Head-flow improvement",
+                "Matched fueling calibration"
+              ],
+              "configuration": {
+                "id": "cfg_sable_na_s3",
+                "aspiration": "naturally_aspirated",
+                "idle_rpm": 800,
+                "redline_rpm": 7000,
+                "soft_limiter_rpm": 6900,
+                "upshift_rpm": 6700,
+                "downshift_rpm": 2200,
+                "launch_target_rpm": 1800,
+                "steady_wot_torque_curve_nm": [
+                  [
+                    800,
+                    180
+                  ],
+                  [
+                    1500,
+                    235
+                  ],
+                  [
+                    2500,
+                    290
+                  ],
+                  [
+                    3500,
+                    345
+                  ],
+                  [
+                    4500,
+                    390
+                  ],
+                  [
+                    5500,
+                    415
+                  ],
+                  [
+                    6500,
+                    380
+                  ],
+                  [
+                    7000,
+                    340
+                  ]
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "path_sable_turbo",
+          "display_name": "Turbo conversion",
+          "path_type": "turbocharged",
+          "conversion_begins_at_stage": 2,
+          "choice_locked_after_stage_1": true,
+          "stages": [
+            {
+              "stage": 1,
+              "paid_reference_price": 550,
+              "min_reputation": 0,
+              "required_transmission_stage": 0,
+              "included_hardware": [
+                "Baseline core-readiness check; repairs quoted separately",
+                "ECU and ignition calibration",
+                "Intake/exhaust breathing package"
+              ],
+              "configuration": {
+                "id": "cfg_sable_turbo_s1",
+                "aspiration": "naturally_aspirated",
+                "idle_rpm": 800,
+                "redline_rpm": 7000,
+                "soft_limiter_rpm": 6900,
+                "upshift_rpm": 6700,
+                "downshift_rpm": 2200,
+                "launch_target_rpm": 1800,
+                "steady_wot_torque_curve_nm": [
+                  [
+                    800,
+                    175
+                  ],
+                  [
+                    1500,
+                    228
+                  ],
+                  [
+                    2500,
+                    275
+                  ],
+                  [
+                    3500,
+                    318
+                  ],
+                  [
+                    4500,
+                    345
+                  ],
+                  [
+                    5500,
+                    355
+                  ],
+                  [
+                    6500,
+                    310
+                  ],
+                  [
+                    7000,
+                    270
+                  ]
+                ]
+              }
+            },
+            {
+              "stage": 2,
+              "paid_reference_price": 2500,
+              "min_reputation": 150,
+              "required_transmission_stage": 1,
+              "included_hardware": [
+                "Low-boost turbo conversion and manifold",
+                "Intercooler and intake plumbing",
+                "Fuel pump/injector package",
+                "Matched ECU calibration"
+              ],
+              "configuration": {
+                "id": "cfg_sable_turbo_s2",
+                "aspiration": "turbocharged",
+                "idle_rpm": 800,
+                "redline_rpm": 7000,
+                "soft_limiter_rpm": 6900,
+                "upshift_rpm": 6700,
+                "downshift_rpm": 2200,
+                "launch_target_rpm": 1800,
+                "steady_wot_torque_curve_nm": [
+                  [
+                    800,
+                    175
+                  ],
+                  [
+                    1500,
+                    228
+                  ],
+                  [
+                    1800,
+                    242.1
+                  ],
+                  [
+                    2500,
+                    305
+                  ],
+                  [
+                    3500,
+                    390
+                  ],
+                  [
+                    4500,
+                    450
+                  ],
+                  [
+                    5500,
+                    460
+                  ],
+                  [
+                    6500,
+                    410
+                  ],
+                  [
+                    7000,
+                    355
+                  ]
+                ],
+                "off_boost_torque_curve_nm": [
+                  [
+                    800,
+                    175
+                  ],
+                  [
+                    1500,
+                    228
+                  ],
+                  [
+                    1800,
+                    242.1
+                  ],
+                  [
+                    2500,
+                    275
+                  ],
+                  [
+                    3500,
+                    318
+                  ],
+                  [
+                    4500,
+                    345
+                  ],
+                  [
+                    5500,
+                    355
+                  ],
+                  [
+                    6500,
+                    310
+                  ],
+                  [
+                    7000,
+                    270
+                  ]
+                ],
+                "boost_threshold_rpm": 1800,
+                "full_boost_rpm": 4000,
+                "spool_rise_seconds": 0.5,
+                "spool_fall_seconds": 0.22
+              }
+            },
+            {
+              "stage": 3,
+              "paid_reference_price": 4500,
+              "min_reputation": 500,
+              "required_transmission_stage": 2,
+              "included_hardware": [
+                "Larger turbo and boost-control package",
+                "Forged internals",
+                "Higher-capacity intercooler and fueling",
+                "Final ECU calibration"
+              ],
+              "configuration": {
+                "id": "cfg_sable_turbo_s3",
+                "aspiration": "turbocharged",
+                "idle_rpm": 800,
+                "redline_rpm": 7000,
+                "soft_limiter_rpm": 6900,
+                "upshift_rpm": 6700,
+                "downshift_rpm": 2200,
+                "launch_target_rpm": 1800,
+                "steady_wot_torque_curve_nm": [
+                  [
+                    800,
+                    175
+                  ],
+                  [
+                    1500,
+                    228
+                  ],
+                  [
+                    2200,
+                    260.9
+                  ],
+                  [
+                    2500,
+                    300
+                  ],
+                  [
+                    3500,
+                    440
+                  ],
+                  [
+                    4500,
+                    560
+                  ],
+                  [
+                    5500,
+                    590
+                  ],
+                  [
+                    6500,
+                    540
+                  ],
+                  [
+                    7000,
+                    470
+                  ]
+                ],
+                "off_boost_torque_curve_nm": [
+                  [
+                    800,
+                    175
+                  ],
+                  [
+                    1500,
+                    228
+                  ],
+                  [
+                    2200,
+                    260.9
+                  ],
+                  [
+                    2500,
+                    275
+                  ],
+                  [
+                    3500,
+                    318
+                  ],
+                  [
+                    4500,
+                    345
+                  ],
+                  [
+                    5500,
+                    355
+                  ],
+                  [
+                    6500,
+                    310
+                  ],
+                  [
+                    7000,
+                    270
+                  ]
+                ],
+                "boost_threshold_rpm": 2200,
+                "full_boost_rpm": 4800,
+                "spool_rise_seconds": 0.8,
+                "spool_fall_seconds": 0.28
+              }
+            }
+          ]
+        },
+        {
+          "id": "path_sable_supercharger",
+          "display_name": "Positive-displacement supercharger conversion",
+          "path_type": "positive_displacement_supercharged",
+          "conversion_begins_at_stage": 2,
+          "choice_locked_after_stage_1": true,
+          "stages": [
+            {
+              "stage": 1,
+              "paid_reference_price": 550,
+              "min_reputation": 0,
+              "required_transmission_stage": 0,
+              "included_hardware": [
+                "Baseline core-readiness check; repairs quoted separately",
+                "ECU and ignition calibration",
+                "Intake/exhaust breathing package"
+              ],
+              "configuration": {
+                "id": "cfg_sable_supercharger_s1",
+                "aspiration": "naturally_aspirated",
+                "idle_rpm": 800,
+                "redline_rpm": 7000,
+                "soft_limiter_rpm": 6900,
+                "upshift_rpm": 6700,
+                "downshift_rpm": 2200,
+                "launch_target_rpm": 1800,
+                "steady_wot_torque_curve_nm": [
+                  [
+                    800,
+                    175
+                  ],
+                  [
+                    1500,
+                    228
+                  ],
+                  [
+                    2500,
+                    275
+                  ],
+                  [
+                    3500,
+                    318
+                  ],
+                  [
+                    4500,
+                    345
+                  ],
+                  [
+                    5500,
+                    355
+                  ],
+                  [
+                    6500,
+                    310
+                  ],
+                  [
+                    7000,
+                    270
+                  ]
+                ]
+              }
+            },
+            {
+              "stage": 2,
+              "paid_reference_price": 2500,
+              "min_reputation": 150,
+              "required_transmission_stage": 1,
+              "included_hardware": [
+                "Positive-displacement supercharger conversion and belt drive",
+                "Charge cooler",
+                "Fuel pump/injector package",
+                "Matched ECU calibration"
+              ],
+              "configuration": {
+                "id": "cfg_sable_supercharger_s2",
+                "aspiration": "positive_displacement_supercharged",
+                "idle_rpm": 800,
+                "redline_rpm": 7000,
+                "soft_limiter_rpm": 6900,
+                "upshift_rpm": 6700,
+                "downshift_rpm": 2200,
+                "launch_target_rpm": 1800,
+                "steady_wot_torque_curve_nm": [
+                  [
+                    800,
+                    220
+                  ],
+                  [
+                    1500,
+                    285
+                  ],
+                  [
+                    2500,
+                    340
+                  ],
+                  [
+                    3500,
+                    380
+                  ],
+                  [
+                    4500,
+                    420
+                  ],
+                  [
+                    5500,
+                    440
+                  ],
+                  [
+                    6500,
+                    400
+                  ],
+                  [
+                    7000,
+                    350
+                  ]
+                ]
+              }
+            },
+            {
+              "stage": 3,
+              "paid_reference_price": 4500,
+              "min_reputation": 500,
+              "required_transmission_stage": 2,
+              "included_hardware": [
+                "Higher-output positive-displacement supercharger/pulley package",
+                "Forged internals",
+                "Higher-capacity charge cooling and fueling",
+                "Final ECU calibration"
+              ],
+              "configuration": {
+                "id": "cfg_sable_supercharger_s3",
+                "aspiration": "positive_displacement_supercharged",
+                "idle_rpm": 800,
+                "redline_rpm": 7000,
+                "soft_limiter_rpm": 6900,
+                "upshift_rpm": 6700,
+                "downshift_rpm": 2200,
+                "launch_target_rpm": 1800,
+                "steady_wot_torque_curve_nm": [
+                  [
+                    800,
+                    245
+                  ],
+                  [
+                    1500,
+                    330
+                  ],
+                  [
+                    2500,
+                    410
+                  ],
+                  [
+                    3500,
+                    470
+                  ],
+                  [
+                    4500,
+                    520
+                  ],
+                  [
+                    5500,
+                    540
+                  ],
+                  [
+                    6500,
+                    495
+                  ],
+                  [
+                    7000,
+                    430
+                  ]
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pt_quarry",
+      "car_id": "car_quarry",
+      "display_name": "2.5 L factory-turbo inline-four",
+      "displacement_l": 2.5,
+      "cylinder_count": 4,
+      "authored_peak_power_limit_kw": 350,
+      "gearbox": {
+        "forward_ratios": [
+          3.45,
+          2.12,
+          1.52,
+          1.15,
+          0.93,
+          0.78
+        ],
+        "reverse_ratio": 3.2,
+        "final_drive": 3.9,
+        "wheel_radius_m": 0.33,
+        "drivetrain_efficiency": 0.85,
+        "base_shift_seconds_source": "cars.json:shift_seconds"
+      },
+      "stock": {
+        "id": "cfg_quarry_stock",
+        "aspiration": "turbocharged",
+        "idle_rpm": 900,
+        "redline_rpm": 6700,
+        "soft_limiter_rpm": 6600,
+        "upshift_rpm": 6400,
+        "downshift_rpm": 2200,
+        "launch_target_rpm": 1800,
+        "steady_wot_torque_curve_nm": [
+          [
+            900,
+            125
+          ],
+          [
+            1600,
+            160
+          ],
+          [
+            1700,
+            165.625
+          ],
+          [
+            2400,
+            340
+          ],
+          [
+            3200,
+            395
+          ],
+          [
+            4200,
+            410
+          ],
+          [
+            5200,
+            410
+          ],
+          [
+            6200,
+            355
+          ],
+          [
+            6700,
+            310
+          ]
+        ],
+        "off_boost_torque_curve_nm": [
+          [
+            900,
+            125
+          ],
+          [
+            1600,
+            160
+          ],
+          [
+            1700,
+            165.625
+          ],
+          [
+            2400,
+            205
+          ],
+          [
+            3200,
+            235
+          ],
+          [
+            4200,
+            260
+          ],
+          [
+            5200,
+            265
+          ],
+          [
+            6200,
+            245
+          ],
+          [
+            6700,
+            220
+          ]
+        ],
+        "boost_threshold_rpm": 1700,
+        "full_boost_rpm": 3000,
+        "spool_rise_seconds": 0.4,
+        "spool_fall_seconds": 0.2
+      },
+      "paths": [
+        {
+          "id": "path_quarry_turbo",
+          "display_name": "Factory turbo development",
+          "path_type": "turbocharged",
+          "conversion_begins_at_stage": null,
+          "choice_locked_after_stage_1": true,
+          "stages": [
+            {
+              "stage": 1,
+              "paid_reference_price": 550,
+              "min_reputation": 0,
+              "required_transmission_stage": 0,
+              "included_hardware": [
+                "ECU calibration within stock turbo range",
+                "Charge-air and fueling calibration"
+              ],
+              "configuration": {
+                "id": "cfg_quarry_turbo_s1",
+                "aspiration": "turbocharged",
+                "idle_rpm": 900,
+                "redline_rpm": 6700,
+                "soft_limiter_rpm": 6600,
+                "upshift_rpm": 6400,
+                "downshift_rpm": 2200,
+                "launch_target_rpm": 1800,
+                "steady_wot_torque_curve_nm": [
+                  [
+                    900,
+                    125
+                  ],
+                  [
+                    1600,
+                    160
+                  ],
+                  [
+                    1700,
+                    165.625
+                  ],
+                  [
+                    2400,
+                    360
+                  ],
+                  [
+                    3200,
+                    420
+                  ],
+                  [
+                    4200,
+                    440
+                  ],
+                  [
+                    5200,
+                    440
+                  ],
+                  [
+                    6200,
+                    380
+                  ],
+                  [
+                    6700,
+                    330
+                  ]
+                ],
+                "off_boost_torque_curve_nm": [
+                  [
+                    900,
+                    125
+                  ],
+                  [
+                    1600,
+                    160
+                  ],
+                  [
+                    1700,
+                    165.625
+                  ],
+                  [
+                    2400,
+                    205
+                  ],
+                  [
+                    3200,
+                    235
+                  ],
+                  [
+                    4200,
+                    260
+                  ],
+                  [
+                    5200,
+                    265
+                  ],
+                  [
+                    6200,
+                    245
+                  ],
+                  [
+                    6700,
+                    220
+                  ]
+                ],
+                "boost_threshold_rpm": 1700,
+                "full_boost_rpm": 3000,
+                "spool_rise_seconds": 0.4,
+                "spool_fall_seconds": 0.2
+              }
+            },
+            {
+              "stage": 2,
+              "paid_reference_price": 1500,
+              "min_reputation": 150,
+              "required_transmission_stage": 1,
+              "included_hardware": [
+                "Higher-capacity intercooler",
+                "Fuel pump/injector package",
+                "Revised boost control"
+              ],
+              "configuration": {
+                "id": "cfg_quarry_turbo_s2",
+                "aspiration": "turbocharged",
+                "idle_rpm": 900,
+                "redline_rpm": 6700,
+                "soft_limiter_rpm": 6600,
+                "upshift_rpm": 6400,
+                "downshift_rpm": 2200,
+                "launch_target_rpm": 1800,
+                "steady_wot_torque_curve_nm": [
+                  [
+                    900,
+                    125
+                  ],
+                  [
+                    1600,
+                    160
+                  ],
+                  [
+                    1800,
+                    171.25
+                  ],
+                  [
+                    2400,
+                    365
+                  ],
+                  [
+                    3200,
+                    455
+                  ],
+                  [
+                    4200,
+                    495
+                  ],
+                  [
+                    5200,
+                    505
+                  ],
+                  [
+                    6200,
+                    445
+                  ],
+                  [
+                    6700,
+                    385
+                  ]
+                ],
+                "off_boost_torque_curve_nm": [
+                  [
+                    900,
+                    125
+                  ],
+                  [
+                    1600,
+                    160
+                  ],
+                  [
+                    1800,
+                    171.25
+                  ],
+                  [
+                    2400,
+                    205
+                  ],
+                  [
+                    3200,
+                    235
+                  ],
+                  [
+                    4200,
+                    260
+                  ],
+                  [
+                    5200,
+                    265
+                  ],
+                  [
+                    6200,
+                    245
+                  ],
+                  [
+                    6700,
+                    220
+                  ]
+                ],
+                "boost_threshold_rpm": 1800,
+                "full_boost_rpm": 3500,
+                "spool_rise_seconds": 0.48,
+                "spool_fall_seconds": 0.22
+              }
+            },
+            {
+              "stage": 3,
+              "paid_reference_price": 3000,
+              "min_reputation": 500,
+              "required_transmission_stage": 2,
+              "included_hardware": [
+                "Larger turbo package",
+                "Forged bottom-end package",
+                "Higher-capacity intercooling and matched fueling"
+              ],
+              "configuration": {
+                "id": "cfg_quarry_turbo_s3",
+                "aspiration": "turbocharged",
+                "idle_rpm": 900,
+                "redline_rpm": 6700,
+                "soft_limiter_rpm": 6600,
+                "upshift_rpm": 6400,
+                "downshift_rpm": 2200,
+                "launch_target_rpm": 1800,
+                "steady_wot_torque_curve_nm": [
+                  [
+                    900,
+                    125
+                  ],
+                  [
+                    1600,
+                    160
+                  ],
+                  [
+                    2200,
+                    193.75
+                  ],
+                  [
+                    2400,
+                    345
+                  ],
+                  [
+                    3200,
+                    475
+                  ],
+                  [
+                    4200,
+                    555
+                  ],
+                  [
+                    5200,
+                    585
+                  ],
+                  [
+                    6200,
+                    520
+                  ],
+                  [
+                    6700,
+                    450
+                  ]
+                ],
+                "off_boost_torque_curve_nm": [
+                  [
+                    900,
+                    125
+                  ],
+                  [
+                    1600,
+                    160
+                  ],
+                  [
+                    2200,
+                    193.75
+                  ],
+                  [
+                    2400,
+                    205
+                  ],
+                  [
+                    3200,
+                    235
+                  ],
+                  [
+                    4200,
+                    260
+                  ],
+                  [
+                    5200,
+                    265
+                  ],
+                  [
+                    6200,
+                    245
+                  ],
+                  [
+                    6700,
+                    220
+                  ]
+                ],
+                "boost_threshold_rpm": 2200,
+                "full_boost_rpm": 4300,
+                "spool_rise_seconds": 0.72,
+                "spool_fall_seconds": 0.28
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pt_vela",
+      "car_id": "car_vela",
+      "display_name": "4.0 L high-revving naturally aspirated V8",
+      "displacement_l": 4,
+      "cylinder_count": 8,
+      "authored_peak_power_limit_kw": 525,
+      "gearbox": {
+        "forward_ratios": [
+          3.1,
+          2.15,
+          1.62,
+          1.29,
+          1.05,
+          0.88,
+          0.76
+        ],
+        "reverse_ratio": 3.2,
+        "final_drive": 3.9,
+        "wheel_radius_m": 0.335,
+        "drivetrain_efficiency": 0.88,
+        "base_shift_seconds_source": "cars.json:shift_seconds"
+      },
+      "stock": {
+        "id": "cfg_vela_stock",
+        "aspiration": "naturally_aspirated",
+        "idle_rpm": 900,
+        "redline_rpm": 8500,
+        "soft_limiter_rpm": 8400,
+        "upshift_rpm": 8200,
+        "downshift_rpm": 2200,
+        "launch_target_rpm": 1800,
+        "steady_wot_torque_curve_nm": [
+          [
+            900,
+            190
+          ],
+          [
+            1800,
+            240
+          ],
+          [
+            3000,
+            300
+          ],
+          [
+            4500,
+            340
+          ],
+          [
+            6000,
+            365
+          ],
+          [
+            7500,
+            380
+          ],
+          [
+            8200,
+            345
+          ],
+          [
+            8500,
+            310
+          ]
+        ]
+      },
+      "paths": [
+        {
+          "id": "path_vela_na",
+          "display_name": "High-revving naturally aspirated development",
+          "path_type": "naturally_aspirated",
+          "conversion_begins_at_stage": null,
+          "choice_locked_after_stage_1": true,
+          "stages": [
+            {
+              "stage": 1,
+              "paid_reference_price": 550,
+              "min_reputation": 0,
+              "required_transmission_stage": 0,
+              "included_hardware": [
+                "Baseline core-readiness check; repairs quoted separately",
+                "ECU and ignition calibration",
+                "Intake/exhaust breathing package"
+              ],
+              "configuration": {
+                "id": "cfg_vela_na_s1",
+                "aspiration": "naturally_aspirated",
+                "idle_rpm": 900,
+                "redline_rpm": 8500,
+                "soft_limiter_rpm": 8400,
+                "upshift_rpm": 8200,
+                "downshift_rpm": 2200,
+                "launch_target_rpm": 1800,
+                "steady_wot_torque_curve_nm": [
+                  [
+                    900,
+                    195
+                  ],
+                  [
+                    1800,
+                    248
+                  ],
+                  [
+                    3000,
+                    310
+                  ],
+                  [
+                    4500,
+                    355
+                  ],
+                  [
+                    6000,
+                    382
+                  ],
+                  [
+                    7500,
+                    400
+                  ],
+                  [
+                    8200,
+                    365
+                  ],
+                  [
+                    8500,
+                    330
+                  ]
+                ]
+              }
+            },
+            {
+              "stage": 2,
+              "paid_reference_price": 800,
+              "min_reputation": 150,
+              "required_transmission_stage": 0,
+              "included_hardware": [
+                "Matched intake/exhaust and mild cam package",
+                "Fueling calibration"
+              ],
+              "configuration": {
+                "id": "cfg_vela_na_s2",
+                "aspiration": "naturally_aspirated",
+                "idle_rpm": 900,
+                "redline_rpm": 8500,
+                "soft_limiter_rpm": 8400,
+                "upshift_rpm": 8200,
+                "downshift_rpm": 2200,
+                "launch_target_rpm": 1800,
+                "steady_wot_torque_curve_nm": [
+                  [
+                    900,
+                    198
+                  ],
+                  [
+                    1800,
+                    250
+                  ],
+                  [
+                    3000,
+                    315
+                  ],
+                  [
+                    4500,
+                    365
+                  ],
+                  [
+                    6000,
+                    400
+                  ],
+                  [
+                    7500,
+                    425
+                  ],
+                  [
+                    8200,
+                    395
+                  ],
+                  [
+                    8500,
+                    360
+                  ]
+                ]
+              }
+            },
+            {
+              "stage": 3,
+              "paid_reference_price": 1600,
+              "min_reputation": 500,
+              "required_transmission_stage": 1,
+              "included_hardware": [
+                "High-lift cams and valvetrain package",
+                "Head-flow improvement",
+                "Matched fueling calibration"
+              ],
+              "configuration": {
+                "id": "cfg_vela_na_s3",
+                "aspiration": "naturally_aspirated",
+                "idle_rpm": 900,
+                "redline_rpm": 8500,
+                "soft_limiter_rpm": 8400,
+                "upshift_rpm": 8200,
+                "downshift_rpm": 2200,
+                "launch_target_rpm": 1800,
+                "steady_wot_torque_curve_nm": [
+                  [
+                    900,
+                    200
+                  ],
+                  [
+                    1800,
+                    252
+                  ],
+                  [
+                    3000,
+                    320
+                  ],
+                  [
+                    4500,
+                    375
+                  ],
+                  [
+                    6000,
+                    420
+                  ],
+                  [
+                    7500,
+                    455
+                  ],
+                  [
+                    8200,
+                    430
+                  ],
+                  [
+                    8500,
+                    395
+                  ]
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "path_vela_turbo",
+          "display_name": "High-output turbo conversion",
+          "path_type": "turbocharged",
+          "conversion_begins_at_stage": 2,
+          "choice_locked_after_stage_1": true,
+          "stages": [
+            {
+              "stage": 1,
+              "paid_reference_price": 550,
+              "min_reputation": 0,
+              "required_transmission_stage": 0,
+              "included_hardware": [
+                "Baseline core-readiness check; repairs quoted separately",
+                "ECU and ignition calibration",
+                "Intake/exhaust breathing package"
+              ],
+              "configuration": {
+                "id": "cfg_vela_turbo_s1",
+                "aspiration": "naturally_aspirated",
+                "idle_rpm": 900,
+                "redline_rpm": 8500,
+                "soft_limiter_rpm": 8400,
+                "upshift_rpm": 8200,
+                "downshift_rpm": 2200,
+                "launch_target_rpm": 1800,
+                "steady_wot_torque_curve_nm": [
+                  [
+                    900,
+                    195
+                  ],
+                  [
+                    1800,
+                    248
+                  ],
+                  [
+                    3000,
+                    310
+                  ],
+                  [
+                    4500,
+                    355
+                  ],
+                  [
+                    6000,
+                    382
+                  ],
+                  [
+                    7500,
+                    400
+                  ],
+                  [
+                    8200,
+                    365
+                  ],
+                  [
+                    8500,
+                    330
+                  ]
+                ]
+              }
+            },
+            {
+              "stage": 2,
+              "paid_reference_price": 2500,
+              "min_reputation": 150,
+              "required_transmission_stage": 1,
+              "included_hardware": [
+                "Low-boost turbo conversion and manifold",
+                "Intercooler and intake plumbing",
+                "Fuel pump/injector package",
+                "Matched ECU calibration"
+              ],
+              "configuration": {
+                "id": "cfg_vela_turbo_s2",
+                "aspiration": "turbocharged",
+                "idle_rpm": 900,
+                "redline_rpm": 8500,
+                "soft_limiter_rpm": 8400,
+                "upshift_rpm": 8200,
+                "downshift_rpm": 2200,
+                "launch_target_rpm": 1800,
+                "steady_wot_torque_curve_nm": [
+                  [
+                    900,
+                    195
+                  ],
+                  [
+                    1800,
+                    248
+                  ],
+                  [
+                    2400,
+                    279
+                  ],
+                  [
+                    3000,
+                    340
+                  ],
+                  [
+                    4500,
+                    420
+                  ],
+                  [
+                    6000,
+                    495
+                  ],
+                  [
+                    7500,
+                    510
+                  ],
+                  [
+                    8200,
+                    465
+                  ],
+                  [
+                    8500,
+                    415
+                  ]
+                ],
+                "off_boost_torque_curve_nm": [
+                  [
+                    900,
+                    195
+                  ],
+                  [
+                    1800,
+                    248
+                  ],
+                  [
+                    2400,
+                    279
+                  ],
+                  [
+                    3000,
+                    310
+                  ],
+                  [
+                    4500,
+                    355
+                  ],
+                  [
+                    6000,
+                    382
+                  ],
+                  [
+                    7500,
+                    400
+                  ],
+                  [
+                    8200,
+                    365
+                  ],
+                  [
+                    8500,
+                    330
+                  ]
+                ],
+                "boost_threshold_rpm": 2400,
+                "full_boost_rpm": 5000,
+                "spool_rise_seconds": 0.6,
+                "spool_fall_seconds": 0.25
+              }
+            },
+            {
+              "stage": 3,
+              "paid_reference_price": 4500,
+              "min_reputation": 500,
+              "required_transmission_stage": 2,
+              "included_hardware": [
+                "Larger turbo and boost-control package",
+                "Forged internals",
+                "Higher-capacity intercooler and fueling",
+                "Final ECU calibration"
+              ],
+              "configuration": {
+                "id": "cfg_vela_turbo_s3",
+                "aspiration": "turbocharged",
+                "idle_rpm": 900,
+                "redline_rpm": 8500,
+                "soft_limiter_rpm": 8400,
+                "upshift_rpm": 8200,
+                "downshift_rpm": 2200,
+                "launch_target_rpm": 1800,
+                "steady_wot_torque_curve_nm": [
+                  [
+                    900,
+                    195
+                  ],
+                  [
+                    1800,
+                    248
+                  ],
+                  [
+                    2800,
+                    299.6666666666667
+                  ],
+                  [
+                    3000,
+                    330
+                  ],
+                  [
+                    4500,
+                    465
+                  ],
+                  [
+                    6000,
+                    585
+                  ],
+                  [
+                    7500,
+                    640
+                  ],
+                  [
+                    8200,
+                    595
+                  ],
+                  [
+                    8500,
+                    530
+                  ]
+                ],
+                "off_boost_torque_curve_nm": [
+                  [
+                    900,
+                    195
+                  ],
+                  [
+                    1800,
+                    248
+                  ],
+                  [
+                    2800,
+                    299.6666666666667
+                  ],
+                  [
+                    3000,
+                    310
+                  ],
+                  [
+                    4500,
+                    355
+                  ],
+                  [
+                    6000,
+                    382
+                  ],
+                  [
+                    7500,
+                    400
+                  ],
+                  [
+                    8200,
+                    365
+                  ],
+                  [
+                    8500,
+                    330
+                  ]
+                ],
+                "boost_threshold_rpm": 2800,
+                "full_boost_rpm": 5800,
+                "spool_rise_seconds": 0.95,
+                "spool_fall_seconds": 0.32
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pt_apex",
+      "car_id": "car_apex",
+      "display_name": "4.0 L factory twin-turbo V8",
+      "displacement_l": 4,
+      "cylinder_count": 8,
+      "authored_peak_power_limit_kw": 610,
+      "gearbox": {
+        "forward_ratios": [
+          3.25,
+          2.18,
+          1.63,
+          1.28,
+          1.03,
+          0.84,
+          0.7
+        ],
+        "reverse_ratio": 3.2,
+        "final_drive": 3.5,
+        "wheel_radius_m": 0.345,
+        "drivetrain_efficiency": 0.85,
+        "base_shift_seconds_source": "cars.json:shift_seconds"
+      },
+      "stock": {
+        "id": "cfg_apex_stock",
+        "aspiration": "twin_turbocharged",
+        "idle_rpm": 800,
+        "redline_rpm": 7000,
+        "soft_limiter_rpm": 6900,
+        "upshift_rpm": 6700,
+        "downshift_rpm": 2200,
+        "launch_target_rpm": 1800,
+        "steady_wot_torque_curve_nm": [
+          [
+            800,
+            180
+          ],
+          [
+            1300,
+            219.28571428571428
+          ],
+          [
+            1500,
+            330
+          ],
+          [
+            2300,
+            500
+          ],
+          [
+            3200,
+            610
+          ],
+          [
+            4200,
+            655
+          ],
+          [
+            5200,
+            655
+          ],
+          [
+            6200,
+            616
+          ],
+          [
+            7000,
+            540
+          ]
+        ],
+        "off_boost_torque_curve_nm": [
+          [
+            800,
+            180
+          ],
+          [
+            1300,
+            219.28571428571428
+          ],
+          [
+            1500,
+            235
+          ],
+          [
+            2300,
+            300
+          ],
+          [
+            3200,
+            350
+          ],
+          [
+            4200,
+            390
+          ],
+          [
+            5200,
+            410
+          ],
+          [
+            6200,
+            385
+          ],
+          [
+            7000,
+            345
+          ]
+        ],
+        "boost_threshold_rpm": 1300,
+        "full_boost_rpm": 3000,
+        "spool_rise_seconds": 0.3,
+        "spool_fall_seconds": 0.16
+      },
+      "paths": [
+        {
+          "id": "path_apex_twin_turbo",
+          "display_name": "Factory twin-turbo development",
+          "path_type": "twin_turbocharged",
+          "conversion_begins_at_stage": null,
+          "choice_locked_after_stage_1": true,
+          "stages": [
+            {
+              "stage": 1,
+              "paid_reference_price": 550,
+              "min_reputation": 0,
+              "required_transmission_stage": 0,
+              "included_hardware": [
+                "ECU calibration within stock turbo range",
+                "Charge-air and fueling calibration"
+              ],
+              "configuration": {
+                "id": "cfg_apex_twin_turbo_s1",
+                "aspiration": "twin_turbocharged",
+                "idle_rpm": 800,
+                "redline_rpm": 7000,
+                "soft_limiter_rpm": 6900,
+                "upshift_rpm": 6700,
+                "downshift_rpm": 2200,
+                "launch_target_rpm": 1800,
+                "steady_wot_torque_curve_nm": [
+                  [
+                    800,
+                    180
+                  ],
+                  [
+                    1300,
+                    219.28571428571428
+                  ],
+                  [
+                    1500,
+                    345
+                  ],
+                  [
+                    2300,
+                    530
+                  ],
+                  [
+                    3200,
+                    650
+                  ],
+                  [
+                    4200,
+                    700
+                  ],
+                  [
+                    5200,
+                    705
+                  ],
+                  [
+                    6200,
+                    665
+                  ],
+                  [
+                    7000,
+                    585
+                  ]
+                ],
+                "off_boost_torque_curve_nm": [
+                  [
+                    800,
+                    180
+                  ],
+                  [
+                    1300,
+                    219.28571428571428
+                  ],
+                  [
+                    1500,
+                    235
+                  ],
+                  [
+                    2300,
+                    300
+                  ],
+                  [
+                    3200,
+                    350
+                  ],
+                  [
+                    4200,
+                    390
+                  ],
+                  [
+                    5200,
+                    410
+                  ],
+                  [
+                    6200,
+                    385
+                  ],
+                  [
+                    7000,
+                    345
+                  ]
+                ],
+                "boost_threshold_rpm": 1300,
+                "full_boost_rpm": 3000,
+                "spool_rise_seconds": 0.3,
+                "spool_fall_seconds": 0.16
+              }
+            },
+            {
+              "stage": 2,
+              "paid_reference_price": 1750,
+              "min_reputation": 150,
+              "required_transmission_stage": 1,
+              "included_hardware": [
+                "Higher-capacity intercooler",
+                "Fuel pump/injector package",
+                "Revised boost control"
+              ],
+              "configuration": {
+                "id": "cfg_apex_twin_turbo_s2",
+                "aspiration": "twin_turbocharged",
+                "idle_rpm": 800,
+                "redline_rpm": 7000,
+                "soft_limiter_rpm": 6900,
+                "upshift_rpm": 6700,
+                "downshift_rpm": 2200,
+                "launch_target_rpm": 1800,
+                "steady_wot_torque_curve_nm": [
+                  [
+                    800,
+                    180
+                  ],
+                  [
+                    1500,
+                    235
+                  ],
+                  [
+                    2300,
+                    550
+                  ],
+                  [
+                    3200,
+                    710
+                  ],
+                  [
+                    4200,
+                    785
+                  ],
+                  [
+                    5200,
+                    800
+                  ],
+                  [
+                    6200,
+                    765
+                  ],
+                  [
+                    7000,
+                    675
+                  ]
+                ],
+                "off_boost_torque_curve_nm": [
+                  [
+                    800,
+                    180
+                  ],
+                  [
+                    1500,
+                    235
+                  ],
+                  [
+                    2300,
+                    300
+                  ],
+                  [
+                    3200,
+                    350
+                  ],
+                  [
+                    4200,
+                    390
+                  ],
+                  [
+                    5200,
+                    410
+                  ],
+                  [
+                    6200,
+                    385
+                  ],
+                  [
+                    7000,
+                    345
+                  ]
+                ],
+                "boost_threshold_rpm": 1500,
+                "full_boost_rpm": 3500,
+                "spool_rise_seconds": 0.38,
+                "spool_fall_seconds": 0.18
+              }
+            },
+            {
+              "stage": 3,
+              "paid_reference_price": 3500,
+              "min_reputation": 500,
+              "required_transmission_stage": 2,
+              "included_hardware": [
+                "Larger turbo package",
+                "Forged bottom-end package",
+                "Higher-capacity intercooling and matched fueling"
+              ],
+              "configuration": {
+                "id": "cfg_apex_twin_turbo_s3",
+                "aspiration": "twin_turbocharged",
+                "idle_rpm": 800,
+                "redline_rpm": 7000,
+                "soft_limiter_rpm": 6900,
+                "upshift_rpm": 6700,
+                "downshift_rpm": 2200,
+                "launch_target_rpm": 1800,
+                "steady_wot_torque_curve_nm": [
+                  [
+                    800,
+                    180
+                  ],
+                  [
+                    1500,
+                    235
+                  ],
+                  [
+                    1800,
+                    259.375
+                  ],
+                  [
+                    2300,
+                    530
+                  ],
+                  [
+                    3200,
+                    750
+                  ],
+                  [
+                    4200,
+                    880
+                  ],
+                  [
+                    5200,
+                    920
+                  ],
+                  [
+                    6200,
+                    900
+                  ],
+                  [
+                    7000,
+                    805
+                  ]
+                ],
+                "off_boost_torque_curve_nm": [
+                  [
+                    800,
+                    180
+                  ],
+                  [
+                    1500,
+                    235
+                  ],
+                  [
+                    1800,
+                    259.375
+                  ],
+                  [
+                    2300,
+                    300
+                  ],
+                  [
+                    3200,
+                    350
+                  ],
+                  [
+                    4200,
+                    390
+                  ],
+                  [
+                    5200,
+                    410
+                  ],
+                  [
+                    6200,
+                    385
+                  ],
+                  [
+                    7000,
+                    345
+                  ]
+                ],
+                "boost_threshold_rpm": 1800,
+                "full_boost_rpm": 4300,
+                "spool_rise_seconds": 0.58,
+                "spool_fall_seconds": 0.23
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "spool_time_definition": "rise_and_fall_values_are_exponential_time_constants_tau_63_percent_at_1tau_95_percent_at_3tau"
+}

@@ -1,0 +1,29 @@
+{
+  "pass": true,
+  "units": "meters",
+  "roads": 24,
+  "junctions": 39,
+  "sites": 595,
+  "buildings": 550,
+  "roadKm": 29.51477846534829,
+  "maxGradePercent": 11.741966181975187,
+  "minCurveRadiusM": 37.795002732398764,
+  "maxSampleStepM": 4.080401287479314,
+  "graphConnected": true,
+  "unrepresentedCrossings": [],
+  "stableGameplayLocationIdsPreserved": true,
+  "starter": {
+    "id": "car_finch",
+    "name": "Aster Finch",
+    "length": 4.05,
+    "width": 1.7,
+    "height": 1.46,
+    "wheelbase": 2.45,
+    "wheelRadius": 0.295,
+    "massKg": 1050,
+    "x": -782.883996821045,
+    "z": -413.57596787381067,
+    "yaw": 533.077792978629,
+    "y": 0
+  }
+}

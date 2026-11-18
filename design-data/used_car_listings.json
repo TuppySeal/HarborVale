@@ -1,0 +1,946 @@
+{
+  "schema_version": 1,
+  "status": "preauthored_persistent_vehicle_offers_not_random_inventory",
+  "initial_listing_count": 10,
+  "slice_listing_count": 4,
+  "mechanic_inspection_allowed_all_listings": true,
+  "guaranteed_initial_starter_listing_ids": [
+    "listing_finch_001",
+    "listing_courier_001"
+  ],
+  "unlisted_history_rule": "missing_records_are_unknown_not_assumed_clean_and_not_fabricated_by_inspection",
+  "listing_purchase_rule": "transfer_existing_vehicle_id_into_current_ownership_do_not_generate_fresh_vehicle",
+  "listings": [
+    {
+      "id": "listing_finch_001",
+      "vehicle_id": "veh_used_finch_001",
+      "car_id": "car_finch",
+      "asking_price": 4000,
+      "reputation_required": 0,
+      "included_in_slice": true,
+      "eligible_as_initial_starter": true,
+      "odometer_m": 82000000,
+    "odometer_fraction_m": 0,
+    "condition_revision": 0,
+      "owner_count": 1,
+      "history_completeness": "complete",
+      "accident_history_verified": true,
+      "seller_disclosures": [
+        "Guaranteed healthy starter. All six components freshly serviced and verified.",
+        "No recorded accident; complete supplied history."
+      ],
+      "known_condition_components": [
+        "engine",
+        "cooling",
+        "transmission",
+        "brakes",
+        "tires",
+        "suspension"
+      ],
+      "inspection_report_included": true,
+      "condition": {
+        "engine": 10000,
+        "cooling": 10000,
+        "transmission": 10000,
+        "brakes": 10000,
+        "tires": 10000,
+        "suspension": 10000
+      },
+      "installed_build": {
+        "engine_path_id": null,
+        "engine_stage": 0,
+        "tires": 0,
+        "suspension": 0,
+        "brakes": 0,
+        "weight": 0,
+        "transmission": 0
+      },
+      "thermal_load": 0,
+      "wear_fraction_by_component": {
+        "engine": 0,
+        "cooling": 0,
+        "transmission": 0,
+        "brakes": 0,
+        "tires": 0,
+        "suspension": 0
+      },
+      "worst_recorded_accident_severity": "none",
+      "history_records": [
+        {
+          "record_id": "veh_used_finch_001_history_001",
+          "sequence": 1,
+          "odometer_m": 0,
+          "type": "registration",
+          "source": "documented_workshop_receipt",
+          "summary": "First owner registration.",
+          "cost_credits": 0
+        },
+        {
+          "record_id": "veh_used_finch_001_history_002",
+          "sequence": 2,
+          "odometer_m": 60000000,
+          "type": "maintenance",
+          "source": "documented_workshop_receipt",
+          "summary": "Routine engine and cooling service.",
+          "cost_credits": 300,
+          "components": [
+            "engine",
+            "cooling"
+          ]
+        },
+        {
+          "record_id": "veh_used_finch_001_history_003",
+          "sequence": 3,
+          "odometer_m": 82000000,
+          "type": "repair",
+          "source": "documented_workshop_receipt",
+          "summary": "Dealer preparation: all six modeled components restored and inspected.",
+          "cost_credits": 2400,
+          "components": [
+            "engine",
+            "cooling",
+            "transmission",
+            "brakes",
+            "tires",
+            "suspension"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "listing_courier_001",
+      "vehicle_id": "veh_used_courier_001",
+      "car_id": "car_courier",
+      "asking_price": 5000,
+      "reputation_required": 0,
+      "included_in_slice": true,
+      "eligible_as_initial_starter": true,
+      "odometer_m": 64000000,
+    "odometer_fraction_m": 0,
+    "condition_revision": 0,
+      "owner_count": 2,
+      "history_completeness": "complete",
+      "accident_history_verified": true,
+      "seller_disclosures": [
+        "Guaranteed healthy starter. Full dealer preparation included.",
+        "Two owners; no recorded accident in supplied complete history."
+      ],
+      "known_condition_components": [
+        "engine",
+        "cooling",
+        "transmission",
+        "brakes",
+        "tires",
+        "suspension"
+      ],
+      "inspection_report_included": true,
+      "condition": {
+        "engine": 10000,
+        "cooling": 10000,
+        "transmission": 10000,
+        "brakes": 10000,
+        "tires": 10000,
+        "suspension": 10000
+      },
+      "installed_build": {
+        "engine_path_id": null,
+        "engine_stage": 0,
+        "tires": 0,
+        "suspension": 0,
+        "brakes": 0,
+        "weight": 0,
+        "transmission": 0
+      },
+      "thermal_load": 0,
+      "wear_fraction_by_component": {
+        "engine": 0,
+        "cooling": 0,
+        "transmission": 0,
+        "brakes": 0,
+        "tires": 0,
+        "suspension": 0
+      },
+      "worst_recorded_accident_severity": "none",
+      "history_records": [
+        {
+          "record_id": "veh_used_courier_001_history_001",
+          "sequence": 1,
+          "odometer_m": 0,
+          "type": "registration",
+          "source": "documented_workshop_receipt",
+          "summary": "First owner registration.",
+          "cost_credits": 0
+        },
+        {
+          "record_id": "veh_used_courier_001_history_002",
+          "sequence": 2,
+          "odometer_m": 42000000,
+          "type": "ownership_transfer",
+          "source": "documented_workshop_receipt",
+          "summary": "Transferred to second owner.",
+          "cost_credits": 0
+        },
+        {
+          "record_id": "veh_used_courier_001_history_003",
+          "sequence": 3,
+          "odometer_m": 64000000,
+          "type": "repair",
+          "source": "documented_workshop_receipt",
+          "summary": "Dealer preparation: all six modeled components restored and inspected.",
+          "cost_credits": 2400,
+          "components": [
+            "engine",
+            "cooling",
+            "transmission",
+            "brakes",
+            "tires",
+            "suspension"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "listing_courier_002",
+      "vehicle_id": "veh_used_courier_002",
+      "car_id": "car_courier",
+      "asking_price": 3500,
+      "reputation_required": 0,
+      "included_in_slice": true,
+      "eligible_as_initial_starter": false,
+      "odometer_m": 118000000,
+    "odometer_fraction_m": 0,
+    "condition_revision": 0,
+      "owner_count": 3,
+      "history_completeness": "partial",
+      "accident_history_verified": false,
+      "seller_disclosures": [
+        "Project offer: brake service required; do not assume it is race ready.",
+        "Cooling service history is incomplete. Several component conditions are unverified.",
+        "Prior minor repaired impact is documented; missing records remain unknown after inspection."
+      ],
+      "known_condition_components": [
+        "brakes",
+        "tires"
+      ],
+      "inspection_report_included": false,
+      "condition": {
+        "engine": 6500,
+        "cooling": 1500,
+        "transmission": 6000,
+        "brakes": 1800,
+        "tires": 4200,
+        "suspension": 5500
+      },
+      "installed_build": {
+        "engine_path_id": null,
+        "engine_stage": 0,
+        "tires": 0,
+        "suspension": 0,
+        "brakes": 0,
+        "weight": 0,
+        "transmission": 0
+      },
+      "thermal_load": 0,
+      "wear_fraction_by_component": {
+        "engine": 0,
+        "cooling": 0,
+        "transmission": 0,
+        "brakes": 0,
+        "tires": 0,
+        "suspension": 0
+      },
+      "worst_recorded_accident_severity": "minor",
+      "history_records": [
+        {
+          "record_id": "veh_used_courier_002_history_001",
+          "sequence": 1,
+          "odometer_m": 58000000,
+          "type": "ownership_transfer",
+          "source": "documented_workshop_receipt",
+          "summary": "Transferred to third documented owner.",
+          "cost_credits": 0
+        },
+        {
+          "record_id": "veh_used_courier_002_history_002",
+          "sequence": 2,
+          "odometer_m": 91000000,
+          "type": "incident",
+          "source": "documented_incident_report",
+          "summary": "Minor front-corner impact reported.",
+          "cost_credits": 0,
+          "severity": "minor"
+        },
+        {
+          "record_id": "veh_used_courier_002_history_003",
+          "sequence": 3,
+          "odometer_m": 91500000,
+          "type": "repair",
+          "source": "documented_workshop_receipt",
+          "summary": "Front suspension and cooling repair after reported minor impact.",
+          "cost_credits": 450,
+          "components": [
+            "suspension",
+            "cooling"
+          ]
+        },
+        {
+          "record_id": "veh_used_courier_002_history_004",
+          "sequence": 4,
+          "odometer_m": 118000000,
+          "type": "inspection",
+          "source": "documented_workshop_receipt",
+          "summary": "Seller brake/tire check: brake service required; other systems not certified.",
+          "cost_credits": 0,
+          "components": [
+            "brakes",
+            "tires"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "listing_lynx_001",
+      "vehicle_id": "veh_used_lynx_001",
+      "car_id": "car_lynx",
+      "asking_price": 12000,
+      "reputation_required": 150,
+      "included_in_slice": true,
+      "eligible_as_initial_starter": false,
+      "odometer_m": 35000000,
+    "odometer_fraction_m": 0,
+    "condition_revision": 0,
+      "owner_count": 1,
+      "history_completeness": "complete",
+      "accident_history_verified": true,
+      "seller_disclosures": [
+        "Stock factory-turbo car with complete records and current full inspection.",
+        "Dealer preparation included; no recorded accident."
+      ],
+      "known_condition_components": [
+        "engine",
+        "cooling",
+        "transmission",
+        "brakes",
+        "tires",
+        "suspension"
+      ],
+      "inspection_report_included": true,
+      "condition": {
+        "engine": 10000,
+        "cooling": 10000,
+        "transmission": 10000,
+        "brakes": 10000,
+        "tires": 10000,
+        "suspension": 10000
+      },
+      "installed_build": {
+        "engine_path_id": null,
+        "engine_stage": 0,
+        "tires": 0,
+        "suspension": 0,
+        "brakes": 0,
+        "weight": 0,
+        "transmission": 0
+      },
+      "thermal_load": 0,
+      "wear_fraction_by_component": {
+        "engine": 0,
+        "cooling": 0,
+        "transmission": 0,
+        "brakes": 0,
+        "tires": 0,
+        "suspension": 0
+      },
+      "worst_recorded_accident_severity": "none",
+      "history_records": [
+        {
+          "record_id": "veh_used_lynx_001_history_001",
+          "sequence": 1,
+          "odometer_m": 0,
+          "type": "registration",
+          "source": "documented_workshop_receipt",
+          "summary": "First owner registration.",
+          "cost_credits": 0
+        },
+        {
+          "record_id": "veh_used_lynx_001_history_002",
+          "sequence": 2,
+          "odometer_m": 25000000,
+          "type": "maintenance",
+          "source": "documented_workshop_receipt",
+          "summary": "Scheduled engine/cooling service.",
+          "cost_credits": 300,
+          "components": [
+            "engine",
+            "cooling"
+          ]
+        },
+        {
+          "record_id": "veh_used_lynx_001_history_003",
+          "sequence": 3,
+          "odometer_m": 35000000,
+          "type": "repair",
+          "source": "documented_workshop_receipt",
+          "summary": "Full dealer preparation and inspection.",
+          "cost_credits": 2400,
+          "components": [
+            "engine",
+            "cooling",
+            "transmission",
+            "brakes",
+            "tires",
+            "suspension"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "listing_switch_001",
+      "vehicle_id": "veh_used_switch_001",
+      "car_id": "car_switch",
+      "asking_price": 20000,
+      "reputation_required": 250,
+      "included_in_slice": false,
+      "eligible_as_initial_starter": false,
+      "odometer_m": 51000000,
+    "odometer_fraction_m": 0,
+    "condition_revision": 0,
+      "owner_count": 2,
+      "history_completeness": "complete",
+      "accident_history_verified": true,
+      "seller_disclosures": [
+        "Healthy all-wheel-drive daily car; all conditions verified.",
+        "Recent service, normal remaining wear, no recorded accident."
+      ],
+      "known_condition_components": [
+        "engine",
+        "cooling",
+        "transmission",
+        "brakes",
+        "tires",
+        "suspension"
+      ],
+      "inspection_report_included": true,
+      "condition": {
+        "engine": 9600,
+        "cooling": 9500,
+        "transmission": 9500,
+        "brakes": 9200,
+        "tires": 9000,
+        "suspension": 9300
+      },
+      "installed_build": {
+        "engine_path_id": null,
+        "engine_stage": 0,
+        "tires": 0,
+        "suspension": 0,
+        "brakes": 0,
+        "weight": 0,
+        "transmission": 0
+      },
+      "thermal_load": 0,
+      "wear_fraction_by_component": {
+        "engine": 0,
+        "cooling": 0,
+        "transmission": 0,
+        "brakes": 0,
+        "tires": 0,
+        "suspension": 0
+      },
+      "worst_recorded_accident_severity": "none",
+      "history_records": [
+        {
+          "record_id": "veh_used_switch_001_history_001",
+          "sequence": 1,
+          "odometer_m": 0,
+          "type": "registration",
+          "source": "documented_workshop_receipt",
+          "summary": "First owner registration.",
+          "cost_credits": 0
+        },
+        {
+          "record_id": "veh_used_switch_001_history_002",
+          "sequence": 2,
+          "odometer_m": 30000000,
+          "type": "ownership_transfer",
+          "source": "documented_workshop_receipt",
+          "summary": "Transferred to second owner.",
+          "cost_credits": 0
+        },
+        {
+          "record_id": "veh_used_switch_001_history_003",
+          "sequence": 3,
+          "odometer_m": 48000000,
+          "type": "maintenance",
+          "source": "documented_workshop_receipt",
+          "summary": "All-system inspection and routine service.",
+          "cost_credits": 800,
+          "components": [
+            "engine",
+            "cooling",
+            "transmission",
+            "brakes",
+            "tires",
+            "suspension"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "listing_sable_001",
+      "vehicle_id": "veh_used_sable_001",
+      "car_id": "car_sable",
+      "asking_price": 32000,
+      "reputation_required": 500,
+      "included_in_slice": false,
+      "eligible_as_initial_starter": false,
+      "odometer_m": 46000000,
+    "odometer_fraction_m": 0,
+    "condition_revision": 0,
+      "owner_count": 2,
+      "history_completeness": "complete",
+      "accident_history_verified": true,
+      "seller_disclosures": [
+        "Healthy mechanically, with a disclosed repaired minor impact.",
+        "Current component inspection available; accident history remains part of this vehicle's record."
+      ],
+      "known_condition_components": [
+        "engine",
+        "cooling",
+        "transmission",
+        "brakes",
+        "tires",
+        "suspension"
+      ],
+      "inspection_report_included": true,
+      "condition": {
+        "engine": 9400,
+        "cooling": 9600,
+        "transmission": 9400,
+        "brakes": 9200,
+        "tires": 9100,
+        "suspension": 9300
+      },
+      "installed_build": {
+        "engine_path_id": null,
+        "engine_stage": 0,
+        "tires": 0,
+        "suspension": 0,
+        "brakes": 0,
+        "weight": 0,
+        "transmission": 0
+      },
+      "thermal_load": 0,
+      "wear_fraction_by_component": {
+        "engine": 0,
+        "cooling": 0,
+        "transmission": 0,
+        "brakes": 0,
+        "tires": 0,
+        "suspension": 0
+      },
+      "worst_recorded_accident_severity": "minor",
+      "history_records": [
+        {
+          "record_id": "veh_used_sable_001_history_001",
+          "sequence": 1,
+          "odometer_m": 0,
+          "type": "registration",
+          "source": "documented_workshop_receipt",
+          "summary": "First owner registration.",
+          "cost_credits": 0
+        },
+        {
+          "record_id": "veh_used_sable_001_history_002",
+          "sequence": 2,
+          "odometer_m": 22000000,
+          "type": "incident",
+          "source": "documented_incident_report",
+          "summary": "Minor rear-quarter impact documented.",
+          "cost_credits": 0,
+          "severity": "minor"
+        },
+        {
+          "record_id": "veh_used_sable_001_history_003",
+          "sequence": 3,
+          "odometer_m": 22500000,
+          "type": "repair",
+          "source": "documented_workshop_receipt",
+          "summary": "Suspension/alignment and body repair completed.",
+          "cost_credits": 600,
+          "components": [
+            "suspension"
+          ]
+        },
+        {
+          "record_id": "veh_used_sable_001_history_004",
+          "sequence": 4,
+          "odometer_m": 43000000,
+          "type": "maintenance",
+          "source": "documented_workshop_receipt",
+          "summary": "All-system workshop check and service.",
+          "cost_credits": 800,
+          "components": [
+            "engine",
+            "cooling",
+            "transmission",
+            "brakes",
+            "tires",
+            "suspension"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "listing_quarry_001",
+      "vehicle_id": "veh_used_quarry_001",
+      "car_id": "car_quarry",
+      "asking_price": 48000,
+      "reputation_required": 650,
+      "included_in_slice": false,
+      "eligible_as_initial_starter": false,
+      "odometer_m": 39000000,
+    "odometer_fraction_m": 0,
+    "condition_revision": 0,
+      "owner_count": 2,
+      "history_completeness": "complete",
+      "accident_history_verified": true,
+      "seller_disclosures": [
+        "Healthy hill-road car with complete workshop records.",
+        "Tires show normal use; no recorded accident."
+      ],
+      "known_condition_components": [
+        "engine",
+        "cooling",
+        "transmission",
+        "brakes",
+        "tires",
+        "suspension"
+      ],
+      "inspection_report_included": true,
+      "condition": {
+        "engine": 9400,
+        "cooling": 9200,
+        "transmission": 9200,
+        "brakes": 9000,
+        "tires": 8800,
+        "suspension": 9200
+      },
+      "installed_build": {
+        "engine_path_id": null,
+        "engine_stage": 0,
+        "tires": 0,
+        "suspension": 0,
+        "brakes": 0,
+        "weight": 0,
+        "transmission": 0
+      },
+      "thermal_load": 0,
+      "wear_fraction_by_component": {
+        "engine": 0,
+        "cooling": 0,
+        "transmission": 0,
+        "brakes": 0,
+        "tires": 0,
+        "suspension": 0
+      },
+      "worst_recorded_accident_severity": "none",
+      "history_records": [
+        {
+          "record_id": "veh_used_quarry_001_history_001",
+          "sequence": 1,
+          "odometer_m": 0,
+          "type": "registration",
+          "source": "documented_workshop_receipt",
+          "summary": "First owner registration.",
+          "cost_credits": 0
+        },
+        {
+          "record_id": "veh_used_quarry_001_history_002",
+          "sequence": 2,
+          "odometer_m": 26000000,
+          "type": "ownership_transfer",
+          "source": "documented_workshop_receipt",
+          "summary": "Transferred to second owner.",
+          "cost_credits": 0
+        },
+        {
+          "record_id": "veh_used_quarry_001_history_003",
+          "sequence": 3,
+          "odometer_m": 35000000,
+          "type": "maintenance",
+          "source": "documented_workshop_receipt",
+          "summary": "All-system service and inspection.",
+          "cost_credits": 900,
+          "components": [
+            "engine",
+            "cooling",
+            "transmission",
+            "brakes",
+            "tires",
+            "suspension"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "listing_vela_001",
+      "vehicle_id": "veh_used_vela_001",
+      "car_id": "car_vela",
+      "asking_price": 72000,
+      "reputation_required": 900,
+      "included_in_slice": false,
+      "eligible_as_initial_starter": false,
+      "odometer_m": 24000000,
+    "odometer_fraction_m": 0,
+    "condition_revision": 0,
+      "owner_count": 1,
+      "history_completeness": "complete",
+      "accident_history_verified": true,
+      "seller_disclosures": [
+        "Verified high-revving stock V8, single owner.",
+        "Complete supplied service record; no recorded accident."
+      ],
+      "known_condition_components": [
+        "engine",
+        "cooling",
+        "transmission",
+        "brakes",
+        "tires",
+        "suspension"
+      ],
+      "inspection_report_included": true,
+      "condition": {
+        "engine": 9600,
+        "cooling": 9500,
+        "transmission": 9700,
+        "brakes": 9500,
+        "tires": 9300,
+        "suspension": 9500
+      },
+      "installed_build": {
+        "engine_path_id": null,
+        "engine_stage": 0,
+        "tires": 0,
+        "suspension": 0,
+        "brakes": 0,
+        "weight": 0,
+        "transmission": 0
+      },
+      "thermal_load": 0,
+      "wear_fraction_by_component": {
+        "engine": 0,
+        "cooling": 0,
+        "transmission": 0,
+        "brakes": 0,
+        "tires": 0,
+        "suspension": 0
+      },
+      "worst_recorded_accident_severity": "none",
+      "history_records": [
+        {
+          "record_id": "veh_used_vela_001_history_001",
+          "sequence": 1,
+          "odometer_m": 0,
+          "type": "registration",
+          "source": "documented_workshop_receipt",
+          "summary": "First owner registration.",
+          "cost_credits": 0
+        },
+        {
+          "record_id": "veh_used_vela_001_history_002",
+          "sequence": 2,
+          "odometer_m": 20000000,
+          "type": "maintenance",
+          "source": "documented_workshop_receipt",
+          "summary": "Routine service with full component inspection.",
+          "cost_credits": 900,
+          "components": [
+            "engine",
+            "cooling",
+            "transmission",
+            "brakes",
+            "tires",
+            "suspension"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "listing_apex_001",
+      "vehicle_id": "veh_used_apex_001",
+      "car_id": "car_apex",
+      "asking_price": 110000,
+      "reputation_required": 1100,
+      "included_in_slice": false,
+      "eligible_as_initial_starter": false,
+      "odometer_m": 12000000,
+    "odometer_fraction_m": 0,
+    "condition_revision": 0,
+      "owner_count": 1,
+      "history_completeness": "complete",
+      "accident_history_verified": true,
+      "seller_disclosures": [
+        "Fully prepared flagship with complete inspection and records.",
+        "All six components verified at 100%; no recorded accident."
+      ],
+      "known_condition_components": [
+        "engine",
+        "cooling",
+        "transmission",
+        "brakes",
+        "tires",
+        "suspension"
+      ],
+      "inspection_report_included": true,
+      "condition": {
+        "engine": 10000,
+        "cooling": 10000,
+        "transmission": 10000,
+        "brakes": 10000,
+        "tires": 10000,
+        "suspension": 10000
+      },
+      "installed_build": {
+        "engine_path_id": null,
+        "engine_stage": 0,
+        "tires": 0,
+        "suspension": 0,
+        "brakes": 0,
+        "weight": 0,
+        "transmission": 0
+      },
+      "thermal_load": 0,
+      "wear_fraction_by_component": {
+        "engine": 0,
+        "cooling": 0,
+        "transmission": 0,
+        "brakes": 0,
+        "tires": 0,
+        "suspension": 0
+      },
+      "worst_recorded_accident_severity": "none",
+      "history_records": [
+        {
+          "record_id": "veh_used_apex_001_history_001",
+          "sequence": 1,
+          "odometer_m": 0,
+          "type": "registration",
+          "source": "documented_workshop_receipt",
+          "summary": "First owner registration.",
+          "cost_credits": 0
+        },
+        {
+          "record_id": "veh_used_apex_001_history_002",
+          "sequence": 2,
+          "odometer_m": 12000000,
+          "type": "repair",
+          "source": "documented_workshop_receipt",
+          "summary": "Full dealer preparation and inspection.",
+          "cost_credits": 2400,
+          "components": [
+            "engine",
+            "cooling",
+            "transmission",
+            "brakes",
+            "tires",
+            "suspension"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "listing_sable_002",
+      "vehicle_id": "veh_used_sable_002",
+      "car_id": "car_sable",
+      "asking_price": 25000,
+      "reputation_required": 500,
+      "included_in_slice": false,
+      "eligible_as_initial_starter": false,
+      "odometer_m": 132000000,
+    "odometer_fraction_m": 0,
+    "condition_revision": 0,
+      "owner_count": null,
+      "history_completeness": "partial",
+      "accident_history_verified": true,
+      "seller_disclosures": [
+        "Non-roadworthy project: cooling failure, slipping transmission and suspension service required.",
+        "Previous major impact and repair are documented; exact owner count is unknown.",
+        "Other component conditions require inspection. Repairing it never removes the recorded major incident."
+      ],
+      "known_condition_components": [
+        "cooling",
+        "transmission",
+        "suspension"
+      ],
+      "inspection_report_included": false,
+      "condition": {
+        "engine": 3800,
+        "cooling": 900,
+        "transmission": 1700,
+        "brakes": 2600,
+        "tires": 2300,
+        "suspension": 1800
+      },
+      "installed_build": {
+        "engine_path_id": null,
+        "engine_stage": 0,
+        "tires": 0,
+        "suspension": 0,
+        "brakes": 0,
+        "weight": 0,
+        "transmission": 0
+      },
+      "thermal_load": 0,
+      "wear_fraction_by_component": {
+        "engine": 0,
+        "cooling": 0,
+        "transmission": 0,
+        "brakes": 0,
+        "tires": 0,
+        "suspension": 0
+      },
+      "worst_recorded_accident_severity": "major",
+      "history_records": [
+        {
+          "record_id": "veh_used_sable_002_history_001",
+          "sequence": 1,
+          "odometer_m": 96000000,
+          "type": "incident",
+          "source": "documented_incident_report",
+          "summary": "Major front impact documented.",
+          "cost_credits": 0,
+          "severity": "major"
+        },
+        {
+          "record_id": "veh_used_sable_002_history_002",
+          "sequence": 2,
+          "odometer_m": 98000000,
+          "type": "repair",
+          "source": "documented_workshop_receipt",
+          "summary": "Prior owner repaired major-impact damage; record remains permanent.",
+          "cost_credits": 1800,
+          "components": [
+            "cooling",
+            "suspension"
+          ]
+        },
+        {
+          "record_id": "veh_used_sable_002_history_003",
+          "sequence": 3,
+          "odometer_m": 132000000,
+          "type": "inspection",
+          "source": "documented_workshop_receipt",
+          "summary": "Current seller report identifies cooling failure and transmission/suspension service needs.",
+          "cost_credits": 0,
+          "components": [
+            "cooling",
+            "transmission",
+            "suspension"
+          ]
+        }
+      ]
+    }
+  ]
+}
+

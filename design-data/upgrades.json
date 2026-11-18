@@ -1,0 +1,24 @@
+{
+  "schema_version": 2,
+  "stage_reputation_required": {"1": 0, "2": 150, "3": 500},
+  "price_scaling": {"reference_car_price": 8000, "power": 0.5, "minimum_multiplier": 0.75, "maximum_multiplier": 3.0, "round_to_nearest": 50, "half_rounding": "up"},
+  "effect_rule": "engine_selects_authored_configuration_other_categories_use_stock_attribute",
+  "purchase_sequence": "exactly_next_stage_required_in_every_category",
+  "direct_stage_purchase_allowed": false,
+  "engine_path_selected_at_stage": 1,
+  "engine_path_change_allowed": false,
+  "investment_rule": "sum_actual_new_paid_steps_per_category_in_current_ownership",
+  "charge_rules": {
+    "engine": "round_each_package_step_paid_reference_price_then_pay_full_step",
+    "other_categories": "rounded_catalog_next_stage_total_minus_rounded_catalog_current_installed_stage_total"
+  },
+  "downgrades_allowed": false,
+  "categories": [
+    {"id": "engine", "operation": "select_authored_engine_configuration", "definition_source": "powertrains.json", "stage_price_source": "powertrains[].paths[].stages[].paid_reference_price", "stage_configuration_source": "powertrains[].paths[].stages[].configuration", "supporting_stage_source": "powertrains[].paths[].stages[].required_transmission_stage", "stock_configuration_source": "powertrains[].stock", "hardware_pricing": "included_in_the_paid_engine_step_no_separate_charge_or_free_inventory", "stages": [{"stage": 1, "previous_stage_required": 0}, {"stage": 2, "previous_stage_required": 1}, {"stage": 3, "previous_stage_required": 2}]},
+    {"id": "tires", "attribute": "grip", "operation": "multiply", "stages": [{"stage": 1, "effect": 1.04, "reference_total_price": 450}, {"stage": 2, "effect": 1.08, "reference_total_price": 950}, {"stage": 3, "effect": 1.12, "reference_total_price": 1800}]},
+    {"id": "suspension", "attribute": "chassis", "operation": "add", "stages": [{"stage": 1, "effect": 4, "reference_total_price": 350}, {"stage": 2, "effect": 8, "reference_total_price": 800}, {"stage": 3, "effect": 12, "reference_total_price": 1500}]},
+    {"id": "brakes", "attribute": "brake_deceleration", "operation": "multiply", "stages": [{"stage": 1, "effect": 1.06, "reference_total_price": 250}, {"stage": 2, "effect": 1.12, "reference_total_price": 600}, {"stage": 3, "effect": 1.18, "reference_total_price": 1100}]},
+    {"id": "weight", "attribute": "mass_kg", "operation": "multiply", "stages": [{"stage": 1, "effect": 0.97, "reference_total_price": 300}, {"stage": 2, "effect": 0.94, "reference_total_price": 700}, {"stage": 3, "effect": 0.90, "reference_total_price": 1400}]},
+    {"id": "transmission", "attribute": "shift_seconds", "operation": "multiply", "stages": [{"stage": 1, "effect": 0.88, "reference_total_price": 350}, {"stage": 2, "effect": 0.72, "reference_total_price": 850}, {"stage": 3, "effect": 0.55, "reference_total_price": 1650}]}
+  ]
+}
