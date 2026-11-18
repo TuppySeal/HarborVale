@@ -1,0 +1,15 @@
+PASS Rest: four grounded wheels, speed 0.000 km/h
+PASS Stock 0-100 km/h: 13.56 s; speed 100.0, gear 3, rpm 5412
+PASS Automatic shifts and bounded RPM
+PASS 100-0 braking: 4.10 s, 52.7 m
+PASS Reverse after braking: -11.38 m/s
+PASS Steering turn: 80.8 deg, upright
+PASS Handbrake locks rear wheels and reduces rear lateral grip
+PASS Body collision blocks barrier penetration
+PASS Recovery clears velocity and restores upright spawn
+PASS 8 cm curb traversal remains upright without launch
+PASS Ramp traversal and landing return to grounded upright motion
+PASS Chase camera initializes in perspective
+PASS City road recovery anchor found
+PASS City spawn rests on actual road collision
+PASS City road acceleration: 30.5 km/h

@@ -1,0 +1,10 @@
+EDITOR-ONLY ISSUE: Unity SearchDatabase startup indexing exception; excluded from runtime-controller result. See editor log.
+PASS Runtime bootstrap equips car and establishes ground contact
+PASS Runtime chase camera active
+PASS Runtime HUD and procedural audio initialized
+PASS Actual Play Mode acceleration: 64.6 km/h
+PASS Actual Play Mode brake/reverse input reduces speed
+PASS Recovery clears velocity in Play Mode
+PASS Map inspection camera and parked vehicle toggle
+PASS Return from map to driving perspective
+PASS No runtime exceptions during driving/camera/HUD checks

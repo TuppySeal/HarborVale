@@ -188,3 +188,8 @@ Treat crashes, lost valid saves, duplicate payouts/charges, negative balances, e
 User authorized November 18: expand the map, use believable dimensions, curve roads beyond the initial right-angle layout, and add the starter car model. Accept when continuous curved roads and shared junctions import/render, dimensions and grades pass geometry checks, stable service/event IDs persist, and a reusable fictional Aster Finch prefab is visible at garage scale. Preserve the prior scene before rebuilding. Actual editor rendering is required; manual driving is outside this model/map task. Record remaining input/playtest limitations.
 
 
+
+### M11-T03 — Driveable stock Finch
+
+User authorized driving November 18. Add physical stock-car suspension/traction, RPM-dependent authored stock torque curve, automatic gears, throttle/brake/reverse, steering, handbrake, chase camera, HUD and safe recovery. Preserve the city and an independent handling test scene. Verify acceleration, braking, reverse, turns, handbrake, resting stability, collisions/recovery, city road contacts and rendering; manually check keyboard/camera if available. Record measured evidence and unperformed checks. This does not complete the larger stock/upgraded-handling milestone or authorize economy/racing systems.
+

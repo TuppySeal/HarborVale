@@ -1,15 +1,20 @@
-# Harbor Vale — scaled city prototype
+# Harbor Vale — driving prototype
 
-Open this folder in Unity 6000.6.0f1, then open Assets/HarborValeGreybox/Scenes/HarborVale_CityMap.unity.
+Open the project in **Unity 6000.6.0f1**, open `Assets/HarborValeGreybox/Scenes/HarborVale_CityMap.unity`, then press **Play**. The Aster Finch starts on the nearby road, ready to drive.
 
-An expanded meter-scale city with 24 named curved roads, 39 junctions, about 29.5 km of roads, three districts and labeled services/events. Includes an original low-poly Aster Finch starter hatchback prefab outside the player garage. One unit is one meter; two-lane roads are 7.2 m wide; the Finch body is 4.05 m long.
+| Controls | Action |
+|---|---|
+| W / S, Up / Down | Accelerate, brake, reverse |
+| A / D, Left / Right | Steer |
+| Space | Handbrake |
+| R | Recover on road |
+| C | Chase / bonnet camera |
+| Tab | Map inspection / return to driving |
 
-Press Play to inspect: 1 city, 2 docks, 3 midtown, 4 ridge, **5 car**, **6 street**, F fly mode, RMB look, WASD move, Q/E height, Shift faster, L labels. The car is a static visual model; driving/racing and career systems remain future work.
+Local Windows output: `Builds/HarborVale-Driving/HarborVale.exe` (build output is not stored in Git). Close an older preview and relaunch this output for the latest changes.
 
-![Starter Aster Finch](artifacts/qa/M11-T02/Starter_Finch.png)
+The stock Finch has physical suspension and tires, authored RPM-dependent torque, automatic gears, brakes/reverse and progressive steering. Includes HUD and original procedural engine audio. The city retains 24 curved roads, three labeled districts and meter-scale building placeholders. This is a driving prototype; racing/career, upgrades, traffic/police and persistence remain future work.
 
-![Expanded city](artifacts/qa/M11-T02/City_Expanded.png)
+Measured native physics: 0–100 km/h 13.56 s; 100–0 braking 4.10 s / 52.7 m. Physics and actual Play Mode integration checks passed. Sustained physical keyboard driving feel still needs user feedback. See `artifacts/qa/M11-T03/` for reports and the observed Windows-player preview.
 
-Continuation: read project/STATUS.md, project/NEXT_TASK.md, project/TASKS.json and project/EXPANSION_HANDOFF.md. Full design documents and balance sources are included under docs/ and design-data/. Earlier Godot and map-prototype paths in design history are superseded by this Unity project and the expansion handoff.
-
-All car and city geometry is originally authored procedural content with Unity primitives and built-in font/shaders. No third-party car model or licensed vehicle brand is included.
+Read `project/STATUS.md`, `project/NEXT_TASK.md`, `project/TASKS.json` and **`project/DRIVING_HANDOFF.md`** before continuing. Layout/model history remains in `project/EXPANSION_HANDOFF.md`. Preserve the independent `Finch_HandlingTest.unity` scene. Original geometry/audio, Unity built-in shaders/font and built-in modules; no paid controller or third-party car asset.

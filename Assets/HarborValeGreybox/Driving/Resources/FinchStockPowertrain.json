@@ -1,0 +1,44 @@
+{
+  "source": "design-data/powertrains.json:pt_finch.stock; cars.json:car_finch; visual tire radius 0.295 m",
+  "carId": "car_finch",
+  "massKg": 1050,
+  "wheelRadius": 0.295,
+  "efficiency": 0.9,
+  "finalDrive": 4.1,
+  "reverseRatio": 3.2,
+  "idleRpm": 900,
+  "redlineRpm": 6500,
+  "softLimiterRpm": 6400,
+  "upshiftRpm": 6200,
+  "downshiftRpm": 2200,
+  "launchRpm": 1800,
+  "shiftSeconds": 0.45,
+  "brakeDeceleration": 7.2,
+  "ratios": [
+    3.55,
+    2,
+    1.36,
+    1.03,
+    0.82
+  ],
+  "rpm": [
+    900,
+    1500,
+    2500,
+    3500,
+    4500,
+    5500,
+    6200,
+    6500
+  ],
+  "torque": [
+    74,
+    95,
+    111,
+    116,
+    119,
+    113,
+    100,
+    90
+  ]
+}

@@ -59,3 +59,8 @@ Confirmed: use Unity and start making a boxed/labeled city map. Overrides planni
 
 Confirmed November 18: expand the Unity map and replace the oversized rectilinear street plan with a connected curved network. New road widths: 7.2 m two lanes, 14 m four lanes; sidewalks 3 m where urban. Use original fictional Aster Finch as the starter visual, 4.05 x 1.70 x 1.46 m, 2.45 m wheelbase; these dimensions are authored defaults, not licensed vehicle measurements. Native procedural meshes and prefab, no third-party model dependency. Canonical destination is Documents/Unity/HarborVale on installed Unity 6000.6.0f1; prior project remains a preserved earlier revision. No handling/career implementation implied.
 
+
+## D043 — User-authorized stock Finch driving
+
+Confirmed November 18: make the starter car driveable now. Use Unity 6000.6 WheelColliders/Rigidbody, original Finch stock torque samples/ratios and 1,050 kg mass. Runtime bootstrap equips the existing static scene model without overwriting the open map scene; preserve static source prefab and create a separate driveable prefab/test scene. Keyboard primary; gamepad remains unverified. No paid tune stages, economy, traffic or police implemented in this bounded step.
+

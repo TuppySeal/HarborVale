@@ -20,3 +20,7 @@ After user sign-in, Unity successfully resolved entitlements and imported the pr
 
 Canonical project is now C:/Users/Justice/Documents/Unity/HarborVale using installed C:/Program Files/Unity/Hub/Editor/6000.6.0f1/Editor/Unity.exe. Earlier engine paths above are historical. M11-T02 successfully compiled, generated, saved/reopened and rendered with Unity 6000.6.0f1 and built-in pipeline. Road surface collision and model bounds checks passed. Exact next-step source/evidence paths: project/EXPANSION_HANDOFF.md.
 
+
+## Driving prototype
+Unity 6000.6.0f1 built-in vehicles/audio modules (1.0.0) added. Isolated verification project .work/UnityDrivingValidation avoids editing open canonical scenes. Native physics, actual Play Mode and Windows standalone development export succeeded. Exact reports and known editor-only issue are documented in project/DRIVING_HANDOFF.md and KNOWN_ISSUES.md. No paid assets/plugins were added.
+

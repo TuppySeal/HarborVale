@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project_title": "Redline: From Rust to Riches",
   "project_stage": "implementation",
-  "updated_at": "2026-11-18T19:28:30.8578321Z",
+  "updated_at": "2026-11-18T19:53:13.8552163Z",
   "current_task_id": null,
   "next_task_id": null,
   "status_values": [
@@ -678,14 +678,36 @@
         "artifacts/qa/M11-T02/verification.txt",
         "artifacts/qa/M11-T02/City_Expanded.png",
         "artifacts/qa/M11-T02/Starter_Finch.png",
-        "project/EXPANSION_HANDOFF.md"
+        "project/EXPANSION_HANDOFF.md",
+        "project/EXPANSION_GITHUB_VERIFICATION.json"
       ],
       "remaining_steps": [],
       "blockers": [],
       "updated_at": "2026-11-18T19:28:30.8578321Z"
+    },
+    {
+      "id": "M11-T03",
+      "title": "Driveable stock Aster Finch in Unity city",
+      "milestone": "M11",
+      "depends_on": [
+        "M11-T02"
+      ],
+      "status": "done",
+      "spec_ref": "docs/05_BUILD_ROADMAP.md",
+      "acceptance_key": "M11-T03",
+      "evidence": [
+        "artifacts/qa/M11-T03/physics-results.txt",
+        "artifacts/qa/M11-T03/playmode-results.txt",
+        "artifacts/qa/M11-T03/player-build.txt",
+        "artifacts/qa/M11-T03/Windows_Player_Preview.jpg",
+        "project/DRIVING_HANDOFF.md"
+      ],
+      "remaining_steps": [],
+      "blockers": [],
+      "updated_at": "2026-11-18T19:53:13.8552163Z"
     }
   ],
   "implementation_authorized": true,
   "current_design_amendment": "docs/12_CONFIRMED_FEATURE_CHOICES.md",
-  "authorization_scope": "Unity map expansion, world scale and starter-car visual model"
+  "authorization_scope": "Unity map and stock starter-car driving prototype"
 }

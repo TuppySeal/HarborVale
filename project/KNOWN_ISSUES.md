@@ -40,3 +40,7 @@ Workaround:
 Next investigation:
 Resolved by / verification:
 ```
+
+## K001 / low / open — Unity editor search indexing
+Affected: isolated Unity 6000.6.0f1 verification editor. At startup UnityEditor.Search.SearchDatabase.EnumerateAll/GetDefaultSearchDatabase throws ArgumentOutOfRangeException. Reproduced across batch editor launches; no game-runtime stack. Play Mode test records this editor-only issue separately; all other runtime errors still fail. Windows player does not include editor search code. Evidence: artifacts/qa/M11-T03/playmode-results.txt; local .work/UnityDrivingValidation/driving-playmode.log. Next investigation: Unity editor search indexing configuration or a version-matched upstream fix; do not silently upgrade the pinned engine.
+
