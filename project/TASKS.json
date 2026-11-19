@@ -2,9 +2,9 @@
   "schema_version": 1,
   "project_title": "Redline: From Rust to Riches",
   "project_stage": "implementation",
-  "updated_at": "2026-11-19T10:07:03.307Z",
+  "updated_at": "2026-11-19T10:25:58.799Z",
   "current_task_id": "M15-T02",
-  "next_task_id": "M15-T02",
+  "next_task_id": "M15-T03",
   "status_values": [
     "not_started",
     "in_progress",
@@ -1034,38 +1034,42 @@
     {
       "id": "M15-T02",
       "title": "Claude isolated roadside prop kit",
-      "status": "not_started",
+      "status": "in_progress",
       "remaining_steps": [
-        "Dispatch TASK.md once Windows prompt is dismissed",
-        "Inspect actual native assets and rendered previews"
+        "Await actual saved native assets and rendered previews",
+        "Independently check geometry, references, dimensions, package and visual quality",
+        "Review map placement in a disposable project before integration"
       ],
       "milestone": "M15",
       "depends_on": [
         "M14-T05"
       ],
       "spec_ref": "project/RENDERING_HANDOFF.md",
-      "evidence": [],
-      "blockers": [
-        "Windows network-access security dialog blocks external helper UI; assignments prepared separately"
-      ]
+      "evidence": [
+        "project/map-art-coordination/DISPATCH.json"
+      ],
+      "blockers": [],
+      "updated_at": "2026-11-19T10:25:58.799Z"
     },
     {
       "id": "M15-T03",
       "title": "Antigravity isolated building facade kit",
-      "status": "not_started",
+      "status": "in_progress",
       "remaining_steps": [
-        "Dispatch TASK.md once Windows prompt is dismissed",
-        "Inspect actual native assets and rendered previews"
+        "Await actual saved native assets and rendered previews",
+        "Independently check geometry, references, dimensions, package and visual quality",
+        "Review map placement in a disposable project before integration"
       ],
       "milestone": "M15",
       "depends_on": [
         "M14-T05"
       ],
       "spec_ref": "project/RENDERING_HANDOFF.md",
-      "evidence": [],
-      "blockers": [
-        "Windows network-access security dialog blocks external helper UI; assignments prepared separately"
-      ]
+      "evidence": [
+        "project/map-art-coordination/DISPATCH.json"
+      ],
+      "blockers": [],
+      "updated_at": "2026-11-19T10:25:58.799Z"
     }
   ],
   "implementation_authorized": true,
