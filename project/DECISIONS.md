@@ -105,3 +105,7 @@ User requested brake+accelerator near4000RPM by tune. Implement stopped first-ge
 
 ## D055 — Turbo sound profiles without paid-state changes
 User requests more realistic turbo audio and BOV or stututu choice. Provide original airflow/spool synthesis and actual boosted-lift releases; treat selection as a free cosmetic preference separate from paid v5 state and burble/flame tunes. Save Finch atomically, keep Apex temporary. No engine-power, physical surge, valve hardware or wear change implied.
+
+
+## D056 — Clean integrated driving presentation and safe look controls
+User requested audio/SFX/animation cleanup and side-looking while driving. Smooth existing audio and visual transitions without handling/economy changes. RMB drag plus J/L sides and K rear use separate controls; modal/focus/recovery release cursor and restore view. Native capture/PCM/geometry checks support the result; physical-input feel and subjective listening remain user review.

@@ -1,0 +1,14 @@
+PASS Tune-specific hold RPM and limited staged turbo boost build progressively
+PASS Paddle shift rejected during brake staging
+PASS Release carries finite rev/spool state into actual launch
+PASS Lift/modal cancellation clears staging
+PASS Launch target depends on induction calibration
+MEASURE staged=False distance3s=18.31m speed=41.1km/h
+PASS Vehicle holds calibrated RPM under brake while stopped
+PASS Brakes prevent premature launch False
+MEASURE staged=True distance3s=20.00m speed=42.5km/h
+PASS Staged turbo launch covers more distance in first three seconds with suitable tires
+PASS Vehicle holds calibrated RPM under brake during countdown
+PASS Brakes prevent premature launch True
+PASS Releasing before green cannot launch through countdown lock
+PASS Countdown/staging cancellation safe

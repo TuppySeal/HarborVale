@@ -252,3 +252,7 @@ Three sequential paid LSD/suspension/gearing/aero stages, parked setup, physical
 
 ### M14-T04 — Selectable turbo spool/release audio (done)
 State-driven airflow, BOV/flutter, free garage audio preferences/previews, native pulls/audio and paid-state isolation. See project/TURBO_AUDIO_HANDOFF.md.
+
+
+### M14-T05 — Driving audio, effects and camera polish (done)
+Sample-smoothed existing mix, preview/scene fades, wheel/flare/skid animation cleanup, RMB and J/L/K view controls. See project/AV_CAMERA_HANDOFF.md.

@@ -1,0 +1,51 @@
+PASS Paid Finch expanded workshop opens
+PASS Paid install na_1
+PASS Paid install gearbox_1
+PASS Paid install induction_roots_1
+PASS Paid install cooling_1
+PASS Paid install cooling_2
+PASS Paid install brakes_1
+PASS Paid install brakes_2
+PASS Paid install brakes_3
+PASS Paid install tires_1
+PASS Paid install tires_2
+PASS Paid install tires_3
+PASS Paid install intake_1
+PASS Paid install exhaust_1
+PASS Paid install exhaust_2
+PASS Paid install sound_flame_1
+PASS Paid install sound_flame_2
+PASS Paid install na_2
+PASS Paid install na_3
+PASS Paid install gearbox_2
+PASS Paid install gearbox_3
+PASS Paid install induction_roots_2
+PASS Paid install induction_roots_3
+PASS Stage3 tires alter actual longitudinal grip
+PASS SC staged torque definition actually applied
+PASS Already installed cannot debit again
+PASS Incompatible Finch twins cannot be purchased
+PASS Exactly one engine/effects audio source
+PASS No duplicate wheel physics
+PASS Actual loaded SC produces whine
+PASS Actual drive reaches lift-off RPM
+PASS Installed flame tune generates a real throttle-lift pop
+PASS Return to mode menu
+PASS Apex starts fresh temporary stock build
+PASS Apex gets same workshop UI
+PASS Free Apex stage na_1
+PASS Free Apex stage gearbox_1
+PASS Free Apex stage induction_twin_1
+PASS Free Apex stage induction_twin_2
+PASS Free Apex stage na_2
+PASS Free Apex stage intake_1
+PASS Free Apex stage exhaust_1
+PASS Free Apex stage na_3
+PASS Free Apex stage gearbox_2
+PASS Free Apex stage cooling_1
+PASS Free Apex stage cooling_2
+PASS Free Apex stage induction_twin_3
+PASS Actual twin-turbo curve installed
+PASS Free Apex never changes paid Finch ledger
+PASS Paid multistage build reloads after scene roundtrip
+PASS No native runtime errors

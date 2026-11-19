@@ -1,0 +1,81 @@
+PASS Finch smooth side/rear/center view -90
+PASS Finch camera does not move or steer car -90
+PASS Finch smooth side/rear/center view 90
+PASS Finch camera does not move or steer car 90
+PASS Finch smooth side/rear/center view 180
+PASS Finch camera does not move or steer car 180
+PASS Finch smooth side/rear/center view 0
+PASS Finch camera does not move or steer car 0
+PASS Finch bonnet camera looks sideways
+PASS Finch modal opens safely
+PASS Finch modal blocks camera and releases mouse
+PASS Finch prepared hardware na_1
+PASS Finch prepared hardware gearbox_1
+PASS Finch prepared hardware induction_roots_1
+PASS Finch prepared hardware induction_roots_2
+PASS Finch prepared hardware na_2
+PASS Finch prepared hardware intake_1
+PASS Finch prepared hardware exhaust_1
+PASS Finch prepared hardware na_3
+PASS Finch prepared hardware gearbox_2
+PASS Finch prepared hardware cooling_1
+PASS Finch prepared hardware cooling_2
+PASS Finch prepared hardware induction_roots_3
+PASS Finch prepared exhaust sound_flame_1
+PASS Finch supercharger audio follows installed hardware without turbo layer
+PASS Finch measured tire slip produces smoke and squeal
+MEASURE Finch wheel visual error=0.07157701
+PASS Finch wheel visuals follow interpolated body without large separation
+PASS Finch automatic shifts do not invent throttle-lift pops
+MEASURE Finch lift rpm=3718.678 shifting=False grounded=4
+PASS Finch actual high-RPM lift creates pop and flame
+PASS Finch flame geometry and light fade together
+PASS Finch smoke finishes naturally after traction demand ends
+PASS Finch skid effects use bounded six-segment pool per tire
+PASS Finch rubber segments contain no long gap bridges
+PASS Finch native listener captures driving mix
+MEASURE Finch reset trail length=0 flame=0 throttle=0
+PASS Finch recovery clears old visual trails and flames
+PASS Finch recovery recenters camera
+PASS Finch presentation retains four physical wheel contacts
+PASS Apex smooth side/rear/center view -90
+PASS Apex camera does not move or steer car -90
+PASS Apex smooth side/rear/center view 90
+PASS Apex camera does not move or steer car 90
+PASS Apex smooth side/rear/center view 180
+PASS Apex camera does not move or steer car 180
+PASS Apex smooth side/rear/center view 0
+PASS Apex camera does not move or steer car 0
+PASS Apex bonnet camera looks sideways
+PASS Apex modal opens safely
+PASS Apex modal blocks camera and releases mouse
+PASS Apex prepared hardware na_1
+PASS Apex prepared hardware gearbox_1
+PASS Apex prepared hardware induction_roots_1
+PASS Apex prepared hardware induction_roots_2
+PASS Apex prepared hardware na_2
+PASS Apex prepared hardware intake_1
+PASS Apex prepared hardware exhaust_1
+PASS Apex prepared hardware na_3
+PASS Apex prepared hardware gearbox_2
+PASS Apex prepared hardware cooling_1
+PASS Apex prepared hardware cooling_2
+PASS Apex prepared hardware induction_roots_3
+PASS Apex prepared exhaust sound_flame_1
+PASS Apex supercharger audio follows installed hardware without turbo layer
+MEASURE Apex wheel visual error=0.123557
+PASS Apex wheel visuals follow interpolated body without large separation
+PASS Apex automatic shifts do not invent throttle-lift pops
+MEASURE Apex lift rpm=4519.407 shifting=True grounded=4
+PASS Apex actual high-RPM lift creates pop and flame
+PASS Apex flame geometry and light fade together
+PASS Apex smoke finishes naturally after traction demand ends
+PASS Apex skid effects use bounded six-segment pool per tire
+PASS Apex rubber segments contain no long gap bridges
+PASS Apex native listener captures driving mix
+MEASURE Apex reset trail length=0 flame=0 throttle=0
+PASS Apex recovery clears old visual trails and flames
+PASS Apex recovery recenters camera
+PASS Apex presentation retains four physical wheel contacts
+PASS Free Apex presentation review leaves paid ledger byte-identical
+PASS No native runtime errors

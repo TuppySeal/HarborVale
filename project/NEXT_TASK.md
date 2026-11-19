@@ -1,5 +1,5 @@
-# Turbo audio complete — listening and driving review next
+# Audiovisual and camera polish complete — human review next
 
-Read STATUS.md and TURBO_AUDIO_HANDOFF.md. Latest executable Builds/HarborVale-TurboAudio/HarborVale.exe in C:/Users/Justice/Documents/Unity/HarborVale. Park at Finch garage, G > Turbo audio, preview/select BOV or flutter. Preference is free and separate from paid saves; Apex is temporary. Build boost then lift to hear it. W+S staging and all previous controls/upgrades retained.
+Read STATUS.md and AV_CAMERA_HANDOFF.md. Latest player Builds/HarborVale-PolishedDrive/HarborVale.exe in C:/Users/Justice/Documents/Unity/HarborVale. RMB drag looks around; J/L sides and K rear; release centers. C switches chase/bonnet. Existing W/S/A/D, staging, M/Z/X and G shop controls retained. Garage still has Turbo audio with BOV/flutter previews.
 
-Human next check: compare both profiles at low/high boost on small/large/twin setups, listen for balance with engine and exhaust layers, check rapid throttle, modal closing and real keyboard/controller feel. Keep v5 receipts/49 offers and protected scenes/handling unchanged. Preserve separate preference failure behavior. No thermal/surge/wear/full-career claim or scope added. External AI art/projects remain isolated.
+Next human checks: listen/drive a full Finch/Apex lap, review actual steering/wheel/flare/smoke motion and levels, RMB focus/cursor restore and view switches near walls, different frame rates and road grades. Preserve v5 paid receipts, separate v1 preference and49 offers. Physical simulation controls/curves untouched; wheel changes are visual only. No new career/thermal/wear/external-art scope implied. Original Claude/Antigravity projects remain isolated.

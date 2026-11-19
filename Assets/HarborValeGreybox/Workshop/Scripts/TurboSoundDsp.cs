@@ -3,10 +3,10 @@ namespace HarborValeGreybox.Workshop {
 public enum TurboReleaseMode { BlowOffValve=0, Flutter=1 }
 // Original sample-rate-aware synthesis. No borrowed recordings or random calls into Unity's audio thread.
 public sealed class TurboSoundDsp {
- readonly double sampleRate;uint random=0x6d2b79f5;double rotor,level,phase,low,air,resonance,releaseTime=-1,releaseStrength,releaseScale=1;int mode;
+ readonly double sampleRate;uint random=0x6d2b79f5;double rotor,level,phase,low,air,resonance,releaseTime=-1,releaseStrength,releaseScale=1,releaseFade=1;int mode;bool cancelling;
  public TurboSoundDsp(int rate){sampleRate=Math.Max(8000,rate);}
- public void Release(TurboReleaseMode choice,float pressure,float size){mode=(int)choice;releaseStrength=Math.Min(1,Math.Sqrt(Math.Max(0,pressure)/1.5));releaseScale=Math.Max(.75,Math.Min(1.25,size));releaseTime=0;}
- public void Cancel(){releaseTime=-1;level=0;}
+ public void Release(TurboReleaseMode choice,float pressure,float size){mode=(int)choice;releaseStrength=Math.Min(1,Math.Sqrt(Math.Max(0,pressure)/1.5));releaseScale=Math.Max(.75,Math.Min(1.25,size));releaseTime=0;releaseFade=1;cancelling=false;}
+ public void Cancel(){cancelling=true;}
  double Noise(){random^=random<<13;random^=random>>17;random^=random<<5;return random/2147483648.0-1;}
  public float Sample(float gain,float speed,float size){
   double dt=1/sampleRate;level+=(Math.Max(0,gain)-level)*(1-Math.Exp(-dt/.035));rotor+=(Math.Max(0,Math.Min(1,speed))-rotor)*(1-Math.Exp(-dt/.075));double n=Noise();low+=(n-low)*(1-Math.Exp(-dt*2*Math.PI*700));air+=(n-air)*(1-Math.Exp(-dt*2*Math.PI*6200));double band=air-low;
@@ -17,7 +17,7 @@ public sealed class TurboSoundDsp {
   if(releaseTime>=0){double t=releaseTime;releaseTime+=dt;double envelope=0,tone=0;
    if(mode==0){double length=.32+.30*releaseStrength;envelope=(1-Math.Exp(-t/.006))*Math.Exp(-t/(.09+.10*releaseStrength));tone=.045*Math.Sin(2*Math.PI*(3000*t-1150*t*t)*releaseScale);if(t>length)releaseTime=-1;}
    else {double cursor=0;int pulses=4+(int)(releaseStrength*3);double length=pulses*.055+.014*pulses*(pulses-1)/2;for(int i=0;i<pulses;i++){double period=.055+.014*i;double local=t-cursor;if(local>=0&&local<period){double p=local/(period*.72);if(p<1)envelope=Math.Pow(Math.Sin(p*Math.PI),1.6)*Math.Pow(.76,i);tone=.14*Math.Sin(2*Math.PI*(1100*t-300*t*t)*releaseScale);break;}cursor+=period;}if(t>length)releaseTime=-1;}
-   output+=releaseStrength*.50*envelope*(band+tone);
+   if(cancelling){releaseFade*=Math.Exp(-dt/.006);if(releaseFade<.0001)releaseTime=-1;}output+=releaseFade*releaseStrength*.50*envelope*(band+tone);
   }
   return (float)Math.Max(-.7,Math.Min(.7,output));
  }

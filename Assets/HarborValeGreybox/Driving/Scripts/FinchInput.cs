@@ -19,6 +19,7 @@ public static class FinchInput {
  }
 #if ENABLE_INPUT_SYSTEM
  static UnityEngine.InputSystem.Key Convert(KeyCode k){switch(k){
+  case KeyCode.J:return UnityEngine.InputSystem.Key.J;case KeyCode.K:return UnityEngine.InputSystem.Key.K;case KeyCode.L:return UnityEngine.InputSystem.Key.L;
   case KeyCode.M:return UnityEngine.InputSystem.Key.M;case KeyCode.Z:return UnityEngine.InputSystem.Key.Z;case KeyCode.X:return UnityEngine.InputSystem.Key.X;
   case KeyCode.G:return UnityEngine.InputSystem.Key.G;case KeyCode.Return:return UnityEngine.InputSystem.Key.Enter;case KeyCode.E:return UnityEngine.InputSystem.Key.E;case KeyCode.W:return UnityEngine.InputSystem.Key.W;case KeyCode.S:return UnityEngine.InputSystem.Key.S;
   case KeyCode.A:return UnityEngine.InputSystem.Key.A;case KeyCode.D:return UnityEngine.InputSystem.Key.D;
@@ -31,6 +32,20 @@ public static class FinchInput {
   default:return UnityEngine.InputSystem.Key.Escape;}}
 #endif
  public static bool Shortcut(KeyCode k)=>Down(k)&&!Held(KeyCode.LeftAlt)&&!Held(KeyCode.RightAlt)&&!Held(KeyCode.LeftControl)&&!Held(KeyCode.RightControl);
+ public static bool MouseLookHeld {get {if(!Application.isFocused)return false;
+#if ENABLE_INPUT_SYSTEM
+   return UnityEngine.InputSystem.Mouse.current?.rightButton.isPressed==true;
+#else
+   return Input.GetMouseButton(1);
+#endif
+ }}
+ public static Vector2 MouseLookDelta {get {if(!Application.isFocused)return Vector2.zero;
+#if ENABLE_INPUT_SYSTEM
+   return UnityEngine.InputSystem.Mouse.current==null?Vector2.zero:UnityEngine.InputSystem.Mouse.current.delta.ReadValue()*.12f;
+#else
+   return new Vector2(Input.GetAxisRaw("Mouse X"),Input.GetAxisRaw("Mouse Y"))*2.5f;
+#endif
+ }}
  public static float Accelerator=>(Held(KeyCode.W)||Held(KeyCode.UpArrow)?1:0);
  public static float ServiceBrake=>(Held(KeyCode.S)||Held(KeyCode.DownArrow)?1:0);
  public static float Pedal=>(Held(KeyCode.W)||Held(KeyCode.UpArrow)?1:0)-(Held(KeyCode.S)||Held(KeyCode.DownArrow)?1:0);

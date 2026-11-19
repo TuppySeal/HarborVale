@@ -40,3 +40,7 @@ M14-T03 complete. Read project/CHASSIS_HANDOFF.md before edits. Latest player Bu
 
 ## Latest turbo audio expansion
 M14-T04 complete. Read project/TURBO_AUDIO_HANDOFF.md. Latest player Builds/HarborVale-TurboAudio. Paid state/catalog remain v5/49offers. BOV/flutter is a free cosmetic preference stored separately; Apex temporary. Release follows actual boosted driver lift, never key-only/NA/Roots effects. Preserve real state gates, atomic settings error handling and audio-thread safety. Procedural sound is not real-car recording or physical surge/valve simulation.
+
+
+## Latest driving presentation/camera polish
+M14-T05 complete. Read project/AV_CAMERA_HANDOFF.md. Latest player Builds/HarborVale-PolishedDrive. RMB/J/L/K view controls must stay separate from vehicle steering and release cursor on modal/focus/disable/scene exit. Preserve visual-only wheel interpolation, real audio/slip/load gates, finite sample-rate ramps and scene fade. Paid v5/catalog49 and separate v1 turbo preference unchanged. Full-lap subjective listening and physical-input checks remain manual; no further gameplay expansion implied.

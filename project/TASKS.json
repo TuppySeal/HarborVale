@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project_title": "Redline: From Rust to Riches",
   "project_stage": "implementation",
-  "updated_at": "2026-11-19T08:41:04.387Z",
+  "updated_at": "2026-11-19T09:12:04.489Z",
   "current_task_id": null,
   "next_task_id": null,
   "status_values": [
@@ -990,6 +990,25 @@
         "artifacts/qa/M14-T04/audio-rules.txt",
         "artifacts/qa/M14-T04/final-native/results.txt",
         "artifacts/qa/M14-T04/install-verification.json"
+      ],
+      "remaining_steps": [],
+      "blockers": []
+    },
+    {
+      "id": "M14-T05",
+      "title": "Clean driving mix, visual effects and side-look camera",
+      "milestone": "M14",
+      "depends_on": [
+        "M14-T04"
+      ],
+      "status": "done",
+      "spec_ref": "project/AV_CAMERA_HANDOFF.md",
+      "acceptance_key": "M14-T05",
+      "evidence": [
+        "project/AV_CAMERA_HANDOFF.md",
+        "artifacts/qa/M14-T05/av-camera-rules.txt",
+        "artifacts/qa/M14-T05/verified-native/results.txt",
+        "artifacts/qa/M14-T05/install-verification.json"
       ],
       "remaining_steps": [],
       "blockers": []
