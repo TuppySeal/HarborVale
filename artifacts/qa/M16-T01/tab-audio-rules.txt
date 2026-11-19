@@ -1,0 +1,62 @@
+PASS Existing 49 offers retained
+PASS All upgrade families have a dedicated tab
+PASS Engine tunes is populated
+PASS Engine tunes keeps authored stage order
+PASS Small turbo is populated
+PASS Small turbo keeps authored stage order
+PASS Large turbo is populated
+PASS Large turbo keeps authored stage order
+PASS Supercharger is populated
+PASS Supercharger keeps authored stage order
+PASS Twin turbo is populated
+PASS Twin turbo keeps authored stage order
+PASS Intercoolers is populated
+PASS Intercoolers keeps authored stage order
+PASS Gearbox is populated
+PASS Gearbox keeps authored stage order
+PASS Brakes is populated
+PASS Brakes keeps authored stage order
+PASS Tires is populated
+PASS Tires keeps authored stage order
+PASS Intake is populated
+PASS Intake keeps authored stage order
+PASS Exhaust is populated
+PASS Exhaust keeps authored stage order
+PASS Sound tunes is populated
+PASS Sound tunes keeps authored stage order
+PASS Differential is populated
+PASS Differential keeps authored stage order
+PASS Suspension is populated
+PASS Suspension keeps authored stage order
+PASS Final drive is populated
+PASS Final drive keeps authored stage order
+PASS Aero is populated
+PASS Aero keeps authored stage order
+PASS Every offer belongs to exactly one specific tab
+PASS small induction stages isolated from other families
+PASS large induction stages isolated from other families
+PASS roots induction stages isolated from other families
+PASS twin induction stages isolated from other families
+PASS Return-to-NA service remains discoverable under Engine tunes
+PASS Finch twin-turbo compatibility restriction retained
+PASS Airborne wheels produce no squeal
+PASS Low-speed normal driving produces no squeal
+PASS Actual low-speed powered burnout remains audible
+PASS Normal measured grip stays silent
+PASS Bounded rubber synthesis at 22050
+PASS Soft squeal attack at 22050
+PASS Sustained tire friction is audible at 22050
+PASS Slip release fades to silence at 22050
+PASS Tire layer has negligible DC at 22050
+PASS Bounded rubber synthesis at 44100
+PASS Soft squeal attack at 44100
+PASS Sustained tire friction is audible at 44100
+PASS Slip release fades to silence at 44100
+PASS Tire layer has negligible DC at 44100
+PASS Bounded rubber synthesis at 48000
+PASS Soft squeal attack at 48000
+PASS Sustained tire friction is audible at 48000
+PASS Slip release fades to silence at 48000
+PASS Tire layer has negligible DC at 48000
+PASS Tire tone is independent of engine RPM
+PASS Road speed changes friction texture and resonance

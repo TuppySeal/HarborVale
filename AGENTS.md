@@ -52,3 +52,7 @@ M15-T01 complete. Read project/RENDERING_HANDOFF.md. Latest player Builds/Harbor
 
 ## Latest reviewed map art
 M15-T02–T04 complete. Read project/MAP_ART_HANDOFF.md. Latest player Builds/HarborVale-CityArt.17 compatible Midtown plots use runtime apartment facades and51 visual-only forecourt props; source scene/roads/colliders/car physics unchanged. Never blindly rescale all buildings or rerun old source builders. Preserve placement IDs and static batching timing. Corrected roadside resources differ from the original Claude package. Native10/placement9/building41/prop38 plus clean import4 verified; do not fabricate a new garage regression pass from the unsupported batch ScreenCapture run. Active physical desktop input may conflict with helper UI; keep monitor settings unchanged and preserve drafts.
+
+
+## Latest garage tabs and tire audio
+M16-T01 complete. Read project/TABS_TIRE_HANDOFF.md. Latest player Builds/HarborVale-GarageTabs.17 full-width tabs map every existing offer to one family; prerequisite navigation reveals its tab and install hotkey requires a visible selection. Keep49-offer balance/v5 receipts and free Apex isolation. Tire sound follows actual wheel slip/road speed rather than engine RPM; preserve real contact/modal/focus gates, audio-thread-local synthesis and no duplicate sources/physics. Native64/rules62/mixer-camera33 passed; subjective listening and physical UI input remain manual.

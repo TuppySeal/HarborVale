@@ -264,3 +264,7 @@ M15-T01 done: Linear/4xMSAA/tonemap, shadow cleanup and measured static batching
 
 ### M15-T02–T04 — Reviewed external art and first Midtown pass (done)
 Three building prototypes and four corrected props reviewed;17 existing plots dressed with facades,34 lamps and17 planters while preserving physical map. See project/MAP_ART_HANDOFF.md.
+
+
+### M16-T01 — Upgrade-family tabs and smoother tire squeal (done)
+17 tabs, prerequisite tab jumps and guarded visible-selection install. Slip/road-speed rubber synthesis with clean fades. Read project/TABS_TIRE_HANDOFF.md.

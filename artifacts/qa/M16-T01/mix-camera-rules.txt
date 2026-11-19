@@ -1,0 +1,36 @@
+PASS All-layer worst-case mix remains finite with headroom at 22050
+PASS Startup has a soft attack at 22050
+PASS Focus/scene master fade reaches silence at 22050
+PASS Mixed signal has negligible DC at 22050
+MEASURE rate=22050 peak=0.59419 steady RMS=0.17533
+PASS All-layer worst-case mix remains finite with headroom at 44100
+PASS Startup has a soft attack at 44100
+PASS Focus/scene master fade reaches silence at 44100
+PASS Mixed signal has negligible DC at 44100
+MEASURE rate=44100 peak=0.59247 steady RMS=0.16906
+PASS All-layer worst-case mix remains finite with headroom at 48000
+PASS Startup has a soft attack at 48000
+PASS Focus/scene master fade reaches silence at 48000
+PASS Mixed signal has negligible DC at 48000
+MEASURE rate=48000 peak=0.62186 steady RMS=0.16780
+PASS Existing engine layer is audible and finite
+PASS Existing tires layer is audible and finite
+PASS Existing blower layer is audible and finite
+PASS Existing turbo layer is audible and finite
+PASS Existing pop layer is audible and finite
+PASS Recovery cancellation fades transient tails cleanly
+PASS Smooth keyboard view reaches -90 degrees
+PASS View keeps a stable upright horizon -90
+PASS Smooth keyboard view reaches 90 degrees
+PASS View keeps a stable upright horizon 90
+PASS Smooth keyboard view reaches 180 degrees
+PASS View keeps a stable upright horizon 180
+PASS Smooth keyboard view reaches 0 degrees
+PASS View keeps a stable upright horizon 0
+PASS Mouse yaw/pitch are bounded
+PASS Garage/modal lock releases and recenters view
+PASS Bonnet view supports side looking
+PASS Camera contracts in front of scenery obstruction
+PASS Wheel position maps through physical body pose
+PASS Wheel steer/spin maps through body rotation without physics writes
+PASS Presentation changes retain exactly four physical contacts

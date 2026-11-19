@@ -1,9 +1,5 @@
-# Review first Midtown art pass and current garage
+# Try the tabbed garage and tire sound
 
-Read STATUS.md, MAP_ART_HANDOFF.md and RENDERING_HANDOFF.md. Latest player Builds/HarborVale-CityArt/HarborVale.exe in C:/Users/Justice/Documents/Unity/HarborVale. Close older players before opening it. Test Apex · free upgrades -> stop -> G is the free parts/GUI test; Finch uses saved paid upgrades at starting garage. All existing camera/driving controls retained.
+Read STATUS.md and TABS_TIRE_HANDOFF.md. Latest installed player Builds/HarborVale-GarageTabs/HarborVale.exe in C:/Users/Justice/Documents/Unity/HarborVale. Free test: Test Apex · free upgrades -> stop -> G. Finch paid parts: stop at starting garage -> G. Tabs are across the top; each induction family has its own Stage1–3 list. View next required part jumps to that upgrade's tab. Switching tabs clears search; Apex-only twins remain restricted on Finch.
 
-First art pass is localized to17 existing Midtown plots; other districts remain greybox.34 lamps and17 planters are visual only; roads/driveways/original collision shapes retained. Human next: drive Midtown in Finch/Apex, review street-level silhouettes, camera/clipping and frame cost, then choose next compatible modular variants/placement expansion. Warehouse/storefront/wall/bollard are reviewed reusable assets available in CityArt/Resources, not all placed. Do not blindly stretch the full city or run legacy builders. No new career or mechanic simulation is implied.
-
-Helper copies remain separate. An unsent Claude correction draft may remain because physical keyboard input blocked submission; do not automatically send stale measurements. See handoff for corrected copies and exact test commands. Keep desktop/monitor settings unchanged; use project-scoped background checks while user plays.
-
-Download latest complete Windows ZIP from https://github.com/TuppySeal/HarborVale/releases/latest while signed into the private repository. Extract all files, then run HarborVale.exe. Use Test Apex · free upgrades, stop and G for free garage testing. See RELEASES.json for checksums.
+Human review: mouse/keyboard browsing at different resolutions; real drifting/burnout tire sound and quiet return to grip; relative engine/tire/turbo levels on speakers/headphones. No physics, price, torque, save-schema or catalog changes. Existing city-art continuation remains in MAP_ART_HANDOFF.md. Audio demo and native mix in Builds/Demos/GarageTabs. Use latest GitHub release after publication; prior CityArt ZIP remains available at its historical tag.

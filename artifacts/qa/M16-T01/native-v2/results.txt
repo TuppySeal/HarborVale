@@ -1,0 +1,65 @@
+PASS Paid Finch opens new tabbed garage
+PASS First garage opens on Engine tunes
+PASS Finch tab selects only visible parts: All parts
+PASS Finch tab selects only visible parts: Engine tunes
+PASS Finch tab selects only visible parts: Small turbo
+PASS Finch tab selects only visible parts: Large turbo
+PASS Finch tab selects only visible parts: Supercharger
+PASS Finch tab selects only visible parts: Twin turbo
+PASS Finch tab selects only visible parts: Intercoolers
+PASS Finch tab selects only visible parts: Gearbox
+PASS Finch tab selects only visible parts: Brakes
+PASS Finch tab selects only visible parts: Tires
+PASS Finch tab selects only visible parts: Intake
+PASS Finch tab selects only visible parts: Exhaust
+PASS Finch tab selects only visible parts: Sound tunes
+PASS Finch tab selects only visible parts: Differential
+PASS Finch tab selects only visible parts: Suspension
+PASS Finch tab selects only visible parts: Final drive
+PASS Finch tab selects only visible parts: Aero
+PASS Supercharger tab contains its three stages only
+PASS Rendered garage screenshot is nonblank: Finch_Supercharger_1280x720
+PASS Missing requirement action jumps to Engine tunes tab
+PASS Visible required engine stage purchases through real store
+PASS Next missing requirement jumps to Gearbox tab
+PASS Visible gearbox stage purchases through real store
+PASS Supercharger stage purchases from its own tab
+PASS Repeated installed selection cannot charge twice
+PASS Finch twin-turbo tab clearly retains Apex-only restrictions
+PASS Finch cannot buy incompatible twin turbo from tab
+PASS Empty tab search cannot purchase hidden prior selection
+PASS Changing tabs clears search and reveals all brake stages
+PASS Paid burnout fixture stage induction_roots_2
+PASS Paid burnout fixture stage na_2
+PASS Paid burnout fixture stage intake_1
+PASS Paid burnout fixture stage exhaust_1
+PASS Paid burnout fixture stage na_3
+PASS Paid burnout fixture stage gearbox_2
+PASS Paid burnout fixture stage cooling_1
+PASS Paid burnout fixture stage cooling_2
+PASS Paid burnout fixture stage induction_roots_3
+PASS Rendered garage screenshot is nonblank: Finch_Supercharger_1600x900
+MEASURE actual tire gain=0.045 speed=63.06073
+PASS Actual driven-wheel slip and road speed reach new tire audio layer
+PASS Native audio listener records loaded tire/engine mix
+PASS Recovered stationary car stops requesting squeal
+PASS Free Apex opens same tabbed interface
+PASS Apex twin-turbo stages appear in order under Twin turbo
+PASS Free Apex twin path na_1
+PASS Free Apex twin path gearbox_1
+PASS Free Apex twin path induction_twin_1
+PASS Free Apex twin path induction_twin_2
+PASS Free Apex twin path na_2
+PASS Free Apex twin path intake_1
+PASS Free Apex twin path exhaust_1
+PASS Free Apex twin path na_3
+PASS Free Apex twin path gearbox_2
+PASS Free Apex twin path cooling_1
+PASS Free Apex twin path cooling_2
+PASS Free Apex twin path induction_twin_3
+PASS Rendered garage screenshot is nonblank: Apex_TwinTurbo_1600x900
+PASS Twin turbo tab installs actual Apex hardware/curve
+PASS Rendered garage screenshot is nonblank: Apex_SoundTunes_1600x900
+PASS Free Apex tab installs leave paid Finch ledger byte-identical
+PASS Tabs and tire audio add no duplicate physics or engine sources
+PASS No native tab/audio runtime errors

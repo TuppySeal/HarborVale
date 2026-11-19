@@ -63,3 +63,5 @@ Do not interpret a check here as unperformed controller, full-campaign, frame-ra
 - [x] M15-T02/03: Isolated roadside/building tasks sent, delivered and independently reviewed; corrected assets and first integration documented in MAP_ART_HANDOFF.md.
 
 - [x] M15-T02–T04: Reviewed building kit and corrected roadside kit, actual fresh import/native renders,17 Midtown facade replacements and51 forecourt props with preserved map collision.
+
+- [x] M16-T01:17 upgrade-family tabs with counts and prerequisite jumps; smoother band-limited tire squeal follows road speed/real slip; native layouts/audio and paid-isolation checks passed.

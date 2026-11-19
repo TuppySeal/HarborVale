@@ -117,3 +117,7 @@ User requested Claude/Antigravity improve the map while Codex cleans rendering. 
 
 ## D058 — Review native art before a bounded map placement pass
 Correct helper assets in a separate copy, verify persistent native references/actual renders and clean package imports. Replace only17 compatible Midtown facades; preserve core plot identities and collision, keep forecourt props visual-only without dynamic lights. Broader city geometry/prop collision/performance needs deliberate subsequent work.
+
+
+## D059 — Split boost families into clear tabs; keep tire pitch independent of engine RPM
+User requested upgrade tabs and improved tire squeal. Keep all49 offers, fees and transactions untouched; group by hardware family with direct prerequisite navigation. Use filtered original tire texture and road-speed/slip telemetry while preserving contact/focus gates and one shared audio source.
