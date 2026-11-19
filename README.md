@@ -4,7 +4,13 @@
 
 This repository and its downloads are private. Sign in with a GitHub account that has access.
 
-Download **HarborVale-Fitments-Windows-x64.zip** from the release's Assets list, extract the entire ZIP, then run **HarborVale.exe** inside the extracted HarborVale folder. Keep HarborVale_Data and all DLLs beside it. Close older game versions first. The game runs on a Windows64-bit PC; GitHub does not run it in a browser.
+Download **HarborVale-Rivals-Windows-x64.zip** from the release's Assets list, extract the entire ZIP, then run **HarborVale.exe** inside the extracted HarborVale folder. Keep HarborVale_Data and all DLLs beside it. Close older game versions first. The game runs on a Windows64-bit PC; GitHub does not run it in a browser.
+
+## AI rivals and traffic
+
+Choose **Drive Finch**, stop and press **H** for **Rivals & Fleet**. Regular physical traffic appears automatically. Cash races against three AI drivers pay650/1000/1500credits for a win or150/200/250for a valid second-place finish; no entry fee. Follow all37 checkpoints around the Dockside loop.
+
+Optional **pink slips permanently stake the selected car and its upgrades**, with a separate agreement before starting. Winning transfers the actual rival car/build; losing, abandoning or closing midrace transfers yours. Ties keep both titles. A free stock loaner and1800credit new replacement path recover from losing your last car. Select owned/won cars inH after returning to driving; paid upgrades stay with each car. Existing progress imports read-only into v7. Traffic is a prototype without signals/overtaking/police; current rivals/fleet are Finch variants.
 
 ## Try the garage
 
@@ -23,6 +29,6 @@ Cleaner lighting/edge smoothing and a first art pass on17 existing Midtown plots
 
 ## Unity source
 
-Unity **6000.6.0f1**, built-in renderer. Open **Assets/HarborValeGreybox/Launch/Scenes/HarborVale_Hub.unity** and press Play. Installed local player: **Builds/HarborVale-Fitments/HarborVale.exe**. Builds and caches are excluded from Git; downloadable players are attached to GitHub Releases.
+Unity **6000.6.0f1**, built-in renderer. Open **Assets/HarborValeGreybox/Launch/Scenes/HarborVale_Hub.unity** and press Play. Installed local player: **Builds/HarborVale-Rivals/HarborVale.exe**. Builds and caches are excluded from Git; downloadable players are attached to GitHub Releases.
 
-Read project/STATUS.md, project/NEXT_TASK.md, project/FITMENT_HANDOFF.md and project/RELEASES.json for current progress, actual verification and download hashes. Earlier milestone handoffs preserve historical measurements and save migrations. Follow AGENTS.md before changes; do not run legacy scene exporters or reset paid saves.
+Read project/STATUS.md, project/NEXT_TASK.md, project/RIVALS_HANDOFF.md and project/RELEASES.json for current progress, actual verification and download hashes. Earlier milestone handoffs preserve historical measurements and save migrations. Follow AGENTS.md before changes; do not run legacy scene exporters or reset paid saves.

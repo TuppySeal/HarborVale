@@ -1,0 +1,7 @@
+PASS Regular traffic spawns multiple physical AI cars around player
+PASS Traffic uses dynamic collisions and four physical tires
+PASS Traffic actually travels along its road routes
+PASS Actual rendered screen: City_Traffic
+PASS Rivals and fleet panel opens while stopped
+PASS Actual rendered screen: Rivals_Fleet_1280x720
+PASS Final UI layout reviewed without changing gameplay

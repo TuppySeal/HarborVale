@@ -1,0 +1,27 @@
+PASS Regular traffic spawns multiple physical AI cars around player
+PASS Traffic uses dynamic collisions and four physical tires
+PASS Traffic actually travels along its road routes
+PASS Actual rendered screen: City_Traffic
+PASS Rivals and fleet panel opens while stopped
+PASS Actual rendered screen: Rivals_Fleet_1280x720
+PASS Unconfirmed pink slip cannot commit stakes
+PASS Cash race starts with persisted opponent and frozen terms:
+PASS Rival is a real drivable physics car with authored powertrain
+PASS Garage cannot open while rival race owns controls
+PASS Actual rendered screen: Rival_Countdown
+PASS Actual rendered screen: AI_Race_On_Road
+PASS Native physical full-lap race resolves after player's valid finish
+PASS Real race grants additional saved profit
+PASS Native result retry cannot pay twice
+PASS Actual player/traffic/rival listener mix recorded
+PASS Actual rendered screen: Cash_Result
+PASS Stopped player can reopen rivals after result
+PASS Explicit pink-slip agreement commits named owned car
+PASS Deliberate abandon settles confirmed pink-slip forfeit
+PASS Last car transfers permanently and recovery loaner is selected
+PASS Recovery loaner is actual stock drivable car, not lost upgraded car
+PASS Actual rendered screen: Pink_Loss_Recovery
+PASS Native title loss and loaner survive reload
+PASS Apex sandbox does not create paid rivals or street traffic
+PASS Apex launch leaves owned-car paid ledger byte-identical
+PASS Native rival/traffic run has no runtime errors

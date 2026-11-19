@@ -14,7 +14,7 @@ public sealed class HarborValeLaunch:MonoBehaviour {
  static void Loaded(Scene scene,LoadSceneMode mode){
   if(scene.name!=MenuScene&&scene.name!=CityScene&&scene.name!=SportsScene&&scene.name!="Finch_HandlingTest")return;
   // All scene-specific systems initialize here, including when returning from the hub.
-  FinchDrivingBootstrap.StartDriving();DocksideTrialDirector.Hook();FinchGarage.Hook();ApexTestDrive.Hook();HarborValeGreybox.Workshop.ExpandedWorkshop.Hook();
+  FinchDrivingBootstrap.StartDriving();DocksideTrialDirector.Hook();FinchGarage.Hook();ApexTestDrive.Hook();HarborValeGreybox.Workshop.ExpandedWorkshop.Hook();TrafficWorld.Hook();RivalRaceDirector.Hook();
   if(Instance==null){var root=new GameObject("HarborVale | launch and mode selection");Instance=root.AddComponent<HarborValeLaunch>();DontDestroyOnLoad(root);}
   Instance.Message=null;
   if(scene.name==SportsScene&&!UnityEngine.Object.FindAnyObjectByType<SportsAccelerationHUD>())new GameObject("Sports | live acceleration tests").AddComponent<SportsAccelerationHUD>();
@@ -22,7 +22,7 @@ public sealed class HarborValeLaunch:MonoBehaviour {
  public bool Open(string scene){if(Busy||!(scene==MenuScene||scene==CityScene||scene==SportsScene)||!Application.CanStreamedLevelBeLoaded(scene))return false;
   var trial=UnityEngine.Object.FindAnyObjectByType<DocksideTrialDirector>();
   if(trial!=null&&trial.Session!=null&&trial.Session.ValidFinish&&trial.SaveError!=null){Message="Finish saving this race result before leaving.";return false;}
-  if(trial!=null&&trial.Active)trial.Abandon();
+  if(RivalRaceDirector.Instance!=null&&!RivalRaceDirector.Instance.BeforeLeave()){Message="Save the rival race result before leaving.";return false;}if(trial!=null&&trial.Active)trial.Abandon();
   Busy=true;StartCoroutine(Change(scene));return true;
  }
  IEnumerator Change(string scene){foreach(var car in UnityEngine.Object.FindObjectsByType<FinchVehicle>(FindObjectsSortMode.None))car.controlsLocked=true;foreach(var fx in UnityEngine.Object.FindObjectsByType<HarborValeGreybox.Workshop.WorkshopEffects>(FindObjectsSortMode.None))fx.BeginSceneExit();yield return new WaitForSecondsRealtime(.10f);var load=SceneManager.LoadSceneAsync(scene,LoadSceneMode.Single);yield return load;Busy=false;}

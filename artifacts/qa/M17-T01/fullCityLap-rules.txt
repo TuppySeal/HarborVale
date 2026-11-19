@@ -1,0 +1,8 @@
+MEASURE time=0 gate=0 speed=0.7061787 pos=(-784.15, 0.43, -428.22) path=0 recoveries=0
+MEASURE time=40 gate=8 speed=9.060315 pos=(-343.09, 0.08, -339.42) path=147 recoveries=0
+MEASURE time=80 gate=13 speed=61.24585 pos=(-261.83, 0.08, -550.40) path=246 recoveries=0
+MEASURE time=120 gate=18 speed=17.54258 pos=(-233.21, 0.08, -803.03) path=330 recoveries=0
+MEASURE time=160 gate=26 speed=1.974647 pos=(-648.46, 0.08, -900.63) path=479 recoveries=0
+MEASURE time=200 gate=30 speed=61.18669 pos=(-765.46, 0.08, -721.19) path=567 recoveries=0
+MEASURE time=240 gate=35 speed=9.090041 pos=(-817.03, 0.08, -453.04) path=659 recoveries=0
+PASS AI completes full2042m city loop using ordered gates and dynamic physics; gates=37 time=250.2166 recoveries=0

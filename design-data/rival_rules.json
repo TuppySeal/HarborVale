@@ -1,0 +1,45 @@
+{
+  "schema": 1,
+  "trafficCount": 10,
+  "opponents": [
+    {
+      "id": "rookie",
+      "name": "Mara / Dockside Rookie",
+      "speedKph": 46,
+      "winCredits": 650,
+      "finishCredits": 150,
+      "build": {
+        "naStage": 0,
+        "gearboxStage": 0,
+        "tireStage": 0
+      }
+    },
+    {
+      "id": "club",
+      "name": "Theo / Harbor Club",
+      "speedKph": 63,
+      "winCredits": 1000,
+      "finishCredits": 200,
+      "build": {
+        "naStage": 1,
+        "gearboxStage": 1,
+        "tireStage": 1
+      }
+    },
+    {
+      "id": "tuned",
+      "name": "Sana / Night Runner",
+      "speedKph": 78,
+      "winCredits": 1500,
+      "finishCredits": 250,
+      "build": {
+        "naStage": 1,
+        "gearboxStage": 1,
+        "induction": "small",
+        "inductionStage": 1,
+        "tireStage": 2
+      }
+    }
+  ],
+  "replacementPrice": 1800
+}

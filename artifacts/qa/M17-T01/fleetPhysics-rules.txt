@@ -1,0 +1,37 @@
+PASS 36 connected road loops imported without scene regeneration
+PASS Real authored rival build resolves: rookie
+PASS Real authored rival build resolves: club
+PASS Real authored rival build resolves: tuned
+PASS Released v6 imports once preserving money, identity and all installed parts
+PASS Old file and historical receipt values remain unchanged
+PASS Existing prototype becomes retained owned identity without fake purchase history
+PASS Fresh zero-credit profile identity materializes before first cash race
+PASS Cash race terms persist before countdown without entry charge
+PASS Committed race locks vehicle modifications
+PASS Race winner requires player's ordered directional gate completion
+PASS Cash result payout is atomic and idempotent
+PASS Pink win transfers the actual opponent identity and exact build
+PASS Won car can be selected with its turbo and tune
+PASS Won-car upgrade belongs to its identity, retaining original car's build
+PASS Pink loss removes staked car and selects remaining owned car
+PASS Interrupted last-car stake forfeits once and provides free loaner
+PASS Loaner cannot be staked
+PASS Loaner cannot consume paid upgrade funds
+PASS Loaner cash win does not reverse a title loss
+PASS Replacement purchase debits once and creates new vehicle identity
+PASS Lost original remains lost after recovery purchase
+PASS Complete ownership/build/title ledger replays after reload
+PASS Failed fleet commit reports failure
+PASS Failed commit leaves cash, car and ownership history unchanged
+PASS Forged cached ownership cannot override receipt history
+PASS Unknown schema8 is preserved instead of overwritten from backup
+PASS New fleet transactions never edit original v6 source
+PASS Race request retry cannot change stakes mode
+PASS Same-step photo finish resolves as draw rather than frame-order loss
+PASS Draw keeps both actual title stakes with their original owners
+PASS Completed request cannot create another race contract
+PASS Valid second-place finish grants only frozen completion profit
+MEASURE AI speed=5.385414 pos=(11.74, 0.00, 74.29) pedal=0.65 brake=0 steer=-0.002339027 ground=4
+PASS AI accelerates and follows actual wheel-driven vehicle physics
+PASS AI has exactly four contacts and a dynamic collision body
+PASS AI obstacle sensing reduces throttle/brakes for blocked lane
