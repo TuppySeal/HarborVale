@@ -1,0 +1,47 @@
+PASS Unified Windows player starts at real mode menu
+PASS Menu creates no car or career account
+PASS Finch selection starts scene transition
+PASS Exactly one controller and four wheel contacts after transition
+PASS Exactly one persistent launcher and one audio listener
+PASS All seeded progress confined to explicit isolated fixture
+PASS Fresh fixture expected
+PASS Actual Finch garage opens after menu entry
+PASS Paid part 0 installs after menu entry
+PASS Paid part 1 installs after menu entry
+PASS Paid part 2 installs after menu entry
+PASS Paid part 3 installs after menu entry
+PASS All four paid receipts leave 250 fixture credits
+PASS Time trial starts before transition
+PASS Returning to menu explicitly abandons active race
+PASS Abandoned run gives no payout or changed profile
+PASS Apex selection starts scene transition
+PASS Exactly one controller and four wheel contacts after transition
+PASS Exactly one persistent launcher and one audio listener
+PASS Apex starts stock without any career services
+PASS Free Apex package 1 applies
+PASS Free Apex package 2 applies
+PASS Free Apex package 3 applies
+PASS Free Apex package 4 applies
+PASS Stopped grounded sports car arms live timer
+PASS Actual driving completes live 0-100 in 4.42 seconds
+PASS Best time belongs only to tested configuration
+PASS Stopped car re-arms after recovery
+PASS Recovery cancels an armed test
+PASS Same configuration can be reapplied during armed setup
+PASS Reinstalling same configuration cancels stale timing
+PASS Sports testing never changes career fixture
+PASS Sports returns to menu
+PASS Finch can be selected again in same process
+PASS Exactly one controller and four wheel contacts after transition
+PASS Exactly one persistent launcher and one audio listener
+PASS Repeated scene entry reloads complete paid Finch build without extra charge
+PASS Apex handling never leaks onto Finch
+PASS Exactly one trial and garage after repeated selection
+PASS Unpaid valid result blocks menu departure when save fails
+PASS Retry settles preserved valid result
+PASS Menu departure resumes after result saves
+PASS Apex can be selected again
+PASS Exactly one controller and four wheel contacts after transition
+PASS Exactly one persistent launcher and one audio listener
+PASS New sports visit starts a fresh timing session
+PASS New sports visit resets free parts to stock

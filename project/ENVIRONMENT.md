@@ -35,3 +35,6 @@ Unity 6000.6.0f1; same built-in module set, no new dependency or asset. Isolated
 
 ## Turbo parts and sports test
 Same pinned Unity 6000.6.0f1/modules; no new dependency. Isolated .work/UnityBoostValidation; successful Windows development exports installed as Builds/HarborVale-TurboParts and Builds/HarborVale-SportsTest. Native player probes use explicit opt-in arguments; sports scene has no career store. Source/details/evidence in BOOST_HANDOFF.md and SPORTS_TEST_HANDOFF.md.
+
+## Unified launch verification
+Same Unity 6000.6.0f1/packages. New HarborVale_Hub scene and three-scene EditorBuildSettings; local Windows export Builds/HarborVale-Play. Verification in .work/UnityBoostValidation, native player/timer/regression evidence M12-T05. No external dependency installed. Read LAUNCH_HANDOFF.md.

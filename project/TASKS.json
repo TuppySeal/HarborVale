@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project_title": "Redline: From Rust to Riches",
   "project_stage": "implementation",
-  "updated_at": "2026-11-19T02:40:03.341Z",
+  "updated_at": "2026-11-19T03:10:35.404Z",
   "current_task_id": null,
   "next_task_id": null,
   "status_values": [
@@ -810,9 +810,35 @@
       "remaining_steps": [],
       "blockers": [],
       "updated_at": "2026-11-19T02:40:03.341Z"
+    },
+    {
+      "id": "M12-T05",
+      "title": "Unified launch menu and live sports acceleration testing",
+      "milestone": "M12",
+      "depends_on": [
+        "M12-T04"
+      ],
+      "status": "done",
+      "spec_ref": "docs/05_BUILD_ROADMAP.md",
+      "acceptance_key": "M12-T05",
+      "evidence": [
+        "artifacts/qa/M12-T05/timer-rules.txt",
+        "artifacts/qa/M12-T05/player-build.txt",
+        "artifacts/qa/M12-T05/player-smoke.txt",
+        "artifacts/qa/M12-T05/finch-regression.txt",
+        "artifacts/qa/M12-T05/sports-regression.txt",
+        "artifacts/qa/M12-T05/trial-regression.txt",
+        "artifacts/qa/M12-T05/visual-inspection.txt",
+        "artifacts/qa/M12-T05/install-verification.txt",
+        "artifacts/qa/M12-T05/Launch_Menu.png",
+        "project/LAUNCH_HANDOFF.md"
+      ],
+      "remaining_steps": [],
+      "blockers": [],
+      "updated_at": "2026-11-19T03:10:35.404Z"
     }
   ],
   "implementation_authorized": true,
   "current_design_amendment": "docs/12_CONFIRMED_FEATURE_CHOICES.md",
-  "authorization_scope": "One-location functional parts plus separate sports test car/city with stronger matched upgrades; no career writes from sports tests"
+  "authorization_scope": "User-authorized next step: unified Finch/Apex launch flow and live sports performance testing; Claude completes isolated garage preview"
 }

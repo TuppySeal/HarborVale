@@ -35,6 +35,7 @@ public class FinchVehicle:MonoBehaviour {
   }
   Wheels[0].ConfigureVehicleSubsteps(5,8,12);spawn=transform.position;spawnRotation=transform.rotation;
  }
+ public int ResetSequence{get;private set;}
  public int InstalledPrototypeStage{get;private set;}
  public void InstallPowertrain(FinchDefinition definition,int stage=0){Initialize();if(definition==null||definition.carId!=PowertrainCarId)throw new System.ArgumentException("Incompatible powertrain");Engine=new FinchPowertrain(definition);InstalledPrototypeStage=stage;}
  void Awake(){Initialize();}
@@ -75,7 +76,7 @@ public class FinchVehicle:MonoBehaviour {
   float force=(travelA-travelB)*antiRoll;if(ga)Body.AddForceAtPosition(Wheels[a].transform.up*-force,Wheels[a].transform.position);if(gb)Body.AddForceAtPosition(Wheels[b].transform.up*force,Wheels[b].transform.position);
  }
  void LateUpdate(){if(Wheels==null)return;for(int i=0;i<4;i++)if(visual[i]!=null){Wheels[i].GetWorldPose(out var p,out var q);visual[i].SetPositionAndRotation(p,q);}}
- public void ResetAt(Vector3 position,Quaternion rotation){Initialize();Body.linearVelocity=Vector3.zero;Body.angularVelocity=Vector3.zero;Body.position=position;Body.rotation=rotation;transform.SetPositionAndRotation(position,rotation);Engine.Reset();steer=0;commandedPedal=commandedSteer=0;foreach(var w in Wheels){w.motorTorque=0;w.brakeTorque=0;w.steerAngle=0;}Body.WakeUp();Physics.SyncTransforms();}
+ public void ResetAt(Vector3 position,Quaternion rotation){Initialize();ResetSequence++;GroundedWheels=0;Body.linearVelocity=Vector3.zero;Body.angularVelocity=Vector3.zero;Body.position=position;Body.rotation=rotation;transform.SetPositionAndRotation(position,rotation);Engine.Reset();steer=0;commandedPedal=commandedSteer=0;foreach(var w in Wheels){w.motorTorque=0;w.brakeTorque=0;w.steerAngle=0;}Body.WakeUp();Physics.SyncTransforms();}
  public void Recover(){if(RecoveryHandler!=null&&RecoveryHandler.TryRecover(this))return;if((gameObject.scene.name=="HarborVale_CityMap"||gameObject.scene.name=="HarborVale_SportsTest")&&FinchDrivingBootstrap.TryRecovery(transform.position,transform.forward,out var p,out var q))ResetAt(p,q);else ResetAt(spawn+Vector3.up*.2f,spawnRotation);}
 }
 }

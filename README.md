@@ -1,6 +1,12 @@
-# HarborVale — sports testing and functional parts
+# HarborVale — choose a drive, race and test upgrades
 
 Unity **6000.6.0f1**, built-in renderer. This is a playable prototype.
+
+Latest Windows player: **Builds/HarborVale-Play/HarborVale.exe**. One menu selects saved Finch or free Apex. The bottom-right Main menu button returns between modes. In Unity open **Assets/HarborValeGreybox/Launch/Scenes/HarborVale_Hub.unity** and press Play.
+
+In Apex mode, stop and apply free parts in order. Wait until **Arm test** is enabled, click it and accelerate to measure 0–100. Best times belong to each configuration for the current visit. Recovery or a changed build cancels the run. Road slope affects results. Sports settings reset when leaving; Finch paid progress stays saved.
+
+![Choose your drive](artifacts/qa/M12-T05/Launch_Menu.png)
 
 ## Sports test
 
@@ -17,3 +23,5 @@ W/S accelerate/brake/reverse; A/D steer; Space handbrake; R recover; C camera; T
 ![Aster Apex sports test](artifacts/qa/M12-T04/Sports_Model.png)
 
 Read project/STATUS.md, NEXT_TASK.md, TASKS.json, BOOST_HANDOFF.md and SPORTS_TEST_HANDOFF.md. FEATURE_CHECKLIST.md separates completed work from future content. Native physics/rule/Play Mode and Windows checks are recorded; full-lap manual feel, controllers, optimization and the full ownership/maintenance career remain future work. Claude garage visuals are separate and not yet integrated. Local executables are not stored in Git.
+
+Latest startup/timing handoff: project/LAUNCH_HANDOFF.md. Older standalone builds below remain preserved alternatives.

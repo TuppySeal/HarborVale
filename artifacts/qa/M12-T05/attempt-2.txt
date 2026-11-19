@@ -1,0 +1,28 @@
+PASS Unified Windows player starts at real mode menu
+PASS Menu creates no car or career account
+PASS Finch selection starts scene transition
+PASS Exactly one controller and four wheel contacts after transition
+PASS Exactly one persistent launcher and one audio listener
+PASS All seeded progress confined to explicit isolated fixture
+PASS Fresh fixture expected
+PASS Actual Finch garage opens after menu entry
+PASS Paid part 0 installs after menu entry
+PASS Paid part 1 installs after menu entry
+PASS Paid part 2 installs after menu entry
+PASS Paid part 3 installs after menu entry
+PASS All four paid receipts leave 250 fixture credits
+PASS Time trial starts before transition
+PASS Returning to menu explicitly abandons active race
+PASS Abandoned run gives no payout or changed profile
+PASS Apex selection starts scene transition
+PASS Exactly one controller and four wheel contacts after transition
+PASS Exactly one persistent launcher and one audio listener
+PASS Apex starts stock without any career services
+PASS Free Apex package 1 applies
+PASS Free Apex package 2 applies
+PASS Free Apex package 3 applies
+PASS Free Apex package 4 applies
+PASS Stopped grounded sports car arms live timer
+PASS Actual driving completes live 0-100 in 4.42 seconds
+PASS Best time belongs only to tested configuration
+FAIL Stopped car re-arms after recovery

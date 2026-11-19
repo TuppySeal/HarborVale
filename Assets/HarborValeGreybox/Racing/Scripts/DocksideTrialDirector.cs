@@ -14,7 +14,7 @@ public class DocksideTrialDirector:MonoBehaviour,IFinchRecoveryHandler {
  public static string LegacySavePath=>Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),"HarborVale","Prototype","race-progress-v2.json");
  public static string SavePath=>Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),"HarborVale","Prototype","race-progress-v3.json");
  public bool Active=>Session!=null&&(Session.State==TrialState.Countdown||Session.State==TrialState.Running);
- [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]static void Hook(){if(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name!="HarborVale_CityMap")return;var root=new GameObject("First Lap | time trial");root.AddComponent<DocksideTrialDirector>();}
+ public static void Hook(){if(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name!="HarborVale_CityMap")return;var root=new GameObject("First Lap | time trial");root.AddComponent<DocksideTrialDirector>();}
  void Start(){Initialize();}
  public void Initialize(string saveOverride=null){
   if(Definition!=null)return;var data=Resources.Load<TextAsset>("FirstDocksideTrial");if(data==null)throw new InvalidOperationException("Trial route missing");Definition=JsonUtility.FromJson<TrialDefinition>(data.text);Definition.Validate();vehicle=UnityEngine.Object.FindAnyObjectByType<FinchVehicle>();

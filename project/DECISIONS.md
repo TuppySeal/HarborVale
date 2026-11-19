@@ -79,3 +79,6 @@ User explicitly requested turbo/intercooler upgrades and confirmed all parts may
 
 ## D047 — Separate user-authorized sports testing car
 User requests a sports car with extra grip/downforce and stronger same-category upgrades. Add fictional Aster Apex test coupe, AWD and physical speed-squared downforce, matched RPM torque curves, and sequential free test-only Stage1/gearbox/turbo/cooler controls. Separate SportsTest scene/build uses existing city geometry with no trial/garage account hook; never creates career funds, records or ownership. Keep Finch defaults unchanged.
+
+## D048 — Unified launch and live sports timing
+User requests next step after Claude garage scripts report. Choose a unified Finch/Apex menu and live 0–100 sports comparison to address separate-executable usability. Register scene-safe initialization once; preserve paid builds and no-reward race abandonment. Timer results are session-only per configuration, not campaign records or repeatable rewards. Claude must finish its own preview compilation/scene/render/package before integration; reported script completion is not verified game art.

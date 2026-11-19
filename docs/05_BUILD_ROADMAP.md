@@ -173,6 +173,7 @@ Dependencies are task IDs separated by commas. A dependency is satisfied only wh
 | M12-T02 | Garage purchase and persistent Stage 1 Finch tune | M12-T01 | done |
 | M12-T03 | Functional Finch turbo, gearbox support and intercooler upgrades | M12-T02 | done |
 | M12-T04 | Sports test car with grip, downforce and sequential test upgrades | M12-T03 | done |
+| M12-T05 | Unified launch menu and live sports acceleration testing | M12-T04 | done |
 
 ### M11-T01 — User-requested Unity map prototype
 
@@ -216,3 +217,6 @@ Accept when one garage sells real gearbox support, a compatible turbo Stage-2 pa
 
 ### M12-T04 — Sports test car
 Separate city test scene with original sports visual, higher grip/brakes, AWD and speed-squared downforce. Same four sequential upgrades with stronger authored torque curves and per-car spool, free only in the test scene with no career transactions. Verify actual physics acceleration, grip/aero settings, prerequisites, recovery and Windows rendering/export. Preserve Finch settings and player saves.
+
+### M12-T05 — Unified testing flow
+One Windows entry menu selects regular saved Finch or free Apex sports tests and can return without duplicate controllers/physics/garage/trials. Returning from an active race abandons without payout; unresolved valid finish-save errors block leaving. Sports mode never changes career progress. Add live stopped-start 0–100 timer, current-configuration session best, and cancellation on recovery, changed build, prolonged air or map input lock. Verify repeat scene transitions, paid build reload, timer boundaries and actual Windows rendering/export. No ownership/garage-art integration implied.

@@ -25,6 +25,10 @@ This is a playable prototype, not the complete planned game. Task states/evidenc
 - [x] Separate driveable Aster Apex sports test car/city with AWD, more grip, physical downforce and free stronger sequential upgrades.
 - [x] Sports Windows driving, recovery, prerequisites and unchanged-career-save verification.
 
+- [x] Unified Windows launch menu for saved Finch and free Apex, with repeatable in-app mode switching.
+- [x] Live Apex 0–100 timing and per-configuration session best, with recovery/build-change guards.
+- [x] Mode transition/paid-state/no-sports-write/save-error safeguards verified in actual Windows player.
+
 ## Next gameplay/content work
 
 - [ ] Review full-lap handling and medal pacing with the player; controller support.

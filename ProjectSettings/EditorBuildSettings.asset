@@ -6,8 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/HarborValeGreybox/Launch/Scenes/HarborVale_Hub.unity
+    guid: 897d52698f9d04a47a91dacb7ea37359
+  - enabled: 1
     path: Assets/HarborValeGreybox/Scenes/HarborVale_CityMap.unity
     guid: 933e70776616ef445913657a315901d2
+  - enabled: 1
+    path: Assets/HarborValeGreybox/SportsTest/Scenes/HarborVale_SportsTest.unity
+    guid: ffde684399f8e5e43ac3c1b7ca59bea9
   m_configObjects: {}
-  m_UseUCBPForAssetBundles: 0
-

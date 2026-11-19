@@ -1,0 +1,1 @@
+PASS actual 1280x800 Windows menu, live timer/result and paid Finch reload screenshots inspected. Labels/buttons readable; both mode cards and in-drive main-menu button visible. Actual scene transitions exercised through the same public action handlers as the UI. Physical mouse-click usability, gamepad and full-lap driving remain unverified.

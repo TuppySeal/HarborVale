@@ -23,3 +23,6 @@ Latest user continuation authorized bounded M12-T02: first paid Stage 1 Finch tu
 
 ## Latest authorized parts and sports tests
 M12-T03 and M12-T04 complete. Read BOOST_HANDOFF.md and SPORTS_TEST_HANDOFF.md in project/. One-location paid Stage1/gearbox/turbo/cooler uses v3 with read-only one-time v2/v1 migration. Apex SportsTest is separate free temporary testing, never career transactions/ownership. Preserve Finch handling defaults, source city/static prefab/handling scene and Claude separate project. No full career expansion is implied. Source balance is imported from design-data; run boost importer instead of old base importer alone.
+
+## Unified launch and sports timing
+M12-T05 complete. Read project/LAUNCH_HANDOFF.md. HarborVale_Hub selects Finch or Apex; launch dispatcher initializes systems on each scene load. Do not re-add the old one-time bootstrap attributes. Keep pending valid race-save guard and no-payout abandonment on menu return. Sports timer/configuration best is session-only, separate from career data. Claude initial garage remains unverified/unintegrated; its finish prompt is in project/CLAUDE_GARAGE_FINISH_PROMPT.md.

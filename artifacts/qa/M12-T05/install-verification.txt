@@ -1,0 +1,2 @@
+PASS 19 source/scene/meta/build-settings files match isolated verified source by SHA256; installed player executable matches tested export. Existing city/static Finch/handling scene and previous player folders were preserved.
+PASS all 249 installed Windows player/data files match the tested export by SHA256.

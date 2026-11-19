@@ -6,7 +6,7 @@ public static class FinchDrivingBootstrap {
  [Serializable] public class Recovery{public Anchor[] anchors;}
  static Recovery recovery;
  [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]static void Clear(){recovery=null;}
- [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]static void StartDriving(){
+ public static void StartDriving(){
   var specification=UnityEngine.Object.FindAnyObjectByType<StarterCarSpecification>();if(specification==null)return;
   var car=specification.GetComponent<FinchVehicle>();if(car==null)car=specification.gameObject.AddComponent<FinchVehicle>();car.Initialize();
   // The city starts on a clear nearby carriageway; test scenes preserve their authored spawn.

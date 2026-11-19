@@ -1,0 +1,1 @@
+PASS moving-start rejection, stopped arming, launch trigger, interpolated 100 km/h crossing, unpowered roll rejection and cancellation persistence.
