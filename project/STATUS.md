@@ -7,3 +7,5 @@ Paid Finch uses atomic/idempotent v5 receipts and one-time validated v4/v3/v2/v1
 Native editor checks: chassis23, staging12, workshop225 plus retained18/27/25/104. Windows chassis54, workshop51, transitions47 passed. Screenshots inspected; full-lap feel, physical input/controller behavior and listening remain manual. Install hashes in artifacts/qa/M14-T03/install-verification.json. Publication record follows push.
 
 Implementation uploaded and remote-verified at 77ad400751b8b593ae312c5ff157c7d1b83fa968. See CHASSIS_GITHUB_VERIFICATION.json.
+
+Recorded a68-second gameplay demo with actual audio: Builds/Demos/HarborVale-Gameplay-Demo.mp4. See DEMO_RECORDING.md; gameplay release unchanged.
