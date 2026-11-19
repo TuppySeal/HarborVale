@@ -1,0 +1,12 @@
+{
+  "implementationCommit": "b105c7977057f2379acdaf4922dbabb85a3f97cc",
+  "remote": "https://github.com/TuppySeal/HarborVale",
+  "branch": "main",
+  "remoteVerified": true,
+  "player": "Builds/HarborVale-CustomWorkshop/HarborVale.exe",
+  "catalogOffers": 37,
+  "newNativeRuleChecks": 177,
+  "windowsWorkshopChecks": 51,
+  "windowsTransitionChecks": 47,
+  "sourceAndPlayerHashRecord": "artifacts/qa/M14-T02/install-verification.json"
+}

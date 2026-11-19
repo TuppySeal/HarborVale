@@ -5,3 +5,5 @@ Canonical C:/Users/Justice/Documents/Unity/HarborVale, Unity6000.6.0f1. Latest W
 Paid stages: NA engine, small/large turbo, supercharger, cooling, gearbox, brakes, tires, intake/exhaust and optional burble/flame power tradeoffs; twins are Apex-only. Exclusive conversions replace hardware, not stack it. Existing four prices/curves and paid history preserved through one-time validated v4 migration. No full career, service history, odometer, brake heat/fade or thermal simulation claimed.
 
 Native upgrade/save rules 177, retained regressions and 51 Windows workshop plus47 scene/timing/save checks passed. Actual SC sound/pedal-lift pop and free/paid separation checked. Native screenshots inspected; subjective full-lap/input/audio polish remains manual. Original scenes/static model hashes preserved. Publication record follows after push.
+
+Implementation uploaded and remote-verified at b105c7977057f2379acdaf4922dbabb85a3f97cc. See STAGED_WORKSHOP_GITHUB_VERIFICATION.json.
