@@ -1,7 +1,7 @@
 # HarborVale Garage Interface Review (V3 / V4 Final Sign-off)
 
-**Review Location**: `C:\Users\Justice\Documents\HarborVale-Antigravity-QA\GarageReview\GARAGE_REVIEW_V3.md`  
-**Artifacts Evaluated**: Native captures at 1280×720, 1600×900, and 1280×800 from `native-v3` and `native-v4` (`Garage_1280x720.png`, `Garage_1600x900.png`, `Garage_Overview.png`, `Garage_LockedTurbo.png`, `Garage_NoResults.png`, `Garage_InstalledBuild.png`), alongside `native-results.txt` (24/24 tests PASS) and `player.log`.  
+**Review Location**: `C:\Users\Justice\Documents\HarborVale-Antigravity-QA\GarageReview\GARAGE_REVIEW_V3.md`
+**Artifacts Evaluated**: Native captures at 1280×720, 1600×900, and 1280×800 from `native-v3` and `native-v4` (`Garage_1280x720.png`, `Garage_1600x900.png`, `Garage_Overview.png`, `Garage_LockedTurbo.png`, `Garage_NoResults.png`, `Garage_InstalledBuild.png`), alongside `native-results.txt` (24/24 tests PASS) and `player.log`.
 **Architecture Note**: Interface layout and matrix scaling are driven by Unity’s native **IMGUI** (`GUI.matrix` / `GUILayout`).
 
 ---
