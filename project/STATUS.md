@@ -13,3 +13,5 @@ Old scene, static Finch prefab, handling scene, old builds and existing untracke
 Claude garage-preview prompt is prepared for its separate project; no claim it has run, and no Claude art/scene was integrated. Blender-dependent workbench was blocked. Local visual-only Finch kit: deliverables/ClaudeGarageVisualKit. No Claude files/session were modified.
 
 Detailed completed/todo list: FEATURE_CHECKLIST.md. Source publication verification will be appended after push.
+
+Implementation uploaded and remote-verified at fe4e007b4abd8341d9e61995b784ce1db9e6cf50 on https://github.com/TuppySeal/HarborVale. Tracked source clean after upload; existing untracked PackageManagerSettings.asset preserved. See SPORTS_GITHUB_VERIFICATION.json.

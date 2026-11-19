@@ -1,0 +1,19 @@
+{
+  "implementation_commit": "fe4e007b4abd8341d9e61995b784ce1db9e6cf50",
+  "verified_remote_main_at_publication": "fe4e007b4abd8341d9e61995b784ce1db9e6cf50",
+  "verified_at": "2026-11-19T02:43:08.630Z",
+  "repository": "https://github.com/TuppySeal/HarborVale",
+  "tracked_worktree": "clean after implementation commit",
+  "preserved_untracked": [
+    "ProjectSettings/PackageManagerSettings.asset"
+  ],
+  "builds": [
+    "Builds/HarborVale-SportsTest/HarborVale-SportsTest.exe",
+    "Builds/HarborVale-TurboParts/HarborVale.exe"
+  ],
+  "evidence": [
+    "artifacts/qa/M12-T04/install-verification.txt",
+    "artifacts/qa/M12-T04/player-smoke.txt",
+    "artifacts/qa/M12-T03/player-reload.txt"
+  ]
+}
