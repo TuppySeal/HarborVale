@@ -26,3 +26,6 @@ M12-T03 and M12-T04 complete. Read BOOST_HANDOFF.md and SPORTS_TEST_HANDOFF.md i
 
 ## Unified launch and sports timing
 M12-T05 complete. Read project/LAUNCH_HANDOFF.md. HarborVale_Hub selects Finch or Apex; launch dispatcher initializes systems on each scene load. Do not re-add the old one-time bootstrap attributes. Keep pending valid race-save guard and no-payout abandonment on menu return. Sports timer/configuration best is session-only, separate from career data. Claude initial garage remains unverified/unintegrated; its finish prompt is in project/CLAUDE_GARAGE_FINISH_PROMPT.md.
+
+## Smooth transmission/manual controls
+M12-T06 complete. Read project/SHIFTING_HANDOFF.md. M automatic/manual, Z down/X up; manual preference is per drive, preserved through recovery/parts but not a save schema field. Keep road-speed RPM safety, kickdown hysteresis, modal locks and authored torque/price invariants. Native/window checks do not substitute for subjective full-lap/controller verification. Latest player Builds/HarborVale-SmoothDrive.

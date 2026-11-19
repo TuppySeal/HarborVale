@@ -1,0 +1,1 @@
+PASS 12 installed source/meta files and all 249 Windows player/data files match verified isolated source/export by SHA256. Original scenes, static prefab, handling test scene and older build folders retained.

@@ -11,16 +11,21 @@ public class FinchDrivingHUD:MonoBehaviour {
  void Update(){
   if(FinchInput.Shortcut(KeyCode.Tab)&&map!=null&&!vehicle.controlsLocked)SetInspection(!inspection);
   if(FinchInput.Shortcut(KeyCode.C)&&!inspection){chase.bonnet=!chase.bonnet;chase.Snap();}
-  if(engineAudio!=null){engineAudio.pitch=Mathf.Clamp(vehicle.Engine.Rpm/2400,.35f,2.8f);engineAudio.volume=inspection?.035f:.10f+vehicle.Throttle*.12f;}
+  if(engineAudio!=null){engineAudio.pitch=Mathf.Lerp(engineAudio.pitch,Mathf.Clamp(vehicle.Engine.Rpm/2400,.35f,2.8f),1-Mathf.Exp(-Time.unscaledDeltaTime/.08f));engineAudio.volume=inspection?.035f:.10f+vehicle.Throttle*.12f;}
  }
  public void SetInspection(bool value){if(map==null)return;inspection=value;map.enabled=value;chase.enabled=!value;vehicle.playerInput=!value;FinchDrivingBootstrap.SetMapLabels(value);if(!value){chase.GetComponent<Camera>().orthographic=false;chase.Snap();}}
  void OnGUI(){
   if(vehicle==null||vehicle.Engine==null)return;
   if(inspection){GUI.Box(new Rect(16,Screen.height-54,420,38),"MAP INSPECTION | TAB to return to driving");return;}
   var label=new GUIStyle(GUI.skin.label){fontSize=16};label.normal.textColor=Color.white;
-  GUI.Box(new Rect(16,16,690,106),vehicle.displayName+" | "+(vehicle.InstalledPrototypeStage>=2?"TURBO S2":vehicle.InstalledPrototypeStage==1?"STAGE 1 NA":(vehicle.PowertrainCarId=="car_apex_test"?"STOCK 2.0":"STOCK 1.4"))+" | "+vehicle.driveLabel);
-  GUI.Label(new Rect(30,44,660,30),Mathf.RoundToInt(vehicle.SpeedKph)+" km/h    "+Mathf.RoundToInt(vehicle.Engine.Rpm)+" RPM    "+(vehicle.Engine.Gear<0?"R":vehicle.Engine.Gear.ToString())+(vehicle.Engine.Shifting?"   SHIFT":"")+(vehicle.Engine.definition.IsTurbo?"   BOOST "+vehicle.Engine.BoostBar.ToString("F2")+" bar":""),label);
-  GUI.Label(new Rect(30,77,660,36),"W / S accelerate, brake, reverse  |  A / D steer  |  Space handbrake\nR recover on road  |  C camera  |  Tab map inspection");
+  GUI.Box(new Rect(16,16,690,106),"");
+  GUI.Label(new Rect(30,20,405,23),vehicle.displayName+" | "+(vehicle.InstalledPrototypeStage>=2?"TURBO S2":vehicle.InstalledPrototypeStage==1?"STAGE 1 NA":(vehicle.PowertrainCarId=="car_apex_test"?"STOCK 2.0":"STOCK 1.4"))+" | "+vehicle.driveLabel);
+  GUI.enabled=vehicle.playerInput&&!vehicle.controlsLocked;
+  if(GUI.Button(new Rect(444,20,110,23),"M: "+(vehicle.Engine.Mode==TransmissionMode.Automatic?"AUTO":"MANUAL")))vehicle.ToggleTransmissionMode();
+  if(GUI.Button(new Rect(560,20,60,23),"Z: -"))vehicle.PaddleShift(-1);
+  if(GUI.Button(new Rect(626,20,60,23),"X: +"))vehicle.PaddleShift(1);GUI.enabled=true;
+  GUI.Label(new Rect(30,44,660,30),Mathf.RoundToInt(vehicle.SpeedKph)+" km/h    "+Mathf.RoundToInt(vehicle.Engine.Rpm)+" RPM    "+(vehicle.Engine.Mode==TransmissionMode.Automatic?"AUTO ":"MANUAL ")+(vehicle.Engine.Gear<0?"R":vehicle.Engine.Gear.ToString())+(vehicle.Engine.Shifting?"   SHIFT":"")+(vehicle.Engine.definition.IsTurbo?"   BOOST "+vehicle.Engine.BoostBar.ToString("F2")+" bar":""),label);
+  GUI.Label(new Rect(30,77,660,36),vehicle.Engine.ShiftNote??"W / S accelerate, brake, reverse  |  A / D steer  |  Space handbrake\nR recover  |  C camera  |  Tab map  |  M auto/manual  |  Z / X down / up");
  }
  void OnDestroy(){if(engineAudio!=null&&engineAudio.clip!=null)Destroy(engineAudio.clip);}
 }

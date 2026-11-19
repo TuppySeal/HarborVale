@@ -38,3 +38,6 @@ Same pinned Unity 6000.6.0f1/modules; no new dependency. Isolated .work/UnityBoo
 
 ## Unified launch verification
 Same Unity 6000.6.0f1/packages. New HarborVale_Hub scene and three-scene EditorBuildSettings; local Windows export Builds/HarborVale-Play. Verification in .work/UnityBoostValidation, native player/timer/regression evidence M12-T05. No external dependency installed. Read LAUNCH_HANDOFF.md.
+
+## Smooth driving verification
+Same Unity 6000.6.0f1/packages. Export Builds/HarborVale-SmoothDrive; isolated .work/UnityBoostValidation. Keyboard M/Z/X mapped through existing input system, no gamepad hardware verification. Editor-only original-gearbox reproducer; opt-in --shift-smoke-dir native probe. No dependency/asset install.

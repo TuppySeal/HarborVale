@@ -1,0 +1,27 @@
+PASS Imported one-location prices: gearbox 250, turbo kit 1900, street intercooler 400
+PASS Fresh turbo starts on off-boost curve
+PASS Loaded spool approaches 158 Nm net steady curve without double boost
+PASS Spool state is per vehicle
+PASS Throttle lift decays boost with authored fall constant
+PASS Shift cut removes torque and decays spool
+PASS Unloaded/free-air demand cannot build boost
+PASS Below-threshold output remains off boost
+PASS Street cooler selects matched 162 Nm curve; peak stays under 90 kW
+PASS Cooler does not invent off-boost or another boost multiplier
+PASS Four valid gold fixtures fund 3200 credits
+PASS Turbo cannot skip Stage 1/gearbox
+PASS Intercooler cannot precede turbo kit
+PASS Supporting gearbox cannot skip paid Stage 1
+PASS V2 paid tune/earnings migrate into v3 without charging Stage 1 again
+PASS Turbo still requires supporting gearbox after migration
+PASS Paid gearbox shortens actual shift interruption
+PASS Turbo purchase saves Stage 2/basic intercooler and its full sequential fee
+PASS Duplicate turbo request pays once
+PASS New request cannot rebuy turbo Stage 2
+PASS Failed cooler write cannot debit or install
+PASS V3 reload preserves all four paid receipts and 250 remaining credits
+PASS V2 file remains unchanged
+PASS Reload resolves cooler curve and supporting shift timing
+PASS Repeated build application never compounds source shift modifiers
+PASS Measured rolling 40-100: Stage1 9.66 s, turbo 7.62 s, street cooler 7.42 s
+PASS Measured 0-100: Stage1 NA 12.72 s, turbo/basic cooler 10.48 s, turbo/street cooler 10.28 s

@@ -82,3 +82,6 @@ User requests a sports car with extra grip/downforce and stronger same-category 
 
 ## D048 — Unified launch and live sports timing
 User requests next step after Claude garage scripts report. Choose a unified Finch/Apex menu and live 0–100 sports comparison to address separate-executable usability. Register scene-safe initialization once; preserve paid builds and no-reward race abandonment. Timer results are session-only per configuration, not campaign records or repeatable rewards. Claude must finish its own preview compilation/scene/render/package before integration; reported script completion is not verified game art.
+
+## D049 — User-authorized smooth automatic and paddle-style manual
+Repair late low-RPM-only automatic downshifts with road-speed matching and full-demand kickdown, hysteresis/shift cooldown and bounded clutch re-engagement. Add M automatic/manual, Z down/X up and clickable controls; a successful paddle request selects manual. Manual uses safe downshift rejection and a first-gear standstill assist, without a clutch/stall/damage simulation. Preserve mode through car recovery/paid hardware changes, reset to automatic on a new scene visit; no save schema or price changes. Smooth digital throttle/brake and existing audio pitch, retain car grip/camera/default curves. Claude art/audio preview remains separate.

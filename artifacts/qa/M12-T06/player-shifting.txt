@@ -1,0 +1,19 @@
+PASS Menu starts sports mode
+PASS Upgrade 1 applies
+PASS Upgrade 2 applies
+PASS Upgrade 3 applies
+PASS Upgrade 4 applies
+PASS New drive defaults to automatic
+PASS Mode toggle selects manual
+PASS Paddle selects second gear
+PASS Manual second remains selected
+PASS Manual holds second during real acceleration
+PASS Unsafe real-speed downshift is rejected
+PASS Safe third gear accepted
+PASS Automatic resumes after manual deceleration
+PASS Real throttle kickdown selects lower gear
+PASS Manual selected after recovery
+PASS Part reinstallation keeps manual mode
+PASS Recovery keeps manual mode
+PASS Map blocks transmission controls
+PASS Countdown/shop lock blocks transmission controls

@@ -19,6 +19,7 @@ public static class FinchInput {
  }
 #if ENABLE_INPUT_SYSTEM
  static UnityEngine.InputSystem.Key Convert(KeyCode k){switch(k){
+  case KeyCode.M:return UnityEngine.InputSystem.Key.M;case KeyCode.Z:return UnityEngine.InputSystem.Key.Z;case KeyCode.X:return UnityEngine.InputSystem.Key.X;
   case KeyCode.G:return UnityEngine.InputSystem.Key.G;case KeyCode.Return:return UnityEngine.InputSystem.Key.Enter;case KeyCode.E:return UnityEngine.InputSystem.Key.E;case KeyCode.W:return UnityEngine.InputSystem.Key.W;case KeyCode.S:return UnityEngine.InputSystem.Key.S;
   case KeyCode.A:return UnityEngine.InputSystem.Key.A;case KeyCode.D:return UnityEngine.InputSystem.Key.D;
   case KeyCode.UpArrow:return UnityEngine.InputSystem.Key.UpArrow;case KeyCode.DownArrow:return UnityEngine.InputSystem.Key.DownArrow;

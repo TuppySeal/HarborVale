@@ -174,6 +174,7 @@ Dependencies are task IDs separated by commas. A dependency is satisfied only wh
 | M12-T03 | Functional Finch turbo, gearbox support and intercooler upgrades | M12-T02 | done |
 | M12-T04 | Sports test car with grip, downforce and sequential test upgrades | M12-T03 | done |
 | M12-T05 | Unified launch menu and live sports acceleration testing | M12-T04 | done |
+| M12-T06 | Smooth automatic downshifts and optional paddle-style manual transmission | M12-T05 | done |
 
 ### M11-T01 — User-requested Unity map prototype
 
@@ -220,3 +221,6 @@ Separate city test scene with original sports visual, higher grip/brakes, AWD an
 
 ### M12-T05 — Unified testing flow
 One Windows entry menu selects regular saved Finch or free Apex sports tests and can return without duplicate controllers/physics/garage/trials. Returning from an active race abandons without payout; unresolved valid finish-save errors block leaving. Sports mode never changes career progress. Add live stopped-start 0–100 timer, current-configuration session best, and cancellation on recovery, changed build, prolonged air or map input lock. Verify repeat scene transitions, paid build reload, timer boundaries and actual Windows rendering/export. No ownership/garage-art integration implied.
+
+### M12-T06 — Smoother gearbox and driving response
+Automatic matches gears to road speed when slowing, uses safe throttle kickdown and avoids hunting. Manual paddle-style M/Z/X controls reject unsafe over-rev downshifts, reverse shifts, overlapping shifts and garage/map/countdown inputs. Show current mode/gear and rejection feedback; recovery/upgrades preserve selected mode, with first-gear stop assist. Smooth keyboard throttle/brake and shift re-engagement without altering authored torque curves, paid hardware or saves. Verify original sluggish high-gear scenario, safe shift boundaries, throttle/shift continuity, real native decel/reaccel and Windows integration for Finch/Apex; retain failed checks and manual-feel limits.

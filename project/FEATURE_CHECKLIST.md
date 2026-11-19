@@ -29,6 +29,10 @@ This is a playable prototype, not the complete planned game. Task states/evidenc
 - [x] Live Apex 0–100 timing and per-configuration session best, with recovery/build-change guards.
 - [x] Mode transition/paid-state/no-sports-write/save-error safeguards verified in actual Windows player.
 
+- [x] Road-matched automatic downshifts/kickdown, anti-hunting, smoother clutch/throttle/brake response.
+- [x] Protected M/Z/X and clickable paddle-style manual controls; recovery/upgrade preference retained.
+- [x] Native legacy-behavior comparison, braking/reacceleration and Windows shift/persistence checks.
+
 ## Next gameplay/content work
 
 - [ ] Review full-lap handling and medal pacing with the player; controller support.

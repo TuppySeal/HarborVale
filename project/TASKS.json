@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project_title": "Redline: From Rust to Riches",
   "project_stage": "implementation",
-  "updated_at": "2026-11-19T03:10:35.404Z",
+  "updated_at": "2026-11-19T03:43:36.930Z",
   "current_task_id": null,
   "next_task_id": null,
   "status_values": [
@@ -836,9 +836,34 @@
       "remaining_steps": [],
       "blockers": [],
       "updated_at": "2026-11-19T03:10:35.404Z"
+    },
+    {
+      "id": "M12-T06",
+      "title": "Smooth automatic downshifts and optional paddle-style manual transmission",
+      "milestone": "M12",
+      "depends_on": [
+        "M12-T05"
+      ],
+      "status": "done",
+      "spec_ref": "docs/05_BUILD_ROADMAP.md",
+      "acceptance_key": "M12-T06",
+      "evidence": [
+        "artifacts/qa/M12-T06/rules-physics.txt",
+        "artifacts/qa/M12-T06/player-shifting.txt",
+        "artifacts/qa/M12-T06/launch-regression.txt",
+        "artifacts/qa/M12-T06/parts-regression.txt",
+        "artifacts/qa/M12-T06/trial-regression.txt",
+        "artifacts/qa/M12-T06/player-build.txt",
+        "artifacts/qa/M12-T06/visual-inspection.txt",
+        "artifacts/qa/M12-T06/install-verification.txt",
+        "project/SHIFTING_HANDOFF.md"
+      ],
+      "remaining_steps": [],
+      "blockers": [],
+      "updated_at": "2026-11-19T03:43:36.930Z"
     }
   ],
   "implementation_authorized": true,
   "current_design_amendment": "docs/12_CONFIRMED_FEATURE_CHOICES.md",
-  "authorization_scope": "User-authorized next step: unified Finch/Apex launch flow and live sports performance testing; Claude completes isolated garage preview"
+  "authorization_scope": "User-authorized smoother driving, automatic downshift repair and optional paddle-style manual shifting"
 }

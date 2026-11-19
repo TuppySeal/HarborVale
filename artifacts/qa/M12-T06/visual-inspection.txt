@@ -1,0 +1,1 @@
+PASS actual native Windows automatic/manual HUD, paddle buttons, safe third gear, blocked over-rev feedback and automatic kickdown screenshots inspected. UI/action paths tested through actual vehicle methods; no physical keyboard, mouse-click, listening, gamepad or full-lap subjective smoothness claim.

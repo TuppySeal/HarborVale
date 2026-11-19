@@ -2,7 +2,9 @@
 
 Unity **6000.6.0f1**, built-in renderer. This is a playable prototype.
 
-Latest Windows player: **Builds/HarborVale-Play/HarborVale.exe**. One menu selects saved Finch or free Apex. The bottom-right Main menu button returns between modes. In Unity open **Assets/HarborValeGreybox/Launch/Scenes/HarborVale_Hub.unity** and press Play.
+Latest Windows player: **Builds/HarborVale-SmoothDrive/HarborVale.exe**. Close older game windows before switching. One menu selects saved Finch or free Apex.
+
+Automatic now downshifts on deceleration and kicks down when you ask for acceleration. **M** toggles automatic/manual, **Z** downshifts, **X** upshifts; HUD buttons also work. Unsafe downshifts are rejected. Mode survives recovery/parts in the current drive. Throttle, braking, clutch reconnection and engine pitch ease between states. Read project/SHIFTING_HANDOFF.md for current measurements and verification; older standalone figures below describe previous releases. The bottom-right Main menu button returns between modes. In Unity open **Assets/HarborValeGreybox/Launch/Scenes/HarborVale_Hub.unity** and press Play.
 
 In Apex mode, stop and apply free parts in order. Wait until **Arm test** is enabled, click it and accelerate to measure 0–100. Best times belong to each configuration for the current visit. Recovery or a changed build cancels the run. Road slope affects results. Sports settings reset when leaving; Finch paid progress stays saved.
 
