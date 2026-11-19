@@ -1,6 +1,6 @@
 # HarborVale garage, engine inventory and Tempest
 
-Canonical Unity project: `C:/Users/Justice/Documents/Unity/HarborVale`, Unity 6000.6.0f1. Checked source and player are installed. Run `Builds/HarborVale-GarageInventory/HarborVale.exe`. Latest published build remains Rivals until RELEASES.json records the garage inventory release.
+Canonical Unity project: `C:/Users/Justice/Documents/Unity/HarborVale`, Unity 6000.6.0f1. Checked source and player are installed. Run `Builds/HarborVale-GarageInventory/HarborVale.exe`. Published verified Windows ZIP at https://github.com/TuppySeal/HarborVale/releases/latest (tag test-2026-11-19-garage-inventory). All251 player files verified inside the252-entry ZIP; uploaded asset size and SHA256 independently verified by GitHub. See RELEASES.json / INVENTORY_GITHUB_VERIFICATION.json.
 
 ## User flow
 
@@ -32,4 +32,4 @@ Editor entry point: `HarborValeGreybox.Racing.Editor.InventoryVerification.Relea
 
 Use a development player with `--inventory-check-dir <empty isolated folder>`, optionally `--inventory-interactive` for physical mouse verification. Test-only fixture earnings are confined to that override; never include profiles/logs/cache files in Git or release. Full evidence and remaining manual checks are recorded in `artifacts/qa/M17-T02/install-verification.json` after installation. Native screenshots prove rendering and tested inputs, not subjective handling/sound quality. Human driving, small-screen readability, audio listening, collision edge cases and traffic/difficulty/performance review remain useful.
 
-Final audio recording: peak0.4021, RMS0.1131, zero clipped samples. All251 installed player files match the tested build. Protected original source matches prior Git commit; user PackageManagerSettings.asset remains untracked and untouched. Next: push checked source to existing origin/main, publish verified private Windows ZIP and update RELEASES.json. Never reuse or overwrite an old release tag.
+Final audio recording: peak0.4021, RMS0.1131, zero clipped samples. All251 installed player files match the tested build. Protected original source matches prior Git commit; user PackageManagerSettings.asset remains untracked and untouched. Source and checked Windows ZIP are published; see RELEASES.json. Next: human driving/audio/GUI/collision review, then deliberately choose future loose-parts/service/world scope. Never reuse or overwrite an old release tag.

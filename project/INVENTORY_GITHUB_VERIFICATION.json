@@ -1,0 +1,31 @@
+{
+  "sourceCommit": "5d52b3d04397257d71a532ef41d408bc1aa0fcf7",
+  "verifiedAt": "2026-11-19T22:41:33.554Z",
+  "tag": "test-2026-11-19-garage-inventory",
+  "url": "https://github.com/TuppySeal/HarborVale/releases/tag/test-2026-11-19-garage-inventory",
+  "latestUrl": "https://github.com/TuppySeal/HarborVale/releases/latest",
+  "serverVerifiedAssets": [
+    {
+      "name": "HarborVale-GarageInventory-Windows-x64.zip",
+      "size": 70223202,
+      "sha256": "94abd96f988447a327b642e919cf5a0b7c7018120e6b02e5ef1ea126f91ef307",
+      "url": "https://github.com/TuppySeal/HarborVale/releases/download/test-2026-11-19-garage-inventory/HarborVale-GarageInventory-Windows-x64.zip"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "size": 109,
+      "sha256": "fa201237fc8f52a742a85b8a9e5a4dad0d2a7ff0fc4db0882edc5733f4182212",
+      "url": "https://github.com/TuppySeal/HarborVale/releases/download/test-2026-11-19-garage-inventory/SHA256SUMS.txt"
+    }
+  ],
+  "verifiedPlayerFiles": 251,
+  "checks": {
+    "inventoryRules": 38,
+    "modelCityLaps": 4,
+    "mixCamera": 33,
+    "turbo": 29,
+    "cityArt": 9,
+    "physicalMouseDrag": 35,
+    "nativeFinal": 43
+  }
+}

@@ -1,37 +1,69 @@
 {
   "latest": {
-    "publishedAt": "2026-11-19T17:52:20Z",
-    "tag": "test-2026-11-19-rivals",
-    "sourceCommit": "87adf022126ca3dd6bfa450d0c2c6f9b561af704",
+    "publishedAt": "2026-11-19T22:41:18Z",
+    "tag": "test-2026-11-19-garage-inventory",
+    "sourceCommit": "5d52b3d04397257d71a532ef41d408bc1aa0fcf7",
     "repository": "TuppySeal/HarborVale",
     "private": true,
-    "url": "https://github.com/TuppySeal/HarborVale/releases/tag/test-2026-11-19-rivals",
+    "url": "https://github.com/TuppySeal/HarborVale/releases/tag/test-2026-11-19-garage-inventory",
     "latestUrl": "https://github.com/TuppySeal/HarborVale/releases/latest",
-    "releaseId": 451712095,
+    "releaseId": 452020610,
     "assets": [
       {
-        "name": "HarborVale-Rivals-Windows-x64.zip",
-        "size": 69341043,
-        "sha256": "9d9ef63a151a543f8d3a84058b080f992f5b3c9639c093f2a49c5603c12b3a28",
-        "url": "https://github.com/TuppySeal/HarborVale/releases/download/test-2026-11-19-rivals/HarborVale-Rivals-Windows-x64.zip"
+        "name": "HarborVale-GarageInventory-Windows-x64.zip",
+        "size": 70223202,
+        "sha256": "94abd96f988447a327b642e919cf5a0b7c7018120e6b02e5ef1ea126f91ef307",
+        "url": "https://github.com/TuppySeal/HarborVale/releases/download/test-2026-11-19-garage-inventory/HarborVale-GarageInventory-Windows-x64.zip"
       },
       {
         "name": "SHA256SUMS.txt",
-        "size": 100,
-        "sha256": "0ce99530f59ab0ad7f37d9b84d1a8a91915e15e33323ba842ace51191c51aee6",
-        "url": "https://github.com/TuppySeal/HarborVale/releases/download/test-2026-11-19-rivals/SHA256SUMS.txt"
+        "size": 109,
+        "sha256": "fa201237fc8f52a742a85b8a9e5a4dad0d2a7ff0fc4db0882edc5733f4182212",
+        "url": "https://github.com/TuppySeal/HarborVale/releases/download/test-2026-11-19-garage-inventory/SHA256SUMS.txt"
       }
     ],
     "packageVerification": {
-      "filename": "HarborVale-Rivals-Windows-x64.zip",
-      "zipEntries": 251,
-      "sha256": "9d9ef63a151a543f8d3a84058b080f992f5b3c9639c093f2a49c5603c12b3a28",
-      "verifiedPlayerFiles": 250,
-      "completeDirectoryVerified": true,
-      "bytes": 69341043
+      "sha256": "94abd96f988447a327b642e919cf5a0b7c7018120e6b02e5ef1ea126f91ef307",
+      "bytes": 70223202,
+      "verifiedPlayerFiles": 251,
+      "zipEntries": 252,
+      "filename": "HarborVale-GarageInventory-Windows-x64.zip",
+      "completeDirectoryVerified": true
     }
   },
   "history": [
+    {
+      "publishedAt": "2026-11-19T17:52:20Z",
+      "tag": "test-2026-11-19-rivals",
+      "sourceCommit": "87adf022126ca3dd6bfa450d0c2c6f9b561af704",
+      "repository": "TuppySeal/HarborVale",
+      "private": true,
+      "url": "https://github.com/TuppySeal/HarborVale/releases/tag/test-2026-11-19-rivals",
+      "latestUrl": "https://github.com/TuppySeal/HarborVale/releases/latest",
+      "releaseId": 451712095,
+      "assets": [
+        {
+          "name": "HarborVale-Rivals-Windows-x64.zip",
+          "size": 69341043,
+          "sha256": "9d9ef63a151a543f8d3a84058b080f992f5b3c9639c093f2a49c5603c12b3a28",
+          "url": "https://github.com/TuppySeal/HarborVale/releases/download/test-2026-11-19-rivals/HarborVale-Rivals-Windows-x64.zip"
+        },
+        {
+          "name": "SHA256SUMS.txt",
+          "size": 100,
+          "sha256": "0ce99530f59ab0ad7f37d9b84d1a8a91915e15e33323ba842ace51191c51aee6",
+          "url": "https://github.com/TuppySeal/HarborVale/releases/download/test-2026-11-19-rivals/SHA256SUMS.txt"
+        }
+      ],
+      "packageVerification": {
+        "filename": "HarborVale-Rivals-Windows-x64.zip",
+        "zipEntries": 251,
+        "sha256": "9d9ef63a151a543f8d3a84058b080f992f5b3c9639c093f2a49c5603c12b3a28",
+        "verifiedPlayerFiles": 250,
+        "completeDirectoryVerified": true,
+        "bytes": 69341043
+      }
+    },
     {
       "publishedAt": "2026-11-19T16:11:14Z",
       "tag": "test-2026-11-19-fitments",

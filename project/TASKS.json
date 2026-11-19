@@ -2,9 +2,9 @@
   "schema_version": 1,
   "project_title": "Redline: From Rust to Riches",
   "project_stage": "implementation",
-  "updated_at": "2026-11-19T22:39:58.218Z",
+  "updated_at": "2026-11-19T22:41:33.555Z",
   "current_task_id": "M17-T02",
-  "next_task_id": "M17-T02",
+  "next_task_id": null,
   "status_values": [
     "not_started",
     "in_progress",
@@ -1159,18 +1159,18 @@
       "id": "M17-T02",
       "title": "Drive-in garage, four distinct cars, drag-and-drop engine inventory and AI bump recovery",
       "milestone": "M17",
-      "status": "in_progress",
+      "status": "done",
       "depends_on": [
         "M17-T01"
       ],
       "spec_ref": "project/INVENTORY_HANDOFF.md",
       "evidence": [
         "project/INVENTORY_HANDOFF.md",
-        "artifacts/qa/M17-T02/install-verification.json"
+        "artifacts/qa/M17-T02/install-verification.json",
+        "https://github.com/TuppySeal/HarborVale/releases/tag/test-2026-11-19-garage-inventory",
+        "project/INVENTORY_GITHUB_VERIFICATION.json"
       ],
-      "remaining_steps": [
-        "Push checked source and publish verified private Windows ZIP"
-      ],
+      "remaining_steps": [],
       "blockers": []
     }
   ],
