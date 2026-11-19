@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project_title": "Redline: From Rust to Riches",
   "project_stage": "implementation",
-  "updated_at": "2026-11-19T16:09:14.287Z",
+  "updated_at": "2026-11-19T16:12:04.601Z",
   "current_task_id": "M16-T02",
   "next_task_id": "M16-T02",
   "status_values": [
@@ -1123,18 +1123,18 @@
       "id": "M16-T02",
       "title": "Part previews, owned tire fitments, paid drivetrain conversions and grounded audio",
       "milestone": "M16",
-      "status": "in_progress",
+      "status": "complete",
       "depends_on": [
         "M16-T01"
       ],
       "spec_ref": "project/FITMENT_HANDOFF.md",
       "evidence": [
         "project/FITMENT_HANDOFF.md",
-        "artifacts/qa/M16-T02/install-verification.json"
+        "artifacts/qa/M16-T02/install-verification.json",
+        "https://github.com/TuppySeal/HarborVale/releases/tag/test-2026-11-19-fitments",
+        "project/FITMENT_GITHUB_VERIFICATION.json"
       ],
-      "remaining_steps": [
-        "Push verified source and publish updated downloadable Windows release"
-      ],
+      "remaining_steps": [],
       "blockers": []
     }
   ],

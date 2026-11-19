@@ -268,3 +268,4 @@ Three building prototypes and four corrected props reviewed;17 existing plots dr
 
 ### M16-T01 — Upgrade-family tabs and smoother tire squeal (done)
 17 tabs, prerequisite tab jumps and guarded visible-selection install. Slip/road-speed rubber synthesis with clean fades. Read project/TABS_TIRE_HANDOFF.md.
+- M16-T02 complete: original selected-part previews; owned road/drift/slick fitting; paid FWD/RWD/AWD jobs; v6 migration/replay; load-based engine/induction/exhaust sound; verified native Windows release.

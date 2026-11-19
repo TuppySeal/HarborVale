@@ -1,0 +1,32 @@
+{
+  "sourceCommit": "e46cff646e4357ee70b27a7df1e37a6b4b5a3654",
+  "verifiedAt": "2026-11-19T16:12:04.599Z",
+  "tag": "test-2026-11-19-fitments",
+  "url": "https://github.com/TuppySeal/HarborVale/releases/tag/test-2026-11-19-fitments",
+  "latestUrl": "https://github.com/TuppySeal/HarborVale/releases/latest",
+  "serverVerifiedAssets": [
+    {
+      "name": "HarborVale-Fitments-Windows-x64.zip",
+      "size": 68711640,
+      "sha256": "3cc769c9edaf53c075fc697823f09a11a5ccf800714b149397a2bd085ca9c211",
+      "url": "https://github.com/TuppySeal/HarborVale/releases/download/test-2026-11-19-fitments/HarborVale-Fitments-Windows-x64.zip"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "size": 102,
+      "sha256": "82ced0280e75027bdd4aaeabc805e292c49166f41fccc590eba37bd686606c15",
+      "url": "https://github.com/TuppySeal/HarborVale/releases/download/test-2026-11-19-fitments/SHA256SUMS.txt"
+    }
+  ],
+  "verifiedPlayerFiles": 250,
+  "checks": {
+    "fitment": 43,
+    "engineSound": 3,
+    "mixCamera": 33,
+    "turbo": 29,
+    "cityArt": 9,
+    "native": 80,
+    "originalOffersUnchanged": 49,
+    "originalCarCurvesUnchanged": 2
+  }
+}

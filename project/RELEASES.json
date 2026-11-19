@@ -1,37 +1,69 @@
 {
   "latest": {
-    "publishedAt": "2026-11-19T15:39:13Z",
-    "tag": "test-2026-11-19-garage-tabs",
-    "sourceCommit": "c917e39c500cf327afffa9e824e3fcbd729ddc6e",
+    "publishedAt": "2026-11-19T16:11:14Z",
+    "tag": "test-2026-11-19-fitments",
+    "sourceCommit": "e46cff646e4357ee70b27a7df1e37a6b4b5a3654",
     "repository": "TuppySeal/HarborVale",
     "private": true,
-    "url": "https://github.com/TuppySeal/HarborVale/releases/tag/test-2026-11-19-garage-tabs",
+    "url": "https://github.com/TuppySeal/HarborVale/releases/tag/test-2026-11-19-fitments",
     "latestUrl": "https://github.com/TuppySeal/HarborVale/releases/latest",
-    "releaseId": 451550479,
+    "releaseId": 451590392,
     "assets": [
       {
-        "name": "HarborVale-GarageTabs-Windows-x64.zip",
-        "size": 68700907,
-        "sha256": "fbcb719c89ffb98a3e1886df6b277bf949226452e62266e55a074290b7099e29",
-        "url": "https://github.com/TuppySeal/HarborVale/releases/download/test-2026-11-19-garage-tabs/HarborVale-GarageTabs-Windows-x64.zip"
+        "name": "HarborVale-Fitments-Windows-x64.zip",
+        "size": 68711640,
+        "sha256": "3cc769c9edaf53c075fc697823f09a11a5ccf800714b149397a2bd085ca9c211",
+        "url": "https://github.com/TuppySeal/HarborVale/releases/download/test-2026-11-19-fitments/HarborVale-Fitments-Windows-x64.zip"
       },
       {
         "name": "SHA256SUMS.txt",
-        "size": 104,
-        "sha256": "686d4223467955e9c316c7907040e55f9ba0305236a050f1cf59f3635f1b243b",
-        "url": "https://github.com/TuppySeal/HarborVale/releases/download/test-2026-11-19-garage-tabs/SHA256SUMS.txt"
+        "size": 102,
+        "sha256": "82ced0280e75027bdd4aaeabc805e292c49166f41fccc590eba37bd686606c15",
+        "url": "https://github.com/TuppySeal/HarborVale/releases/download/test-2026-11-19-fitments/SHA256SUMS.txt"
       }
     ],
     "packageVerification": {
-      "filename": "HarborVale-GarageTabs-Windows-x64.zip",
-      "sha256": "fbcb719c89ffb98a3e1886df6b277bf949226452e62266e55a074290b7099e29",
+      "filename": "HarborVale-Fitments-Windows-x64.zip",
       "verifiedPlayerFiles": 250,
+      "zipEntries": 251,
       "completeDirectoryVerified": true,
-      "bytes": 68700907,
-      "zipEntries": 251
+      "sha256": "3cc769c9edaf53c075fc697823f09a11a5ccf800714b149397a2bd085ca9c211",
+      "bytes": 68711640
     }
   },
   "history": [
+    {
+      "publishedAt": "2026-11-19T15:39:13Z",
+      "tag": "test-2026-11-19-garage-tabs",
+      "sourceCommit": "c917e39c500cf327afffa9e824e3fcbd729ddc6e",
+      "repository": "TuppySeal/HarborVale",
+      "private": true,
+      "url": "https://github.com/TuppySeal/HarborVale/releases/tag/test-2026-11-19-garage-tabs",
+      "latestUrl": "https://github.com/TuppySeal/HarborVale/releases/latest",
+      "releaseId": 451550479,
+      "assets": [
+        {
+          "name": "HarborVale-GarageTabs-Windows-x64.zip",
+          "size": 68700907,
+          "sha256": "fbcb719c89ffb98a3e1886df6b277bf949226452e62266e55a074290b7099e29",
+          "url": "https://github.com/TuppySeal/HarborVale/releases/download/test-2026-11-19-garage-tabs/HarborVale-GarageTabs-Windows-x64.zip"
+        },
+        {
+          "name": "SHA256SUMS.txt",
+          "size": 104,
+          "sha256": "686d4223467955e9c316c7907040e55f9ba0305236a050f1cf59f3635f1b243b",
+          "url": "https://github.com/TuppySeal/HarborVale/releases/download/test-2026-11-19-garage-tabs/SHA256SUMS.txt"
+        }
+      ],
+      "packageVerification": {
+        "filename": "HarborVale-GarageTabs-Windows-x64.zip",
+        "sha256": "fbcb719c89ffb98a3e1886df6b277bf949226452e62266e55a074290b7099e29",
+        "verifiedPlayerFiles": 250,
+        "completeDirectoryVerified": true,
+        "bytes": 68700907,
+        "zipEntries": 251
+      }
+    },
     {
       "publishedAt": "2026-11-19T15:20:09Z",
       "tag": "test-2026-11-19-city-art",

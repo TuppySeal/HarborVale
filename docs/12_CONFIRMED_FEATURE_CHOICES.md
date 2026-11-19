@@ -48,5 +48,5 @@ Pink-slip races are optional, deliberately confirmed bets on specific cars. Both
 ## Before implementation
 
 Reconcile older documents/data for shop quality and delayed jobs, fuel, visible damage, conversions, traffic/police, pink-slip transfers and zero-car recovery. Preserve earlier task IDs/statuses and add appropriate tasks. Baseline validation does not validate this expanded scope. Continue planning until the user requests building.
-
-
+## M16-T02 implemented choices
+User requested simple part previews, realistic sound pass, selectable tires and purchasable drivetrain layouts. Implemented separate slicks (higher dry grip) and drift tires (progressive rear breakaway), in addition to owned stock road tires and retained quality stages. Tire sets buy once/refit free; each FWD/RWD/AWD conversion is a complete paid kit/labor job with disclosed mass/efficiency and no removed-kit refund. Compatible paid upgrades persist. Apex remains isolated free testing.55 total offers; see project/FITMENT_HANDOFF.md for prices, v6 atomic receipts and verification limits.
