@@ -1,0 +1,13 @@
+{
+  "verifiedAt": "2026-11-19T15:15:34.1858421Z",
+  "player": "Builds/HarborVale-CityArt/HarborVale.exe",
+  "implementationCommit": "57c4be3ce8341b35470f085b0f04f4da0fb6c48a",
+  "sourceScenePreserved": true,
+  "branch": "origin/main",
+  "nativeArtChecks": 10,
+  "propRepairChecks": 38,
+  "placementChecks": 9,
+  "buildingImportChecks": 41,
+  "helperFoldersPreserved": true,
+  "freshPropImportCount": 4
+}
