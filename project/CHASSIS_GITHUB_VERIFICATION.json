@@ -1,0 +1,9 @@
+{
+  "implementationCommit": "77ad400751b8b593ae312c5ff157c7d1b83fa968",
+  "remoteMainVerified": "77ad400751b8b593ae312c5ff157c7d1b83fa968",
+  "verifiedAt": "2026-11-19T08:09:12.657Z",
+  "repository": "https://github.com/TuppySeal/HarborVale",
+  "player": "Builds/HarborVale-Chassis/HarborVale.exe",
+  "installEvidence": "artifacts/qa/M14-T03/install-verification.json",
+  "note": "Windows player installed locally; executable/caches/test accounts/logs excluded from Git. User PackageManagerSettings.asset preserved untracked."
+}
