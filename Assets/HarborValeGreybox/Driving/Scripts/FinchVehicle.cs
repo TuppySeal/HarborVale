@@ -33,10 +33,12 @@ public class FinchVehicle:MonoBehaviour {
   }
   Wheels[0].ConfigureVehicleSubsteps(5,8,12);spawn=transform.position;spawnRotation=transform.rotation;
  }
+ public int InstalledPrototypeStage{get;private set;}
+ public void InstallPowertrain(FinchDefinition definition,int stage=0){Initialize();if(definition==null||definition.carId!="car_finch")throw new System.ArgumentException("Incompatible powertrain");Engine=new FinchPowertrain(definition);InstalledPrototypeStage=stage;}
  void Awake(){Initialize();}
  void Update(){
   if(!externalInput){commandedPedal=playerInput&&!controlsLocked?FinchInput.Pedal:0;commandedSteer=playerInput&&!controlsLocked?FinchInput.Steer:0;commandedHandbrake=controlsLocked||!playerInput||!Application.isFocused||FinchInput.Held(KeyCode.Space);}
-  if(playerInput&&!externalInput&&FinchInput.Shortcut(KeyCode.R))Recover();
+  if(playerInput&&!externalInput&&!controlsLocked&&FinchInput.Shortcut(KeyCode.R))Recover();
   if(transform.position.y< -40)Recover();
  }
  void FixedUpdate(){Tick(Time.fixedDeltaTime);}
@@ -75,5 +77,7 @@ public class FinchVehicle:MonoBehaviour {
  public void Recover(){if(RecoveryHandler!=null&&RecoveryHandler.TryRecover(this))return;if(gameObject.scene.name=="HarborVale_CityMap"&&FinchDrivingBootstrap.TryRecovery(transform.position,transform.forward,out var p,out var q))ResetAt(p,q);else ResetAt(spawn+Vector3.up*.2f,spawnRotation);}
 }
 }
+
+
 
 

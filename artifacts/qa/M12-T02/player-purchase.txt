@@ -1,0 +1,1 @@
+PASS Windows player: isolated valid trial reward fixture funded 1100 credits, garage installed authored Stage 1 for 400, 700 credits remained, actual before/installed/driving UI screenshots. Real player profile untouched.

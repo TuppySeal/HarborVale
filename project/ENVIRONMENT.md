@@ -28,3 +28,7 @@ Unity 6000.6.0f1 built-in vehicles/audio modules (1.0.0) added. Isolated verific
 ## First time-trial verification
 Unity 6000.6.0f1 isolated validation in .work/UnityRaceValidation; same physics/audio modules, plus built-in com.unity.modules.screencapture 1.0.0 for actual player UI screenshots. ScreenCapture is used only by explicit development smoke mode. Final Windows output Builds/HarborVale-FirstLap. Source scene/static car geometry unchanged; checkpoint/recovery hooks attach at runtime. Profiles from probes remain isolated; ordinary game race progress uses LocalAppData/HarborVale/Prototype.
 
+
+## Garage verification
+Unity 6000.6.0f1; same built-in module set, no new dependency or asset. Isolated project .work/UnityGarageValidation; final Windows Garage development player exported successfully (166474217 bytes, 0 build errors). Actual visible player snapshots and separate-process saved-tune reload use isolated profiles; real user progress is untouched by tests. Canonical profile migration/path details in project/GARAGE_HANDOFF.md.
+

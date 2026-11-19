@@ -19,3 +19,6 @@ Claude supplied generate_garage_props.py plus documentation and a verification b
 ## Next small task prepared for Claude
 Generate only a verified workbench in WorkshopProps/VerifiedWorkbench: workbench.blend, workbench.fbx, one rendered preview and an actual dimensions/origin/transforms/material verification note (target 1.8 x 0.9 x 0.9 m). Locate Blender outside PATH before declaring it unavailable. If unavailable, report the exact blocker and keep exports pending. Do not modify Unity or generate the other nine props yet. This brief was provided to the user; no direct Claude messaging connection was used.
 
+
+Direct UI submission confirmed: the workbench-only prompt appeared in the Claude chat; the user confirmed Claude was working on it. Do not send a duplicate or interact with that session while it runs.
+

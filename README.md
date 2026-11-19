@@ -1,26 +1,21 @@
-# Harbor Vale — First Lap
+# Harbor Vale — race, earn, tune
 
-Open in **Unity 6000.6.0f1**, open `Assets/HarborValeGreybox/Scenes/HarborVale_CityMap.unity`, then press **Play**.
+Open the project in **Unity 6000.6.0f1**, open `Assets/HarborValeGreybox/Scenes/HarborVale_CityMap.unity`, then press **Play**.
 
-Local Windows build: **`Builds/HarborVale-FirstLap/HarborVale.exe`**. Build output stays outside Git; older driving previews are preserved.
+Latest local Windows build: **`Builds/HarborVale-Garage/HarborVale.exe`**. Close older previews before switching. Executables stay outside Git.
 
-Stop/slow at the nearby **FIRST LAP** arch and press **E**. Follow the teal route line through 37 ordered checkpoints around the 2 km Dockside loop. Earn credits, improve your medal/best time and replay. Race earnings and records save automatically.
+1. Stop near FIRST LAP and press **E** to race the 2 km checkpoint loop.
+2. Earn credits, then press **Esc** to return from results.
+3. Stop near the player garage and press **G**.
+4. Compare the torque curves and buy **Stage 1 for 400 credits** with Enter or the install button.
+5. Drive the upgraded Finch. The payment and tune persist through restarting the game.
 
-| Control | Action |
-|---|---|
-| W/S or Up/Down | Accelerate, brake, reverse |
-| A/D or Left/Right | Steer |
-| Space | Handbrake |
-| E | Start / retry trial |
-| R | Recover (+3 seconds during race) |
-| C | Chase / bonnet camera |
-| Tab | Map inspection / return to driving |
-| Esc | Abandon race / leave results |
+W/S accelerate/brake/reverse, A/D steer, Space handbrake, R recover, C camera, Tab map. Esc/G closes the garage. Racing recovery adds 3 seconds.
 
-Gold pays 700 credits; first completion adds 400 once. Replay payouts vary with medal. Race earnings are a prototype account; garage spending, car purchases and the complete career remain future work. The car, city and checkpoints use original placeholder geometry.
+Stage 1 changes the authored RPM-dependent torque curve. Native measured 0–100 km/h improves from **13.56 to 12.84 seconds**. Peak crank power derives from the curve (~65.2→70.1 kW). Only the first naturally aspirated engine package is implemented so far.
 
-![First Lap race HUD](artifacts/qa/M12-T01/Trial_Racing_UI.png)
+![Paid Stage 1 garage](artifacts/qa/M12-T02/Garage_Installed_UI.png)
 
-Rule/atomic save fixtures, actual Play Mode integration, driving regression and Windows export/smoke checks passed. Screenshots were inspected from a visible Windows player. Test gates were scripted; no manual full-lap or medal-pacing claim is made. See `artifacts/qa/M12-T01/visual-inspection.txt`.
+Valid First Lap v1 progress imports into a separate v2 profile once. Old files remain unchanged; the current available-credit account is earned credits minus historical spending. Later old-build earnings do not synchronize automatically. Real player saves are never seeded by test probes.
 
-Continue from `project/STATUS.md`, `project/NEXT_TASK.md`, `project/TASKS.json` and **`project/TRIAL_HANDOFF.md`**. Current map/driving sources and the independent handling test scene are preserved. Claude's separate art assignment is documented in `project/CLAUDE_ART_HANDOFF.md`; assets are not imported yet.
+Read `project/STATUS.md`, `project/NEXT_TASK.md`, `project/TASKS.json` and **`project/GARAGE_HANDOFF.md`** before continuing. Source, physics/rule/Play Mode/Windows restart evidence and actual UI snapshots are included. The complete ownership/maintenance career, later stages/conversions, AI opponents, traffic and police remain future work. Claude's workshop art stays separate until actual exports are verified.

@@ -1,0 +1,13 @@
+import fs from 'node:fs';
+const car=JSON.parse(fs.readFileSync('design-data/cars.json','utf8')).cars.find(c=>c.id==='car_finch');
+const engine=JSON.parse(fs.readFileSync('design-data/powertrains.json','utf8')).powertrains.find(p=>p.id===car.powertrain_id);
+const rules=JSON.parse(fs.readFileSync('design-data/upgrades.json','utf8')),scaling=rules.price_scaling;
+const path=engine.paths.find(p=>p.id==='path_finch_na'),stage=path.stages.find(s=>s.stage===1);
+const multiplier=Math.max(scaling.minimum_multiplier,Math.min(scaling.maximum_multiplier,(car.purchase_price/scaling.reference_car_price)**scaling.power));
+const price=Math.floor(stage.paid_reference_price*multiplier/scaling.round_to_nearest+.5)*scaling.round_to_nearest;
+function definition(cfg){return {source:'design-data/powertrains.json:'+cfg.id,carId:car.id,massKg:car.mass_kg,wheelRadius:.295,efficiency:engine.gearbox.drivetrain_efficiency,finalDrive:engine.gearbox.final_drive,reverseRatio:engine.gearbox.reverse_ratio,idleRpm:cfg.idle_rpm,redlineRpm:cfg.redline_rpm,softLimiterRpm:cfg.soft_limiter_rpm,upshiftRpm:cfg.upshift_rpm,downshiftRpm:cfg.downshift_rpm,launchRpm:cfg.launch_target_rpm,shiftSeconds:car.shift_seconds,brakeDeceleration:car.brake_deceleration,ratios:engine.gearbox.forward_ratios,rpm:cfg.steady_wot_torque_curve_nm.map(p=>p[0]),torque:cfg.steady_wot_torque_curve_nm.map(p=>p[1])};}
+const site=JSON.parse(fs.readFileSync('design-data/harbor_vale_expanded_map.json','utf8')).sites.find(s=>s.id==='D01');
+const catalog={title:'PLAYER GARAGE',x:site.accessX,y:site.y+.08,z:site.accessZ,offer:{stage:1,requiredPreviousStage:0,minimumReputation:stage.min_reputation,supportingTransmission:stage.required_transmission_stage,price,pathId:path.id,configId:stage.configuration.id,displayName:'Stage 1 — naturally aspirated'},stock:definition(engine.stock),stageOne:definition(stage.configuration)};
+if(price!==400||catalog.offer.configId!=='cfg_finch_na_s1')throw Error('Catalog changed; review migration/fixtures before updating');
+const folder=process.argv[2]||'Assets/HarborValeGreybox/Garage/Resources';fs.mkdirSync(folder,{recursive:true});fs.writeFileSync(folder+'/FinchGarageCatalog.json',JSON.stringify(catalog,null,2)+'\n');
+fs.mkdirSync('artifacts/qa/M12-T02',{recursive:true});const report={pass:true,price,priceSource:'550 reference * 0.75 minimum scaling, nearest 50 half-up',config:catalog.offer.configId,stockTorqueAt4500:catalog.stock.torque[4],stageOneTorqueAt4500:catalog.stageOne.torque[4],supportingTransmission:catalog.offer.supportingTransmission};fs.writeFileSync('artifacts/qa/M12-T02/catalog-report.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));

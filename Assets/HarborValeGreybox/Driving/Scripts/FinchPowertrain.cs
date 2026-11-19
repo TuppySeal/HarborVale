@@ -4,6 +4,7 @@ namespace HarborValeGreybox.Driving {
 [Serializable] public class FinchDefinition {
  public string source,carId;public float massKg,wheelRadius,efficiency,finalDrive,reverseRatio,idleRpm,redlineRpm,softLimiterRpm,upshiftRpm,downshiftRpm,launchRpm,shiftSeconds,brakeDeceleration;
  public float[] ratios,rpm,torque;
+ public float PeakKw(){float peak=0;for(int i=0;i<rpm.Length;i++){peak=Mathf.Max(peak,torque[i]*rpm[i]/9549.2966f);if(i>0){float a=(torque[i]-torque[i-1])/(rpm[i]-rpm[i-1]);if(a<0){float b=torque[i-1]-a*rpm[i-1],r=-b/(2*a);if(r>rpm[i-1]&&r<rpm[i])peak=Mathf.Max(peak,(a*r+b)*r/9549.2966f);}}}return peak;}
  public float SampleTorque(float speed){if(speed>=redlineRpm)return 0;speed=Mathf.Max(idleRpm,speed);for(int i=1;i<rpm.Length;i++)if(speed<=rpm[i])return Mathf.Lerp(torque[i-1],torque[i],Mathf.InverseLerp(rpm[i-1],rpm[i],speed));return torque[torque.Length-1];}
 }
 // Per-car transient gearbox/engine state. Authored net torque is applied once.
@@ -32,4 +33,5 @@ public sealed class FinchPowertrain {
  }
 }
 }
+
 

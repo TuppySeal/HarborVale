@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project_title": "Redline: From Rust to Riches",
   "project_stage": "implementation",
-  "updated_at": "2026-11-19T01:17:01.8518223Z",
+  "updated_at": "2026-11-19T01:49:35.4014817Z",
   "current_task_id": null,
   "next_task_id": null,
   "status_values": [
@@ -726,14 +726,42 @@
         "artifacts/qa/M12-T01/player-smoke.txt",
         "artifacts/qa/M12-T01/visual-inspection.txt",
         "artifacts/qa/M12-T01/Trial_Racing_UI.png",
-        "project/TRIAL_HANDOFF.md"
+        "project/TRIAL_HANDOFF.md",
+        "project/TRIAL_GITHUB_VERIFICATION.json",
+        "artifacts/qa/M12-T01/install-verification.txt"
       ],
       "remaining_steps": [],
       "blockers": [],
       "updated_at": "2026-11-19T01:17:01.8518223Z"
+    },
+    {
+      "id": "M12-T02",
+      "title": "Garage purchase and persistent Stage 1 Finch tune",
+      "milestone": "M12",
+      "depends_on": [
+        "M12-T01"
+      ],
+      "status": "done",
+      "spec_ref": "docs/05_BUILD_ROADMAP.md",
+      "acceptance_key": "M12-T02",
+      "evidence": [
+        "artifacts/qa/M12-T02/catalog-report.json",
+        "artifacts/qa/M12-T02/rule-physics-results.txt",
+        "artifacts/qa/M12-T02/playmode-results.txt",
+        "artifacts/qa/M12-T02/trial-regression.txt",
+        "artifacts/qa/M12-T02/player-build.txt",
+        "artifacts/qa/M12-T02/player-purchase.txt",
+        "artifacts/qa/M12-T02/player-reload.txt",
+        "artifacts/qa/M12-T02/visual-inspection.txt",
+        "artifacts/qa/M12-T02/Garage_Installed_UI.png",
+        "project/GARAGE_HANDOFF.md"
+      ],
+      "remaining_steps": [],
+      "blockers": [],
+      "updated_at": "2026-11-19T01:49:35.4014817Z"
     }
   ],
   "implementation_authorized": true,
   "current_design_amendment": "docs/12_CONFIRMED_FEATURE_CHOICES.md",
-  "authorization_scope": "User-authorized next expansion: first time trial with saved race earnings"
+  "authorization_scope": "Latest user next-step request: bounded garage and first paid tune"
 }

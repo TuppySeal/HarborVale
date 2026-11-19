@@ -1,0 +1,9 @@
+{
+  "pass": true,
+  "price": 400,
+  "priceSource": "550 reference * 0.75 minimum scaling, nearest 50 half-up",
+  "config": "cfg_finch_na_s1",
+  "stockTorqueAt4500": 119,
+  "stageOneTorqueAt4500": 125,
+  "supportingTransmission": 0
+}

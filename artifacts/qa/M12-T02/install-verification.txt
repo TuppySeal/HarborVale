@@ -1,0 +1,1 @@
+PASS SHA-256: 17 new garage files and six existing integration sources match the tested project. City scene/static model/test scene were preserved. Final Windows build 166474217 bytes, 0 errors.

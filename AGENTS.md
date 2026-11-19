@@ -16,3 +16,7 @@ Git remote is already configured. Push intended source to existing origin/main a
 ## First time-trial expansion
 User authorized choosing the next expansion. M12-T01 implements the first time trial and saved race earnings. Read project/TRIAL_HANDOFF.md before any race/economy edits. Preserve frozen historical receipts, integer currency and atomic idempotent transactions. Race earnings are a prototype account, not a fabricated car purchase or full wallet; future integration must migrate earned receipts exactly once. Do not reset a corrupted profile silently. Keep Claude's work confined to its separate workshop-art folder and do not edit that output during gameplay work.
 
+
+## Paid garage expansion
+Latest user continuation authorized bounded M12-T02: first paid Stage 1 Finch tune. Read project/GARAGE_HANDOFF.md before edits. Use imported authored curves and fee; keep cash, receipt and installed stage atomic and idempotent. Preserve actual historical amounts and prototype identity. New production save path is v2 with one-time validated v1 import; never repeatedly import, silently reset paid data, or overwrite unknown newer schemas. Preserve current city/static model/test scene and leave Claude's working art folder/session untouched. Future staged tunes/conversions require their real prerequisites and a recorded migration when needed.
+

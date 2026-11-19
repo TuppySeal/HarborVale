@@ -1,0 +1,104 @@
+{
+  "title": "PLAYER GARAGE",
+  "x": -781.7993023464251,
+  "y": 0.08,
+  "z": -422.51036421025833,
+  "offer": {
+    "stage": 1,
+    "requiredPreviousStage": 0,
+    "minimumReputation": 0,
+    "supportingTransmission": 0,
+    "price": 400,
+    "pathId": "path_finch_na",
+    "configId": "cfg_finch_na_s1",
+    "displayName": "Stage 1 — naturally aspirated"
+  },
+  "stock": {
+    "source": "design-data/powertrains.json:cfg_finch_stock",
+    "carId": "car_finch",
+    "massKg": 1050,
+    "wheelRadius": 0.295,
+    "efficiency": 0.9,
+    "finalDrive": 4.1,
+    "reverseRatio": 3.2,
+    "idleRpm": 900,
+    "redlineRpm": 6500,
+    "softLimiterRpm": 6400,
+    "upshiftRpm": 6200,
+    "downshiftRpm": 2200,
+    "launchRpm": 1800,
+    "shiftSeconds": 0.45,
+    "brakeDeceleration": 7.2,
+    "ratios": [
+      3.55,
+      2,
+      1.36,
+      1.03,
+      0.82
+    ],
+    "rpm": [
+      900,
+      1500,
+      2500,
+      3500,
+      4500,
+      5500,
+      6200,
+      6500
+    ],
+    "torque": [
+      74,
+      95,
+      111,
+      116,
+      119,
+      113,
+      100,
+      90
+    ]
+  },
+  "stageOne": {
+    "source": "design-data/powertrains.json:cfg_finch_na_s1",
+    "carId": "car_finch",
+    "massKg": 1050,
+    "wheelRadius": 0.295,
+    "efficiency": 0.9,
+    "finalDrive": 4.1,
+    "reverseRatio": 3.2,
+    "idleRpm": 900,
+    "redlineRpm": 6500,
+    "softLimiterRpm": 6400,
+    "upshiftRpm": 6200,
+    "downshiftRpm": 2200,
+    "launchRpm": 1800,
+    "shiftSeconds": 0.45,
+    "brakeDeceleration": 7.2,
+    "ratios": [
+      3.55,
+      2,
+      1.36,
+      1.03,
+      0.82
+    ],
+    "rpm": [
+      900,
+      1500,
+      2500,
+      3500,
+      4500,
+      5500,
+      6200,
+      6500
+    ],
+    "torque": [
+      76,
+      99,
+      115,
+      121,
+      125,
+      120,
+      108,
+      97
+    ]
+  }
+}

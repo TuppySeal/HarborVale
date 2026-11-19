@@ -9,7 +9,9 @@ public class DocksideTrialDirector:MonoBehaviour,IFinchRecoveryHandler {
  GameObject markers;Transform[] arches;LineRenderer routeLine;Vector3 previous;int visualGate=-2;Material cyan,amber,white;TextMesh startLabel;float flashUntil;string flash;double lastTickTime;
  // Isolated editor probes set this before scene startup; players leave it null.
  public static string SavePathOverrideForTests;
- public static string SavePath=>Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),"HarborVale","Prototype","race-progress-v1.json");
+ public bool ExternalModalOpen{get;set;}
+ public static string LegacySavePath=>Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),"HarborVale","Prototype","race-progress-v1.json");
+ public static string SavePath=>Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),"HarborVale","Prototype","race-progress-v2.json");
  public bool Active=>Session!=null&&(Session.State==TrialState.Countdown||Session.State==TrialState.Running);
  [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]static void Hook(){if(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name!="HarborVale_CityMap")return;var root=new GameObject("First Lap | time trial");root.AddComponent<DocksideTrialDirector>();}
  void Start(){Initialize();}
@@ -17,7 +19,7 @@ public class DocksideTrialDirector:MonoBehaviour,IFinchRecoveryHandler {
   if(Definition!=null)return;var data=Resources.Load<TextAsset>("FirstDocksideTrial");if(data==null)throw new InvalidOperationException("Trial route missing");Definition=JsonUtility.FromJson<TrialDefinition>(data.text);Definition.Validate();vehicle=UnityEngine.Object.FindAnyObjectByType<FinchVehicle>();
   if(vehicle==null){var spec=UnityEngine.Object.FindAnyObjectByType<StarterCarSpecification>();if(spec==null)throw new InvalidOperationException("No starter vehicle");vehicle=spec.gameObject.AddComponent<FinchVehicle>();vehicle.Initialize();}
   vehicle.RecoveryHandler=this;
-  try{Store=new RaceProgressStore(saveOverride??SavePathOverrideForTests??SavePath,Definition);}catch(Exception e){SaveError="Saved race progress could not be read.";Debug.LogWarning("Race progress unavailable: "+e.Message);}
+  try{Store=new RaceProgressStore(saveOverride??SavePathOverrideForTests??SavePath,Definition,legacyFile:saveOverride==null&&SavePathOverrideForTests==null?LegacySavePath:null);}catch(Exception e){SaveError="Saved race progress could not be read.";Debug.LogWarning("Race progress unavailable: "+e.Message);}
   previous=vehicle.transform.position;lastTickTime=Time.realtimeSinceStartupAsDouble;CreateVisuals();
  }
  Material Material(string name,Color color){var m=new Material(Shader.Find("Sprites/Default")){name=name,color=color};return m;}
@@ -29,7 +31,7 @@ public class DocksideTrialDirector:MonoBehaviour,IFinchRecoveryHandler {
   var caption=new GameObject("First Lap start label");caption.transform.SetParent(markers.transform,false);caption.transform.position=Definition.checkpoints[0].Position+Vector3.up*5;startLabel=caption.AddComponent<TextMesh>();startLabel.font=Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");startLabel.text="FIRST LAP\nTIME TRIAL";startLabel.fontSize=48;startLabel.characterSize=.18f;startLabel.anchor=TextAnchor.MiddleCenter;startLabel.alignment=TextAlignment.Center;caption.GetComponent<Renderer>().sharedMaterial=startLabel.font.material;startLabel.color=new Color(.2f,1,.8f);
  }
  public bool BeginRun(){
-  Initialize();if(Store==null||Active)return false;var hud=vehicle.GetComponent<FinchDrivingHUD>();if(hud!=null)hud.SetInspection(false);Session=new TrialSession(Definition);Receipt=null;SaveError=null;ShowingResult=false;
+  Initialize();if(Store==null||Active||ExternalModalOpen)return false;var hud=vehicle.GetComponent<FinchDrivingHUD>();if(hud!=null)hud.SetInspection(false);Session=new TrialSession(Definition);Receipt=null;SaveError=null;ShowingResult=false;
   var first=Definition.checkpoints[0];vehicle.ResetAt(first.Position-first.Forward*8+Vector3.up*.4f,Quaternion.LookRotation(first.Forward));vehicle.controlsLocked=true;previous=vehicle.transform.position;visualGate=-2;var follow=Camera.main==null?null:Camera.main.GetComponent<FinchChaseCamera>();if(follow!=null)follow.Snap();return true;
  }
  void ShowResult(){ShowingResult=true;vehicle.controlsLocked=true;var hud=vehicle.GetComponent<FinchDrivingHUD>();if(hud!=null)hud.SetInspection(false);}
@@ -38,7 +40,7 @@ public class DocksideTrialDirector:MonoBehaviour,IFinchRecoveryHandler {
  void Update(){
   if(Definition==null||vehicle==null)return;Vector3 now=vehicle.transform.position;double realtime=Time.realtimeSinceStartupAsDouble;float dt=(float)Math.Max(0,realtime-lastTickTime);lastTickTime=realtime;
   if(Active){Session.Tick(dt,previous,now);vehicle.controlsLocked=Session.State==TrialState.Countdown;if(Session.State==TrialState.Finished){ShowResult();TrySettlement();}else if(Session.State==TrialState.Abandoned){ShowResult();}}
-  previous=now;
+  previous=now;if(ExternalModalOpen){UpdateVisuals();return;}
   if(FinchInput.Shortcut(KeyCode.Escape)){if(Active)Abandon();else if(ShowingResult)DismissResult();}
   else if((vehicle.playerInput||ShowingResult)&&FinchInput.Shortcut(KeyCode.E)){if(ShowingResult){if(SaveError!=null&&Session!=null&&Session.ValidFinish)TrySettlement();else BeginRun();}else if(!Active&&NearStart()&&vehicle.SpeedKph<8)BeginRun();}
   UpdateVisuals();
@@ -58,8 +60,8 @@ public class DocksideTrialDirector:MonoBehaviour,IFinchRecoveryHandler {
  }
  static string TimeText(float seconds){int ms=Mathf.RoundToInt(seconds*1000);return (ms/60000).ToString("00")+":"+((ms/1000)%60).ToString("00")+"."+(ms%1000).ToString("000");}
  void OnGUI(){
-  if(Definition==null||vehicle==null)return;var large=new GUIStyle(GUI.skin.label){fontSize=22,fontStyle=FontStyle.Bold,alignment=TextAnchor.MiddleCenter};large.normal.textColor=Color.white;var centered=new GUIStyle(GUI.skin.label){alignment=TextAnchor.MiddleCenter,fontSize=15,wordWrap=true};centered.normal.textColor=Color.white;
-  bool restored=Store!=null&&Store.RecoveredBackup;GUI.Box(new Rect(Screen.width-270,16,254,restored?88:68),"RACE PROGRESS");GUI.Label(new Rect(Screen.width-255,42,238,restored?60:38),Store==null?"Save unavailable":"Race earnings  "+Store.Profile.earnings+" cr\nReputation  "+Store.Profile.reputation+(restored?"\nLoaded last valid backup":""));
+  if(Definition==null||vehicle==null||ExternalModalOpen)return;var large=new GUIStyle(GUI.skin.label){fontSize=22,fontStyle=FontStyle.Bold,alignment=TextAnchor.MiddleCenter};large.normal.textColor=Color.white;var centered=new GUIStyle(GUI.skin.label){alignment=TextAnchor.MiddleCenter,fontSize=15,wordWrap=true};centered.normal.textColor=Color.white;
+  bool restored=Store!=null&&Store.RecoveredBackup;GUI.Box(new Rect(Screen.width-270,16,254,restored?88:68),"RACE PROGRESS");GUI.Label(new Rect(Screen.width-255,42,238,restored?60:38),Store==null?"Save unavailable":"Available credits  "+Store.Profile.availableCredits+" cr\nReputation  "+Store.Profile.reputation+(restored?"\nLoaded last valid backup":""));
   if(ShowingResult){float x=(Screen.width-640)/2f,y=(Screen.height-350)/2f;GUI.Box(new Rect(x,y,640,350),Definition.title);bool finish=Session!=null&&Session.ValidFinish;string heading=finish?TrialDefinition.Medal(Definition.Rank(Session.Elapsed))+"  "+TimeText(Session.Elapsed):"RUN ABANDONED";GUI.Label(new Rect(x+20,y+40,600,40),heading,large);
    string detail=finish?(Receipt!=null?"Earned "+Receipt.credits+" cr"+(Receipt.firstClear?" (includes first-clear bonus)":"")+"\nReputation +"+Receipt.reputation+"\nTotal race earnings "+Store.Profile.earnings+" cr\nBest time "+TimeText(Store.Profile.records[0].bestMilliseconds/1000f):"Payout pending. Your previous progress is preserved."):"No credits awarded. Explore or try again.";
    if(SaveError!=null)detail+="\nCould not save: "+SaveError;
@@ -76,3 +78,4 @@ public class DocksideTrialDirector:MonoBehaviour,IFinchRecoveryHandler {
  void OnDestroy(){if(vehicle!=null){vehicle.RecoveryHandler=null;vehicle.controlsLocked=false;}if(cyan!=null)Destroy(cyan);if(amber!=null)Destroy(amber);if(white!=null)Destroy(white);}
 }
 }
+

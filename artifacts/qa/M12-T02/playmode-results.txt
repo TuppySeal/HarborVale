@@ -1,0 +1,15 @@
+EDITOR-ONLY ISSUE: K001 search indexing.
+PASS Stock startup is near the garage with authored curve
+PASS Garage opens and locks driving/race interaction
+PASS Race cannot start over a garage modal
+PASS Unfunded garage purchase cannot install
+PASS Garage refresh sees earned credits
+PASS Purchase commits 400 credits and installs paid stage
+PASS Vehicle uses Stage 1 curve and HUD stage
+PASS Duplicate UI request cannot charge again
+PASS Free-roam recovery preserves installed torque
+PASS Driving/race input unlock after leaving garage
+PASS Race reset keeps tune and active race blocks garage
+PASS Abandon/retry does not reset paid build
+PASS Installed build reloads from disk
+PASS No gameplay runtime exceptions

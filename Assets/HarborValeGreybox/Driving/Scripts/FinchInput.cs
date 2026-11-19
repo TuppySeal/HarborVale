@@ -19,7 +19,7 @@ public static class FinchInput {
  }
 #if ENABLE_INPUT_SYSTEM
  static UnityEngine.InputSystem.Key Convert(KeyCode k){switch(k){
-  case KeyCode.E:return UnityEngine.InputSystem.Key.E;case KeyCode.W:return UnityEngine.InputSystem.Key.W;case KeyCode.S:return UnityEngine.InputSystem.Key.S;
+  case KeyCode.G:return UnityEngine.InputSystem.Key.G;case KeyCode.Return:return UnityEngine.InputSystem.Key.Enter;case KeyCode.E:return UnityEngine.InputSystem.Key.E;case KeyCode.W:return UnityEngine.InputSystem.Key.W;case KeyCode.S:return UnityEngine.InputSystem.Key.S;
   case KeyCode.A:return UnityEngine.InputSystem.Key.A;case KeyCode.D:return UnityEngine.InputSystem.Key.D;
   case KeyCode.UpArrow:return UnityEngine.InputSystem.Key.UpArrow;case KeyCode.DownArrow:return UnityEngine.InputSystem.Key.DownArrow;
   case KeyCode.LeftArrow:return UnityEngine.InputSystem.Key.LeftArrow;case KeyCode.RightArrow:return UnityEngine.InputSystem.Key.RightArrow;
@@ -34,5 +34,6 @@ public static class FinchInput {
  public static float Steer=>(Held(KeyCode.D)||Held(KeyCode.RightArrow)?1:0)-(Held(KeyCode.A)||Held(KeyCode.LeftArrow)?1:0);
 }
 }
+
 
 
