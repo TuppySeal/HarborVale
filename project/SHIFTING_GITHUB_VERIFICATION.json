@@ -1,0 +1,18 @@
+{
+  "implementation_commit": "758fa45fe6f4e2e1e4b37da26fea61f0d371483a",
+  "verified_remote_main_at_publication": "758fa45fe6f4e2e1e4b37da26fea61f0d371483a",
+  "verified_at": "2026-11-19T03:44:36.675Z",
+  "repository": "https://github.com/TuppySeal/HarborVale",
+  "player": "Builds/HarborVale-SmoothDrive/HarborVale.exe",
+  "verified_checks": {
+    "native_rules_physics": 104,
+    "windows_shifting": 19,
+    "windows_transitions_persistence": 47,
+    "installed_source_files": 12,
+    "installed_windows_files": 249
+  },
+  "manual_feel_and_controller": "Not manually verified",
+  "preserved_untracked": [
+    "ProjectSettings/PackageManagerSettings.asset"
+  ]
+}
