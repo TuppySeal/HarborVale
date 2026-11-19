@@ -1,11 +1,12 @@
 using UnityEngine;
 namespace HarborValeGreybox.Driving {
+public interface IFinchRecoveryHandler {bool TryRecover(FinchVehicle vehicle);}
 [DisallowMultipleComponent]
 public class FinchVehicle:MonoBehaviour {
  public TextAsset stockDefinition;
  [Header("Accessible stock handling")]
  public float lowSpeedSteer=32,highSpeedSteer=7.5f,steeringResponse=2.4f,antiRoll=3800,aeroCdA=.88f;
- public bool playerInput=true,externalInput;
+ public bool playerInput=true,externalInput; public bool controlsLocked; public IFinchRecoveryHandler RecoveryHandler{get;set;}
  public float commandedPedal,commandedSteer;public bool commandedHandbrake;
  public Rigidbody Body{get;private set;}public WheelCollider[] Wheels{get;private set;}
  public FinchPowertrain Engine{get;private set;}
@@ -34,7 +35,7 @@ public class FinchVehicle:MonoBehaviour {
  }
  void Awake(){Initialize();}
  void Update(){
-  if(!externalInput){commandedPedal=playerInput?FinchInput.Pedal:0;commandedSteer=playerInput?FinchInput.Steer:0;commandedHandbrake=!playerInput||!Application.isFocused||FinchInput.Held(KeyCode.Space);}
+  if(!externalInput){commandedPedal=playerInput&&!controlsLocked?FinchInput.Pedal:0;commandedSteer=playerInput&&!controlsLocked?FinchInput.Steer:0;commandedHandbrake=controlsLocked||!playerInput||!Application.isFocused||FinchInput.Held(KeyCode.Space);}
   if(playerInput&&!externalInput&&FinchInput.Shortcut(KeyCode.R))Recover();
   if(transform.position.y< -40)Recover();
  }
@@ -42,7 +43,7 @@ public class FinchVehicle:MonoBehaviour {
  public void Tick(float dt){
   Initialize();float forward=ForwardSpeed;float pedal=Mathf.Clamp(commandedPedal,-1,1);
   bool opposite=pedal!=0&&Mathf.Sign(pedal)!=Mathf.Sign(forward)&&Mathf.Abs(forward)>1;
-  Brake=opposite?Mathf.Abs(pedal):0;Throttle=opposite?0:Mathf.Abs(pedal);
+  Brake=controlsLocked?1:opposite?Mathf.Abs(pedal):0;Throttle=controlsLocked||opposite?0:Mathf.Abs(pedal);
   bool reverse=pedal<0||(pedal==0&&Engine.Gear<0);
   steer=Mathf.MoveTowards(steer,Mathf.Clamp(commandedSteer,-1,1),steeringResponse*dt);handbrake=Mathf.MoveTowards(handbrake,commandedHandbrake?1:0,dt*6);
   Steering=steer*Mathf.Lerp(lowSpeedSteer,highSpeedSteer,Mathf.Clamp01(SpeedKph/130));
@@ -71,7 +72,8 @@ public class FinchVehicle:MonoBehaviour {
  }
  void LateUpdate(){if(Wheels==null)return;for(int i=0;i<4;i++)if(visual[i]!=null){Wheels[i].GetWorldPose(out var p,out var q);visual[i].SetPositionAndRotation(p,q);}}
  public void ResetAt(Vector3 position,Quaternion rotation){Initialize();Body.linearVelocity=Vector3.zero;Body.angularVelocity=Vector3.zero;Body.position=position;Body.rotation=rotation;transform.SetPositionAndRotation(position,rotation);Engine.Reset();steer=0;commandedPedal=commandedSteer=0;foreach(var w in Wheels){w.motorTorque=0;w.brakeTorque=0;w.steerAngle=0;}Body.WakeUp();Physics.SyncTransforms();}
- public void Recover(){if(gameObject.scene.name=="HarborVale_CityMap"&&FinchDrivingBootstrap.TryRecovery(transform.position,transform.forward,out var p,out var q))ResetAt(p,q);else ResetAt(spawn+Vector3.up*.2f,spawnRotation);}
+ public void Recover(){if(RecoveryHandler!=null&&RecoveryHandler.TryRecover(this))return;if(gameObject.scene.name=="HarborVale_CityMap"&&FinchDrivingBootstrap.TryRecovery(transform.position,transform.forward,out var p,out var q))ResetAt(p,q);else ResetAt(spawn+Vector3.up*.2f,spawnRotation);}
 }
 }
+
 

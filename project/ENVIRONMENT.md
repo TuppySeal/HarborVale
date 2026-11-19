@@ -24,3 +24,7 @@ Canonical project is now C:/Users/Justice/Documents/Unity/HarborVale using insta
 ## Driving prototype
 Unity 6000.6.0f1 built-in vehicles/audio modules (1.0.0) added. Isolated verification project .work/UnityDrivingValidation avoids editing open canonical scenes. Native physics, actual Play Mode and Windows standalone development export succeeded. Exact reports and known editor-only issue are documented in project/DRIVING_HANDOFF.md and KNOWN_ISSUES.md. No paid assets/plugins were added.
 
+
+## First time-trial verification
+Unity 6000.6.0f1 isolated validation in .work/UnityRaceValidation; same physics/audio modules, plus built-in com.unity.modules.screencapture 1.0.0 for actual player UI screenshots. ScreenCapture is used only by explicit development smoke mode. Final Windows output Builds/HarborVale-FirstLap. Source scene/static car geometry unchanged; checkpoint/recovery hooks attach at runtime. Profiles from probes remain isolated; ordinary game race progress uses LocalAppData/HarborVale/Prototype.
+

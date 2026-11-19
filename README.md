@@ -1,20 +1,26 @@
-# Harbor Vale — driving prototype
+# Harbor Vale — First Lap
 
-Open the project in **Unity 6000.6.0f1**, open `Assets/HarborValeGreybox/Scenes/HarborVale_CityMap.unity`, then press **Play**. The Aster Finch starts on the nearby road, ready to drive.
+Open in **Unity 6000.6.0f1**, open `Assets/HarborValeGreybox/Scenes/HarborVale_CityMap.unity`, then press **Play**.
 
-| Controls | Action |
+Local Windows build: **`Builds/HarborVale-FirstLap/HarborVale.exe`**. Build output stays outside Git; older driving previews are preserved.
+
+Stop/slow at the nearby **FIRST LAP** arch and press **E**. Follow the teal route line through 37 ordered checkpoints around the 2 km Dockside loop. Earn credits, improve your medal/best time and replay. Race earnings and records save automatically.
+
+| Control | Action |
 |---|---|
-| W / S, Up / Down | Accelerate, brake, reverse |
-| A / D, Left / Right | Steer |
+| W/S or Up/Down | Accelerate, brake, reverse |
+| A/D or Left/Right | Steer |
 | Space | Handbrake |
-| R | Recover on road |
+| E | Start / retry trial |
+| R | Recover (+3 seconds during race) |
 | C | Chase / bonnet camera |
 | Tab | Map inspection / return to driving |
+| Esc | Abandon race / leave results |
 
-Local Windows output: `Builds/HarborVale-Driving/HarborVale.exe` (build output is not stored in Git). Close an older preview and relaunch this output for the latest changes.
+Gold pays 700 credits; first completion adds 400 once. Replay payouts vary with medal. Race earnings are a prototype account; garage spending, car purchases and the complete career remain future work. The car, city and checkpoints use original placeholder geometry.
 
-The stock Finch has physical suspension and tires, authored RPM-dependent torque, automatic gears, brakes/reverse and progressive steering. Includes HUD and original procedural engine audio. The city retains 24 curved roads, three labeled districts and meter-scale building placeholders. This is a driving prototype; racing/career, upgrades, traffic/police and persistence remain future work.
+![First Lap race HUD](artifacts/qa/M12-T01/Trial_Racing_UI.png)
 
-Measured native physics: 0–100 km/h 13.56 s; 100–0 braking 4.10 s / 52.7 m. Physics and actual Play Mode integration checks passed. Sustained physical keyboard driving feel still needs user feedback. See `artifacts/qa/M11-T03/` for reports and the observed Windows-player preview.
+Rule/atomic save fixtures, actual Play Mode integration, driving regression and Windows export/smoke checks passed. Screenshots were inspected from a visible Windows player. Test gates were scripted; no manual full-lap or medal-pacing claim is made. See `artifacts/qa/M12-T01/visual-inspection.txt`.
 
-Read `project/STATUS.md`, `project/NEXT_TASK.md`, `project/TASKS.json` and **`project/DRIVING_HANDOFF.md`** before continuing. Layout/model history remains in `project/EXPANSION_HANDOFF.md`. Preserve the independent `Finch_HandlingTest.unity` scene. Original geometry/audio, Unity built-in shaders/font and built-in modules; no paid controller or third-party car asset.
+Continue from `project/STATUS.md`, `project/NEXT_TASK.md`, `project/TASKS.json` and **`project/TRIAL_HANDOFF.md`**. Current map/driving sources and the independent handling test scene are preserved. Claude's separate art assignment is documented in `project/CLAUDE_ART_HANDOFF.md`; assets are not imported yet.

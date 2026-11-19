@@ -1,6 +1,6 @@
 # Build roadmap
 
-Current user-requested exception: **M11-T01** builds the Unity map greybox before the older handling-first queue. Unity replaces the proposed Godot choice for this prototype. Other game systems remain unstarted; read the current status rather than automatically starting M00.
+Current implementation track: Unity 6000.6.0f1, user-authorized M11 map/model/driving prototypes and M12-T01 first time trial. The Godot-era queue below is a historical design baseline; read the live ledger and confirmed choices before selecting work. Added prototype tasks do not imply completion of the full career milestones.
 
 This is an implementation queue, not a report of completed work. Every task starts `not_started`; the design documents do not constitute a running game. The first task is `M00-T01`. Use the status and handoff files named in `README.md` as the live record after implementation begins.
 
@@ -192,4 +192,9 @@ User authorized November 18: expand the map, use believable dimensions, curve ro
 ### M11-T03 — Driveable stock Finch
 
 User authorized driving November 18. Add physical stock-car suspension/traction, RPM-dependent authored stock torque curve, automatic gears, throttle/brake/reverse, steering, handbrake, chase camera, HUD and safe recovery. Preserve the city and an independent handling test scene. Verify acceleration, braking, reverse, turns, handbrake, resting stability, collisions/recovery, city road contacts and rendering; manually check keyboard/camera if available. Record measured evidence and unperformed checks. This does not complete the larger stock/upgraded-handling milestone or authorize economy/racing systems.
+
+
+### M12-T01 — First playable Dockside time trial
+Accept when evt_dock_01 starts near the player, counts down with locked controls, requires ordered directional swept-gate crossings, tracks time, displays medal/results and credits valid rewards from design data. Early finish, missed/wrong-direction checkpoints, teleport/recovery, abort and duplicate settlement cannot award undeserved credits. Recovery restores a passed route checkpoint and adds 3 seconds; clock continues during map/focus changes. Save earnings/receipt/best-time/reputation atomically; replay first-clear and best-result reputation cannot duplicate; primary corruption can recover a validated backup. No silent erase when all saves are invalid. Validate rule fixtures, reload/error paths, actual Play Mode integration and Windows export. User route/handling/medal pacing remains a review item; no AI rivals or complete career economy are claimed.
+
 

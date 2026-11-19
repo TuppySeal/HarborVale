@@ -1,0 +1,25 @@
+PASS Countdown blocks checkpoint progress and race time
+PASS Wrong-direction crossing rejected
+PASS Outside gate width rejected
+PASS Crossing above height window rejected
+PASS Teleport crossing rejected
+PASS Early finish rejected
+PASS Skipped checkpoint rejected
+PASS Ordered directional swept crossings finish
+PASS Recovery preserves next gate and adds 3 seconds
+PASS Abandon cannot finish/pay
+PASS Non-finite vehicle positions cannot produce a valid finish
+PASS Gold first finish commits 700 + 400 credits and 50 reputation
+PASS Duplicate finish cannot pay twice
+PASS Duplicate protection survives reload
+PASS Bronze replay pays reduced credits without first-clear or repeated reputation
+PASS Slower replay preserves best time
+PASS Aborted session settlement rejected
+PASS Improved medal grants only best-result reputation difference
+PASS Stale second instance re-reads ledger under exclusive lock
+PASS Historical receipts survive later medal/reward tuning
+PASS Failed write leaves memory and committed credits unchanged; temp ignored
+PASS Corrupt primary recovers validated last backup
+PASS Settlement after backup recovery writes valid combined transaction
+PASS Invalid saves are preserved and never silently reset
+PASS Authored closed Dockside route accepts all ordered checkpoints

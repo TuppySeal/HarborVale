@@ -1,0 +1,21 @@
+{
+  "pass": true,
+  "routeLengthM": 2042.0077328937844,
+  "checkpoints": 37,
+  "closed": true,
+  "roads": [
+    "RD02",
+    "RD04",
+    "RD01",
+    "RD03"
+  ],
+  "baseReward": 700,
+  "firstClearBonus": 400,
+  "maxReputation": 50,
+  "medalSeconds": [
+    115,
+    145,
+    185
+  ],
+  "medalTimingStatus": "provisional; user-driving calibration pending"
+}

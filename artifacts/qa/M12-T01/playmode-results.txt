@@ -1,0 +1,48 @@
+EDITOR-ONLY ISSUE: known Unity search indexing exception (K001).
+PASS Isolated race profile loads; real user progress untouched
+PASS Start creates countdown and locks driving
+PASS Countdown reaches GO and unlocks vehicle
+PASS Vehicle R recovery routes through race penalty policy (delta 3.000000, gates 0/0)
+PASS Race clock continues while map inspection is active
+PASS Runtime checkpoint 1 advances in order
+PASS Runtime checkpoint 2 advances in order
+PASS Runtime checkpoint 3 advances in order
+PASS Runtime checkpoint 4 advances in order
+PASS Runtime checkpoint 5 advances in order
+PASS Runtime checkpoint 6 advances in order
+PASS Runtime checkpoint 7 advances in order
+PASS Runtime checkpoint 8 advances in order
+PASS Runtime checkpoint 9 advances in order
+PASS Runtime checkpoint 10 advances in order
+PASS Runtime checkpoint 11 advances in order
+PASS Runtime checkpoint 12 advances in order
+PASS Runtime checkpoint 13 advances in order
+PASS Runtime checkpoint 14 advances in order
+PASS Runtime checkpoint 15 advances in order
+PASS Runtime checkpoint 16 advances in order
+PASS Runtime checkpoint 17 advances in order
+PASS Runtime checkpoint 18 advances in order
+PASS Runtime checkpoint 19 advances in order
+PASS Runtime checkpoint 20 advances in order
+PASS Runtime checkpoint 21 advances in order
+PASS Runtime checkpoint 22 advances in order
+PASS Runtime checkpoint 23 advances in order
+PASS Runtime checkpoint 24 advances in order
+PASS Runtime checkpoint 25 advances in order
+PASS Runtime checkpoint 26 advances in order
+PASS Runtime checkpoint 27 advances in order
+PASS Runtime checkpoint 28 advances in order
+PASS Runtime checkpoint 29 advances in order
+PASS Runtime checkpoint 30 advances in order
+PASS Runtime checkpoint 31 advances in order
+PASS Runtime checkpoint 32 advances in order
+PASS Runtime checkpoint 33 advances in order
+PASS Runtime checkpoint 34 advances in order
+PASS Runtime checkpoint 35 advances in order
+PASS Runtime checkpoint 36 advances in order
+PASS Finish displays results and commits first gold payout once
+PASS Repeated runtime settlement cannot duplicate reward
+PASS Free-roam return releases car controls
+PASS Abandon awards nothing
+PASS Abandon from inspection restores result keyboard/camera controls
+PASS No gameplay runtime exceptions

@@ -1,0 +1,1 @@
+PASS: 19 race files and three driving integration sources match the verified isolated project by SHA-256. The city scene and static model were not overwritten. Final Windows export: 166447642 bytes, 0 errors.

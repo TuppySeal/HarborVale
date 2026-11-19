@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project_title": "Redline: From Rust to Riches",
   "project_stage": "implementation",
-  "updated_at": "2026-11-18T19:53:13.8552163Z",
+  "updated_at": "2026-11-19T01:17:01.8518223Z",
   "current_task_id": null,
   "next_task_id": null,
   "status_values": [
@@ -700,14 +700,40 @@
         "artifacts/qa/M11-T03/playmode-results.txt",
         "artifacts/qa/M11-T03/player-build.txt",
         "artifacts/qa/M11-T03/Windows_Player_Preview.jpg",
-        "project/DRIVING_HANDOFF.md"
+        "project/DRIVING_HANDOFF.md",
+        "project/DRIVING_GITHUB_VERIFICATION.json"
       ],
       "remaining_steps": [],
       "blockers": [],
       "updated_at": "2026-11-18T19:53:13.8552163Z"
+    },
+    {
+      "id": "M12-T01",
+      "title": "First Dockside time trial with saved race earnings",
+      "milestone": "M12",
+      "depends_on": [
+        "M11-T03"
+      ],
+      "status": "done",
+      "spec_ref": "docs/05_BUILD_ROADMAP.md",
+      "acceptance_key": "M12-T01",
+      "evidence": [
+        "artifacts/qa/M12-T01/route-report.json",
+        "artifacts/qa/M12-T01/rule-results.txt",
+        "artifacts/qa/M12-T01/playmode-results.txt",
+        "artifacts/qa/M12-T01/driving-regression.txt",
+        "artifacts/qa/M12-T01/player-build.txt",
+        "artifacts/qa/M12-T01/player-smoke.txt",
+        "artifacts/qa/M12-T01/visual-inspection.txt",
+        "artifacts/qa/M12-T01/Trial_Racing_UI.png",
+        "project/TRIAL_HANDOFF.md"
+      ],
+      "remaining_steps": [],
+      "blockers": [],
+      "updated_at": "2026-11-19T01:17:01.8518223Z"
     }
   ],
   "implementation_authorized": true,
   "current_design_amendment": "docs/12_CONFIRMED_FEATURE_CHOICES.md",
-  "authorization_scope": "Unity map and stock starter-car driving prototype"
+  "authorization_scope": "User-authorized next expansion: first time trial with saved race earnings"
 }

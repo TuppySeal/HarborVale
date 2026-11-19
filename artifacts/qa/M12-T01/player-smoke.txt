@@ -1,0 +1,1 @@
+PASS Windows player: isolated profile, countdown, 37 scripted ordered gate crossings, results, 1100-credit first gold payout, disk reload, actual offer/race/results UI PNGs. Scripted crossings do not measure a physically driven lap or medal pacing.

@@ -1,6 +1,6 @@
 # Confirmed choices — November 18, 2026
 
-**Later instruction:** the user authorized a Unity city greybox with boxes and labels. The user subsequently authorized the scaled city, starter model and stock starter-car driving (M11-T01 through M11-T03). These bounded requests supersede the planning-only hold below; the full career/game is not yet authorized. See `game/README.md` and `project/STATUS.md`.
+**Later instruction:** the user authorized a Unity city greybox with boxes and labels. The user subsequently authorized the scaled city, starter model and stock starter-car driving (M11-T01 through M11-T03). The user then authorized selecting the next expansion: M12-T01 adds the first time trial and saved prototype race earnings. These implementation requests supersede the planning-only hold below; unimplemented career features still require deliberate scoped work. See `game/README.md` and `project/STATUS.md`.
 
 **Planning only. Do not build the game or begin engine setup.** These answers override conflicting earlier defaults. The 42-task roadmap and numeric data remain a baseline awaiting reconciliation with this expansion.
 
@@ -48,4 +48,5 @@ Pink-slip races are optional, deliberately confirmed bets on specific cars. Both
 ## Before implementation
 
 Reconcile older documents/data for shop quality and delayed jobs, fuel, visible damage, conversions, traffic/police, pink-slip transfers and zero-car recovery. Preserve earlier task IDs/statuses and add appropriate tasks. Baseline validation does not validate this expanded scope. Continue planning until the user requests building.
+
 

@@ -9,7 +9,7 @@ public class FinchDrivingHUD:MonoBehaviour {
   var clip=AudioClip.Create("Original procedural four cylinder loop",count,1,22050,false);clip.SetData(wave,0);engineAudio.clip=clip;engineAudio.Play();
  }
  void Update(){
-  if(FinchInput.Shortcut(KeyCode.Tab)&&map!=null)SetInspection(!inspection);
+  if(FinchInput.Shortcut(KeyCode.Tab)&&map!=null&&!vehicle.controlsLocked)SetInspection(!inspection);
   if(FinchInput.Shortcut(KeyCode.C)&&!inspection){chase.bonnet=!chase.bonnet;chase.Snap();}
   if(engineAudio!=null){engineAudio.pitch=Mathf.Clamp(vehicle.Engine.Rpm/2400,.35f,2.8f);engineAudio.volume=inspection?.035f:.10f+vehicle.Throttle*.12f;}
  }
@@ -25,4 +25,5 @@ public class FinchDrivingHUD:MonoBehaviour {
  void OnDestroy(){if(engineAudio!=null&&engineAudio.clip!=null)Destroy(engineAudio.clip);}
 }
 }
+
 

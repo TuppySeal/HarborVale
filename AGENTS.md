@@ -12,3 +12,7 @@ Record actual verification, remaining manual checks and exact next steps in prog
 
 Git remote is already configured. Push intended source to existing origin/main after checks. Never recreate the repository or include credentials, Unity caches, local Verification/ logs, or scene backups.
 
+
+## First time-trial expansion
+User authorized choosing the next expansion. M12-T01 implements the first time trial and saved race earnings. Read project/TRIAL_HANDOFF.md before any race/economy edits. Preserve frozen historical receipts, integer currency and atomic idempotent transactions. Race earnings are a prototype account, not a fabricated car purchase or full wallet; future integration must migrate earned receipts exactly once. Do not reset a corrupted profile silently. Keep Claude's work confined to its separate workshop-art folder and do not edit that output during gameplay work.
+
