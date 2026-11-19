@@ -2,9 +2,9 @@
   "schema_version": 1,
   "project_title": "Redline: From Rust to Riches",
   "project_stage": "implementation",
-  "updated_at": "2026-11-19T17:49:25.368Z",
+  "updated_at": "2026-11-19T17:53:15.611Z",
   "current_task_id": "M17-T01",
-  "next_task_id": "M17-T01",
+  "next_task_id": null,
   "status_values": [
     "not_started",
     "in_progress",
@@ -1141,18 +1141,18 @@
       "id": "M17-T01",
       "title": "Physical street traffic, AI cash races and atomic pink-slip fleet",
       "milestone": "M17",
-      "status": "in_progress",
+      "status": "done",
       "depends_on": [
         "M16-T02"
       ],
       "spec_ref": "project/RIVALS_HANDOFF.md",
       "evidence": [
         "project/RIVALS_HANDOFF.md",
-        "artifacts/qa/M17-T01/install-verification.json"
+        "artifacts/qa/M17-T01/install-verification.json",
+        "https://github.com/TuppySeal/HarborVale/releases/tag/test-2026-11-19-rivals",
+        "project/RIVALS_GITHUB_VERIFICATION.json"
       ],
-      "remaining_steps": [
-        "Push checked source and publish verified Windows ZIP"
-      ],
+      "remaining_steps": [],
       "blockers": []
     }
   ],

@@ -1,0 +1,31 @@
+{
+  "sourceCommit": "87adf022126ca3dd6bfa450d0c2c6f9b561af704",
+  "verifiedAt": "2026-11-19T17:53:15.609Z",
+  "tag": "test-2026-11-19-rivals",
+  "url": "https://github.com/TuppySeal/HarborVale/releases/tag/test-2026-11-19-rivals",
+  "latestUrl": "https://github.com/TuppySeal/HarborVale/releases/latest",
+  "serverVerifiedAssets": [
+    {
+      "name": "HarborVale-Rivals-Windows-x64.zip",
+      "size": 69341043,
+      "sha256": "9d9ef63a151a543f8d3a84058b080f992f5b3c9639c093f2a49c5603c12b3a28",
+      "url": "https://github.com/TuppySeal/HarborVale/releases/download/test-2026-11-19-rivals/HarborVale-Rivals-Windows-x64.zip"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "size": 100,
+      "sha256": "0ce99530f59ab0ad7f37d9b84d1a8a91915e15e33323ba842ace51191c51aee6",
+      "url": "https://github.com/TuppySeal/HarborVale/releases/download/test-2026-11-19-rivals/SHA256SUMS.txt"
+    }
+  ],
+  "verifiedPlayerFiles": 250,
+  "checks": {
+    "fleetPhysics": 36,
+    "fullCityLap": 1,
+    "mixCamera": 33,
+    "turbo": 29,
+    "cityArt": 9,
+    "native": 27,
+    "finalUI": 7
+  }
+}

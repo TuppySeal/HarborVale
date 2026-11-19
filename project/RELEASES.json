@@ -1,37 +1,69 @@
 {
   "latest": {
-    "publishedAt": "2026-11-19T16:11:14Z",
-    "tag": "test-2026-11-19-fitments",
-    "sourceCommit": "e46cff646e4357ee70b27a7df1e37a6b4b5a3654",
+    "publishedAt": "2026-11-19T17:52:20Z",
+    "tag": "test-2026-11-19-rivals",
+    "sourceCommit": "87adf022126ca3dd6bfa450d0c2c6f9b561af704",
     "repository": "TuppySeal/HarborVale",
     "private": true,
-    "url": "https://github.com/TuppySeal/HarborVale/releases/tag/test-2026-11-19-fitments",
+    "url": "https://github.com/TuppySeal/HarborVale/releases/tag/test-2026-11-19-rivals",
     "latestUrl": "https://github.com/TuppySeal/HarborVale/releases/latest",
-    "releaseId": 451590392,
+    "releaseId": 451712095,
     "assets": [
       {
-        "name": "HarborVale-Fitments-Windows-x64.zip",
-        "size": 68711640,
-        "sha256": "3cc769c9edaf53c075fc697823f09a11a5ccf800714b149397a2bd085ca9c211",
-        "url": "https://github.com/TuppySeal/HarborVale/releases/download/test-2026-11-19-fitments/HarborVale-Fitments-Windows-x64.zip"
+        "name": "HarborVale-Rivals-Windows-x64.zip",
+        "size": 69341043,
+        "sha256": "9d9ef63a151a543f8d3a84058b080f992f5b3c9639c093f2a49c5603c12b3a28",
+        "url": "https://github.com/TuppySeal/HarborVale/releases/download/test-2026-11-19-rivals/HarborVale-Rivals-Windows-x64.zip"
       },
       {
         "name": "SHA256SUMS.txt",
-        "size": 102,
-        "sha256": "82ced0280e75027bdd4aaeabc805e292c49166f41fccc590eba37bd686606c15",
-        "url": "https://github.com/TuppySeal/HarborVale/releases/download/test-2026-11-19-fitments/SHA256SUMS.txt"
+        "size": 100,
+        "sha256": "0ce99530f59ab0ad7f37d9b84d1a8a91915e15e33323ba842ace51191c51aee6",
+        "url": "https://github.com/TuppySeal/HarborVale/releases/download/test-2026-11-19-rivals/SHA256SUMS.txt"
       }
     ],
     "packageVerification": {
-      "filename": "HarborVale-Fitments-Windows-x64.zip",
-      "verifiedPlayerFiles": 250,
+      "filename": "HarborVale-Rivals-Windows-x64.zip",
       "zipEntries": 251,
+      "sha256": "9d9ef63a151a543f8d3a84058b080f992f5b3c9639c093f2a49c5603c12b3a28",
+      "verifiedPlayerFiles": 250,
       "completeDirectoryVerified": true,
-      "sha256": "3cc769c9edaf53c075fc697823f09a11a5ccf800714b149397a2bd085ca9c211",
-      "bytes": 68711640
+      "bytes": 69341043
     }
   },
   "history": [
+    {
+      "publishedAt": "2026-11-19T16:11:14Z",
+      "tag": "test-2026-11-19-fitments",
+      "sourceCommit": "e46cff646e4357ee70b27a7df1e37a6b4b5a3654",
+      "repository": "TuppySeal/HarborVale",
+      "private": true,
+      "url": "https://github.com/TuppySeal/HarborVale/releases/tag/test-2026-11-19-fitments",
+      "latestUrl": "https://github.com/TuppySeal/HarborVale/releases/latest",
+      "releaseId": 451590392,
+      "assets": [
+        {
+          "name": "HarborVale-Fitments-Windows-x64.zip",
+          "size": 68711640,
+          "sha256": "3cc769c9edaf53c075fc697823f09a11a5ccf800714b149397a2bd085ca9c211",
+          "url": "https://github.com/TuppySeal/HarborVale/releases/download/test-2026-11-19-fitments/HarborVale-Fitments-Windows-x64.zip"
+        },
+        {
+          "name": "SHA256SUMS.txt",
+          "size": 102,
+          "sha256": "82ced0280e75027bdd4aaeabc805e292c49166f41fccc590eba37bd686606c15",
+          "url": "https://github.com/TuppySeal/HarborVale/releases/download/test-2026-11-19-fitments/SHA256SUMS.txt"
+        }
+      ],
+      "packageVerification": {
+        "filename": "HarborVale-Fitments-Windows-x64.zip",
+        "verifiedPlayerFiles": 250,
+        "zipEntries": 251,
+        "completeDirectoryVerified": true,
+        "sha256": "3cc769c9edaf53c075fc697823f09a11a5ccf800714b149397a2bd085ca9c211",
+        "bytes": 68711640
+      }
+    },
     {
       "publishedAt": "2026-11-19T15:39:13Z",
       "tag": "test-2026-11-19-garage-tabs",
