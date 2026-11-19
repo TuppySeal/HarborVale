@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project_title": "Redline: From Rust to Riches",
   "project_stage": "implementation",
-  "updated_at": "2026-11-19T15:37:40.461Z",
+  "updated_at": "2026-11-19T15:40:11.069Z",
   "current_task_id": null,
   "next_task_id": null,
   "status_values": [
@@ -1112,7 +1112,9 @@
         "project/TABS_TIRE_HANDOFF.md",
         "artifacts/qa/M16-T01/tab-audio-rules.txt",
         "artifacts/qa/M16-T01/native-v2/results.txt",
-        "artifacts/qa/M16-T01/install-verification.json"
+        "artifacts/qa/M16-T01/install-verification.json",
+        "https://github.com/TuppySeal/HarborVale/releases/tag/test-2026-11-19-garage-tabs",
+        "project/TABS_TIRE_GITHUB_VERIFICATION.json"
       ],
       "remaining_steps": [],
       "blockers": []
