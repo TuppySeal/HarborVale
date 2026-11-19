@@ -1,0 +1,104 @@
+PASS Both gearbox versions reach top gear in synthetic high-speed fixture: car_finch
+PASS Top-speed slowdown/reacceleration: new gear 1, prior gear 4 after 0.6 s at 30 km/h: car_finch
+PASS Matched kickdown remains below safe RPM
+PASS Manual upshift accepts available gear
+PASS Manual upshift accepts available gear
+PASS Manual upshift accepts available gear
+PASS Manual upshift accepts available gear
+PASS Successful paddle request selects manual
+PASS Top gear rejects extra upshift
+PASS Unsafe downshift rejected without changing gear
+PASS One paddle command cannot overlap another shift
+PASS Clutch engagement bounded
+PASS Clutch engagement bounded
+PASS Clutch engagement bounded
+PASS Clutch engagement bounded
+PASS Clutch engagement bounded
+PASS Clutch engagement bounded
+PASS Clutch engagement bounded
+PASS Clutch engagement bounded
+PASS Clutch engagement bounded
+PASS Clutch engagement bounded
+PASS Clutch engagement bounded
+PASS Clutch engagement bounded
+PASS Clutch engagement bounded
+PASS Clutch engagement bounded
+PASS Clutch engagement bounded
+PASS Clutch engagement bounded
+PASS Clutch engagement bounded
+PASS Clutch engagement bounded
+PASS Clutch engagement bounded
+PASS Clutch engagement bounded
+PASS Clutch engagement bounded
+PASS Clutch engagement bounded
+PASS Clutch engagement bounded
+PASS Clutch engagement bounded
+PASS Shift power returns through an intermediate engagement ramp
+PASS Manual mode holds gear instead of automatic kickdown
+PASS Coming to a stop selects first without leaving manual
+PASS Recovery reset preserves transmission mode
+PASS First gear rejects extra downshift
+PASS Reverse rejects paddle shifts
+PASS Braking matches a lower road-speed gear
+PASS Steady coasting does not hunt between gears
+PASS Both gearbox versions reach top gear in synthetic high-speed fixture: car_apex_test
+PASS Top-speed slowdown/reacceleration: new gear 1, prior gear 5 after 0.6 s at 30 km/h: car_apex_test
+PASS Matched kickdown remains below safe RPM
+PASS Manual upshift accepts available gear
+PASS Manual upshift accepts available gear
+PASS Manual upshift accepts available gear
+PASS Manual upshift accepts available gear
+PASS Manual upshift accepts available gear
+PASS Successful paddle request selects manual
+PASS Top gear rejects extra upshift
+PASS Unsafe downshift rejected without changing gear
+PASS One paddle command cannot overlap another shift
+PASS Clutch engagement bounded
+PASS Clutch engagement bounded
+PASS Clutch engagement bounded
+PASS Clutch engagement bounded
+PASS Clutch engagement bounded
+PASS Clutch engagement bounded
+PASS Clutch engagement bounded
+PASS Clutch engagement bounded
+PASS Clutch engagement bounded
+PASS Clutch engagement bounded
+PASS Clutch engagement bounded
+PASS Clutch engagement bounded
+PASS Clutch engagement bounded
+PASS Clutch engagement bounded
+PASS Clutch engagement bounded
+PASS Clutch engagement bounded
+PASS Clutch engagement bounded
+PASS Clutch engagement bounded
+PASS Clutch engagement bounded
+PASS Clutch engagement bounded
+PASS Shift power returns through an intermediate engagement ramp
+PASS Manual mode holds gear instead of automatic kickdown
+PASS Coming to a stop selects first without leaving manual
+PASS Recovery reset preserves transmission mode
+PASS First gear rejects extra downshift
+PASS Reverse rejects paddle shifts
+PASS Braking matches a lower road-speed gear
+PASS Steady coasting does not hunt between gears
+PASS Loaded wheel slip permits sensible upshift without full-throttle up/down hunting
+PASS Keyboard throttle ramps rather than jumps: False
+PASS Native 0-100 Finch stock: 13.46 s
+PASS Brake blends in while opposite-direction drive cuts immediately
+PASS Native high-speed braking selects a lower gear
+PASS Native 30-100 after braking: 12.02 s; gears 4 to 2
+PASS Vehicle toggle selects manual
+PASS Installing hardware preserves manual preference
+PASS Vehicle recovery preserves manual preference
+PASS Garage/countdown lock blocks shift controls
+PASS Map input lock blocks shift controls
+PASS Keyboard throttle ramps rather than jumps: True
+PASS Native 0-100 Apex upgraded: 4.32 s
+PASS Brake blends in while opposite-direction drive cuts immediately
+PASS Native high-speed braking selects a lower gear
+PASS Native 30-100 after braking: 3.62 s; gears 4 to 2
+PASS Vehicle toggle selects manual
+PASS Installing hardware preserves manual preference
+PASS Vehicle recovery preserves manual preference
+PASS Garage/countdown lock blocks shift controls
+PASS Map input lock blocks shift controls

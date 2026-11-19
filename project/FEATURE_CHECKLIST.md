@@ -50,3 +50,5 @@ Latest checkpoint: polished workshop with search/categories, visual car preview,
 - [ ] Final road/intersection/terrain detailing, art/audio polish, optimization and release testing.
 
 Do not interpret a check here as unperformed controller, full-campaign, frame-rate or manual-driving verification. Detailed evidence/limits live in the task handoffs.
+
+- [x] M14-T02: 37 staged customization offers, exclusive induction/sound, real brakes/tires and v4 paid history migration; free Apex counterparts. See STAGED_WORKSHOP_HANDOFF.md for bounds and actual tests.

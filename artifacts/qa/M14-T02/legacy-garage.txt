@@ -1,0 +1,18 @@
+PASS Imported 400-credit package and authored 119→125 Nm at 4500 RPM
+PASS Insufficient funds cannot debit or install
+PASS Valid v1 earnings/first-clear/history import into v2
+PASS Atomic purchase saves stage, receipt and 400-credit debit
+PASS Legacy v1 file remains unchanged
+PASS Duplicate request cannot charge twice
+PASS New request cannot rebuy installed stage
+PASS Reload preserves installed curve identity and available credits
+PASS Replay adds reward without erasing spending or tune
+PASS Existing v2 never reimports or depends on an older build's file
+PASS Failed save leaves committed funds and installed stage unchanged
+PASS Stale quote rejected without charge
+PASS Stale second instance cannot buy same stage again
+PASS Historical fee and idempotent retry remain 400 when catalog quote changes
+PASS Validated backup restores spending and installed tune together
+PASS Unknown newer schema never falls back to overwrite its progress
+PASS Measured 0-100 km/h stock 13.46 s → Stage 1 12.72 s
+PASS Derived peak power increases from authored torque curve

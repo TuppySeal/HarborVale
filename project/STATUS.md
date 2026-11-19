@@ -1,9 +1,7 @@
-# HarborVale — workshop interface checkpoint
+# HarborVale — staged customization implemented
 
-Canonical Unity project: C:/Users/Justice/Documents/Unity/HarborVale. Latest Windows player: Builds/HarborVale-Workshop/HarborVale.exe. Original SmoothDrive build retained.
+Canonical C:/Users/Justice/Documents/Unity/HarborVale, Unity6000.6.0f1. Latest Windows player Builds/HarborVale-CustomWorkshop/HarborVale.exe. M14-T02 complete: 37 authored staged offers, saved Finch build and free Apex versions through the same polished workshop. Read STAGED_WORKSHOP_HANDOFF.md for exact prices, compatibility, verification and limitations.
 
-M11/M12 driving, trial, paid four-part garage, free Apex tests and smooth automatic/manual transmission remain implemented. M13 standalone garage/effects/dashboard review complete; previews are outside game Assets and are not live gameplay integrations. M14-T01 polished garage interface implemented and native verified: 24 GUI + 47 unified-player checks. Read WORKSHOP_HANDOFF.md for controls, scope, evidence and limitations.
+Paid stages: NA engine, small/large turbo, supercharger, cooling, gearbox, brakes, tires, intake/exhaust and optional burble/flame power tradeoffs; twins are Apex-only. Exclusive conversions replace hardware, not stack it. Existing four prices/curves and paid history preserved through one-time validated v4 migration. No full career, service history, odometer, brake heat/fade or thermal simulation claimed.
 
-M14-T02 expanded real hardware/calibrations remains pending implementation. GUI is the user priority. Additional superchargers, turbo sizes/twins, brakes and burble/flame tunes require authored curves, real compatibility/costs and safe v4 migration; see EXPANDED_PARTS_IMPLEMENTATION_PLAN.md. Existing four Finch prices and v3 save path unchanged.
-
-User authorized direct coordination with Claude and Antigravity while away. Claude owns brake asset verification in its art folder; Antigravity owns read-only interface review in its QA folder. Codex owns gameplay/UI/saves. No external output is integrated solely from a completion claim. Actual manual driving feel, audio listening and live saved odometer remain unverified/unimplemented as applicable.
+Native upgrade/save rules 177, retained regressions and 51 Windows workshop plus47 scene/timing/save checks passed. Actual SC sound/pedal-lift pop and free/paid separation checked. Native screenshots inspected; subjective full-lap/input/audio polish remains manual. Original scenes/static model hashes preserved. Publication record follows after push.

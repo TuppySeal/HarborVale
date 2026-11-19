@@ -2,9 +2,9 @@
   "schema_version": 1,
   "project_title": "Redline: From Rust to Riches",
   "project_stage": "implementation",
-  "updated_at": "2026-11-19T05:22:10.562Z",
-  "current_task_id": "M14-T02",
-  "next_task_id": "M14-T02",
+  "updated_at": "2026-11-19T06:47:38.172Z",
+  "current_task_id": null,
+  "next_task_id": null,
   "status_values": [
     "not_started",
     "in_progress",
@@ -942,15 +942,17 @@
       "depends_on": [
         "M14-T01"
       ],
-      "status": "not_started",
+      "status": "done",
       "spec_ref": "docs/05_BUILD_ROADMAP.md",
       "acceptance_key": "M14-T02",
-      "evidence": [],
-      "remaining_steps": [
-        "Author compatible small/large/twin turbo and supercharger alternatives with real curves",
-        "Add real brakes, tune options and explicit burble/flame power tradeoff",
-        "Preserve existing paid history atomically and verify saves/performance/SFX gates"
+      "evidence": [
+        "project/STAGED_WORKSHOP_HANDOFF.md",
+        "artifacts/qa/M14-T02/upgrade-save-rules.txt",
+        "artifacts/qa/M14-T02/final-player/player-results.txt",
+        "artifacts/qa/M14-T02/final-transitions/player-smoke.txt",
+        "artifacts/qa/M14-T02/install-verification.json"
       ],
+      "remaining_steps": [],
       "blockers": []
     }
   ],

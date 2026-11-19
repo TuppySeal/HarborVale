@@ -179,7 +179,7 @@ Dependencies are task IDs separated by commas. A dependency is satisfied only wh
 | M13-T02 | Verify isolated conditional audio and visual effects demo | M13-T01 | done |
 | M13-T03 | Verify distinct Finch and Apex dashboard previews | M13-T02 | done |
 | M14-T01 | Polished easy-to-use one-shop garage interface | M13-T03 | done |
-| M14-T02 | Expanded induction, brake and optional burble/flame tune catalogue | M14-T01 | not_started |
+| M14-T02 | Expanded induction, brake and optional burble/flame tune catalogue | M14-T01 | done |
 
 ### M11-T01 — User-requested Unity map prototype
 

@@ -1,0 +1,2008 @@
+{
+  "schema": 1,
+  "notes": "Fictional matched complete net curves. New built-engine stages extend the previous bounded Finch Stage2 ceiling; stock and original paid configurations unchanged. No boost HP multiplier. Cooling 2/3 represent progressively improved matched warm-charge calibrations, not heat simulation.",
+  "offers": [
+    {
+      "id": "na_1",
+      "name": "Engine / NA Stage 1",
+      "category": "Engine",
+      "slot": "na",
+      "choice": "na",
+      "stage": 1,
+      "price": 400,
+      "prerequisites": [],
+      "description": "ECU and breathing package. Also required before forced induction.",
+      "apexOnly": false,
+      "powerLoss": 0
+    },
+    {
+      "id": "na_2",
+      "name": "Engine / NA Stage 2",
+      "category": "Engine",
+      "slot": "na",
+      "choice": "na",
+      "stage": 2,
+      "price": 850,
+      "prerequisites": [
+        "na_1"
+      ],
+      "description": "Matched cams and calibration; increases naturally aspirated torque.",
+      "apexOnly": false,
+      "powerLoss": 0
+    },
+    {
+      "id": "na_3",
+      "name": "Engine / NA Stage 3",
+      "category": "Engine",
+      "slot": "na",
+      "choice": "na",
+      "stage": 3,
+      "price": 1650,
+      "prerequisites": [
+        "na_2",
+        "intake_1",
+        "exhaust_1"
+      ],
+      "description": "Built-engine package and matched NA calibration; supports high-stage induction.",
+      "apexOnly": false,
+      "powerLoss": 0
+    },
+    {
+      "id": "gearbox_1",
+      "name": "Gearbox Stage 1",
+      "category": "Gearbox",
+      "slot": "gearbox",
+      "choice": "gearbox",
+      "stage": 1,
+      "price": 250,
+      "prerequisites": [
+        "na_1"
+      ],
+      "description": "Clutch/shift hardware and calibration. Shorter actual shift interruption; no power multiplier.",
+      "apexOnly": false,
+      "powerLoss": 0
+    },
+    {
+      "id": "gearbox_2",
+      "name": "Gearbox Stage 2",
+      "category": "Gearbox",
+      "slot": "gearbox",
+      "choice": "gearbox",
+      "stage": 2,
+      "price": 650,
+      "prerequisites": [
+        "gearbox_1"
+      ],
+      "description": "Clutch/shift hardware and calibration. Shorter actual shift interruption; no power multiplier.",
+      "apexOnly": false,
+      "powerLoss": 0
+    },
+    {
+      "id": "gearbox_3",
+      "name": "Gearbox Stage 3",
+      "category": "Gearbox",
+      "slot": "gearbox",
+      "choice": "gearbox",
+      "stage": 3,
+      "price": 1150,
+      "prerequisites": [
+        "gearbox_2"
+      ],
+      "description": "Clutch/shift hardware and calibration. Shorter actual shift interruption; no power multiplier.",
+      "apexOnly": false,
+      "powerLoss": 0
+    },
+    {
+      "id": "induction_small_1",
+      "name": "Small turbo Stage 1",
+      "category": "Boost",
+      "slot": "induction",
+      "choice": "small",
+      "stage": 1,
+      "price": 1900,
+      "prerequisites": [
+        "na_1",
+        "gearbox_1"
+      ],
+      "description": "Complete matched kit with basic charge cooling and calibration. Switching induction replaces the prior kit; no refund or stored spare. Compatible plumbing is included. Quick spool and strong midrange torque.",
+      "apexOnly": false,
+      "powerLoss": 0
+    },
+    {
+      "id": "induction_small_2",
+      "name": "Small turbo Stage 2",
+      "category": "Boost",
+      "slot": "induction",
+      "choice": "small",
+      "stage": 2,
+      "price": 1200,
+      "prerequisites": [
+        "induction_small_1"
+      ],
+      "description": "Sequential matched hardware and calibration upgrade. Quick spool and strong midrange torque.",
+      "apexOnly": false,
+      "powerLoss": 0
+    },
+    {
+      "id": "induction_small_3",
+      "name": "Small turbo Stage 3",
+      "category": "Boost",
+      "slot": "induction",
+      "choice": "small",
+      "stage": 3,
+      "price": 1800,
+      "prerequisites": [
+        "induction_small_2",
+        "na_3",
+        "gearbox_2",
+        "cooling_2"
+      ],
+      "description": "Sequential matched hardware and calibration upgrade. Quick spool and strong midrange torque.",
+      "apexOnly": false,
+      "powerLoss": 0
+    },
+    {
+      "id": "induction_large_1",
+      "name": "Large turbo Stage 1",
+      "category": "Boost",
+      "slot": "induction",
+      "choice": "large",
+      "stage": 1,
+      "price": 2400,
+      "prerequisites": [
+        "na_1",
+        "gearbox_1"
+      ],
+      "description": "Complete matched kit with basic charge cooling and calibration. Switching induction replaces the prior kit; no refund or stored spare. Compatible plumbing is included. Later boost and slower spool, with stronger high-RPM torque.",
+      "apexOnly": false,
+      "powerLoss": 0
+    },
+    {
+      "id": "induction_large_2",
+      "name": "Large turbo Stage 2",
+      "category": "Boost",
+      "slot": "induction",
+      "choice": "large",
+      "stage": 2,
+      "price": 1500,
+      "prerequisites": [
+        "induction_large_1"
+      ],
+      "description": "Sequential matched hardware and calibration upgrade. Later boost and slower spool, with stronger high-RPM torque.",
+      "apexOnly": false,
+      "powerLoss": 0
+    },
+    {
+      "id": "induction_large_3",
+      "name": "Large turbo Stage 3",
+      "category": "Boost",
+      "slot": "induction",
+      "choice": "large",
+      "stage": 3,
+      "price": 2250,
+      "prerequisites": [
+        "induction_large_2",
+        "na_3",
+        "gearbox_2",
+        "cooling_2"
+      ],
+      "description": "Sequential matched hardware and calibration upgrade. Later boost and slower spool, with stronger high-RPM torque.",
+      "apexOnly": false,
+      "powerLoss": 0
+    },
+    {
+      "id": "induction_roots_1",
+      "name": "Supercharger Stage 1",
+      "category": "Boost",
+      "slot": "induction",
+      "choice": "roots",
+      "stage": 1,
+      "price": 2650,
+      "prerequisites": [
+        "na_1",
+        "gearbox_1"
+      ],
+      "description": "Complete matched kit with basic charge cooling and calibration. Switching induction replaces the prior kit; no refund or stored spare. Compatible plumbing is included. Immediate low-RPM response. Net torque already includes mechanical drive losses.",
+      "apexOnly": false,
+      "powerLoss": 0
+    },
+    {
+      "id": "induction_roots_2",
+      "name": "Supercharger Stage 2",
+      "category": "Boost",
+      "slot": "induction",
+      "choice": "roots",
+      "stage": 2,
+      "price": 1500,
+      "prerequisites": [
+        "induction_roots_1"
+      ],
+      "description": "Sequential matched hardware and calibration upgrade. Immediate low-RPM response. Net torque already includes mechanical drive losses.",
+      "apexOnly": false,
+      "powerLoss": 0
+    },
+    {
+      "id": "induction_roots_3",
+      "name": "Supercharger Stage 3",
+      "category": "Boost",
+      "slot": "induction",
+      "choice": "roots",
+      "stage": 3,
+      "price": 2250,
+      "prerequisites": [
+        "induction_roots_2",
+        "na_3",
+        "gearbox_2",
+        "cooling_2"
+      ],
+      "description": "Sequential matched hardware and calibration upgrade. Immediate low-RPM response. Net torque already includes mechanical drive losses.",
+      "apexOnly": false,
+      "powerLoss": 0
+    },
+    {
+      "id": "induction_twin_1",
+      "name": "Twin turbo Stage 1",
+      "category": "Boost",
+      "slot": "induction",
+      "choice": "twin",
+      "stage": 1,
+      "price": 3750,
+      "prerequisites": [
+        "na_1",
+        "gearbox_1"
+      ],
+      "description": "Complete matched kit with basic charge cooling and calibration. Switching induction replaces the prior kit; no refund or stored spare. Compatible plumbing is included. Apex-only package; staged turbines broaden response.",
+      "apexOnly": true,
+      "powerLoss": 0
+    },
+    {
+      "id": "induction_twin_2",
+      "name": "Twin turbo Stage 2",
+      "category": "Boost",
+      "slot": "induction",
+      "choice": "twin",
+      "stage": 2,
+      "price": 1950,
+      "prerequisites": [
+        "induction_twin_1"
+      ],
+      "description": "Sequential matched hardware and calibration upgrade. Apex-only package; staged turbines broaden response.",
+      "apexOnly": true,
+      "powerLoss": 0
+    },
+    {
+      "id": "induction_twin_3",
+      "name": "Twin turbo Stage 3",
+      "category": "Boost",
+      "slot": "induction",
+      "choice": "twin",
+      "stage": 3,
+      "price": 2700,
+      "prerequisites": [
+        "induction_twin_2",
+        "na_3",
+        "gearbox_2",
+        "cooling_2"
+      ],
+      "description": "Sequential matched hardware and calibration upgrade. Apex-only package; staged turbines broaden response.",
+      "apexOnly": true,
+      "powerLoss": 0
+    },
+    {
+      "id": "cooling_1",
+      "name": "Charge cooling Stage 1",
+      "category": "Cooling",
+      "slot": "cooling",
+      "choice": "cooling",
+      "stage": 1,
+      "price": 400,
+      "prerequisites": [
+        "na_1",
+        "gearbox_1"
+      ],
+      "description": "Matched charge cooler and calibration for the installed induction kit. Retained through conversions; no temperature/heat-soak simulation claimed.",
+      "apexOnly": false,
+      "powerLoss": 0
+    },
+    {
+      "id": "cooling_2",
+      "name": "Charge cooling Stage 2",
+      "category": "Cooling",
+      "slot": "cooling",
+      "choice": "cooling",
+      "stage": 2,
+      "price": 750,
+      "prerequisites": [
+        "cooling_1"
+      ],
+      "description": "Matched charge cooler and calibration for the installed induction kit. Retained through conversions; no temperature/heat-soak simulation claimed.",
+      "apexOnly": false,
+      "powerLoss": 0
+    },
+    {
+      "id": "cooling_3",
+      "name": "Charge cooling Stage 3",
+      "category": "Cooling",
+      "slot": "cooling",
+      "choice": "cooling",
+      "stage": 3,
+      "price": 1300,
+      "prerequisites": [
+        "cooling_2"
+      ],
+      "description": "Matched charge cooler and calibration for the installed induction kit. Retained through conversions; no temperature/heat-soak simulation claimed.",
+      "apexOnly": false,
+      "powerLoss": 0
+    },
+    {
+      "id": "brakes_1",
+      "name": "Street brakes",
+      "category": "Brakes",
+      "slot": "brakes",
+      "choice": "brakes",
+      "stage": 1,
+      "price": 300,
+      "prerequisites": [],
+      "description": "Pads, rotor and brake-system package. Changes real brake torque; tire grip can still limit stopping distance.",
+      "apexOnly": false,
+      "powerLoss": 0
+    },
+    {
+      "id": "brakes_2",
+      "name": "Sport brakes",
+      "category": "Brakes",
+      "slot": "brakes",
+      "choice": "brakes",
+      "stage": 2,
+      "price": 600,
+      "prerequisites": [
+        "brakes_1"
+      ],
+      "description": "Pads, rotor and brake-system package. Changes real brake torque; tire grip can still limit stopping distance.",
+      "apexOnly": false,
+      "powerLoss": 0
+    },
+    {
+      "id": "brakes_3",
+      "name": "Track brakes",
+      "category": "Brakes",
+      "slot": "brakes",
+      "choice": "brakes",
+      "stage": 3,
+      "price": 1050,
+      "prerequisites": [
+        "brakes_2"
+      ],
+      "description": "Pads, rotor and brake-system package. Changes real brake torque; tire grip can still limit stopping distance.",
+      "apexOnly": false,
+      "powerLoss": 0
+    },
+    {
+      "id": "intake_1",
+      "name": "Intake Stage 1",
+      "category": "Intake",
+      "slot": "intake",
+      "choice": "intake",
+      "stage": 1,
+      "price": 300,
+      "prerequisites": [
+        "na_1"
+      ],
+      "description": "Matched flow hardware and calibration. Adds an RPM-shaped torque contribution once, with greater benefit at higher RPM.",
+      "apexOnly": false,
+      "powerLoss": 0
+    },
+    {
+      "id": "intake_2",
+      "name": "Intake Stage 2",
+      "category": "Intake",
+      "slot": "intake",
+      "choice": "intake",
+      "stage": 2,
+      "price": 600,
+      "prerequisites": [
+        "intake_1"
+      ],
+      "description": "Matched flow hardware and calibration. Adds an RPM-shaped torque contribution once, with greater benefit at higher RPM.",
+      "apexOnly": false,
+      "powerLoss": 0
+    },
+    {
+      "id": "exhaust_1",
+      "name": "Exhaust Stage 1",
+      "category": "Exhaust",
+      "slot": "exhaust",
+      "choice": "exhaust",
+      "stage": 1,
+      "price": 450,
+      "prerequisites": [
+        "na_1"
+      ],
+      "description": "Matched flow hardware and calibration. Adds an RPM-shaped torque contribution once, with greater benefit at higher RPM.",
+      "apexOnly": false,
+      "powerLoss": 0
+    },
+    {
+      "id": "exhaust_2",
+      "name": "Exhaust Stage 2",
+      "category": "Exhaust",
+      "slot": "exhaust",
+      "choice": "exhaust",
+      "stage": 2,
+      "price": 900,
+      "prerequisites": [
+        "exhaust_1"
+      ],
+      "description": "Matched flow hardware and calibration. Adds an RPM-shaped torque contribution once, with greater benefit at higher RPM.",
+      "apexOnly": false,
+      "powerLoss": 0
+    },
+    {
+      "id": "sound_road_1",
+      "name": "Road exhaust calibration",
+      "category": "Sound",
+      "slot": "sound",
+      "choice": "road",
+      "stage": 1,
+      "price": 100,
+      "prerequisites": [],
+      "description": "Restores the normal power curve and quiet overrun. Paid recalibration; no refund.",
+      "apexOnly": false,
+      "powerLoss": 0
+    },
+    {
+      "id": "sound_burble_1",
+      "name": "Burble tune Stage 1",
+      "category": "Sound",
+      "slot": "sound",
+      "choice": "burble",
+      "stage": 1,
+      "price": 300,
+      "prerequisites": [
+        "na_1",
+        "exhaust_1"
+      ],
+      "description": "Exclusive overrun calibration. Synthetic lift-off pops. 2% net torque/power cost; applied once. Switching presets replaces the previous sound tune.",
+      "apexOnly": false,
+      "powerLoss": 0.02
+    },
+    {
+      "id": "sound_burble_2",
+      "name": "Burble tune Stage 2",
+      "category": "Sound",
+      "slot": "sound",
+      "choice": "burble",
+      "stage": 2,
+      "price": 600,
+      "prerequisites": [
+        "sound_burble_1",
+        "exhaust_2"
+      ],
+      "description": "Exclusive overrun calibration. Synthetic lift-off pops. 4% net torque/power cost; applied once. Switching presets replaces the previous sound tune.",
+      "apexOnly": false,
+      "powerLoss": 0.04
+    },
+    {
+      "id": "sound_flame_1",
+      "name": "Flame tune Stage 1",
+      "category": "Sound",
+      "slot": "sound",
+      "choice": "flame",
+      "stage": 1,
+      "price": 500,
+      "prerequisites": [
+        "na_1",
+        "exhaust_1"
+      ],
+      "description": "Exclusive overrun calibration. Synthetic pops and brief visual exhaust flame. 4% net torque/power cost; applied once. Switching presets replaces the previous sound tune.",
+      "apexOnly": false,
+      "powerLoss": 0.04
+    },
+    {
+      "id": "sound_flame_2",
+      "name": "Flame tune Stage 2",
+      "category": "Sound",
+      "slot": "sound",
+      "choice": "flame",
+      "stage": 2,
+      "price": 1000,
+      "prerequisites": [
+        "sound_flame_1",
+        "exhaust_2"
+      ],
+      "description": "Exclusive overrun calibration. Synthetic pops and brief visual exhaust flame. 6% net torque/power cost; applied once. Switching presets replaces the previous sound tune.",
+      "apexOnly": false,
+      "powerLoss": 0.06
+    },
+    {
+      "id": "induction_none_1",
+      "name": "Return to naturally aspirated",
+      "category": "Boost",
+      "slot": "induction",
+      "choice": "none",
+      "stage": 1,
+      "price": 750,
+      "prerequisites": [
+        "na_1"
+      ],
+      "description": "Remove forced induction and match the retained NA engine hardware. Old kit removed with no refund or stored spare; charge cooler remains paid but inactive.",
+      "apexOnly": false,
+      "powerLoss": 0
+    },
+    {
+      "id": "tires_1",
+      "name": "Street tires",
+      "category": "Tires",
+      "slot": "tires",
+      "choice": "tires",
+      "stage": 1,
+      "price": 250,
+      "prerequisites": [],
+      "description": "Compound and carcass package. Increases actual longitudinal and lateral tire friction; does not add engine power or downforce.",
+      "apexOnly": false,
+      "powerLoss": 0
+    },
+    {
+      "id": "tires_2",
+      "name": "Sport tires",
+      "category": "Tires",
+      "slot": "tires",
+      "choice": "tires",
+      "stage": 2,
+      "price": 550,
+      "prerequisites": [
+        "tires_1"
+      ],
+      "description": "Compound and carcass package. Increases actual longitudinal and lateral tire friction; does not add engine power or downforce.",
+      "apexOnly": false,
+      "powerLoss": 0
+    },
+    {
+      "id": "tires_3",
+      "name": "Track tires",
+      "category": "Tires",
+      "slot": "tires",
+      "choice": "tires",
+      "stage": 3,
+      "price": 1000,
+      "prerequisites": [
+        "tires_2"
+      ],
+      "description": "Compound and carcass package. Increases actual longitudinal and lateral tire friction; does not add engine power or downforce.",
+      "apexOnly": false,
+      "powerLoss": 0
+    }
+  ],
+  "cars": [
+    {
+      "carId": "car_finch",
+      "stock": {
+        "source": "design-data/powertrains.json:cfg_finch_stock",
+        "carId": "car_finch",
+        "massKg": 1050,
+        "wheelRadius": 0.295,
+        "efficiency": 0.9,
+        "finalDrive": 4.1,
+        "reverseRatio": 3.2,
+        "idleRpm": 900,
+        "redlineRpm": 6500,
+        "softLimiterRpm": 6400,
+        "upshiftRpm": 6200,
+        "downshiftRpm": 2200,
+        "launchRpm": 1800,
+        "shiftSeconds": 0.45,
+        "brakeDeceleration": 7.2,
+        "ratios": [
+          3.55,
+          2,
+          1.36,
+          1.03,
+          0.82
+        ],
+        "rpm": [
+          900,
+          1500,
+          2500,
+          3500,
+          4500,
+          5500,
+          6200,
+          6500
+        ],
+        "torque": [
+          74,
+          95,
+          111,
+          116,
+          119,
+          113,
+          100,
+          90
+        ]
+      },
+      "stageOne": {
+        "source": "design-data/powertrains.json:cfg_finch_na_s1",
+        "carId": "car_finch",
+        "massKg": 1050,
+        "wheelRadius": 0.295,
+        "efficiency": 0.9,
+        "finalDrive": 4.1,
+        "reverseRatio": 3.2,
+        "idleRpm": 900,
+        "redlineRpm": 6500,
+        "softLimiterRpm": 6400,
+        "upshiftRpm": 6200,
+        "downshiftRpm": 2200,
+        "launchRpm": 1800,
+        "shiftSeconds": 0.45,
+        "brakeDeceleration": 7.2,
+        "ratios": [
+          3.55,
+          2,
+          1.36,
+          1.03,
+          0.82
+        ],
+        "rpm": [
+          900,
+          1500,
+          2500,
+          3500,
+          4500,
+          5500,
+          6200,
+          6500
+        ],
+        "torque": [
+          76,
+          99,
+          115,
+          121,
+          125,
+          120,
+          108,
+          97
+        ]
+      },
+      "legacyTurbo": {
+        "source": "design-data complete configuration:cfg_finch_turbo_s2",
+        "carId": "car_finch",
+        "massKg": 1050,
+        "wheelRadius": 0.295,
+        "efficiency": 0.9,
+        "finalDrive": 4.1,
+        "reverseRatio": 3.2,
+        "idleRpm": 900,
+        "redlineRpm": 6500,
+        "softLimiterRpm": 6400,
+        "upshiftRpm": 6200,
+        "downshiftRpm": 2200,
+        "launchRpm": 1800,
+        "shiftSeconds": 0.45,
+        "brakeDeceleration": 7.2,
+        "ratios": [
+          3.55,
+          2,
+          1.36,
+          1.03,
+          0.82
+        ],
+        "rpm": [
+          900,
+          1500,
+          2500,
+          3500,
+          4500,
+          5500,
+          6200,
+          6500
+        ],
+        "torque": [
+          76,
+          99,
+          115,
+          155,
+          158,
+          146,
+          125,
+          110
+        ],
+        "aspiration": "turbocharged",
+        "offBoostTorque": [
+          76,
+          99,
+          115,
+          121,
+          125,
+          120,
+          108,
+          97
+        ],
+        "boostThresholdRpm": 2500,
+        "fullBoostRpm": 3500,
+        "spoolRise": 0.55,
+        "spoolFall": 0.25,
+        "displayBoostBar": 0.35
+      },
+      "legacyCooled": {
+        "source": "design-data complete configuration:cfg_finch_turbo_s2_ic1",
+        "carId": "car_finch",
+        "massKg": 1050,
+        "wheelRadius": 0.295,
+        "efficiency": 0.9,
+        "finalDrive": 4.1,
+        "reverseRatio": 3.2,
+        "idleRpm": 900,
+        "redlineRpm": 6500,
+        "softLimiterRpm": 6400,
+        "upshiftRpm": 6200,
+        "downshiftRpm": 2200,
+        "launchRpm": 1800,
+        "shiftSeconds": 0.45,
+        "brakeDeceleration": 7.2,
+        "ratios": [
+          3.55,
+          2,
+          1.36,
+          1.03,
+          0.82
+        ],
+        "rpm": [
+          900,
+          1500,
+          2500,
+          3500,
+          4500,
+          5500,
+          6200,
+          6500
+        ],
+        "torque": [
+          76,
+          99,
+          115,
+          158,
+          162,
+          150,
+          129,
+          114
+        ],
+        "aspiration": "turbocharged",
+        "offBoostTorque": [
+          76,
+          99,
+          115,
+          121,
+          125,
+          120,
+          108,
+          97
+        ],
+        "boostThresholdRpm": 2500,
+        "fullBoostRpm": 3500,
+        "spoolRise": 0.55,
+        "spoolFall": 0.25,
+        "displayBoostBar": 0.35
+      },
+      "gearboxMultipliers": [
+        1,
+        0.88,
+        0.73,
+        0.61
+      ],
+      "brakes": [
+        7.2,
+        8.3,
+        9.2,
+        10.1
+      ],
+      "naCurves": [
+        {
+          "torque": [
+            74,
+            95,
+            111,
+            116,
+            119,
+            113,
+            100,
+            90
+          ]
+        },
+        {
+          "torque": [
+            76,
+            99,
+            115,
+            121,
+            125,
+            120,
+            108,
+            97
+          ]
+        },
+        {
+          "torque": [
+            81.7,
+            106.42,
+            123.63,
+            130.07,
+            134.38,
+            129,
+            116.1,
+            104.27
+          ]
+        },
+        {
+          "torque": [
+            87.4,
+            113.85,
+            132.25,
+            139.15,
+            143.75,
+            138,
+            124.2,
+            111.55
+          ]
+        }
+      ],
+      "curves": [
+        {
+          "choice": "small",
+          "stage": 1,
+          "torque": [
+            76,
+            99,
+            115,
+            155,
+            158,
+            146,
+            125,
+            110
+          ],
+          "cooling1": [
+            76,
+            99,
+            115,
+            158,
+            162,
+            150,
+            129,
+            114
+          ],
+          "spoolRise": 0.55,
+          "boostThreshold": 2500,
+          "offBoostTorque": [
+            76,
+            99,
+            115,
+            121,
+            125,
+            120,
+            108,
+            97
+          ]
+        },
+        {
+          "choice": "large",
+          "stage": 1,
+          "torque": [
+            76,
+            99,
+            115,
+            135,
+            165,
+            175,
+            157,
+            135
+          ],
+          "cooling1": [
+            76,
+            99,
+            115,
+            138.38,
+            169.12,
+            179.37,
+            160.92,
+            138.38
+          ],
+          "spoolRise": 0.75,
+          "boostThreshold": 3200,
+          "offBoostTorque": [
+            76,
+            99,
+            115,
+            121,
+            125,
+            120,
+            108,
+            97
+          ]
+        },
+        {
+          "choice": "roots",
+          "stage": 1,
+          "torque": [
+            85,
+            115,
+            140,
+            155,
+            161,
+            155,
+            135,
+            116
+          ],
+          "cooling1": [
+            87.12,
+            117.87,
+            143.5,
+            158.88,
+            165.02,
+            158.88,
+            138.38,
+            118.9
+          ],
+          "spoolRise": 0,
+          "boostThreshold": 0,
+          "offBoostTorque": []
+        },
+        {
+          "choice": "twin",
+          "stage": 1,
+          "torque": [
+            76,
+            99,
+            115,
+            145,
+            166,
+            170,
+            153,
+            133
+          ],
+          "cooling1": [
+            76,
+            99,
+            117.87,
+            148.63,
+            170.15,
+            174.25,
+            156.82,
+            136.32
+          ],
+          "spoolRise": 0.4,
+          "boostThreshold": 2000,
+          "offBoostTorque": [
+            76,
+            99,
+            115,
+            121,
+            125,
+            120,
+            108,
+            97
+          ]
+        },
+        {
+          "choice": "small",
+          "stage": 2,
+          "torque": [
+            78.28,
+            101.97,
+            118.45,
+            173.6,
+            176.96,
+            163.52,
+            140,
+            123.2
+          ],
+          "cooling1": [
+            78.28,
+            101.97,
+            118.45,
+            176.96,
+            181.44,
+            168,
+            144.48,
+            127.68
+          ],
+          "spoolRise": 0.6200000000000001,
+          "boostThreshold": 2500,
+          "offBoostTorque": [
+            78.28,
+            101.97,
+            118.45,
+            124.63,
+            128.75,
+            123.6,
+            111.24,
+            99.91
+          ]
+        },
+        {
+          "choice": "large",
+          "stage": 2,
+          "torque": [
+            78.28,
+            101.97,
+            118.45,
+            151.2,
+            184.8,
+            196,
+            175.84,
+            151.2
+          ],
+          "cooling1": [
+            78.28,
+            101.97,
+            118.45,
+            154.98,
+            189.42,
+            200.9,
+            180.24,
+            154.98
+          ],
+          "spoolRise": 0.83,
+          "boostThreshold": 3200,
+          "offBoostTorque": [
+            78.28,
+            101.97,
+            118.45,
+            124.63,
+            128.75,
+            123.6,
+            111.24,
+            99.91
+          ]
+        },
+        {
+          "choice": "roots",
+          "stage": 2,
+          "torque": [
+            95.2,
+            128.8,
+            156.8,
+            173.6,
+            180.32,
+            173.6,
+            151.2,
+            129.92
+          ],
+          "cooling1": [
+            97.58,
+            132.02,
+            160.72,
+            177.94,
+            184.83,
+            177.94,
+            154.98,
+            133.17
+          ],
+          "spoolRise": 0,
+          "boostThreshold": 0,
+          "offBoostTorque": []
+        },
+        {
+          "choice": "twin",
+          "stage": 2,
+          "torque": [
+            78.28,
+            101.97,
+            128.8,
+            162.4,
+            185.92,
+            190.4,
+            171.36,
+            148.96
+          ],
+          "cooling1": [
+            78.28,
+            101.97,
+            132.02,
+            166.46,
+            190.57,
+            195.16,
+            175.64,
+            152.68
+          ],
+          "spoolRise": 0.44,
+          "boostThreshold": 2000,
+          "offBoostTorque": [
+            78.28,
+            101.97,
+            118.45,
+            124.63,
+            128.75,
+            123.6,
+            111.24,
+            99.91
+          ]
+        },
+        {
+          "choice": "small",
+          "stage": 3,
+          "torque": [
+            80.56,
+            104.94,
+            121.9,
+            192.2,
+            195.92,
+            181.04,
+            155,
+            136.4
+          ],
+          "cooling1": [
+            80.56,
+            104.94,
+            121.9,
+            195.92,
+            200.88,
+            186,
+            159.96,
+            141.36
+          ],
+          "spoolRise": 0.6900000000000001,
+          "boostThreshold": 2500,
+          "offBoostTorque": [
+            80.56,
+            104.94,
+            121.9,
+            128.26,
+            132.5,
+            127.2,
+            114.48,
+            102.82
+          ]
+        },
+        {
+          "choice": "large",
+          "stage": 3,
+          "torque": [
+            80.56,
+            104.94,
+            121.9,
+            167.4,
+            204.6,
+            217,
+            194.68,
+            167.4
+          ],
+          "cooling1": [
+            80.56,
+            104.94,
+            121.9,
+            171.58,
+            209.71,
+            222.42,
+            199.55,
+            171.58
+          ],
+          "spoolRise": 0.91,
+          "boostThreshold": 3200,
+          "offBoostTorque": [
+            80.56,
+            104.94,
+            121.9,
+            128.26,
+            132.5,
+            127.2,
+            114.48,
+            102.82
+          ]
+        },
+        {
+          "choice": "roots",
+          "stage": 3,
+          "torque": [
+            105.4,
+            142.6,
+            173.6,
+            192.2,
+            199.64,
+            192.2,
+            167.4,
+            143.84
+          ],
+          "cooling1": [
+            108.03,
+            146.16,
+            177.94,
+            197,
+            204.63,
+            197,
+            171.58,
+            147.44
+          ],
+          "spoolRise": 0,
+          "boostThreshold": 0,
+          "offBoostTorque": []
+        },
+        {
+          "choice": "twin",
+          "stage": 3,
+          "torque": [
+            80.56,
+            104.94,
+            142.6,
+            179.8,
+            205.84,
+            210.8,
+            189.72,
+            164.92
+          ],
+          "cooling1": [
+            80.56,
+            104.94,
+            146.16,
+            184.29,
+            210.99,
+            216.07,
+            194.46,
+            169.04
+          ],
+          "spoolRise": 0.48000000000000004,
+          "boostThreshold": 2000,
+          "offBoostTorque": [
+            80.56,
+            104.94,
+            121.9,
+            128.26,
+            132.5,
+            127.2,
+            114.48,
+            102.82
+          ]
+        }
+      ],
+      "intakeDelta": [
+        0,
+        0,
+        0.4,
+        0.7,
+        1,
+        1.3,
+        1.2,
+        0.9
+      ],
+      "exhaustDelta": [
+        0,
+        0,
+        0.2,
+        0.6,
+        1,
+        1.4,
+        1.3,
+        1
+      ],
+      "maxPowerKw": 145,
+      "coolingFactors": [
+        1,
+        1,
+        1.0125,
+        1.025
+      ],
+      "gripModifiers": [
+        1,
+        1.06,
+        1.13,
+        1.2
+      ]
+    },
+    {
+      "carId": "car_apex_test",
+      "stock": {
+        "source": "Original fictional Aster Apex testing configuration; not career balance",
+        "carId": "car_apex_test",
+        "massKg": 1250,
+        "wheelRadius": 0.295,
+        "efficiency": 0.88,
+        "finalDrive": 3.7,
+        "reverseRatio": 3.2,
+        "idleRpm": 900,
+        "redlineRpm": 6500,
+        "softLimiterRpm": 6400,
+        "upshiftRpm": 6200,
+        "downshiftRpm": 2200,
+        "launchRpm": 2600,
+        "shiftSeconds": 0.36,
+        "brakeDeceleration": 10.5,
+        "ratios": [
+          3.1,
+          2.05,
+          1.5,
+          1.18,
+          0.95,
+          0.78
+        ],
+        "rpm": [
+          900,
+          1500,
+          2500,
+          3500,
+          4500,
+          5500,
+          6200,
+          6500
+        ],
+        "torque": [
+          170,
+          220,
+          270,
+          295,
+          300,
+          285,
+          250,
+          210
+        ]
+      },
+      "stageOne": {
+        "source": "Original fictional Aster Apex testing configuration; not career balance",
+        "carId": "car_apex_test",
+        "massKg": 1250,
+        "wheelRadius": 0.295,
+        "efficiency": 0.88,
+        "finalDrive": 3.7,
+        "reverseRatio": 3.2,
+        "idleRpm": 900,
+        "redlineRpm": 6500,
+        "softLimiterRpm": 6400,
+        "upshiftRpm": 6200,
+        "downshiftRpm": 2200,
+        "launchRpm": 2600,
+        "shiftSeconds": 0.36,
+        "brakeDeceleration": 10.5,
+        "ratios": [
+          3.1,
+          2.05,
+          1.5,
+          1.18,
+          0.95,
+          0.78
+        ],
+        "rpm": [
+          900,
+          1500,
+          2500,
+          3500,
+          4500,
+          5500,
+          6200,
+          6500
+        ],
+        "torque": [
+          175,
+          235,
+          290,
+          320,
+          335,
+          320,
+          290,
+          245
+        ]
+      },
+      "legacyTurbo": {
+        "source": "Original fictional Aster Apex testing configuration; not career balance",
+        "carId": "car_apex_test",
+        "massKg": 1250,
+        "wheelRadius": 0.295,
+        "efficiency": 0.88,
+        "finalDrive": 3.7,
+        "reverseRatio": 3.2,
+        "idleRpm": 900,
+        "redlineRpm": 6500,
+        "softLimiterRpm": 6400,
+        "upshiftRpm": 6200,
+        "downshiftRpm": 2200,
+        "launchRpm": 2600,
+        "shiftSeconds": 0.36,
+        "brakeDeceleration": 10.5,
+        "ratios": [
+          3.1,
+          2.05,
+          1.5,
+          1.18,
+          0.95,
+          0.78
+        ],
+        "rpm": [
+          900,
+          1500,
+          2500,
+          3500,
+          4500,
+          5500,
+          6200,
+          6500
+        ],
+        "torque": [
+          175,
+          235,
+          310,
+          445,
+          480,
+          465,
+          415,
+          360
+        ],
+        "aspiration": "turbo",
+        "offBoostTorque": [
+          175,
+          235,
+          290,
+          320,
+          335,
+          320,
+          290,
+          245
+        ],
+        "boostThresholdRpm": 2200,
+        "fullBoostRpm": 3500,
+        "spoolRise": 0.48,
+        "spoolFall": 0.22,
+        "displayBoostBar": 0.85
+      },
+      "legacyCooled": {
+        "source": "Original fictional Aster Apex testing configuration; not career balance",
+        "carId": "car_apex_test",
+        "massKg": 1250,
+        "wheelRadius": 0.295,
+        "efficiency": 0.88,
+        "finalDrive": 3.7,
+        "reverseRatio": 3.2,
+        "idleRpm": 900,
+        "redlineRpm": 6500,
+        "softLimiterRpm": 6400,
+        "upshiftRpm": 6200,
+        "downshiftRpm": 2200,
+        "launchRpm": 2600,
+        "shiftSeconds": 0.36,
+        "brakeDeceleration": 10.5,
+        "ratios": [
+          3.1,
+          2.05,
+          1.5,
+          1.18,
+          0.95,
+          0.78
+        ],
+        "rpm": [
+          900,
+          1500,
+          2500,
+          3500,
+          4500,
+          5500,
+          6200,
+          6500
+        ],
+        "torque": [
+          175,
+          235,
+          310,
+          460,
+          510,
+          495,
+          445,
+          385
+        ],
+        "aspiration": "turbo",
+        "offBoostTorque": [
+          175,
+          235,
+          290,
+          320,
+          335,
+          320,
+          290,
+          245
+        ],
+        "boostThresholdRpm": 2200,
+        "fullBoostRpm": 3500,
+        "spoolRise": 0.48,
+        "spoolFall": 0.22,
+        "displayBoostBar": 0.85
+      },
+      "gearboxMultipliers": [
+        1,
+        0.78,
+        0.73,
+        0.61
+      ],
+      "brakes": [
+        10.5,
+        12,
+        13,
+        14
+      ],
+      "naCurves": [
+        {
+          "torque": [
+            170,
+            220,
+            270,
+            295,
+            300,
+            285,
+            250,
+            210
+          ]
+        },
+        {
+          "torque": [
+            175,
+            235,
+            290,
+            320,
+            335,
+            320,
+            290,
+            245
+          ]
+        },
+        {
+          "torque": [
+            188.13,
+            252.63,
+            311.75,
+            344,
+            360.13,
+            344,
+            311.75,
+            263.38
+          ]
+        },
+        {
+          "torque": [
+            201.25,
+            270.25,
+            333.5,
+            368,
+            385.25,
+            368,
+            333.5,
+            281.75
+          ]
+        }
+      ],
+      "curves": [
+        {
+          "choice": "small",
+          "stage": 1,
+          "torque": [
+            175,
+            235,
+            310,
+            445,
+            480,
+            465,
+            415,
+            360
+          ],
+          "cooling1": [
+            175,
+            235,
+            310,
+            460,
+            510,
+            495,
+            445,
+            385
+          ],
+          "spoolRise": 0.48,
+          "boostThreshold": 2200,
+          "offBoostTorque": [
+            175,
+            235,
+            290,
+            320,
+            335,
+            320,
+            290,
+            245
+          ]
+        },
+        {
+          "choice": "large",
+          "stage": 1,
+          "torque": [
+            175,
+            235,
+            290,
+            375,
+            475,
+            525,
+            475,
+            410
+          ],
+          "cooling1": [
+            175,
+            235,
+            290,
+            384.37,
+            486.87,
+            538.13,
+            486.87,
+            420.25
+          ],
+          "spoolRise": 0.75,
+          "boostThreshold": 3200,
+          "offBoostTorque": [
+            175,
+            235,
+            290,
+            320,
+            335,
+            320,
+            290,
+            245
+          ]
+        },
+        {
+          "choice": "roots",
+          "stage": 1,
+          "torque": [
+            190,
+            275,
+            355,
+            410,
+            430,
+            420,
+            370,
+            320
+          ],
+          "cooling1": [
+            194.75,
+            281.88,
+            363.87,
+            420.25,
+            440.75,
+            430.5,
+            379.25,
+            328
+          ],
+          "spoolRise": 0,
+          "boostThreshold": 0,
+          "offBoostTorque": []
+        },
+        {
+          "choice": "twin",
+          "stage": 1,
+          "torque": [
+            175,
+            235,
+            315,
+            435,
+            500,
+            535,
+            490,
+            425
+          ],
+          "cooling1": [
+            175,
+            235,
+            322.88,
+            445.87,
+            512.5,
+            548.38,
+            502.25,
+            435.62
+          ],
+          "spoolRise": 0.4,
+          "boostThreshold": 2000,
+          "offBoostTorque": [
+            175,
+            235,
+            290,
+            320,
+            335,
+            320,
+            290,
+            245
+          ]
+        },
+        {
+          "choice": "small",
+          "stage": 2,
+          "torque": [
+            180.25,
+            242.05,
+            347.2,
+            498.4,
+            537.6,
+            520.8,
+            464.8,
+            403.2
+          ],
+          "cooling1": [
+            180.25,
+            242.05,
+            347.2,
+            515.2,
+            571.2,
+            554.4,
+            498.4,
+            431.2
+          ],
+          "spoolRise": 0.55,
+          "boostThreshold": 2200,
+          "offBoostTorque": [
+            180.25,
+            242.05,
+            298.7,
+            329.6,
+            345.05,
+            329.6,
+            298.7,
+            252.35
+          ]
+        },
+        {
+          "choice": "large",
+          "stage": 2,
+          "torque": [
+            180.25,
+            242.05,
+            298.7,
+            420,
+            532,
+            588,
+            532,
+            459.2
+          ],
+          "cooling1": [
+            180.25,
+            242.05,
+            298.7,
+            430.5,
+            545.3,
+            602.7,
+            545.3,
+            470.68
+          ],
+          "spoolRise": 0.83,
+          "boostThreshold": 3200,
+          "offBoostTorque": [
+            180.25,
+            242.05,
+            298.7,
+            329.6,
+            345.05,
+            329.6,
+            298.7,
+            252.35
+          ]
+        },
+        {
+          "choice": "roots",
+          "stage": 2,
+          "torque": [
+            212.8,
+            308,
+            397.6,
+            459.2,
+            481.6,
+            470.4,
+            414.4,
+            358.4
+          ],
+          "cooling1": [
+            218.12,
+            315.7,
+            407.54,
+            470.68,
+            493.64,
+            482.16,
+            424.76,
+            367.36
+          ],
+          "spoolRise": 0,
+          "boostThreshold": 0,
+          "offBoostTorque": []
+        },
+        {
+          "choice": "twin",
+          "stage": 2,
+          "torque": [
+            180.25,
+            242.05,
+            352.8,
+            487.2,
+            560,
+            599.2,
+            548.8,
+            476
+          ],
+          "cooling1": [
+            180.25,
+            242.05,
+            361.62,
+            499.38,
+            574,
+            614.18,
+            562.52,
+            487.9
+          ],
+          "spoolRise": 0.44,
+          "boostThreshold": 2000,
+          "offBoostTorque": [
+            180.25,
+            242.05,
+            298.7,
+            329.6,
+            345.05,
+            329.6,
+            298.7,
+            252.35
+          ]
+        },
+        {
+          "choice": "small",
+          "stage": 3,
+          "torque": [
+            185.5,
+            249.1,
+            384.4,
+            551.8,
+            595.2,
+            576.6,
+            514.6,
+            446.4
+          ],
+          "cooling1": [
+            185.5,
+            249.1,
+            384.4,
+            570.4,
+            632.4,
+            613.8,
+            551.8,
+            477.4
+          ],
+          "spoolRise": 0.62,
+          "boostThreshold": 2200,
+          "offBoostTorque": [
+            185.5,
+            249.1,
+            307.4,
+            339.2,
+            355.1,
+            339.2,
+            307.4,
+            259.7
+          ]
+        },
+        {
+          "choice": "large",
+          "stage": 3,
+          "torque": [
+            185.5,
+            249.1,
+            307.4,
+            465,
+            589,
+            651,
+            589,
+            508.4
+          ],
+          "cooling1": [
+            185.5,
+            249.1,
+            307.4,
+            476.62,
+            603.72,
+            667.27,
+            603.72,
+            521.11
+          ],
+          "spoolRise": 0.91,
+          "boostThreshold": 3200,
+          "offBoostTorque": [
+            185.5,
+            249.1,
+            307.4,
+            339.2,
+            355.1,
+            339.2,
+            307.4,
+            259.7
+          ]
+        },
+        {
+          "choice": "roots",
+          "stage": 3,
+          "torque": [
+            235.6,
+            341,
+            440.2,
+            508.4,
+            533.2,
+            520.8,
+            458.8,
+            396.8
+          ],
+          "cooling1": [
+            241.49,
+            349.52,
+            451.2,
+            521.11,
+            546.53,
+            533.82,
+            470.27,
+            406.72
+          ],
+          "spoolRise": 0,
+          "boostThreshold": 0,
+          "offBoostTorque": []
+        },
+        {
+          "choice": "twin",
+          "stage": 3,
+          "torque": [
+            185.5,
+            249.1,
+            390.6,
+            539.4,
+            620,
+            663.4,
+            607.6,
+            527
+          ],
+          "cooling1": [
+            185.5,
+            249.1,
+            400.37,
+            552.88,
+            635.5,
+            679.98,
+            622.79,
+            540.17
+          ],
+          "spoolRise": 0.48000000000000004,
+          "boostThreshold": 2000,
+          "offBoostTorque": [
+            185.5,
+            249.1,
+            307.4,
+            339.2,
+            355.1,
+            339.2,
+            307.4,
+            259.7
+          ]
+        }
+      ],
+      "intakeDelta": [
+        0,
+        0,
+        0.8,
+        1.4,
+        2,
+        2.6,
+        2.4,
+        1.8
+      ],
+      "exhaustDelta": [
+        0,
+        0,
+        0.4,
+        1.2,
+        2,
+        2.8,
+        2.6,
+        2
+      ],
+      "maxPowerKw": 450,
+      "coolingFactors": [
+        1,
+        1,
+        1.0125,
+        1.025
+      ],
+      "gripModifiers": [
+        1,
+        1.06,
+        1.13,
+        1.2
+      ]
+    }
+  ]
+}

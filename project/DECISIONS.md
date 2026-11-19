@@ -1,5 +1,8 @@
 # Requirements and decisions
 
+## D052 — User-authorized staged customization expansion
+User asked to implement the pending hardware, multiple paid stages of each and useful additional upgrades. M14-T02 now adds 37 authored offers: three NA/gearbox/cooling/brake/tire stages; three stages each of small/large turbo, Roots supercharger and Apex-only twins; two intake/exhaust stages; exclusive road/burble/flame calibrations and paid NA restoration. New built-engine tiers supersede D046's bounded <=90 kW restriction only for the newly authorized higher stages (145 kW Finch authoring ceiling); original stock/Stage1/small turbo/basic and street-cooler curves/fees remain exact. No full career/repair/heat/history scope is inferred. Induction conversions replace the active kit, retaining shared paid upgrades but offering no refund/spare inventory. Higher sound stages disclose greater real power loss. V4 validates and materializes one-time v3/v2/v1 imports, with immutable receipts and atomic payments. Both cars use the polished workshop; Apex is temporary/free and never writes career data. See STAGED_WORKSHOP_HANDOFF.md and actual native evidence.
+
 Initial design date: 2026-11-17, America/Los_Angeles.
 
 `confirmed` means the user supplied the requirement. `proposed default` means this package chooses it so implementation can start; the user can revise it. New user direction takes precedence over earlier defaults.
@@ -85,3 +88,9 @@ User requests next step after Claude garage scripts report. Choose a unified Fin
 
 ## D049 — User-authorized smooth automatic and paddle-style manual
 Repair late low-RPM-only automatic downshifts with road-speed matching and full-demand kickdown, hysteresis/shift cooldown and bounded clutch re-engagement. Add M automatic/manual, Z down/X up and clickable controls; a successful paddle request selects manual. Manual uses safe downshift rejection and a first-gear standstill assist, without a clutch/stall/damage simulation. Preserve mode through car recovery/paid hardware changes, reset to automatic on a new scene visit; no save schema or price changes. Smooth digital throttle/brake and existing audio pitch, retain car grip/camera/default curves. Claude art/audio preview remains separate.
+
+## D050 — Review Claude previews in preserved copies
+User supplied repeated handoff requesting manual garage then effects verification. Take over in .work/ClaudeReview using original Claude inputs read-only and minimal static car dependencies. Correct compile/runtime/wiring issues in the review copy, garage first; then conditional SFX and actual video/audio. Export reviewed source/packages and native previews outside main gameplay. Do not integrate art/audio or modify original Claude projects during verification. Use installed local FFmpeg for real capture encoding; no new dependency install.
+
+## D051 — Queued garage expansion with GUI priority
+User requests, after current verification, a substantially easier and more attractive garage interface plus turbo sizes, superchargers, twin turbo, brake upgrades and tune/SFX choices. Interface polish and clarity are the priority. Use category cards/current build and an explicit quote/requirements/tradeoff panel at one shop. Induction alternatives require compatibility/exclusivity and authored RPM curves, not stacked flat boosts. Optional burble/flame presets disclose a small real power reduction. Preserve all existing paid receipts/migrations; implementation follows standalone preview verification. Latest HUD addition is included in review; simulated readings must never become invented saved mileage.
