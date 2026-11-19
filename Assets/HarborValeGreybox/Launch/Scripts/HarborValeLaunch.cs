@@ -12,6 +12,7 @@ public sealed class HarborValeLaunch:MonoBehaviour {
  [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]static void Reset(){Instance=null;}
  [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]static void Register(){SceneManager.sceneLoaded-=Loaded;SceneManager.sceneLoaded+=Loaded;}
  static void Loaded(Scene scene,LoadSceneMode mode){
+  if(scene.name!=MenuScene&&scene.name!=CityScene&&scene.name!=SportsScene&&scene.name!="Finch_HandlingTest")return;
   // All scene-specific systems initialize here, including when returning from the hub.
   FinchDrivingBootstrap.StartDriving();DocksideTrialDirector.Hook();FinchGarage.Hook();ApexTestDrive.Hook();
   if(Instance==null){var root=new GameObject("HarborVale | launch and mode selection");Instance=root.AddComponent<HarborValeLaunch>();DontDestroyOnLoad(root);}
@@ -25,7 +26,7 @@ public sealed class HarborValeLaunch:MonoBehaviour {
   Busy=true;StartCoroutine(Change(scene));return true;
  }
  IEnumerator Change(string scene){yield return null;var load=SceneManager.LoadSceneAsync(scene,LoadSceneMode.Single);yield return load;Busy=false;}
- void OnGUI(){string scene=SceneManager.GetActiveScene().name;if(scene!=MenuScene){if(Application.CanStreamedLevelBeLoaded(MenuScene)){var trial=UnityEngine.Object.FindAnyObjectByType<DocksideTrialDirector>();GUI.enabled=!Busy;if(GUI.Button(new Rect(Screen.width-172,Screen.height-57,156,39),trial!=null&&trial.Active?"End run / main menu":"Main menu"))Open(MenuScene);GUI.enabled=true;if(Message!=null)GUI.Box(new Rect(Screen.width-380,Screen.height-100,364,38),Message);}return;}
+ void OnGUI(){string scene=SceneManager.GetActiveScene().name;if(scene!=MenuScene&&scene!=CityScene&&scene!=SportsScene)return;if(scene!=MenuScene){if(UnityEngine.Object.FindAnyObjectByType<DocksideTrialDirector>()?.ExternalModalOpen==true)return;if(Application.CanStreamedLevelBeLoaded(MenuScene)){var trial=UnityEngine.Object.FindAnyObjectByType<DocksideTrialDirector>();GUI.enabled=!Busy;if(GUI.Button(new Rect(Screen.width-172,Screen.height-57,156,39),trial!=null&&trial.Active?"End run / main menu":"Main menu"))Open(MenuScene);GUI.enabled=true;if(Message!=null)GUI.Box(new Rect(Screen.width-380,Screen.height-100,364,38),Message);}return;}
   var old=GUI.matrix;GUI.matrix=Matrix4x4.Scale(new Vector3(Screen.width/1280f,Screen.height/800f,1));var oldColor=GUI.color;GUI.color=new Color(.035f,.065f,.095f);GUI.DrawTexture(new Rect(0,0,1280,800),Texture2D.whiteTexture);GUI.color=oldColor;
   var title=new GUIStyle(GUI.skin.label){fontSize=54,fontStyle=FontStyle.Bold};title.normal.textColor=new Color(.28f,.89f,.83f);var heading=new GUIStyle(GUI.skin.label){fontSize=25,fontStyle=FontStyle.Bold};var text=new GUIStyle(GUI.skin.label){fontSize=18,wordWrap=true};var button=new GUIStyle(GUI.skin.button){fontSize=21,fontStyle=FontStyle.Bold};
   GUI.Label(new Rect(80,63,1120,80),"HARBOR VALE",title);GUI.Label(new Rect(84,146,1120,44),"Choose your drive",heading);

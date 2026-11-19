@@ -35,6 +35,8 @@ This is a playable prototype, not the complete planned game. Task states/evidenc
 
 ## Next gameplay/content work
 
+Latest checkpoint: polished workshop with search/categories, visual car preview, full prerequisite path cost and saved purchase feedback. Native GUI 24 checks and unified-player 47 checks passed. Separate garage/effects/dashboard previews verified; live dashboard odometer remains unconnected. See WORKSHOP_HANDOFF.md.
+
 - [ ] Review full-lap handling and medal pacing with the player; controller support.
 - [ ] Later paid tune stages, additional supporting parts, NA/boosted conversion choices and dyno refinement.
 - [ ] More events, AI opponents/rivals and a broader reputation progression.

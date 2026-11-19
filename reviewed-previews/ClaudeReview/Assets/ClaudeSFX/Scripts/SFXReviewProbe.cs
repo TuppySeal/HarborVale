@@ -1,0 +1,17 @@
+using System;
+using System.IO;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using HarborValePreviewReview;
+namespace ClaudeSFX {
+public class SFXReviewProbe:MonoBehaviour {
+ string folder;List<string> lines=new List<string>();bool failed;
+ void Check(bool yes,string text){lines.Add((yes?"PASS ":"FAIL ")+text);if(!yes){failed=true;File.WriteAllLines(Path.Combine(folder,"native-results.txt"),lines);Application.Quit(1);throw new Exception(text);}}
+ void Log(string m,string s,LogType t){if(t==LogType.Error||t==LogType.Exception){failed=true;lines.Add("ERROR "+m);File.WriteAllLines(Path.Combine(folder,"native-results.txt"),lines);Application.Quit(1);}}
+ IEnumerator Start(){var args=Environment.GetCommandLineArgs();int i=Array.IndexOf(args,"--review-dir");if(i<0||i+1>=args.Length)yield break;folder=Path.GetFullPath(args[i+1]);Directory.CreateDirectory(folder);Application.logMessageReceived+=Log;yield return new WaitForSecondsRealtime(1);var d=UnityEngine.Object.FindAnyObjectByType<SFXDemoController>();d.Automatic=false;var test=new EffectTelemetry{rpm=4500,load=1,boostBar=.8f,speed=20,slip=.6f,grounded=true};d.Apply(test,"Gate check");Check(d.sound.TurboGain==0&&d.sound.SuperGain==0,"No hardware means no forced-induction sound");test.turbo=true;d.Apply(test,"Gate check");Check(d.sound.TurboGain>0,"Turbo follows boost and load");test.load=0;d.Apply(test,"Gate check");Check(d.sound.TurboGain==0,"No load mutes turbo layer");test.grounded=false;d.Apply(test,"Gate check");Check(d.sound.SquealGain==0&&d.effects[d.CarIndex].drift.Intensity==0,"Airborne slip produces no tire sound/smoke");test.grounded=true;test.slip=0;d.Apply(test,"Gate check");Check(d.sound.SquealGain==0,"No tire slip means no squeal");test.slip=.7f;d.Apply(test,"Gate check");Check(d.sound.SquealGain>0,"Grounded slip drives squeal");test.supercharger=true;d.Apply(test,"Gate check");Check(d.sound.SuperGain==0,"Supercharger is silent without explicit preview hardware permission");test.superchargerPreview=true;test.load=.8f;d.Apply(test,"Gate check");Check(d.sound.SuperGain>0,"Supercharger preview hardware enables whine");Check(!d.sound.Pop(),"Exhaust pop rejects missing downpipe");test.downpipe=true;test.load=.02f;d.Apply(test,"Gate check");Check(d.sound.Pop(),"Downpipe high-RPM lift allows pop");Check(UnityEngine.Object.FindObjectsByType<Rigidbody>(FindObjectsSortMode.None).Length==0,"Effects create no rigidbody or wheel physics");Check(d.cars[1].transform.Find("Original Aster Apex sports coupe | 4.3 x 1.85 m")!=null,"Apex uses actual distinct sports visual");Vector3[] positions={d.cars[0].transform.position,d.cars[1].transform.position};var recorder=gameObject.AddComponent<PreviewRecorder>();recorder.Begin(Path.Combine(folder,"recording"));d.sound.BeginCapture();
+  for(int car=0;car<2;car++){d.SelectCar(car);for(int phase=0;phase<7;phase++){d.PhaseState(phase);yield return new WaitForSecondsRealtime(1.5f);}}
+  recorder.Finish();string audio=d.sound.SaveCapture(Path.Combine(folder,"native-mix.wav"));lines.Add(audio);Check(new FileInfo(Path.Combine(folder,"native-mix.wav")).Length>100000,"Actual generated DSP output captured to PCM WAV");for(int car=0;car<2;car++)Check(d.cars[car].transform.position==positions[car],"Visual effects do not move car root "+car);yield return new WaitForSecondsRealtime(.3f);Check(!failed,"No native runtime errors");File.WriteAllLines(Path.Combine(folder,"native-results.txt"),lines);Application.Quit(0);
+ }
+}
+}

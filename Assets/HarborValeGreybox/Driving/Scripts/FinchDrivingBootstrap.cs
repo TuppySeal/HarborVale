@@ -7,6 +7,7 @@ public static class FinchDrivingBootstrap {
  static Recovery recovery;
  [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]static void Clear(){recovery=null;}
  public static void StartDriving(){
+  string scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;if(scene!="HarborVale_CityMap"&&scene!="HarborVale_SportsTest"&&scene!="Finch_HandlingTest")return;
   var specification=UnityEngine.Object.FindAnyObjectByType<StarterCarSpecification>();if(specification==null)return;
   var car=specification.GetComponent<FinchVehicle>();if(car==null)car=specification.gameObject.AddComponent<FinchVehicle>();car.Initialize();
   // The city starts on a clear nearby carriageway; test scenes preserve their authored spawn.

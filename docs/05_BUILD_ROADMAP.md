@@ -175,6 +175,11 @@ Dependencies are task IDs separated by commas. A dependency is satisfied only wh
 | M12-T04 | Sports test car with grip, downforce and sequential test upgrades | M12-T03 | done |
 | M12-T05 | Unified launch menu and live sports acceleration testing | M12-T04 | done |
 | M12-T06 | Smooth automatic downshifts and optional paddle-style manual transmission | M12-T05 | done |
+| M13-T01 | Verify and repair isolated Claude garage preview | M12-T06 | done |
+| M13-T02 | Verify isolated conditional audio and visual effects demo | M13-T01 | done |
+| M13-T03 | Verify distinct Finch and Apex dashboard previews | M13-T02 | done |
+| M14-T01 | Polished easy-to-use one-shop garage interface | M13-T03 | done |
+| M14-T02 | Expanded induction, brake and optional burble/flame tune catalogue | M14-T01 | not_started |
 
 ### M11-T01 — User-requested Unity map prototype
 
@@ -224,3 +229,18 @@ One Windows entry menu selects regular saved Finch or free Apex sports tests and
 
 ### M12-T06 — Smoother gearbox and driving response
 Automatic matches gears to road speed when slowing, uses safe throttle kickdown and avoids hunting. Manual paddle-style M/Z/X controls reject unsafe over-rev downshifts, reverse shifts, overlapping shifts and garage/map/countdown inputs. Show current mode/gear and rejection feedback; recovery/upgrades preserve selected mode, with first-gear stop assist. Smooth keyboard throttle/brake and shift re-engagement without altering authored torque curves, paid hardware or saves. Verify original sluggish high-gear scenario, safe shift boundaries, throttle/shift continuity, real native decel/reaccel and Windows integration for Finch/Apex; retain failed checks and manual-feel limits.
+
+### M13-T01 — Garage verification before integration
+Separate corrected copy, preserve original Claude and main game. Compile, generate/reopen an editable scene, static real Finch, working four-part selection with actual procedural meshes, one counter, preview-only installs, camera orbit/zoom/reset and readable UI. Capture actual rendered walkthrough/screenshots; export minimal source/dependency package and state verification limits. No gameplay integration.
+
+### M13-T02 — Conditional effects verification
+Only after garage verification. Distinct true Finch/Apex visuals, turbo gated by hardware/load/boost, tire squeal by grounded slip/speed, supercharger preview-only hardware gate, exhaust conditional preview. Visual-only animation never writes body/wheels/physics. Test gating, switching and clean scene startup, capture actual video with native mixed audio and provide measured audio/sample evidence and editable source/package. No untested listening/realism claim or game integration.
+
+### M13-T03 — Dashboard preview review
+Review latest Claude gauge scripts in a preserved copy. Distinct Finch/Apex visual layouts, readable speed/RPM scales/redline, distance units and explicit demo telemetry labels. Fix time-only phantom mileage; simulated trip integrates declared speed, stationary does not advance. Real odometer remains unconnected until a future gameplay persistence adapter exists. Verify native visual switch/needle bounds and export source; no fake saved game mileage or main integration claim.
+
+### M14-T01 — Garage usability/design first
+User explicitly prioritizes an easy and attractive GUI. Clear category navigation, readable part cards, current-build context, visible credits and one detail/quote area combining price, requirements, next action and performance tradeoffs. Unavailable parts explain why and what is needed. Responsive supported layouts, stable modal input and actual purchase/save behavior; native screenshots required. One shop remains.
+
+### M14-T02 — Expanded compatible parts and tunes
+After review/interface, add small/large turbo choices, supercharger alternatives and appropriate twin-turbo setups, real brake upgrades and different calibrated tunes. Burble/flame presets are optional with a disclosed small real power loss. Complete authored torque curves and hardware prerequisites, exclusive induction choices rather than accidental stacking, actual brake effects, state-gated audio/visuals and atomic migration preserving historical paid receipts. Verify persistent builds and measured behavior; no invented service/ownership history.

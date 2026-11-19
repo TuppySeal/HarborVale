@@ -1,0 +1,1 @@
+PASS actual saved scene reopened with static Finch, four complete part displays, materials and wired camera/manager/UI. Minimal static dependencies only; no driving/racing/save code.

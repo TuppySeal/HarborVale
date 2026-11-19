@@ -1,7 +1,7 @@
-# Next action
+# Continue M14-T02 expanded parts
 
-M12-T06 is verified and installed. Close older game windows and launch Documents/Unity/HarborVale/Builds/HarborVale-SmoothDrive/HarborVale.exe. Choose Finch or Apex. Automatic is default. Slow from high speed, then accelerate to check the new downshift/kickdown response. M toggles manual, Z down/X up; HUD buttons do the same. Unsafe shifts show a reason. Manual preference survives recovery/parts for this drive; new scene visits start automatic.
+Read STATUS.md, WORKSHOP_HANDOFF.md, EXPANDED_PARTS_IMPLEMENTATION_PLAN.md, BOOST_HANDOFF.md, SPORTS_TEST_HANDOFF.md and inspect Git. Working Unity .work/UnityBoostValidation; canonical C:/Users/Justice/Documents/Unity/HarborVale. UI-only source/player now installed; publish intended files only. M14-T02 is authorized and must not be forgotten after GUI checkpoint. Do not fabricate completion.
 
-Next useful work: user full-lap feel review, especially brake-release acceleration, gear choice on corner exit and manual shifting. Do not describe synthetic/native checks as manual subjective playtesting. Controller hardware support, road seams/frame-pacing and further camera/steering refinements remain unverified/planned.
+Implement authored compatible induction alternatives/net curves, brakes and exclusive sound calibrations, atomic v4 migration/history, polished GUI offers and separate ephemeral Apex tests. Preserve historical prices/receipts, v3 legacy files and city/handling/static assets. Verified SFX runtime classes are available under reviewed-previews/ClaudeReview but demo telemetry is not real driving telemetry. Live dashboards/recorded mileage need their own bounded adapter and verification.
 
-Read SHIFTING_HANDOFF.md and LAUNCH_HANDOFF.md before changes. Preserve paid v3 history/curves, source scenes/static prefab/testpad and earlier builds. Claude's garage/audio projects remain separate pending actual verified scene/package review. No automatic broad-career implementation is implied.
+External coordination is authorized. Claude current task: finish asset-only BrakeKit package, actual rendered PNGs and clean import evidence. Antigravity current task: read-only native-v3 screenshots review to GARAGE_REVIEW_V3.md. Check their real files and keep write ownership separate. Messages sent via their existing Windows app sessions.

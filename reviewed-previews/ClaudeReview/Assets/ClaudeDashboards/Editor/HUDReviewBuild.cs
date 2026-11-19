@@ -1,0 +1,13 @@
+using System;
+using System.IO;
+using UnityEngine;
+using UnityEditor;
+using UnityEditor.SceneManagement;
+using UnityEditor.Build.Reporting;
+using HarborValePreviewReview.Editor;
+using ClaudeSFX.Editor;
+namespace ClaudeDashboardReview.Editor {
+public static class HUDReviewBuild {
+ public static void Build(){Directory.CreateDirectory("Verification/HUD");EditorSceneManager.NewScene(NewSceneSetup.EmptyScene,NewSceneMode.Single);var controller=new GameObject("Dual dashboards | explicit preview telemetry").AddComponent<HUDPreviewController>();controller.cars=new GameObject[2];var prefab=AssetDatabase.LoadAssetAtPath<GameObject>("Assets/HarborValeGreybox/Expansion/Prefabs/AsterFinch.prefab");for(int i=0;i<2;i++){var car=UnityEngine.Object.Instantiate(prefab);car.name=i==0?"Finch static visual":"Apex static visual";if(i==1)ApexStaticVisual.MakeVisual(car);controller.cars[i]=car;}var camera=new GameObject("Main Camera");camera.tag="MainCamera";var cam=camera.AddComponent<Camera>();cam.backgroundColor=new Color(.055f,.075f,.11f);cam.clearFlags=CameraClearFlags.SolidColor;camera.transform.position=new Vector3(5.3f,2.6f,6);camera.transform.LookAt(new Vector3(0,.65f,0));camera.AddComponent<AudioListener>();var light=new GameObject("Dashboard review light").AddComponent<Light>();light.type=LightType.Directional;light.intensity=1.2f;light.transform.rotation=Quaternion.Euler(40,-30,0);RenderSettings.ambientLight=new Color(.5f,.6f,.7f);PreviewBake.Materials("Assets/ClaudeDashboards/Generated");string scene="Assets/ClaudeDashboards/Scenes/DashboardPreview.unity";EditorSceneManager.SaveScene(EditorSceneManager.GetActiveScene(),scene);PlayerSettings.productName="HarborValeDashboardPreview";PlayerSettings.defaultScreenWidth=1280;PlayerSettings.defaultScreenHeight=800;PlayerSettings.fullScreenMode=FullScreenMode.Windowed;PlayerSettings.runInBackground=true;Directory.CreateDirectory("Verification/HUD/Windows");var r=BuildPipeline.BuildPlayer(new BuildPlayerOptions{scenes=new[]{scene},target=BuildTarget.StandaloneWindows64,locationPathName="Verification/HUD/Windows/DashboardPreview.exe",options=BuildOptions.Development});File.WriteAllText("Verification/HUD/build.txt",r.summary.result+" | errors "+r.summary.totalErrors);if(r.summary.result!=BuildResult.Succeeded)throw new Exception("Dashboard export failed");AssetDatabase.ExportPackage(new[]{"Assets/ClaudeGarage","Assets/ClaudeSFX","Assets/ClaudeDashboards","Assets/Review","Assets/HarborValeGreybox/Expansion/Prefabs/AsterFinch.prefab"},"Verification/HUD/ReviewedPreviews.unitypackage",ExportPackageOptions.Recurse|ExportPackageOptions.IncludeDependencies);}
+}
+}

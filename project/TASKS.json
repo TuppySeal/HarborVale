@@ -2,9 +2,9 @@
   "schema_version": 1,
   "project_title": "Redline: From Rust to Riches",
   "project_stage": "implementation",
-  "updated_at": "2026-11-19T03:43:36.930Z",
-  "current_task_id": null,
-  "next_task_id": null,
+  "updated_at": "2026-11-19T05:18:12.367Z",
+  "current_task_id": "M14-T02",
+  "next_task_id": "M14-T02",
   "status_values": [
     "not_started",
     "in_progress",
@@ -861,9 +861,100 @@
       "remaining_steps": [],
       "blockers": [],
       "updated_at": "2026-11-19T03:43:36.930Z"
+    },
+    {
+      "id": "M13-T01",
+      "title": "Verify and repair isolated Claude garage preview",
+      "milestone": "M13",
+      "depends_on": [
+        "M12-T06"
+      ],
+      "status": "done",
+      "spec_ref": "docs/05_BUILD_ROADMAP.md",
+      "acceptance_key": "M13-T01",
+      "evidence": [
+        "artifacts/qa/M13-T01/build.txt",
+        "artifacts/qa/M13-T01/scene-results.txt",
+        "artifacts/qa/M13-T01/playmode.txt",
+        "artifacts/qa/M13-T01/native-results.txt"
+      ],
+      "remaining_steps": [],
+      "blockers": [],
+      "updated_at": "2026-11-19T04:11:39.451Z"
+    },
+    {
+      "id": "M13-T02",
+      "title": "Verify isolated conditional audio and visual effects demo",
+      "milestone": "M13",
+      "depends_on": [
+        "M13-T01"
+      ],
+      "status": "done",
+      "spec_ref": "docs/05_BUILD_ROADMAP.md",
+      "acceptance_key": "M13-T02",
+      "evidence": [
+        "artifacts/qa/M13-T02/build.txt",
+        "artifacts/qa/M13-T02/native-results.txt",
+        "artifacts/qa/M13-T02/media-check.json"
+      ],
+      "remaining_steps": [],
+      "blockers": []
+    },
+    {
+      "id": "M13-T03",
+      "title": "Verify distinct Finch and Apex dashboard previews",
+      "milestone": "M13",
+      "depends_on": [
+        "M13-T02"
+      ],
+      "status": "done",
+      "spec_ref": "docs/05_BUILD_ROADMAP.md",
+      "acceptance_key": "M13-T03",
+      "evidence": [
+        "artifacts/qa/M13-T03/build.txt",
+        "artifacts/qa/M13-T03/native-results.txt"
+      ],
+      "remaining_steps": [],
+      "blockers": []
+    },
+    {
+      "id": "M14-T01",
+      "title": "Polished easy-to-use one-shop garage interface",
+      "milestone": "M14",
+      "depends_on": [
+        "M13-T03"
+      ],
+      "status": "done",
+      "spec_ref": "docs/05_BUILD_ROADMAP.md",
+      "acceptance_key": "M14-T01",
+      "evidence": [
+        "project/WORKSHOP_HANDOFF.md",
+        "artifacts/qa/M14-T01/native-v3/native-results.txt",
+        "artifacts/qa/M14-T01/final-transitions-retry/player-smoke.txt"
+      ],
+      "remaining_steps": [],
+      "blockers": []
+    },
+    {
+      "id": "M14-T02",
+      "title": "Expanded induction, brake and optional burble/flame tune catalogue",
+      "milestone": "M14",
+      "depends_on": [
+        "M14-T01"
+      ],
+      "status": "not_started",
+      "spec_ref": "docs/05_BUILD_ROADMAP.md",
+      "acceptance_key": "M14-T02",
+      "evidence": [],
+      "remaining_steps": [
+        "Author compatible small/large/twin turbo and supercharger alternatives with real curves",
+        "Add real brakes, tune options and explicit burble/flame power tradeoff",
+        "Preserve existing paid history atomically and verify saves/performance/SFX gates"
+      ],
+      "blockers": []
     }
   ],
   "implementation_authorized": true,
   "current_design_amendment": "docs/12_CONFIRMED_FEATURE_CHOICES.md",
-  "authorization_scope": "User-authorized smoother driving, automatic downshift repair and optional paddle-style manual shifting"
+  "authorization_scope": "Finish isolated previews first, then prioritize a polished usable main garage GUI and compatible expanded real parts/tunes with disclosed power tradeoffs"
 }

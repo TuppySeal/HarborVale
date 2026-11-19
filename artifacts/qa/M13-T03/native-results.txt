@@ -1,0 +1,4 @@
+PASS stationary trip does not advance; 36 km/h × 1 s = 0.01 km
+PASS rendered distinct Finch dual analog cluster with explicit simulated trip and unconnected odometer
+PASS rendered distinct Apex central performance ring cluster with explicit simulated trip and unconnected odometer
+PASS no game progression/mileage persistence or physics component involved

@@ -1,0 +1,17 @@
+PASS No hardware means no forced-induction sound
+PASS Turbo follows boost and load
+PASS No load mutes turbo layer
+PASS Airborne slip produces no tire sound/smoke
+PASS No tire slip means no squeal
+PASS Grounded slip drives squeal
+PASS Supercharger is silent without explicit preview hardware permission
+PASS Supercharger preview hardware enables whine
+PASS Exhaust pop rejects missing downpipe
+PASS Downpipe high-RPM lift allows pop
+PASS Effects create no rigidbody or wheel physics
+PASS Apex uses actual distinct sports visual
+Native DSP mix: 2023424 samples, 48000 Hz, 2 channels, RMS 0.07332, peak 0.3920. Captured the generated AudioSource output, not a separate synthesized soundtrack.
+PASS Actual generated DSP output captured to PCM WAV
+PASS Visual effects do not move car root 0
+PASS Visual effects do not move car root 1
+PASS No native runtime errors

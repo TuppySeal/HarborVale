@@ -1,0 +1,24 @@
+PASS Scene opens with all four wired displays
+PASS Original Finch visual loaded; no cube substitute
+PASS Preview creates no car physics
+PASS Selection shows engine_stage1
+PASS Actual part geometry exists
+PASS Mock fitment toggles on
+PASS Mock fitment toggles off
+PASS Selection shows gearbox_stage1
+PASS Actual part geometry exists
+PASS Mock fitment toggles on
+PASS Mock fitment toggles off
+PASS Selection shows turbo_stage2
+PASS Actual part geometry exists
+PASS Mock fitment toggles on
+PASS Mock fitment toggles off
+PASS Turbo package includes distinct basic cooler
+PASS Selection shows intercooler_stage1
+PASS Actual part geometry exists
+PASS Mock fitment toggles on
+PASS Mock fitment toggles off
+PASS Orbit and zoom action changes real camera
+PASS Reset view restores camera distance
+PASS Menu reopens
+PASS No native runtime exceptions

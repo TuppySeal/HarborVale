@@ -1,17 +1,9 @@
-# HarborVale — smoother automatic and paddle-style manual
+# HarborVale — workshop interface checkpoint
 
-Canonical Unity: C:/Users/Justice/Documents/Unity/HarborVale, pinned 6000.6.0f1. Completed bounded prototype tasks M11-T01–T03 and M12-T01–T06. Full career/ownership/maintenance remains planned.
+Canonical Unity project: C:/Users/Justice/Documents/Unity/HarborVale. Latest Windows player: Builds/HarborVale-Workshop/HarborVale.exe. Original SmoothDrive build retained.
 
-Latest Windows player: Builds/HarborVale-SmoothDrive/HarborVale.exe. Close old game windows before using this release. The same hub selects saved Finch or free Apex. Prior Play/TurboParts/SportsTest builds and original city/static Finch/handling scene are retained.
+M11/M12 driving, trial, paid four-part garage, free Apex tests and smooth automatic/manual transmission remain implemented. M13 standalone garage/effects/dashboard review complete; previews are outside game Assets and are not live gameplay integrations. M14-T01 polished garage interface implemented and native verified: 24 GUI + 47 unified-player checks. Read WORKSHOP_HANDOFF.md for controls, scope, evidence and limitations.
 
-Automatic now road-matches lower gears while slowing and kicks down on renewed strong demand or lugging, with hysteresis/cooldown. Loaded-slip upshifts avoid lingering on the limiter. Smooth clutch re-engagement, modest engine braking and throttle/brake/audio-pitch ramps reduce abrupt transitions. Authored torque curves, prices, grip and camera tuning unchanged.
+M14-T02 expanded real hardware/calibrations remains pending implementation. GUI is the user priority. Additional superchargers, turbo sizes/twins, brakes and burble/flame tunes require authored curves, real compatibility/costs and safe v4 migration; see EXPANDED_PARTS_IMPLEMENTATION_PLAN.md. Existing four Finch prices and v3 save path unchanged.
 
-M toggles auto/manual; Z down/X up, with clickable HUD controls. Successful paddle use selects manual; unsafe over-rev, reverse, bounds and overlapping shifts reject visibly. Manual holds gears, selects first when rolling to a stop, and allows intentional second-gear stationary launch. Mode survives recovery/hardware changes within a drive and defaults to auto on a new scene visit. Shop/countdown/map input locks block shifting. See SHIFTING_HANDOFF.md.
-
-Finch v3 paid parts/earnings/migrations unchanged. One-location Stage1 400 → gearbox 250 → turbo/basic cooler 1900 → street cooler 400. Sports free parts/session timing remain separate from career. No save schema or account edits for this feature. Read BOOST_HANDOFF.md, SPORTS_TEST_HANDOFF.md and LAUNCH_HANDOFF.md for retained systems.
-
-Evidence M12-T06: 104 native rule/physics assertions, 19 native Windows manual/automatic checks, 47 unified-player purchase/save/transition/timing checks, parts/trial regressions and zero-error export. Actual UI captures inspected. Installed 12 source/meta files and all 249 player/data files match tested copy by SHA256. Synthetic reproduction selected first safely after slowdown where legacy Finch/Apex remained in fourth/fifth after 0.6 s. Current native 0–100: Finch stock 13.46, Stage1 12.72, turbo 10.48, cooler 10.28; Apex upgraded 4.32 s (city timer fixture 4.31). Earlier handoff timings describe earlier releases.
-
-Objective checks do not prove subjective full-lap smoothness. Physical keyboard/mouse feel, controller hardware, listening, road-seam/camera preferences and frame-pacing remain review items. Existing editor-only K001 recorded; K002 automatic hesitation resolved. No Claude previews were modified/integrated. FEATURE_CHECKLIST.md separates completed from future work. Publication record follows after upload.
-
-Implementation uploaded and remote-verified at 758fa45fe6f4e2e1e4b37da26fea61f0d371483a. See SHIFTING_GITHUB_VERIFICATION.json.
+User authorized direct coordination with Claude and Antigravity while away. Claude owns brake asset verification in its art folder; Antigravity owns read-only interface review in its QA folder. Codex owns gameplay/UI/saves. No external output is integrated solely from a completion claim. Actual manual driving feel, audio listening and live saved odometer remain unverified/unimplemented as applicable.

@@ -1,0 +1,24 @@
+PASS Hub opens Finch drive
+PASS Garage interface opens through real modal
+PASS Driving/shift HUD hidden and controls locked in shop
+PASS Search and category filter find turbo
+PASS Turbo exposes both Stage1 and gearbox prerequisites
+PASS Cooling exposes the full three-part prerequisite path
+PASS Requirement action selects missing Stage1
+PASS Visible Stage1 action purchases once
+PASS Turbo guidance selects missing gearbox
+PASS Gearbox installed from guided flow
+PASS Turbo installed from real purchase flow
+PASS Intercooler installed with exact remaining balance
+PASS Repeated install cannot charge again
+PASS Empty search returns a clear no-results state
+PASS Closing restores driving HUD/input
+PASS Repeated garage open 0
+PASS Repeated garage open 1
+PASS Repeated garage open 2
+PASS Preview never duplicates vehicle physics
+PASS Preview camera/model cleaned up on close
+PASS Garage opens at 1280x720
+PASS Garage opens at 1600x900
+PASS All four real purchases persist after UI changes
+PASS No native runtime errors
