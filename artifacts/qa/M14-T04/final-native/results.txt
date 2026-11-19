@@ -1,0 +1,32 @@
+PASS Workshop opens on isolated paid profile
+PASS Default release is blow-off valve
+PASS Garage audition plays through a real AudioSource
+PASS Audition cannot create real boost on stock NA car
+PASS Garage audition stops cleanly
+PASS Install actual turbo path na_1
+PASS Install actual turbo path gearbox_1
+PASS Install actual turbo path induction_small_1
+PASS Install actual grip path tires_1
+PASS Install actual grip path tires_2
+PASS Install actual grip path tires_3
+PASS Stopped workshop opens for BlowOffValve
+PASS Select BlowOffValve in real workshop
+PASS Audio selection leaves paid ledger byte-unchanged BlowOffValve
+PASS Actual turbo pull builds pressure for BlowOffValve
+PASS Real boost plus driver lift fires BlowOffValve
+PASS Held lift does not repeat BlowOffValve
+PASS Native listener captures audible BlowOffValve
+PASS Stopped workshop opens for Flutter
+PASS Select Flutter in real workshop
+PASS Audio selection leaves paid ledger byte-unchanged Flutter
+PASS Actual turbo pull builds pressure for Flutter
+PASS Real boost plus driver lift fires Flutter
+PASS Held lift does not repeat Flutter
+PASS Native listener captures audible Flutter
+PASS Sound choices cannot change torque curves, mass or transmission
+PASS Apex visit has independent default audio preference
+PASS Apex audio selection is free and temporary
+PASS Apex cannot change paid ledger or Finch preference
+PASS Finch flutter preference reloads after scene roundtrip
+PASS Audio adds no wheel physics
+PASS No native runtime errors

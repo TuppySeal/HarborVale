@@ -101,3 +101,7 @@ User authorized the recommended LSD, adjustable suspension, gearing and aero sta
 
 ## D054 — Tune-dependent brake staging
 User requested brake+accelerator near4000RPM by tune. Implement stopped first-gear staging with actual rev/spool carry, partial clutch load and finite release; countdown permits holding behind locked brakes without an early start. No rolling boost, artificial launch-force multiplier or thermal/wear simulation.
+
+
+## D055 — Turbo sound profiles without paid-state changes
+User requests more realistic turbo audio and BOV or stututu choice. Provide original airflow/spool synthesis and actual boosted-lift releases; treat selection as a free cosmetic preference separate from paid v5 state and burble/flame tunes. Save Finch atomically, keep Apex temporary. No engine-power, physical surge, valve hardware or wear change implied.

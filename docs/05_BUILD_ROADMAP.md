@@ -248,3 +248,7 @@ After review/interface, add small/large turbo choices, supercharger alternatives
 
 ### M14-T03 — Chassis, wheelspin, dyno and staging (done)
 Three sequential paid LSD/suspension/gearing/aero stages, parked setup, physical driven-wheel burnout, HP/estimated WHP/weight and W+S tune-dependent staging. Native rules and player checks passed; see project/CHASSIS_HANDOFF.md.
+
+
+### M14-T04 — Selectable turbo spool/release audio (done)
+State-driven airflow, BOV/flutter, free garage audio preferences/previews, native pulls/audio and paid-state isolation. See project/TURBO_AUDIO_HANDOFF.md.

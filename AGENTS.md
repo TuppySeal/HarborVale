@@ -36,3 +36,7 @@ M14-T02 complete; read project/STAGED_WORKSHOP_HANDOFF.md first for parts/save e
 
 ## Latest chassis and staged launch expansion
 M14-T03 complete. Read project/CHASSIS_HANDOFF.md before edits. Latest player Builds/HarborVale-Chassis. 49 offers with paid chassis hardware, free bounded parked setup receipts and v5 one-time validated migration from v4/v3/v2/v1. Preserve historical amounts, original fees/curves, free Apex isolation and all protected scene/prefab assets. W+S stopped first-gear brake staging carries finite actual rev/spool state; countdown brakes block early release. Burnout effects must follow grounded powered contact slip. WHP is estimated, mass includes aero hardware. Human handling/listening review remains; no thermal/wear/full-career scope implied.
+
+
+## Latest turbo audio expansion
+M14-T04 complete. Read project/TURBO_AUDIO_HANDOFF.md. Latest player Builds/HarborVale-TurboAudio. Paid state/catalog remain v5/49offers. BOV/flutter is a free cosmetic preference stored separately; Apex temporary. Release follows actual boosted driver lift, never key-only/NA/Roots effects. Preserve real state gates, atomic settings error handling and audio-thread safety. Procedural sound is not real-car recording or physical surge/valve simulation.

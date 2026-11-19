@@ -1,0 +1,27 @@
+# Turbo spool, blow-off valve and flutter — M14-T04
+
+Unity6000.6.0f1. Canonical C:/Users/Justice/Documents/Unity/HarborVale. Latest Windows executable Builds/HarborVale-TurboAudio/HarborVale.exe. Previous Chassis build and gameplay video remain. No map, static prefab, powertrain, handling, paid catalog or race-save schema edits.
+
+## Player controls
+
+Stop at the Finch garage and press G, then Turbo audio in the footer. Apex has the same page while stopped. Choose Blow-off valve or Flutter / stututu. Both are free audio preferences, independently selectable from burble/flame exhaust tunes. Preview sound auditions a three-second simulated spool/release without creating real boost or moving the car. Close stops preview. Normal driving release requires an actual boosted throttle lift; no release from simply idling/revving without boost. NA and Roots cars cannot emit turbo effects. Install a compatible small/large/twin turbo to hear the selected profile in driving. Apex preference is temporary and starts at default BOV each visit.
+
+## Runtime audio
+
+WorkshopAudioVoice retains the procedural engine, supercharger, tire and exhaust-pop layers. TurboSoundDsp replaces the old pure whistle with filtered broadband airflow, a small modulated compressor harmonic, smoothed load/spool response and kit-dependent pitch (large lower, twins slightly higher). Audio uses actual boost/load/spool state, not a permanent RPM-only whistle. The release gate arms under throttle with boost above0.08bar; a raw pedal lift below0.15 after above0.4 fires once if current pressure remains above0.04bar. Actual pre-lift pressure controls release strength; holding lift cannot retrigger. Losing boost resets old pressure. It does not falsely treat an automatic shift/clutch cut as a driver lift.
+
+BOV is a fast pressure-release noise attack and decaying airy tail. Flutter is a finite4–7 separated pulses with increasing spacing and declining strength. Under1.2bar test input it produced6 measured bursts at22050/44100/48000Hz; both choices returned to silence and stayed finite/unclipped. Synthesis is original deterministic noise/filter/harmonics, with no downloaded clips or licensing dependencies. Audio-thread requests are exchanged atomically; rendering uses no Unity random API. Focus/modal/hardware/reset changes cancel stale release. Preview uses the exact same synthesis separately; it never drives physics or edits wheel animation.
+
+These are improved procedural effects, not recordings of a real car and not a physical compressor-surge or valve simulation. Selection intentionally changes no HP, WHP, torque, spool response, mass, grip or wear. Subjective realism and balance still benefit from listening on the user's speakers/headphones. Existing exhaust pop/flame power tradeoffs are preserved separately.
+
+## Cosmetic preference persistence
+
+Paid race state remains v5, exactly unchanged. Finch's preference is stored at the active race-store path plus .turbo-audio.json (production: race-progress-v5.json.turbo-audio.json). Separate version1 JSON stores releaseMode0=BOV or1=flutter; missing file defaults BOV. Save writes/flushed temporary bytes then atomic replace. Invalid enum, malformed settings or unknown future version reject without overwriting that file; UI reports an audio-settings error, while paid state is unaffected. Failed write preserves prior preference and active selection. This is cosmetic settings persistence, not a paid part receipt or schema migration. Performance/timing signatures exclude the preference.
+
+## Actual verification
+
+New DSP/gate/preference rules29; existing brake staging12, chassis23, workshop225, garage18, boost27, trial25 and shifting104 passed. Final native Windows sound checks32, workshop51, scene/timing/save transitions47 passed. Real small-turbo pulls fired each release once after measured boost; captured actual stereo48kHz listener output with nonzero signal. Garage audition played on an AudioSource while the stock NA car retained zero boost, stopped cleanly, and could not alter physics. Preference survived a scene roundtrip; selection left the paid ledger byte-identical and Apex changed neither paid file nor Finch preference. Native runtime error monitor passed. Actual new interface screenshot inspected at1280x720. The unchanged general workshop also retained its720/900 checks. Build succeeded with0errors; all249 player files and43 workshop source/data files SHA-verified. Seven protected assets/sources matched. Detailed QA under artifacts/qa/M14-T04; logs/test accounts omitted from Git.
+
+Audio comparison: Builds/Demos/TurboAudio/Blowoff-then-Flutter.m4a (BOV first0–3s, flutter second3–6s). This is an audition using simulated identical boost input, not claimed driving footage. Native_BlowOffValve.wav and Native_Flutter.wav are actual staged-pull listener captures including engine/tire layers. Also in workspace deliverables/HarborVale-Turbo-Audio. For repeatable checks run TurboAudioVerification.Release in the disposable validation copy and --turbo-audio-check-dir with a fresh isolated folder. Retained historical migration test needs the prior local v4 fixture described in CHASSIS_HANDOFF.md. Do not target real paid state with test flags.
+
+Next: human listen/drive review of small/large/twin spool and both lift profiles at varying boost, preview/close behavior, rapid throttle and keyboard/controller inputs. Prior chassis/full-lap limitations remain in CHASSIS_HANDOFF.md. No additional gameplay scope implied; Claude/Antigravity original projects remain untouched.

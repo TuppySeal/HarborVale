@@ -1,0 +1,225 @@
+PASS Production v4 path separate from read-only v3 legacy source
+PASS Unique authored IDs car_finch
+PASS Reachable staged offer car_finch na_1
+PASS Valid authored net curve na_1
+PASS Reachable staged offer car_finch na_2
+PASS Valid authored net curve na_2
+PASS Reachable staged offer car_finch na_3
+PASS Valid authored net curve na_3
+PASS Reachable staged offer car_finch gearbox_1
+PASS Valid authored net curve gearbox_1
+PASS Reachable staged offer car_finch gearbox_2
+PASS Valid authored net curve gearbox_2
+PASS Reachable staged offer car_finch gearbox_3
+PASS Valid authored net curve gearbox_3
+PASS Reachable staged offer car_finch induction_small_1
+PASS Valid authored net curve induction_small_1
+PASS Reachable staged offer car_finch induction_small_2
+PASS Valid authored net curve induction_small_2
+PASS Reachable staged offer car_finch induction_small_3
+PASS Valid authored net curve induction_small_3
+PASS Reachable staged offer car_finch induction_large_1
+PASS Valid authored net curve induction_large_1
+PASS Reachable staged offer car_finch induction_large_2
+PASS Valid authored net curve induction_large_2
+PASS Reachable staged offer car_finch induction_large_3
+PASS Valid authored net curve induction_large_3
+PASS Reachable staged offer car_finch induction_roots_1
+PASS Valid authored net curve induction_roots_1
+PASS Reachable staged offer car_finch induction_roots_2
+PASS Valid authored net curve induction_roots_2
+PASS Reachable staged offer car_finch induction_roots_3
+PASS Valid authored net curve induction_roots_3
+PASS Unsupported Finch twin clearly gated
+PASS Unsupported Finch twin clearly gated
+PASS Unsupported Finch twin clearly gated
+PASS Reachable staged offer car_finch cooling_1
+PASS Valid authored net curve cooling_1
+PASS Reachable staged offer car_finch cooling_2
+PASS Valid authored net curve cooling_2
+PASS Reachable staged offer car_finch cooling_3
+PASS Valid authored net curve cooling_3
+PASS Reachable staged offer car_finch brakes_1
+PASS Valid authored net curve brakes_1
+PASS Reachable staged offer car_finch brakes_2
+PASS Valid authored net curve brakes_2
+PASS Reachable staged offer car_finch brakes_3
+PASS Valid authored net curve brakes_3
+PASS Reachable staged offer car_finch intake_1
+PASS Valid authored net curve intake_1
+PASS Reachable staged offer car_finch intake_2
+PASS Valid authored net curve intake_2
+PASS Reachable staged offer car_finch exhaust_1
+PASS Valid authored net curve exhaust_1
+PASS Reachable staged offer car_finch exhaust_2
+PASS Valid authored net curve exhaust_2
+PASS Reachable staged offer car_finch sound_road_1
+PASS Valid authored net curve sound_road_1
+PASS Reachable staged offer car_finch sound_burble_1
+PASS Valid authored net curve sound_burble_1
+PASS Reachable staged offer car_finch sound_burble_2
+PASS Valid authored net curve sound_burble_2
+PASS Reachable staged offer car_finch sound_flame_1
+PASS Valid authored net curve sound_flame_1
+PASS Reachable staged offer car_finch sound_flame_2
+PASS Valid authored net curve sound_flame_2
+PASS Reachable staged offer car_finch induction_none_1
+PASS Valid authored net curve induction_none_1
+PASS Reachable staged offer car_finch tires_1
+PASS Valid authored net curve tires_1
+PASS Reachable staged offer car_finch tires_2
+PASS Valid authored net curve tires_2
+PASS Reachable staged offer car_finch tires_3
+PASS Valid authored net curve tires_3
+PASS Reachable staged offer car_finch differential_1
+PASS Valid authored net curve differential_1
+PASS Reachable staged offer car_finch differential_2
+PASS Valid authored net curve differential_2
+PASS Reachable staged offer car_finch differential_3
+PASS Valid authored net curve differential_3
+PASS Reachable staged offer car_finch suspension_1
+PASS Valid authored net curve suspension_1
+PASS Reachable staged offer car_finch suspension_2
+PASS Valid authored net curve suspension_2
+PASS Reachable staged offer car_finch suspension_3
+PASS Valid authored net curve suspension_3
+PASS Reachable staged offer car_finch gearing_1
+PASS Valid authored net curve gearing_1
+PASS Reachable staged offer car_finch gearing_2
+PASS Valid authored net curve gearing_2
+PASS Reachable staged offer car_finch gearing_3
+PASS Valid authored net curve gearing_3
+PASS Reachable staged offer car_finch aero_1
+PASS Valid authored net curve aero_1
+PASS Reachable staged offer car_finch aero_2
+PASS Valid authored net curve aero_2
+PASS Reachable staged offer car_finch aero_3
+PASS Valid authored net curve aero_3
+PASS Unique authored IDs car_apex_test
+PASS Reachable staged offer car_apex_test na_1
+PASS Valid authored net curve na_1
+PASS Reachable staged offer car_apex_test na_2
+PASS Valid authored net curve na_2
+PASS Reachable staged offer car_apex_test na_3
+PASS Valid authored net curve na_3
+PASS Reachable staged offer car_apex_test gearbox_1
+PASS Valid authored net curve gearbox_1
+PASS Reachable staged offer car_apex_test gearbox_2
+PASS Valid authored net curve gearbox_2
+PASS Reachable staged offer car_apex_test gearbox_3
+PASS Valid authored net curve gearbox_3
+PASS Reachable staged offer car_apex_test induction_small_1
+PASS Valid authored net curve induction_small_1
+PASS Reachable staged offer car_apex_test induction_small_2
+PASS Valid authored net curve induction_small_2
+PASS Reachable staged offer car_apex_test induction_small_3
+PASS Valid authored net curve induction_small_3
+PASS Reachable staged offer car_apex_test induction_large_1
+PASS Valid authored net curve induction_large_1
+PASS Reachable staged offer car_apex_test induction_large_2
+PASS Valid authored net curve induction_large_2
+PASS Reachable staged offer car_apex_test induction_large_3
+PASS Valid authored net curve induction_large_3
+PASS Reachable staged offer car_apex_test induction_roots_1
+PASS Valid authored net curve induction_roots_1
+PASS Reachable staged offer car_apex_test induction_roots_2
+PASS Valid authored net curve induction_roots_2
+PASS Reachable staged offer car_apex_test induction_roots_3
+PASS Valid authored net curve induction_roots_3
+PASS Reachable staged offer car_apex_test induction_twin_1
+PASS Valid authored net curve induction_twin_1
+PASS Reachable staged offer car_apex_test induction_twin_2
+PASS Valid authored net curve induction_twin_2
+PASS Reachable staged offer car_apex_test induction_twin_3
+PASS Valid authored net curve induction_twin_3
+PASS Reachable staged offer car_apex_test cooling_1
+PASS Valid authored net curve cooling_1
+PASS Reachable staged offer car_apex_test cooling_2
+PASS Valid authored net curve cooling_2
+PASS Reachable staged offer car_apex_test cooling_3
+PASS Valid authored net curve cooling_3
+PASS Reachable staged offer car_apex_test brakes_1
+PASS Valid authored net curve brakes_1
+PASS Reachable staged offer car_apex_test brakes_2
+PASS Valid authored net curve brakes_2
+PASS Reachable staged offer car_apex_test brakes_3
+PASS Valid authored net curve brakes_3
+PASS Reachable staged offer car_apex_test intake_1
+PASS Valid authored net curve intake_1
+PASS Reachable staged offer car_apex_test intake_2
+PASS Valid authored net curve intake_2
+PASS Reachable staged offer car_apex_test exhaust_1
+PASS Valid authored net curve exhaust_1
+PASS Reachable staged offer car_apex_test exhaust_2
+PASS Valid authored net curve exhaust_2
+PASS Reachable staged offer car_apex_test sound_road_1
+PASS Valid authored net curve sound_road_1
+PASS Reachable staged offer car_apex_test sound_burble_1
+PASS Valid authored net curve sound_burble_1
+PASS Reachable staged offer car_apex_test sound_burble_2
+PASS Valid authored net curve sound_burble_2
+PASS Reachable staged offer car_apex_test sound_flame_1
+PASS Valid authored net curve sound_flame_1
+PASS Reachable staged offer car_apex_test sound_flame_2
+PASS Valid authored net curve sound_flame_2
+PASS Reachable staged offer car_apex_test induction_none_1
+PASS Valid authored net curve induction_none_1
+PASS Reachable staged offer car_apex_test tires_1
+PASS Valid authored net curve tires_1
+PASS Reachable staged offer car_apex_test tires_2
+PASS Valid authored net curve tires_2
+PASS Reachable staged offer car_apex_test tires_3
+PASS Valid authored net curve tires_3
+PASS Reachable staged offer car_apex_test differential_1
+PASS Valid authored net curve differential_1
+PASS Reachable staged offer car_apex_test differential_2
+PASS Valid authored net curve differential_2
+PASS Reachable staged offer car_apex_test differential_3
+PASS Valid authored net curve differential_3
+PASS Reachable staged offer car_apex_test suspension_1
+PASS Valid authored net curve suspension_1
+PASS Reachable staged offer car_apex_test suspension_2
+PASS Valid authored net curve suspension_2
+PASS Reachable staged offer car_apex_test suspension_3
+PASS Valid authored net curve suspension_3
+PASS Reachable staged offer car_apex_test gearing_1
+PASS Valid authored net curve gearing_1
+PASS Reachable staged offer car_apex_test gearing_2
+PASS Valid authored net curve gearing_2
+PASS Reachable staged offer car_apex_test gearing_3
+PASS Valid authored net curve gearing_3
+PASS Reachable staged offer car_apex_test aero_1
+PASS Valid authored net curve aero_1
+PASS Reachable staged offer car_apex_test aero_2
+PASS Valid authored net curve aero_2
+PASS Reachable staged offer car_apex_test aero_3
+PASS Valid authored net curve aero_3
+PASS Four frozen legacy prices preserved
+PASS Legacy small turbo/street cooler curve exact
+PASS Stage2 burble costs exactly 4% once
+PASS Repeated resolution cannot compound tune loss
+PASS SC uses immediate net curve, not turbo spool
+PASS SC cannot trigger turbo sound
+PASS Lift effect requires actual ground/load transition
+PASS Cannot skip staged prerequisites
+PASS New conversion charges once
+PASS Committed request retry idempotent
+PASS Conversion replaces kit and retains paid matched cooling
+PASS No charge for same active kit
+PASS Returning to prior kit is a new disclosed full-kit payment
+PASS Atomic write failure rejected
+PASS Failed payment changes no saved credits/build
+PASS Real staged hardware reloads
+PASS v3 migration preserves paid ledger and exact balance
+PASS Migration materializes v4 once; source byte-unchanged
+PASS v4 never reimports old save
+PASS Unknown newer schema preserved/rejected
+PASS Future file not overwritten
+PASS Measured Finch 100-2 km/h braking S0: 36.87 m
+PASS Actual front brake torque S0: 724.8 Nm
+PASS Measured Finch 100-2 km/h braking S1: 36.87 m
+PASS Actual front brake torque S1: 835.6 Nm
+PASS Measured Finch 100-2 km/h braking S2: 36.87 m
+PASS Actual front brake torque S2: 926.2 Nm
+PASS Measured Finch 100-2 km/h braking S3: 36.87 m
+PASS Actual front brake torque S3: 1016.8 Nm

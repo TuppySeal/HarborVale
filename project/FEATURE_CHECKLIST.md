@@ -54,3 +54,5 @@ Do not interpret a check here as unperformed controller, full-campaign, frame-ra
 - [x] M14-T02: 37 staged customization offers, exclusive induction/sound, real brakes/tires and v4 paid history migration; free Apex counterparts. See STAGED_WORKSHOP_HANDOFF.md for bounds and actual tests.
 
 - [x] M14-T03: 49 offers; staged LSD/suspension/gearing/aero and saved setup, physical burnout/smoke, HP/estimated WHP/kg, tune-dependent brake staging with countdown safety. Native verification recorded in CHASSIS_HANDOFF.md.
+
+- [x] M14-T04: Original state-driven turbo spool/airflow, pressure-scaled BOV/flutter, garage preview/selection, separate saved Finch cosmetic preference and temporary Apex option; native audio verified.

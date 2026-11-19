@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project_title": "Redline: From Rust to Riches",
   "project_stage": "implementation",
-  "updated_at": "2026-11-19T08:08:15.190Z",
+  "updated_at": "2026-11-19T08:41:04.387Z",
   "current_task_id": null,
   "next_task_id": null,
   "status_values": [
@@ -972,6 +972,24 @@
         "artifacts/qa/M14-T03/brakeboost-player/player-results.txt",
         "artifacts/qa/M14-T03/transitions-final/player-smoke.txt",
         "artifacts/qa/M14-T03/install-verification.json"
+      ],
+      "remaining_steps": [],
+      "blockers": []
+    },
+    {
+      "id": "M14-T04",
+      "title": "State-driven turbo spool, blow-off valve and selectable flutter audio",
+      "milestone": "M14",
+      "depends_on": [
+        "M14-T03"
+      ],
+      "status": "done",
+      "spec_ref": "project/TURBO_AUDIO_HANDOFF.md",
+      "evidence": [
+        "project/TURBO_AUDIO_HANDOFF.md",
+        "artifacts/qa/M14-T04/audio-rules.txt",
+        "artifacts/qa/M14-T04/final-native/results.txt",
+        "artifacts/qa/M14-T04/install-verification.json"
       ],
       "remaining_steps": [],
       "blockers": []

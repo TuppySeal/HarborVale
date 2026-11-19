@@ -2,7 +2,7 @@ using UnityEngine;
 namespace HarborValeGreybox.Workshop {
 public sealed partial class ExpandedWorkshopView {
  bool setupMode;WorkshopSetup setupDraft;public bool EditingSetup=>setupMode;
- public void ShowSetup(){setupMode=true;setupDraft=ChassisTuning.Copy(garage.Build.setup);clearFocus=true;}
+ public void ShowSetup(){turboAudioMode=false;garage.StopTurboPreview();setupMode=true;setupDraft=ChassisTuning.Copy(garage.Build.setup);clearFocus=true;}
  int Knob(float x,float y,string title,int value,int min,int max,bool enabled=true,string suffix="%"){
   Label(new Rect(x,y,490,25),enabled?title+"  "+value+suffix:title+" / upgrade required",17,enabled?Color.white:muted);if(!enabled){GUI.enabled=false;GUI.HorizontalSlider(new Rect(x,y+30,470,20),.5f,0,1);GUI.enabled=true;return value;}float next=GUI.HorizontalSlider(new Rect(x,y+30,470,20),value,min,max);return Mathf.RoundToInt(next);
  }
