@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project_title": "Redline: From Rust to Riches",
   "project_stage": "implementation",
-  "updated_at": "2026-11-19T06:47:38.172Z",
+  "updated_at": "2026-11-19T08:08:15.190Z",
   "current_task_id": null,
   "next_task_id": null,
   "status_values": [
@@ -954,9 +954,30 @@
       ],
       "remaining_steps": [],
       "blockers": []
+    },
+    {
+      "id": "M14-T03",
+      "title": "Chassis tuning, physical wheelspin, HP/WHP dyno and brake boosting",
+      "milestone": "M14",
+      "depends_on": [
+        "M14-T02"
+      ],
+      "status": "done",
+      "spec_ref": "project/CHASSIS_HANDOFF.md",
+      "acceptance_key": "M14-T03",
+      "evidence": [
+        "project/CHASSIS_HANDOFF.md",
+        "artifacts/qa/M14-T03/chassis-rules.txt",
+        "artifacts/qa/M14-T03/brakeboost-rules.txt",
+        "artifacts/qa/M14-T03/brakeboost-player/player-results.txt",
+        "artifacts/qa/M14-T03/transitions-final/player-smoke.txt",
+        "artifacts/qa/M14-T03/install-verification.json"
+      ],
+      "remaining_steps": [],
+      "blockers": []
     }
   ],
   "implementation_authorized": true,
   "current_design_amendment": "docs/12_CONFIRMED_FEATURE_CHOICES.md",
-  "authorization_scope": "Finish isolated previews first, then prioritize a polished usable main garage GUI and compatible expanded real parts/tunes with disclosed power tradeoffs"
+  "authorization_scope": "Finish isolated previews first, then prioritize a polished usable main garage GUI and compatible expanded real parts/tunes with disclosed power tradeoffs; M14-T03 chassis stages/settings, physical burnout, HP/estimated WHP/weight and tune-dependent brake boosting"
 }

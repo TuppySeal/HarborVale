@@ -244,3 +244,7 @@ User explicitly prioritizes an easy and attractive GUI. Clear category navigatio
 
 ### M14-T02 — Expanded compatible parts and tunes
 After review/interface, add small/large turbo choices, supercharger alternatives and appropriate twin-turbo setups, real brake upgrades and different calibrated tunes. Burble/flame presets are optional with a disclosed small real power loss. Complete authored torque curves and hardware prerequisites, exclusive induction choices rather than accidental stacking, actual brake effects, state-gated audio/visuals and atomic migration preserving historical paid receipts. Verify persistent builds and measured behavior; no invented service/ownership history.
+
+
+### M14-T03 — Chassis, wheelspin, dyno and staging (done)
+Three sequential paid LSD/suspension/gearing/aero stages, parked setup, physical driven-wheel burnout, HP/estimated WHP/weight and W+S tune-dependent staging. Native rules and player checks passed; see project/CHASSIS_HANDOFF.md.

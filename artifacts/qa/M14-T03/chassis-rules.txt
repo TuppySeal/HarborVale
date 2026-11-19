@@ -1,0 +1,26 @@
+PASS 49 authored offers include 12 chassis stages
+PASS HP conversion and estimated drivetrain WHP exact
+PASS Open differential distributes equal torque
+PASS LSD transfers conserved torque toward slower wheel within bias limit
+PASS No smoke in air or locked garage
+PASS Smoke requires actual powered contact slip/excess wheel speed
+PASS Cannot adjust locked stock suspension
+PASS Free setup saves atomically without changing cash
+PASS Setup request retry idempotent
+PASS Hardware and adjustment values persist together
+PASS Aero mass and final drive enter actual powertrain definition
+PASS Chassis tuning cannot fabricate crank power
+PASS Invalid ratios rejected
+PASS Failed setup write rejected
+PASS Failed setup changes neither saved build nor receipts
+PASS Actual prior-release v4 paid multi-stage build imports to v5
+PASS Prior v4 remains byte-unchanged; default setup retained
+PASS Launch fixture settles on four contacts
+MEASURE tires=0 pedal=1 max excess=13.46m/s slip integral=20.69 burnout=1.70s speed=81.1
+PASS Launch fixture settles on four contacts
+MEASURE tires=3 pedal=1 max excess=9.29m/s slip integral=16.11 burnout=1.08s speed=86.4
+PASS Launch fixture settles on four contacts
+MEASURE tires=0 pedal=0.45 max excess=1.92m/s slip integral=6.39 burnout=0.00s speed=53.7
+PASS Powerful stock-tire launch produces physical wheelspin/burnout
+PASS Track tires reduce measured launch slip energy
+PASS Gentler throttle reduces measured launch slip energy

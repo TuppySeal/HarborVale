@@ -7,15 +7,16 @@ public class FinchVehicle:MonoBehaviour {
  [Header("Accessible stock handling")]
  public float lowSpeedSteer=32,highSpeedSteer=7.5f,steeringResponse=2.4f,antiRoll=3800,aeroCdA=.88f;
  public string PowertrainCarId="car_finch",displayName="ASTER FINCH",driveLabel="FWD";
+ public float differentialBias=1,differentialLock;public float DrivenWheelSlip{get;private set;}public bool IsBurningOut{get;private set;}public int DrivenGroundedWheels{get;private set;}
  public float frontDriveShare=1,forwardGrip=1.15f,lateralGrip=1.10f,downforceCoefficient=.35f;
- public bool playerInput=true,externalInput; public bool controlsLocked; public IFinchRecoveryHandler RecoveryHandler{get;set;}
- public float commandedPedal,commandedSteer;public bool commandedHandbrake;
+ public bool countdownStagingAllowed{get;set;}public bool playerInput=true,externalInput; public bool controlsLocked; public IFinchRecoveryHandler RecoveryHandler{get;set;}
+ public bool IsBrakeBoosting=>Engine!=null&&Engine.BrakeBoostHolding;public float commandedServiceBrake;public float commandedPedal,commandedSteer;public bool commandedHandbrake;
  public Rigidbody Body{get;private set;}public WheelCollider[] Wheels{get;private set;}
  public FinchPowertrain Engine{get;private set;}
  public float SpeedKph=>Body==null?0:Body.linearVelocity.magnitude*3.6f;
  public float ForwardSpeed=>Body==null?0:Vector3.Dot(Body.linearVelocity,transform.forward);
  public float Steering{get;private set;}public int GroundedWheels{get;private set;}public float Brake{get;private set;}public float Throttle{get;private set;}
- Transform[] visual=new Transform[4];float steer,handbrake;Vector3 spawn;Quaternion spawnRotation;
+ bool stagingBrakeLatch;Transform[] visual=new Transform[4];float steer,handbrake;Vector3 spawn;Quaternion spawnRotation;
  public void Initialize(){
   if(Engine!=null)return;
   if(stockDefinition==null)stockDefinition=Resources.Load<TextAsset>("FinchStockPowertrain");
@@ -37,12 +38,13 @@ public class FinchVehicle:MonoBehaviour {
  }
  public int ResetSequence{get;private set;}
  public int InstalledPrototypeStage{get;private set;}
- public void InstallPowertrain(FinchDefinition definition,int stage=0){Initialize();if(definition==null||definition.carId!=PowertrainCarId)throw new System.ArgumentException("Incompatible powertrain");var mode=Engine.Mode;Engine=new FinchPowertrain(definition);Engine.SetMode(mode);InstalledPrototypeStage=stage;}
+ public void InstallPowertrain(FinchDefinition definition,int stage=0){Initialize();if(definition==null||definition.carId!=PowertrainCarId)throw new System.ArgumentException("Incompatible powertrain");var mode=Engine.Mode;Engine=new FinchPowertrain(definition);Body.mass=definition.massKg;foreach(var wheel in Wheels)wheel.sprungMass=Body.mass/4;Engine.SetMode(mode);InstalledPrototypeStage=stage;}
  public bool ToggleTransmissionMode(){Initialize();if(!playerInput||controlsLocked)return false;Engine.SetMode(Engine.Mode==TransmissionMode.Automatic?TransmissionMode.Manual:TransmissionMode.Automatic);return true;}
  public bool PaddleShift(int direction){Initialize();return playerInput&&!controlsLocked&&Engine.RequestShift(direction,ForwardSpeed);}
  void Awake(){Initialize();}
  void Update(){
-  if(!externalInput){commandedPedal=playerInput&&!controlsLocked?FinchInput.Pedal:0;commandedSteer=playerInput&&!controlsLocked?FinchInput.Steer:0;commandedHandbrake=controlsLocked||!playerInput||!Application.isFocused||FinchInput.Held(KeyCode.Space);}
+  if(!externalInput){commandedPedal=playerInput&&(!controlsLocked||countdownStagingAllowed)?(FinchInput.Accelerator>0?FinchInput.Accelerator:-FinchInput.ServiceBrake):0;commandedServiceBrake=playerInput&&(!controlsLocked||countdownStagingAllowed)&&FinchInput.Accelerator>0?FinchInput.ServiceBrake:0;commandedSteer=playerInput&&!controlsLocked?FinchInput.Steer:0;commandedHandbrake=(controlsLocked&&!countdownStagingAllowed)||!playerInput||!Application.isFocused||FinchInput.Held(KeyCode.Space);}
+  if(!externalInput){if(FinchInput.ServiceBrake<.1f)stagingBrakeLatch=false;if(stagingBrakeLatch&&FinchInput.ServiceBrake>.1f&&FinchInput.Accelerator<=0){commandedPedal=0;commandedServiceBrake=1;}}
   if(playerInput&&!externalInput&&!controlsLocked){if(FinchInput.Shortcut(KeyCode.R))Recover();if(FinchInput.Shortcut(KeyCode.M))ToggleTransmissionMode();if(FinchInput.Shortcut(KeyCode.Z))PaddleShift(-1);if(FinchInput.Shortcut(KeyCode.X))PaddleShift(1);}
   if(transform.position.y< -40)Recover();
  }
@@ -50,19 +52,25 @@ public class FinchVehicle:MonoBehaviour {
  public void Tick(float dt){
   Initialize();float forward=ForwardSpeed;float pedal=Mathf.Clamp(commandedPedal,-1,1);
   bool opposite=pedal!=0&&Mathf.Sign(pedal)!=Mathf.Sign(forward)&&Mathf.Abs(forward)>1;
-  float brakeDemand=opposite?Mathf.Abs(pedal):0;
-  Brake=controlsLocked?1:Mathf.MoveTowards(Brake,brakeDemand,dt*10);
-  float demand=controlsLocked||opposite?0:Mathf.Abs(pedal);Throttle=controlsLocked||opposite?0:Mathf.MoveTowards(Throttle,demand,dt*(demand>Throttle?5.5f:8));
+  float service=Mathf.Clamp01(commandedServiceBrake);bool stage=service>.7f&&pedal>.5f&&SpeedKph<2.5f&&Engine.Gear==1&&!Engine.Shifting&&Wheels[0].isGrounded&&Wheels[1].isGrounded&&(!controlsLocked||countdownStagingAllowed)&&playerInput&&!commandedHandbrake;if(stage)stagingBrakeLatch=true;
+  if((pedal<=0||(controlsLocked&&!countdownStagingAllowed)||!playerInput||commandedHandbrake)&&Engine.BrakeBoostHolding){Engine.CancelStaging();Throttle=0;}
+  float brakeDemand=Mathf.Max(opposite?Mathf.Abs(pedal):0,service);
+  bool releaseStaging=Engine.BrakeBoostHolding&&!stage&&service<.2f&&pedal>.5f&&!controlsLocked&&playerInput;Brake=controlsLocked?1:releaseStaging?0:Mathf.MoveTowards(Brake,brakeDemand,dt*10);
+  float demand=(controlsLocked&&!(countdownStagingAllowed&&stage))||opposite||(service>.1f&&!stage)?0:Mathf.Abs(pedal);Throttle=(controlsLocked&&!(countdownStagingAllowed&&stage))||opposite?0:Mathf.MoveTowards(Throttle,demand,dt*(demand>Throttle?5.5f:8));
   bool reverse=pedal<0||(pedal==0&&Engine.Gear<0);
   steer=Mathf.MoveTowards(steer,Mathf.Clamp(commandedSteer,-1,1),steeringResponse*dt);handbrake=Mathf.MoveTowards(handbrake,commandedHandbrake?1:0,dt*6);
   Steering=steer*Mathf.Lerp(lowSpeedSteer,highSpeedSteer,Mathf.Clamp01(SpeedKph/130));
-  float torque=Engine.Step(forward,((Wheels[0].rpm+Wheels[1].rpm)*frontDriveShare+(Wheels[2].rpm+Wheels[3].rpm)*(1-frontDriveShare))*.5f,Throttle,reverse,dt,GroundedWheels>0,Brake);
+  DrivenGroundedWheels=0;for(int i=0;i<4;i++)if(Wheels[i].isGrounded&&(i<2?frontDriveShare>.01f:frontDriveShare<.99f))DrivenGroundedWheels++;
+  if(Engine.BrakeBoostHolding&&!stage&&service<.2f&&pedal>.5f&&!controlsLocked&&playerInput)Engine.ReleaseStaging();
+  float torque=stage?Engine.HoldStaging(Throttle,dt):Engine.Step(forward,((Wheels[0].rpm+Wheels[1].rpm)*frontDriveShare+(Wheels[2].rpm+Wheels[3].rpm)*(1-frontDriveShare))*.5f,Throttle,reverse,dt,DrivenGroundedWheels>0,Brake);
   // Avoid accelerating into the opposite direction until braking reaches walking speed.
   if(opposite)torque=0;
-  GroundedWheels=0;float totalBrake=Engine.definition.brakeDeceleration*Body.mass*Engine.definition.wheelRadius;
+  var front=HarborValeGreybox.Workshop.ChassisTuning.AxleTorque(torque*frontDriveShare,Wheels[0].rpm,Wheels[1].rpm,differentialBias,differentialLock);var rear=HarborValeGreybox.Workshop.ChassisTuning.AxleTorque(torque*(1-frontDriveShare),Wheels[2].rpm,Wheels[3].rpm,differentialBias,differentialLock);
+  DrivenWheelSlip=0;IsBurningOut=false;GroundedWheels=0;float totalBrake=Engine.definition.brakeDeceleration*Body.mass*Engine.definition.wheelRadius;
   for(int i=0;i<4;i++){
    var w=Wheels[i];if(w.isGrounded)GroundedWheels++;
-   w.steerAngle=i<2?Steering:0;w.motorTorque=torque*(i<2?frontDriveShare:1-frontDriveShare)*.5f;
+   w.steerAngle=i<2?Steering:0;w.motorTorque=i==0?front.x:i==1?front.y:i==2?rear.x:rear.y;
+   if(w.GetGroundHit(out var hit)&&Mathf.Abs(w.motorTorque)>30){float surface=Mathf.Abs(w.rpm)*2*Mathf.PI*w.radius/60;float road=Mathf.Abs(Vector3.Dot(Body.GetPointVelocity(hit.point),transform.forward));float slipSpeed=Mathf.Max(0,surface-road);DrivenWheelSlip=Mathf.Max(DrivenWheelSlip,slipSpeed);if(Throttle>.25f&&SpeedKph<45&&Mathf.Abs(hit.forwardSlip)>.15f&&slipSpeed>2.5f)IsBurningOut=true;}
    float coastBrake=pedal==0?Engine.definition.massKg*9.81f*.012f*Engine.definition.wheelRadius/4:0;
    float hold=pedal==0&&Mathf.Abs(forward)<.35f?220:0;
    w.brakeTorque=Mathf.Max(totalBrake*Brake*(i<2?.325f:.175f),coastBrake,hold,i>=2?handbrake*1900:0);
@@ -80,7 +88,7 @@ public class FinchVehicle:MonoBehaviour {
   float force=(travelA-travelB)*antiRoll;if(ga)Body.AddForceAtPosition(Wheels[a].transform.up*-force,Wheels[a].transform.position);if(gb)Body.AddForceAtPosition(Wheels[b].transform.up*force,Wheels[b].transform.position);
  }
  void LateUpdate(){if(Wheels==null)return;for(int i=0;i<4;i++)if(visual[i]!=null){Wheels[i].GetWorldPose(out var p,out var q);visual[i].SetPositionAndRotation(p,q);}}
- public void ResetAt(Vector3 position,Quaternion rotation){Initialize();ResetSequence++;GroundedWheels=0;Body.linearVelocity=Vector3.zero;Body.angularVelocity=Vector3.zero;Body.position=position;Body.rotation=rotation;transform.SetPositionAndRotation(position,rotation);Engine.Reset();Throttle=Brake=0;steer=0;commandedPedal=commandedSteer=0;foreach(var w in Wheels){w.motorTorque=0;w.brakeTorque=0;w.steerAngle=0;}Body.WakeUp();Physics.SyncTransforms();}
+ public void ResetAt(Vector3 position,Quaternion rotation){Initialize();ResetSequence++;stagingBrakeLatch=false;countdownStagingAllowed=false;GroundedWheels=DrivenGroundedWheels=0;DrivenWheelSlip=0;IsBurningOut=false;Body.linearVelocity=Vector3.zero;Body.angularVelocity=Vector3.zero;Body.position=position;Body.rotation=rotation;transform.SetPositionAndRotation(position,rotation);Engine.Reset();commandedServiceBrake=0;Throttle=Brake=0;steer=0;commandedPedal=commandedSteer=0;foreach(var w in Wheels){w.motorTorque=0;w.brakeTorque=0;w.steerAngle=0;}Body.WakeUp();Physics.SyncTransforms();}
  public void Recover(){if(RecoveryHandler!=null&&RecoveryHandler.TryRecover(this))return;if((gameObject.scene.name=="HarborVale_CityMap"||gameObject.scene.name=="HarborVale_SportsTest")&&FinchDrivingBootstrap.TryRecovery(transform.position,transform.forward,out var p,out var q))ResetAt(p,q);else ResetAt(spawn+Vector3.up*.2f,spawnRotation);}
 }
 }

@@ -26,8 +26,8 @@ public class FinchDrivingHUD:MonoBehaviour {
   if(GUI.Button(new Rect(444,20,110,23),"M: "+(vehicle.Engine.Mode==TransmissionMode.Automatic?"AUTO":"MANUAL")))vehicle.ToggleTransmissionMode();
   if(GUI.Button(new Rect(560,20,60,23),"Z: -"))vehicle.PaddleShift(-1);
   if(GUI.Button(new Rect(626,20,60,23),"X: +"))vehicle.PaddleShift(1);GUI.enabled=true;
-  GUI.Label(new Rect(30,44,660,30),Mathf.RoundToInt(vehicle.SpeedKph)+" km/h    "+Mathf.RoundToInt(vehicle.Engine.Rpm)+" RPM    "+(vehicle.Engine.Mode==TransmissionMode.Automatic?"AUTO ":"MANUAL ")+(vehicle.Engine.Gear<0?"R":vehicle.Engine.Gear.ToString())+(vehicle.Engine.Shifting?"   SHIFT":"")+(vehicle.Engine.definition.IsTurbo?"   BOOST "+vehicle.Engine.BoostBar.ToString("F2")+" bar":""),label);
-  GUI.Label(new Rect(30,77,660,36),vehicle.Engine.ShiftNote??"W / S accelerate, brake, reverse  |  A / D steer  |  Space handbrake\nR recover  |  C camera  |  Tab map  |  M auto/manual  |  Z / X down / up");
+  GUI.Label(new Rect(30,44,660,30),Mathf.RoundToInt(vehicle.SpeedKph)+" km/h"+(vehicle.IsBurningOut?"  WHEELSPIN":"")+"    "+Mathf.RoundToInt(vehicle.Engine.Rpm)+" RPM    "+(vehicle.Engine.Mode==TransmissionMode.Automatic?"AUTO ":"MANUAL ")+(vehicle.Engine.Gear<0?"R":vehicle.Engine.Gear.ToString())+(vehicle.Engine.Shifting?"   SHIFT":"")+(vehicle.Engine.definition.IsTurbo?"   BOOST "+vehicle.Engine.BoostBar.ToString("F2")+" bar":""),label);
+  GUI.Label(new Rect(30,77,660,36),vehicle.IsBrakeBoosting?"STAGING "+vehicle.Engine.StagingTargetRpm.ToString("F0")+" RPM — hold W + S, release S to launch":vehicle.Engine.ShiftNote??"W / S accelerate, brake, reverse  |  A / D steer  |  Space handbrake\nR recover  |  C camera  |  Tab map  |  M auto/manual  |  Z / X down / up  |  W + S stage / release S launch");
  }
  void OnDestroy(){if(engineAudio!=null&&engineAudio.clip!=null)Destroy(engineAudio.clip);}
 }

@@ -1,9 +1,7 @@
-# HarborVale — staged customization implemented
+# HarborVale — chassis tuning and brake boosting implemented
 
-Canonical C:/Users/Justice/Documents/Unity/HarborVale, Unity6000.6.0f1. Latest Windows player Builds/HarborVale-CustomWorkshop/HarborVale.exe. M14-T02 complete: 37 authored staged offers, saved Finch build and free Apex versions through the same polished workshop. Read STAGED_WORKSHOP_HANDOFF.md for exact prices, compatibility, verification and limitations.
+Canonical C:/Users/Justice/Documents/Unity/HarborVale, Unity6000.6.0f1. Latest Windows player Builds/HarborVale-Chassis/HarborVale.exe. M14-T03 complete: 49 staged offers, three stages each of LSD/suspension/gearing/aero, parked saved adjustments, physical wheelspin/smoke, crank HP + estimated WHP + actual kg, and tune-dependent W+S brake boosting with countdown safety. Read CHASSIS_HANDOFF.md before edits.
 
-Paid stages: NA engine, small/large turbo, supercharger, cooling, gearbox, brakes, tires, intake/exhaust and optional burble/flame power tradeoffs; twins are Apex-only. Exclusive conversions replace hardware, not stack it. Existing four prices/curves and paid history preserved through one-time validated v4 migration. No full career, service history, odometer, brake heat/fade or thermal simulation claimed.
+Paid Finch uses atomic/idempotent v5 receipts and one-time validated v4/v3/v2/v1 migration. Apex is free temporary testing with separate identity. Previous fees/curves/history and source city/static Finch/handling scene preserved. No full career, odometer/service history, wear/heat or measured roller WHP claimed.
 
-Native upgrade/save rules 177, retained regressions and 51 Windows workshop plus47 scene/timing/save checks passed. Actual SC sound/pedal-lift pop and free/paid separation checked. Native screenshots inspected; subjective full-lap/input/audio polish remains manual. Original scenes/static model hashes preserved. Publication record follows after push.
-
-Implementation uploaded and remote-verified at b105c7977057f2379acdaf4922dbabb85a3f97cc. See STAGED_WORKSHOP_GITHUB_VERIFICATION.json.
+Native editor checks: chassis23, staging12, workshop225 plus retained18/27/25/104. Windows chassis54, workshop51, transitions47 passed. Screenshots inspected; full-lap feel, physical input/controller behavior and listening remain manual. Install hashes in artifacts/qa/M14-T03/install-verification.json. Publication record follows push.

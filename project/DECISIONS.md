@@ -94,3 +94,10 @@ User supplied repeated handoff requesting manual garage then effects verificatio
 
 ## D051 — Queued garage expansion with GUI priority
 User requests, after current verification, a substantially easier and more attractive garage interface plus turbo sizes, superchargers, twin turbo, brake upgrades and tune/SFX choices. Interface polish and clarity are the priority. Use category cards/current build and an explicit quote/requirements/tradeoff panel at one shop. Induction alternatives require compatibility/exclusivity and authored RPM curves, not stacked flat boosts. Optional burble/flame presets disclose a small real power reduction. Preserve all existing paid receipts/migrations; implementation follows standalone preview verification. Latest HUD addition is included in review; simulated readings must never become invented saved mileage.
+
+
+## D053 — Chassis settings and physical traction
+User authorized the recommended LSD, adjustable suspension, gearing and aero stages plus realistic overpowering-tire wheelspin and HP/WHP/weight dyno. Hardware prerequisites unlock bounded free setup changes saved atomically in v5. WHP is explicitly estimated from drivetrain efficiency. Smoke is based on real grounded powered slip. Preserve previous paid receipts and free Apex separation.
+
+## D054 — Tune-dependent brake staging
+User requested brake+accelerator near4000RPM by tune. Implement stopped first-gear staging with actual rev/spool carry, partial clutch load and finite release; countdown permits holding behind locked brakes without an early start. No rolling boost, artificial launch-force multiplier or thermal/wear simulation.

@@ -3,7 +3,7 @@ using UnityEngine;
 namespace HarborValeGreybox.Driving {
 [Serializable] public class FinchDefinition {
  public string source,carId,aspiration;public float massKg,wheelRadius,efficiency,finalDrive,reverseRatio,idleRpm,redlineRpm,softLimiterRpm,upshiftRpm,downshiftRpm,launchRpm,shiftSeconds,brakeDeceleration;
- public float[] ratios,rpm,torque,offBoostTorque;public float boostThresholdRpm,fullBoostRpm,spoolRise,spoolFall,displayBoostBar;
+ public float stagingRpm,stagingBoostFraction,stagingClutchLoad;public float[] ratios,rpm,torque,offBoostTorque;public float boostThresholdRpm,fullBoostRpm,spoolRise,spoolFall,displayBoostBar;
  public bool IsTurbo=>offBoostTorque!=null&&rpm!=null&&offBoostTorque.Length==rpm.Length&&spoolRise>0&&spoolFall>0;
  public float PeakKw(){float peak=0;for(int i=0;i<rpm.Length;i++){peak=Mathf.Max(peak,torque[i]*rpm[i]/9549.2966f);if(i>0){float a=(torque[i]-torque[i-1])/(rpm[i]-rpm[i-1]);if(a<0){float b=torque[i-1]-a*rpm[i-1],r=-b/(2*a);if(r>rpm[i-1]&&r<rpm[i])peak=Mathf.Max(peak,(a*r+b)*r/9549.2966f);}}}return peak;}
  public float SampleTorque(float speed)=>Sample(torque,speed);
@@ -23,19 +23,21 @@ public sealed class FinchPowertrain {
  public float ClutchEngagement=>!Shifting?1:Mathf.SmoothStep(0,1,1-shiftRemaining/Mathf.Max(.01f,shiftDuration*.3f));
  // Gauge pressure never multiplies the authored net torque curves.
  public float BoostBar=>definition.IsTurbo?TurboAvailability*definition.displayBoostBar*Mathf.InverseLerp(definition.boostThresholdRpm,definition.fullBoostRpm,Rpm):0;
+ public bool BrakeBoostHolding{get;private set;}public float StagingTargetRpm=>Mathf.Clamp(definition.stagingRpm>0?definition.stagingRpm:3800,definition.idleRpm+500,definition.redlineRpm*.8f);float stagedReleaseTime,stagedReleaseRpm;
  float shiftRemaining,shiftDuration,gearHold;bool wasMoving,kickdownArmed=true;
  public FinchPowertrain(FinchDefinition d){definition=d;Reset();}
- public void Reset(){Gear=1;Rpm=definition.idleRpm;shiftRemaining=shiftDuration=0;gearHold=0;wasMoving=false;kickdownArmed=true;TurboAvailability=NetTorque=0;ShiftNote=null;}
+ public void Reset(){BrakeBoostHolding=false;stagedReleaseTime=0;Gear=1;Rpm=definition.idleRpm;shiftRemaining=shiftDuration=0;gearHold=0;wasMoving=false;kickdownArmed=true;TurboAvailability=NetTorque=0;ShiftNote=null;}
  public void SetMode(TransmissionMode mode){Mode=mode;kickdownArmed=true;ShiftNote=null;}
  public float ProjectedRpm(float speed,int gear)=>Mathf.Abs(speed)/definition.wheelRadius*60/(2*Mathf.PI)*definition.ratios[gear-1]*definition.finalDrive;
  void BeginShift(int next,float seconds){Gear=next;shiftDuration=Mathf.Max(.05f,seconds);shiftRemaining=shiftDuration;gearHold=0;}
  public bool RequestShift(int direction,float speed){
+  if(BrakeBoostHolding){ShiftNote="Release brake staging before shifting.";return false;}
   if(direction!=1&&direction!=-1){ShiftNote="Choose up or down.";return false;}
   if(Gear<1){ShiftNote="Paddles unavailable in reverse.";return false;}
   if(Shifting){ShiftNote="Shift in progress.";return false;}
   int next=Gear+direction;
   if(next<1||next>definition.ratios.Length){ShiftNote=next<1?"Already in first gear.":"Already in top gear.";return false;}
-  if(direction<0&&ProjectedRpm(speed,next)>definition.redlineRpm*.94f){ShiftNote="Downshift blocked: RPM too high.";return false;}
+  if(direction<0&&Mathf.Max(ProjectedRpm(speed,next),Rpm*definition.ratios[next-1]/definition.ratios[Gear-1])>definition.redlineRpm*.94f){ShiftNote="Downshift blocked: RPM too high.";return false;}
   BeginShift(next,definition.shiftSeconds);Mode=TransmissionMode.Manual;ShiftNote=null;return true;
  }
  int AutomaticDownshift(float speed,float throttle,float braking,bool kickdown){
@@ -54,7 +56,11 @@ public sealed class FinchPowertrain {
   for(int gear=Gear-1;gear>=1;gear--){float rpm=ProjectedRpm(speed,gear);if(rpm>definition.upshiftRpm*.85f)continue;float nextCost=Mathf.Abs(rpm-target);if(nextCost<cost){cost=nextCost;matched=gear;}}
   return matched;
  }
+ public void CancelStaging(){BrakeBoostHolding=false;stagedReleaseTime=0;}
+ public void ReleaseStaging(){if(!BrakeBoostHolding)return;stagedReleaseRpm=Rpm;stagedReleaseTime=.5f;BrakeBoostHolding=false;}
+ public float HoldStaging(float throttle,float dt){BrakeBoostHolding=true;stagedReleaseTime=0;Rpm=Mathf.MoveTowards(Rpm,StagingTargetRpm,Mathf.Max(0,dt)*4500);float stagingThrottle=definition.IsTurbo?Mathf.Clamp01(definition.stagingBoostFraction>0?definition.stagingBoostFraction:.5f)*throttle:throttle;NetTorque=ResolveTorque(Rpm,stagingThrottle,true,false,dt);float load=definition.stagingClutchLoad>0?definition.stagingClutchLoad:.25f;return NetTorque*definition.ratios[0]*definition.finalDrive*definition.efficiency*Mathf.Clamp(load,.15f,.35f);}
  public float Step(float forwardSpeed,float drivenRpm,float throttle,bool reverse,float dt,bool loaded=true,float braking=0){
+  if(BrakeBoostHolding){if(throttle>.3f&&Gear==1&&!reverse&&loaded&&braking<.3f){stagedReleaseTime=.5f;stagedReleaseRpm=Rpm;}BrakeBoostHolding=false;}stagedReleaseTime=Mathf.Max(0,stagedReleaseTime-dt);
   dt=Mathf.Max(0,dt);throttle=Mathf.Clamp01(throttle);shiftRemaining=Mathf.Max(0,shiftRemaining-dt);gearHold+=dt;if(throttle<.3f)kickdownArmed=true;
   if(Mathf.Abs(forwardSpeed)<1&&reverse!=(Gear<0))BeginShift(reverse?-1:1,.15f);
   // Paddle-style standstill assist avoids pulling away in a high gear, without a clutch simulation.
@@ -73,9 +79,13 @@ public sealed class FinchPowertrain {
   // Recompute after selecting the gear; RPM and wheel torque always use the same ratio.
   float ratio=Gear<0?definition.reverseRatio:definition.ratios[Gear-1];
   float roadWheelRpm=Mathf.Abs(forwardSpeed)/definition.wheelRadius*60/(2*Mathf.PI);
-  float coupled=Mathf.Max(roadWheelRpm,Mathf.Min(Mathf.Abs(drivenRpm),roadWheelRpm+200))*ratio*definition.finalDrive;
+  float coupled=Mathf.Max(roadWheelRpm,Mathf.Abs(drivenRpm))*ratio*definition.finalDrive;
   float launch=Mathf.Lerp(definition.idleRpm,definition.launchRpm,throttle)*(1-Mathf.Clamp01(Mathf.Abs(forwardSpeed)/8));
+  if(stagedReleaseTime>0)launch=Mathf.Max(launch,definition.idleRpm+(stagedReleaseRpm-definition.idleRpm)*stagedReleaseTime/.5f);
   float target=Mathf.Max(definition.idleRpm,coupled,launch);
+  // A driven wheel that accelerates faster than the cosmetic rev ramp must back-drive
+  // the crank immediately; otherwise delayed limiter response creates impossible wheel overspeed.
+  if(loaded&&!Shifting&&coupled>Rpm)Rpm=Mathf.Min(coupled,definition.redlineRpm+100);
   Rpm=Mathf.MoveTowards(Rpm,Mathf.Min(target,definition.redlineRpm+100),dt*9500);
   bool cut=ClutchEngagement<=0||Rpm>=definition.redlineRpm;
   NetTorque=ResolveTorque(Rpm,throttle,loaded,cut,dt);

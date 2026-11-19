@@ -12,8 +12,9 @@ public class DocksideTrialDirector:MonoBehaviour,IFinchRecoveryHandler {
  public bool ExternalModalOpen{get;set;}
  public static string OlderSavePath=>Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),"HarborVale","Prototype","race-progress-v1.json");
  public static string LegacySavePath=>Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),"HarborVale","Prototype","race-progress-v2.json");
+ public static string PriorSavePath=>Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),"HarborVale","Prototype","race-progress-v4.json");
  public static string PreviousSavePath=>Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),"HarborVale","Prototype","race-progress-v3.json");
- public static string SavePath=>Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),"HarborVale","Prototype","race-progress-v4.json");
+ public static string SavePath=>Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),"HarborVale","Prototype","race-progress-v5.json");
  public bool Active=>Session!=null&&(Session.State==TrialState.Countdown||Session.State==TrialState.Running);
  public static void Hook(){if(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name!="HarborVale_CityMap")return;var root=new GameObject("First Lap | time trial");root.AddComponent<DocksideTrialDirector>();}
  void Start(){Initialize();}
@@ -21,7 +22,7 @@ public class DocksideTrialDirector:MonoBehaviour,IFinchRecoveryHandler {
   if(Definition!=null)return;var data=Resources.Load<TextAsset>("FirstDocksideTrial");if(data==null)throw new InvalidOperationException("Trial route missing");Definition=JsonUtility.FromJson<TrialDefinition>(data.text);Definition.Validate();vehicle=UnityEngine.Object.FindAnyObjectByType<FinchVehicle>();
   if(vehicle==null){var spec=UnityEngine.Object.FindAnyObjectByType<StarterCarSpecification>();if(spec==null)throw new InvalidOperationException("No starter vehicle");vehicle=spec.gameObject.AddComponent<FinchVehicle>();vehicle.Initialize();}
   vehicle.RecoveryHandler=this;
-  try{Store=new RaceProgressStore(saveOverride??SavePathOverrideForTests??SavePath,Definition,legacyFile:saveOverride==null&&SavePathOverrideForTests==null?PreviousSavePath:null,olderLegacyFile:saveOverride==null&&SavePathOverrideForTests==null?LegacySavePath:null,oldestLegacyFile:saveOverride==null&&SavePathOverrideForTests==null?OlderSavePath:null);}catch(Exception e){SaveError="Saved race progress could not be read.";Debug.LogWarning("Race progress unavailable: "+e.Message);}
+  try{Store=new RaceProgressStore(saveOverride??SavePathOverrideForTests??SavePath,Definition,legacyFile:saveOverride==null&&SavePathOverrideForTests==null?PriorSavePath:null,olderLegacyFile:saveOverride==null&&SavePathOverrideForTests==null?PreviousSavePath:null,oldestLegacyFile:saveOverride==null&&SavePathOverrideForTests==null?LegacySavePath:null,ancientLegacyFile:saveOverride==null&&SavePathOverrideForTests==null?OlderSavePath:null);}catch(Exception e){SaveError="Saved race progress could not be read.";Debug.LogWarning("Race progress unavailable: "+e.Message);}
   previous=vehicle.transform.position;lastTickTime=Time.realtimeSinceStartupAsDouble;CreateVisuals();
  }
  Material Material(string name,Color color){var m=new Material(Shader.Find("Sprites/Default")){name=name,color=color};return m;}
@@ -34,14 +35,15 @@ public class DocksideTrialDirector:MonoBehaviour,IFinchRecoveryHandler {
  }
  public bool BeginRun(){
   Initialize();if(Store==null||Active||ExternalModalOpen)return false;var hud=vehicle.GetComponent<FinchDrivingHUD>();if(hud!=null)hud.SetInspection(false);Session=new TrialSession(Definition);Receipt=null;SaveError=null;ShowingResult=false;
-  var first=Definition.checkpoints[0];vehicle.ResetAt(first.Position-first.Forward*8+Vector3.up*.4f,Quaternion.LookRotation(first.Forward));vehicle.controlsLocked=true;previous=vehicle.transform.position;visualGate=-2;var follow=Camera.main==null?null:Camera.main.GetComponent<FinchChaseCamera>();if(follow!=null)follow.Snap();return true;
+  var first=Definition.checkpoints[0];vehicle.ResetAt(first.Position-first.Forward*8+Vector3.up*.4f,Quaternion.LookRotation(first.Forward));vehicle.controlsLocked=true;vehicle.countdownStagingAllowed=true;previous=vehicle.transform.position;visualGate=-2;var follow=Camera.main==null?null:Camera.main.GetComponent<FinchChaseCamera>();if(follow!=null)follow.Snap();return true;
  }
- void ShowResult(){ShowingResult=true;vehicle.controlsLocked=true;var hud=vehicle.GetComponent<FinchDrivingHUD>();if(hud!=null)hud.SetInspection(false);}
+ void ShowResult(){vehicle.countdownStagingAllowed=false;ShowingResult=true;vehicle.controlsLocked=true;var hud=vehicle.GetComponent<FinchDrivingHUD>();if(hud!=null)hud.SetInspection(false);}
  public void Abandon(){if(!Active)return;Session.Abandon();ShowResult();}
  public void DismissResult(bool forfeitUnpaid=false){if(SaveError!=null&&Session!=null&&Session.ValidFinish&&!forfeitUnpaid)return;ShowingResult=false;vehicle.controlsLocked=false;Session=null;Receipt=null;visualGate=-2;}
  void Update(){
   if(Definition==null||vehicle==null)return;Vector3 now=vehicle.transform.position;double realtime=Time.realtimeSinceStartupAsDouble;float dt=(float)Math.Max(0,realtime-lastTickTime);lastTickTime=realtime;
-  if(Active){Session.Tick(dt,previous,now);vehicle.controlsLocked=Session.State==TrialState.Countdown;if(Session.State==TrialState.Finished){ShowResult();TrySettlement();}else if(Session.State==TrialState.Abandoned){ShowResult();}}
+  vehicle.countdownStagingAllowed=Session!=null&&Session.State==TrialState.Countdown&&!ExternalModalOpen;
+  if(Active){Session.Tick(dt,previous,now);vehicle.controlsLocked=Session.State==TrialState.Countdown;vehicle.countdownStagingAllowed=vehicle.controlsLocked;if(Session.State==TrialState.Finished){ShowResult();TrySettlement();}else if(Session.State==TrialState.Abandoned){ShowResult();}}
   previous=now;if(ExternalModalOpen){UpdateVisuals();return;}
   if(FinchInput.Shortcut(KeyCode.Escape)){if(Active)Abandon();else if(ShowingResult)DismissResult();}
   else if((vehicle.playerInput||ShowingResult)&&FinchInput.Shortcut(KeyCode.E)){if(ShowingResult){if(SaveError!=null&&Session!=null&&Session.ValidFinish)TrySettlement();else BeginRun();}else if(!Active&&NearStart()&&vehicle.SpeedKph<8)BeginRun();}
@@ -77,6 +79,6 @@ public class DocksideTrialDirector:MonoBehaviour,IFinchRecoveryHandler {
   if(!vehicle.playerInput)return;float distance=Vector3.Distance(vehicle.transform.position,Definition.checkpoints[0].Position);GUI.Box(new Rect(Screen.width/2-300,Screen.height-120,600,94),Definition.title);
   string offer=Store==null?"Racing is unavailable until the existing save can be read.":NearStart()?(vehicle.SpeedKph<8?"E — Start time trial":"Slow down to start"):(Mathf.RoundToInt(distance)+" m to start — follow the FIRST LAP marker");GUI.Label(new Rect(Screen.width/2-280,Screen.height-91,560,65),offer+"\nGold reward "+Definition.baseReward+" cr   |   First-clear bonus "+Definition.firstClearBonus+" cr\nReplay to improve your time and earn more credits.",centered);
  }
- void OnDestroy(){if(vehicle!=null){vehicle.RecoveryHandler=null;vehicle.controlsLocked=false;}if(cyan!=null)Destroy(cyan);if(amber!=null)Destroy(amber);if(white!=null)Destroy(white);}
+ void OnDestroy(){if(vehicle!=null){vehicle.RecoveryHandler=null;vehicle.controlsLocked=false;vehicle.countdownStagingAllowed=false;}if(cyan!=null)Destroy(cyan);if(amber!=null)Destroy(amber);if(white!=null)Destroy(white);}
 }
 }

@@ -31,6 +31,8 @@ public static class FinchInput {
   default:return UnityEngine.InputSystem.Key.Escape;}}
 #endif
  public static bool Shortcut(KeyCode k)=>Down(k)&&!Held(KeyCode.LeftAlt)&&!Held(KeyCode.RightAlt)&&!Held(KeyCode.LeftControl)&&!Held(KeyCode.RightControl);
+ public static float Accelerator=>(Held(KeyCode.W)||Held(KeyCode.UpArrow)?1:0);
+ public static float ServiceBrake=>(Held(KeyCode.S)||Held(KeyCode.DownArrow)?1:0);
  public static float Pedal=>(Held(KeyCode.W)||Held(KeyCode.UpArrow)?1:0)-(Held(KeyCode.S)||Held(KeyCode.DownArrow)?1:0);
  public static float Steer=>(Held(KeyCode.D)||Held(KeyCode.RightArrow)?1:0)-(Held(KeyCode.A)||Held(KeyCode.LeftArrow)?1:0);
 }
