@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project_title": "Redline: From Rust to Riches",
   "project_stage": "implementation",
-  "updated_at": "2026-11-19T05:18:12.367Z",
+  "updated_at": "2026-11-19T05:22:10.562Z",
   "current_task_id": "M14-T02",
   "next_task_id": "M14-T02",
   "status_values": [
@@ -929,7 +929,7 @@
       "acceptance_key": "M14-T01",
       "evidence": [
         "project/WORKSHOP_HANDOFF.md",
-        "artifacts/qa/M14-T01/native-v3/native-results.txt",
+        "artifacts/qa/M14-T01/native-v4/native-results.txt",
         "artifacts/qa/M14-T01/final-transitions-retry/player-smoke.txt"
       ],
       "remaining_steps": [],

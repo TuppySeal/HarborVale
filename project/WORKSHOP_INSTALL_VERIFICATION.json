@@ -11,23 +11,23 @@
     },
     {
       "path": "Assets/HarborValeGreybox/Garage/Scripts/GarageShopView.cs",
-      "sha256": "3e996d5f86d337e7d48c0345395656d3ec822633d3d75b8ee5e710f487083ffd"
-    },
-    {
-      "path": "Assets/HarborValeGreybox/Garage/Scripts/GarageShopView.cs.meta",
-      "sha256": "aaedfd0d4c18d77bdeb7a776bd838f1eba932da7512e4b5ddf514ba5e0a09f40"
+      "sha256": "de6df1f2970239d8fd445e289f0a548b3c1d048c39b303d0347c1a28920f6333"
     },
     {
       "path": "Assets/HarborValeGreybox/Garage/Scripts/GarageUiProbe.cs",
       "sha256": "3b501666121f242548f9ca5bd01cf9f7fef9db0f3df02ae9367fa16868690013"
     },
     {
-      "path": "Assets/HarborValeGreybox/Garage/Scripts/GarageUiProbe.cs.meta",
-      "sha256": "655c8f8acb5d3292970514b46302f68b714411c08adf85008dc96beae2b71527"
-    },
-    {
       "path": "Assets/HarborValeGreybox/Launch/Scripts/HarborValeLaunch.cs",
       "sha256": "3280f6871f7741d306c315275fce6cdf1026dc726656092b00d256264182e0cf"
+    },
+    {
+      "path": "Assets/HarborValeGreybox/Garage/Scripts/GarageShopView.cs.meta",
+      "sha256": "aaedfd0d4c18d77bdeb7a776bd838f1eba932da7512e4b5ddf514ba5e0a09f40"
+    },
+    {
+      "path": "Assets/HarborValeGreybox/Garage/Scripts/GarageUiProbe.cs.meta",
+      "sha256": "655c8f8acb5d3292970514b46302f68b714411c08adf85008dc96beae2b71527"
     }
   ],
   "playerFileCount": 249,
@@ -58,7 +58,7 @@
     },
     {
       "path": "HarborVale_Data/boot.config",
-      "sha256": "783df35fc87d87e9e529775d35ab6f4c03f19bf4d31a2b24de67ceb7a1a75d6c"
+      "sha256": "7d50a09308c8cb976c4d75f937a333d936a23bec1f62ebc08c11703cdccc428f"
     },
     {
       "path": "HarborVale_Data/globalgamemanagers",
@@ -86,11 +86,11 @@
     },
     {
       "path": "HarborVale_Data/Managed/Assembly-CSharp.dll",
-      "sha256": "714cf8cadbef5fcb60fcbac80eb4edc68e72ea70bbd866c507863ccd7bc49504"
+      "sha256": "224ff8de84407ddaaea7116bf5f537fcd1eeb392f1e6151191a609c12497e3fa"
     },
     {
       "path": "HarborVale_Data/Managed/Assembly-CSharp.pdb",
-      "sha256": "a01a88a9308ef66fb9f4c7af0dbc6ef0a89ec5ee2702befb4c4d597e69b04bd2"
+      "sha256": "8fb8e236fd89c1f15d273e7ce8c1e5819b4e0f956d856ad3f152d2d7a4d4fe14"
     },
     {
       "path": "HarborVale_Data/Managed/Mono.Security.dll",
@@ -1030,5 +1030,7 @@
     }
   ],
   "guiChecks": 24,
-  "transitionChecks": 47
+  "transitionChecks": 47,
+  "previousImplementationCommit": "01458a8c8101c23a5affc160259e59df806daa5e",
+  "typography": "Removed label padding that clipped small text/comma descenders; shortened CURRENT BUILD caption. Native-v4 reran 24 GUI checks; physics/purchase behavior unchanged from 47-check transition run."
 }
