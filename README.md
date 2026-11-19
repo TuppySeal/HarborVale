@@ -1,29 +1,28 @@
-# HarborVale — choose a drive, race and test upgrades
+# HarborVale — Windows racing prototype
 
-Unity **6000.6.0f1**, built-in renderer. This is a playable prototype.
+[**Download the latest Windows build**](https://github.com/TuppySeal/HarborVale/releases/latest)
 
-Latest Windows player: **Builds/HarborVale-SmoothDrive/HarborVale.exe**. Close older game windows before switching. One menu selects saved Finch or free Apex.
+This repository and its downloads are private. Sign in with a GitHub account that has access.
 
-Automatic now downshifts on deceleration and kicks down when you ask for acceleration. **M** toggles automatic/manual, **Z** downshifts, **X** upshifts; HUD buttons also work. Unsafe downshifts are rejected. Mode survives recovery/parts in the current drive. Throttle, braking, clutch reconnection and engine pitch ease between states. Read project/SHIFTING_HANDOFF.md for current measurements and verification; older standalone figures below describe previous releases. The bottom-right Main menu button returns between modes. In Unity open **Assets/HarborValeGreybox/Launch/Scenes/HarborVale_Hub.unity** and press Play.
+Download **HarborVale-CityArt-Windows-x64.zip** from the release's Assets list, extract the entire ZIP, then run **HarborVale.exe** inside the extracted HarborVale folder. Keep HarborVale_Data and all DLLs beside it. Close older game versions first. The game runs on a Windows64-bit PC; GitHub does not run it in a browser.
 
-In Apex mode, stop and apply free parts in order. Wait until **Arm test** is enabled, click it and accelerate to measure 0–100. Best times belong to each configuration for the current visit. Recovery or a changed build cancels the run. Road slope affects results. Sports settings reset when leaving; Finch paid progress stays saved.
+## Try the garage
 
-![Choose your drive](artifacts/qa/M12-T05/Launch_Menu.png)
+- Choose **Test Apex · free upgrades**, stop, then press **G**. Install and test parts freely; Apex upgrades reset each visit.
+- Choose **Drive Finch · saved progress**, stop near the starting player garage, then press **G** for paid upgrades saved to that PC.
 
-## Sports test
+The current searchable garage has49 offers, sequential stages/prerequisites and performance comparisons. It includes engine tunes, small/large/twin turbo options, supercharging, cooling, intake/exhaust, tires, brakes, chassis/settings and optional burble/flame calibrations. Compatibility and hardware requirements apply; twins are Apex-only. Turbo audio offers BOV/flutter choices. The dyno shows crank HP, estimated WHP and vehicle weight.
 
-Run **Builds/HarborVale-SportsTest/HarborVale-SportsTest.exe**, or open **Assets/HarborValeGreybox/SportsTest/Scenes/HarborVale_SportsTest.unity** in Unity and press Play.
+## Drive
 
-Drive the blue Aster Apex: AWD, stronger brakes/grip, splitter/rear wing and physical speed-dependent downforce. Stop below 5 km/h and click the bottom buttons in order: Stock → Stage 1 → Gearbox → Turbo/basic intercooler → Street intercooler. Free test configurations reset on restart and never spend career money. Measured 0–100 improves from **6.10 to 4.44 seconds**. Model is original primitive placeholder geometry.
+W/S accelerate, brake/reverse; A/D steer; Space handbrake; R recover; C chase/bonnet view; Tab map. M switches automatic/manual; Z/X shift down/up. Hold RMB and move the mouse to look around, or hold J/L for side views and K for rear. Hold W+S while stopped for tune-dependent brake boosting.
 
-## Regular game prototype
+## Current map and limits
 
-Run **Builds/HarborVale-TurboParts/HarborVale.exe**, or open **Assets/HarborValeGreybox/Scenes/HarborVale_CityMap.unity**. Race First Lap with E to earn credits. Stop near the garage and press G. All parts are sold here: Stage1 400 credits → gearbox 250 → turbo/basic cooler 1900 → street cooler 400. Purchase in that order. Select with mouse or Up/Down; Enter installs. Payment/build survive restart. Valid older v2/v1 earnings/build import once to v3; use the latest build because old executables do not synchronize later earnings.
+Cleaner lighting/edge smoothing and a first art pass on17 existing Midtown plots: detailed apartment facades,34 lamps and17 planters. Forecourt props are visual only. Roads, driveways and original collision shapes remain; other districts are still greybox. This is a playable prototype, not a finished racing/ownership game. Saves stay local to each PC; no personal saves are included in the ZIP.
 
-W/S accelerate/brake/reverse; A/D steer; Space handbrake; R recover; C camera; Tab map. Esc/G closes the regular garage. Racing recovery adds 3 seconds.
+## Unity source
 
-![Aster Apex sports test](artifacts/qa/M12-T04/Sports_Model.png)
+Unity **6000.6.0f1**, built-in renderer. Open **Assets/HarborValeGreybox/Launch/Scenes/HarborVale_Hub.unity** and press Play. Installed local player: **Builds/HarborVale-CityArt/HarborVale.exe**. Builds and caches are excluded from Git; downloadable players are attached to GitHub Releases.
 
-Read project/STATUS.md, NEXT_TASK.md, TASKS.json, BOOST_HANDOFF.md and SPORTS_TEST_HANDOFF.md. FEATURE_CHECKLIST.md separates completed work from future content. Native physics/rule/Play Mode and Windows checks are recorded; full-lap manual feel, controllers, optimization and the full ownership/maintenance career remain future work. Claude garage visuals are separate and not yet integrated. Local executables are not stored in Git.
-
-Latest startup/timing handoff: project/LAUNCH_HANDOFF.md. Older standalone builds below remain preserved alternatives.
+Read project/STATUS.md, project/NEXT_TASK.md, project/MAP_ART_HANDOFF.md and project/RELEASES.json for current progress, actual verification and download hashes. Earlier milestone handoffs preserve historical measurements and save migrations. Follow AGENTS.md before changes; do not run legacy scene exporters or reset paid saves.

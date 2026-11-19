@@ -1,0 +1,35 @@
+{
+  "latest": {
+    "publishedAt": "2026-11-19T15:20:09Z",
+    "tag": "test-2026-11-19-city-art",
+    "sourceCommit": "825c87d869ba1ffe5d4257096cd3d28a76d34d67",
+    "repository": "TuppySeal/HarborVale",
+    "private": true,
+    "url": "https://github.com/TuppySeal/HarborVale/releases/tag/test-2026-11-19-city-art",
+    "latestUrl": "https://github.com/TuppySeal/HarborVale/releases/latest",
+    "releaseId": 451526224,
+    "assets": [
+      {
+        "name": "HarborVale-CityArt-Windows-x64.zip",
+        "size": 68694411,
+        "sha256": "60352a0f024551b3ff542cdd5e7ff13e778d40a460a43272b7d41113f570c198",
+        "url": "https://github.com/TuppySeal/HarborVale/releases/download/test-2026-11-19-city-art/HarborVale-CityArt-Windows-x64.zip"
+      },
+      {
+        "name": "SHA256SUMS.txt",
+        "size": 101,
+        "sha256": "d9873a9fd08016a5efda4a703a0992f9f27dc790958c909bb1cde8eaa749b64b",
+        "url": "https://github.com/TuppySeal/HarborVale/releases/download/test-2026-11-19-city-art/SHA256SUMS.txt"
+      }
+    ],
+    "packageVerification": {
+      "filename": "HarborVale-CityArt-Windows-x64.zip",
+      "bytes": 68694411,
+      "sha256": "60352a0f024551b3ff542cdd5e7ff13e778d40a460a43272b7d41113f570c198",
+      "verifiedPlayerFiles": 250,
+      "zipEntries": 251,
+      "completeDirectoryVerified": true
+    }
+  },
+  "notes": "Release asset ZIP contains the complete verified Windows build and README. No personal saves, Unity caches or credentials included."
+}

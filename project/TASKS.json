@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project_title": "Redline: From Rust to Riches",
   "project_stage": "implementation",
-  "updated_at": "2026-11-19T10:51:14.883Z",
+  "updated_at": "2026-11-19T15:21:10.355Z",
   "current_task_id": null,
   "next_task_id": null,
   "status_values": [
@@ -1079,6 +1079,22 @@
       "evidence": [
         "artifacts/qa/M15-T04/placement-rules.txt",
         "artifacts/qa/M15-T04/native/results.txt"
+      ],
+      "remaining_steps": [],
+      "blockers": []
+    },
+    {
+      "id": "M15-T05",
+      "title": "Publish verified complete Windows build as private GitHub release",
+      "milestone": "M15",
+      "status": "done",
+      "depends_on": [
+        "M15-T04"
+      ],
+      "spec_ref": "project/RELEASES.json",
+      "evidence": [
+        "https://github.com/TuppySeal/HarborVale/releases/tag/test-2026-11-19-city-art",
+        "project/RELEASES.json"
       ],
       "remaining_steps": [],
       "blockers": []

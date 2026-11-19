@@ -7,3 +7,5 @@ Both requested helper assignments delivered. Native building import41 checks, co
 Test garage: Test Apex · free upgrades, stop and G. Finch: Drive Finch · saved progress, stop near starting garage and G. Same49-offer catalog; no save reset. Read next task for physical review and future map dressing.
 
 Art source uploaded and remote-verified at 57c4be3ce8341b35470f085b0f04f4da0fb6c48a. See MAP_ART_GITHUB_VERIFICATION.json.
+
+Downloadable Windows release published and server-checksum verified: https://github.com/TuppySeal/HarborVale/releases/latest (tag test-2026-11-19-city-art, 68.7MB). See RELEASES.json. Repository remains private.
