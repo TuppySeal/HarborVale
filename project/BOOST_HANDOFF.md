@@ -1,0 +1,15 @@
+# Functional one-location Finch parts
+
+Unity 6000.6.0f1; no new external asset/package. Main city scene and static Finch prefab remain unchanged. Runtime hooks add race/garage/controller systems.
+
+All parts at the existing garage near spawn: G to open while stopped, Up/Down or click to select, Enter to install, G/Esc to close. Stock Finch remains the career prototype car. Engine Stage 1 costs 400 credits; gearbox support 250; turbo Stage 2 with basic intercooler 1900; independent street intercooler 400. Required paid order is Stage1 → gearbox → turbo → cooler. Prototype reputation gates are deferred until more career events exist; mechanical prerequisites are enforced.
+
+Source balance: design-data/powertrains.json adds fictional compatible path_finch_turbo; design-data/prototype_parts.json defines supporting parts and cooler calibration. tools/import_finch_boost.mjs imports the base garage then these definitions into Garage/Resources/FinchGarageCatalog.json. Do not run only the old base importer over the new catalog. All prices use the existing design price formula; no competing handwritten price table.
+
+FinchPowertrain uses complete net torque curves, per-car exponential spool, throttle/shift decay and no loaded boost when wheels have no ground contact. Pressure is a display gauge, not another torque multiplier. Street cooler represents a matched steady calibration under typical warm-charge conditions; actual heat-soak/temperature simulation is not implemented. Gearbox changes shift interruption 0.450 → 0.396 seconds. Native 0–100: Stage1 12.84 s, turbo/basic cooler 10.62 s, street cooler 10.42 s. Turbo/cooler peak crank power 84.1/86.4 kW.
+
+Production profile is LocalAppData/HarborVale/Prototype/race-progress-v3.json. On first use with no v3 file, migrate valid v2 then v1 read-only. Never bypass an existing corrupt v2 to silently remove its paid build. Existing v3 prevents repeated imports. Payments, installed hardware and immutable receipts commit atomically; failure does not debit/install. Historical Stage1 payments count and are never charged twice. Existing older executables remain preserved but their later earnings do not synchronize automatically. Use the latest build.
+
+Evidence under artifacts/qa/M12-T03: authored import, native curve/spool/transaction/migration/failure/physics tests; actual Play Mode modal/parts/recovery/race interlock; existing trial-rule regression; Windows export, real purchase and separate-process reload plus rendered UI captures. Automated player probes use explicit isolated profiles and never seed a real player's account. Editor-only K001 search indexing remains separately recorded. Manual full-lap balance, controller support and sustained performance profiling remain unperformed.
+
+Sports test is independent; read SPORTS_TEST_HANDOFF.md. Claude owns its separate GaragePreview project only. Visual-only Finch dependency package is in deliverables/ClaudeGarageVisualKit locally; no Claude scene or artwork has been integrated.

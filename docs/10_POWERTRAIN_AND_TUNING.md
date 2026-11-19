@@ -14,7 +14,7 @@ Approximate peak kW below is calculated over the complete piecewise-linear torqu
 
 | Car | Stock engine | Stock kW | Paths | Approx. stage 3 kW |
 | --- | --- | ---: | --- | --- |
-| Finch | 1.4 L naturally aspirated four | 65.2 | NA response | 86.4 |
+| Finch | 1.4 L naturally aspirated four | 65.2 | NA response / mild prototype turbo conversion | 86.4 / matched cooler 86.4 |
 | Courier | 2.0 L naturally aspirated four | 84.7 | NA / turbo conversion / PD supercharger conversion | 113.0 / 162.5 / 154.5 |
 | Lynx | 1.6 L factory-turbo four | 128.8 | Factory turbo development | 188.5 |
 | Switch | 2.0 L factory-turbo four | 153.9 | Factory turbo development | 226.2 |
@@ -113,3 +113,5 @@ Test sequential purchase rejection, supporting-stage rejection, exact per-step p
 Deliver the slice with the Finch, Courier and Lynx powertrain behavior before expanding content. The later-authorized maintenance specification includes component wear/damage, a small heat-load model, paid repairs and breakdowns. Apply its bounded condition effects after the healthy installed configuration; preserve the source curves and label PI/dyno potential as healthy output. Engine/transmission upgrades require a serviceable core and do not perform a free overhaul. Actual paid tire/brake/suspension replacements renew only their own listed component.
 
 Full fluid/combustion thermodynamics, fuel economy, knock/detonation, compressor surge and workshop waiting timers remain outside V1.
+
+Prototype amendment D046 adds a fourteenth path, mild Finch turbo, within its 90 kW authored limit. Runtime currently implements common Stage1 and turbo Stage2/basic or street cooler; authored later stages remain design data. Separate Apex testing data in sports_test.json is outside the eight-car career roster and its pricing/progression.

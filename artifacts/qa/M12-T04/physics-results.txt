@@ -1,0 +1,30 @@
+PASS Dedicated sports data: 300 Nm stock to 510 Nm cooler package
+PASS Matched torque curves increase peak power in order
+PASS Intercooler preserves off-boost curve; no duplicate multiplier
+PASS Gearbox reduces shift interruption without source compounding
+PASS Finch defaults remain unchanged (sample 0)
+PASS Sports chassis rests on four suspension contacts
+PASS Sports mass/AWD/grip/aero configured independently
+PASS Actual sports 0-100 step 0: 6.10 s; peak 164.2 kW
+PASS Recovery clears spool while preserving sports configuration
+PASS Finch defaults remain unchanged (sample 1)
+PASS Sports chassis rests on four suspension contacts
+PASS Sports mass/AWD/grip/aero configured independently
+PASS Actual sports 0-100 step 1: 5.56 s; peak 188.3 kW
+PASS Recovery clears spool while preserving sports configuration
+PASS Finch defaults remain unchanged (sample 2)
+PASS Sports chassis rests on four suspension contacts
+PASS Sports mass/AWD/grip/aero configured independently
+PASS Actual sports 0-100 step 2: 5.42 s; peak 188.3 kW
+PASS Recovery clears spool while preserving sports configuration
+PASS Finch defaults remain unchanged (sample 3)
+PASS Sports chassis rests on four suspension contacts
+PASS Sports mass/AWD/grip/aero configured independently
+PASS Actual sports 0-100 step 3: 4.54 s; peak 269.7 kW
+PASS Recovery clears spool while preserving sports configuration
+PASS Finch defaults remain unchanged (sample 4)
+PASS Sports chassis rests on four suspension contacts
+PASS Sports mass/AWD/grip/aero configured independently
+PASS Actual sports 0-100 step 4: 4.44 s; peak 288.9 kW
+PASS Recovery clears spool while preserving sports configuration
+PASS Upgraded sports acceleration improves measurably

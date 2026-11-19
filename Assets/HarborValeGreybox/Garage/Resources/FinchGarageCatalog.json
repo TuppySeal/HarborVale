@@ -11,7 +11,10 @@
     "price": 400,
     "pathId": "path_finch_na",
     "configId": "cfg_finch_na_s1",
-    "displayName": "Stage 1 — naturally aspirated"
+    "displayName": "Stage 1 — naturally aspirated",
+    "partId": "engine_stage1",
+    "kind": "engine",
+    "requiredEngineStage": 0
   },
   "stock": {
     "source": "design-data/powertrains.json:cfg_finch_stock",
@@ -100,5 +103,165 @@
       108,
       97
     ]
-  }
+  },
+  "gearboxOffer": {
+    "partId": "gearbox_stage1",
+    "kind": "gearbox",
+    "stage": 1,
+    "requiredPreviousStage": 0,
+    "requiredEngineStage": 1,
+    "minimumReputation": 0,
+    "supportingTransmission": 0,
+    "price": 250,
+    "pathId": "supporting_transmission",
+    "configId": "tx_finch_s1",
+    "displayName": "Gearbox support — Stage 1"
+  },
+  "turboOffer": {
+    "partId": "turbo_stage2",
+    "kind": "engine",
+    "stage": 2,
+    "requiredPreviousStage": 1,
+    "requiredEngineStage": 1,
+    "minimumReputation": 0,
+    "supportingTransmission": 1,
+    "price": 1900,
+    "pathId": "path_finch_turbo",
+    "configId": "cfg_finch_turbo_s2",
+    "displayName": "Turbo kit + Stage 2 tune"
+  },
+  "intercoolerOffer": {
+    "partId": "intercooler_stage1",
+    "kind": "intercooler",
+    "stage": 1,
+    "requiredPreviousStage": 0,
+    "requiredEngineStage": 2,
+    "minimumReputation": 0,
+    "supportingTransmission": 1,
+    "price": 400,
+    "pathId": "path_finch_turbo",
+    "configId": "cfg_finch_turbo_s2_ic1",
+    "displayName": "Street intercooler + calibration"
+  },
+  "turboBasic": {
+    "source": "design-data complete configuration:cfg_finch_turbo_s2",
+    "carId": "car_finch",
+    "massKg": 1050,
+    "wheelRadius": 0.295,
+    "efficiency": 0.9,
+    "finalDrive": 4.1,
+    "reverseRatio": 3.2,
+    "idleRpm": 900,
+    "redlineRpm": 6500,
+    "softLimiterRpm": 6400,
+    "upshiftRpm": 6200,
+    "downshiftRpm": 2200,
+    "launchRpm": 1800,
+    "shiftSeconds": 0.45,
+    "brakeDeceleration": 7.2,
+    "ratios": [
+      3.55,
+      2,
+      1.36,
+      1.03,
+      0.82
+    ],
+    "rpm": [
+      900,
+      1500,
+      2500,
+      3500,
+      4500,
+      5500,
+      6200,
+      6500
+    ],
+    "torque": [
+      76,
+      99,
+      115,
+      155,
+      158,
+      146,
+      125,
+      110
+    ],
+    "aspiration": "turbocharged",
+    "offBoostTorque": [
+      76,
+      99,
+      115,
+      121,
+      125,
+      120,
+      108,
+      97
+    ],
+    "boostThresholdRpm": 2500,
+    "fullBoostRpm": 3500,
+    "spoolRise": 0.55,
+    "spoolFall": 0.25,
+    "displayBoostBar": 0.35
+  },
+  "turboStreet": {
+    "source": "design-data complete configuration:cfg_finch_turbo_s2_ic1",
+    "carId": "car_finch",
+    "massKg": 1050,
+    "wheelRadius": 0.295,
+    "efficiency": 0.9,
+    "finalDrive": 4.1,
+    "reverseRatio": 3.2,
+    "idleRpm": 900,
+    "redlineRpm": 6500,
+    "softLimiterRpm": 6400,
+    "upshiftRpm": 6200,
+    "downshiftRpm": 2200,
+    "launchRpm": 1800,
+    "shiftSeconds": 0.45,
+    "brakeDeceleration": 7.2,
+    "ratios": [
+      3.55,
+      2,
+      1.36,
+      1.03,
+      0.82
+    ],
+    "rpm": [
+      900,
+      1500,
+      2500,
+      3500,
+      4500,
+      5500,
+      6200,
+      6500
+    ],
+    "torque": [
+      76,
+      99,
+      115,
+      158,
+      162,
+      150,
+      129,
+      114
+    ],
+    "aspiration": "turbocharged",
+    "offBoostTorque": [
+      76,
+      99,
+      115,
+      121,
+      125,
+      120,
+      108,
+      97
+    ],
+    "boostThresholdRpm": 2500,
+    "fullBoostRpm": 3500,
+    "spoolRise": 0.55,
+    "spoolFall": 0.25,
+    "displayBoostBar": 0.35
+  },
+  "gearboxShiftMultiplier": 0.88
 }

@@ -1,21 +1,19 @@
-# Harbor Vale — race, earn, tune
+# HarborVale — sports testing and functional parts
 
-Open the project in **Unity 6000.6.0f1**, open `Assets/HarborValeGreybox/Scenes/HarborVale_CityMap.unity`, then press **Play**.
+Unity **6000.6.0f1**, built-in renderer. This is a playable prototype.
 
-Latest local Windows build: **`Builds/HarborVale-Garage/HarborVale.exe`**. Close older previews before switching. Executables stay outside Git.
+## Sports test
 
-1. Stop near FIRST LAP and press **E** to race the 2 km checkpoint loop.
-2. Earn credits, then press **Esc** to return from results.
-3. Stop near the player garage and press **G**.
-4. Compare the torque curves and buy **Stage 1 for 400 credits** with Enter or the install button.
-5. Drive the upgraded Finch. The payment and tune persist through restarting the game.
+Run **Builds/HarborVale-SportsTest/HarborVale-SportsTest.exe**, or open **Assets/HarborValeGreybox/SportsTest/Scenes/HarborVale_SportsTest.unity** in Unity and press Play.
 
-W/S accelerate/brake/reverse, A/D steer, Space handbrake, R recover, C camera, Tab map. Esc/G closes the garage. Racing recovery adds 3 seconds.
+Drive the blue Aster Apex: AWD, stronger brakes/grip, splitter/rear wing and physical speed-dependent downforce. Stop below 5 km/h and click the bottom buttons in order: Stock → Stage 1 → Gearbox → Turbo/basic intercooler → Street intercooler. Free test configurations reset on restart and never spend career money. Measured 0–100 improves from **6.10 to 4.44 seconds**. Model is original primitive placeholder geometry.
 
-Stage 1 changes the authored RPM-dependent torque curve. Native measured 0–100 km/h improves from **13.56 to 12.84 seconds**. Peak crank power derives from the curve (~65.2→70.1 kW). Only the first naturally aspirated engine package is implemented so far.
+## Regular game prototype
 
-![Paid Stage 1 garage](artifacts/qa/M12-T02/Garage_Installed_UI.png)
+Run **Builds/HarborVale-TurboParts/HarborVale.exe**, or open **Assets/HarborValeGreybox/Scenes/HarborVale_CityMap.unity**. Race First Lap with E to earn credits. Stop near the garage and press G. All parts are sold here: Stage1 400 credits → gearbox 250 → turbo/basic cooler 1900 → street cooler 400. Purchase in that order. Select with mouse or Up/Down; Enter installs. Payment/build survive restart. Valid older v2/v1 earnings/build import once to v3; use the latest build because old executables do not synchronize later earnings.
 
-Valid First Lap v1 progress imports into a separate v2 profile once. Old files remain unchanged; the current available-credit account is earned credits minus historical spending. Later old-build earnings do not synchronize automatically. Real player saves are never seeded by test probes.
+W/S accelerate/brake/reverse; A/D steer; Space handbrake; R recover; C camera; Tab map. Esc/G closes the regular garage. Racing recovery adds 3 seconds.
 
-Read `project/STATUS.md`, `project/NEXT_TASK.md`, `project/TASKS.json` and **`project/GARAGE_HANDOFF.md`** before continuing. Source, physics/rule/Play Mode/Windows restart evidence and actual UI snapshots are included. The complete ownership/maintenance career, later stages/conversions, AI opponents, traffic and police remain future work. Claude's workshop art stays separate until actual exports are verified.
+![Aster Apex sports test](artifacts/qa/M12-T04/Sports_Model.png)
+
+Read project/STATUS.md, NEXT_TASK.md, TASKS.json, BOOST_HANDOFF.md and SPORTS_TEST_HANDOFF.md. FEATURE_CHECKLIST.md separates completed work from future content. Native physics/rule/Play Mode and Windows checks are recorded; full-lap manual feel, controllers, optimization and the full ownership/maintenance career remain future work. Claude garage visuals are separate and not yet integrated. Local executables are not stored in Git.

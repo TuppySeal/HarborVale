@@ -32,3 +32,6 @@ Unity 6000.6.0f1 isolated validation in .work/UnityRaceValidation; same physics/
 ## Garage verification
 Unity 6000.6.0f1; same built-in module set, no new dependency or asset. Isolated project .work/UnityGarageValidation; final Windows Garage development player exported successfully (166474217 bytes, 0 build errors). Actual visible player snapshots and separate-process saved-tune reload use isolated profiles; real user progress is untouched by tests. Canonical profile migration/path details in project/GARAGE_HANDOFF.md.
 
+
+## Turbo parts and sports test
+Same pinned Unity 6000.6.0f1/modules; no new dependency. Isolated .work/UnityBoostValidation; successful Windows development exports installed as Builds/HarborVale-TurboParts and Builds/HarborVale-SportsTest. Native player probes use explicit opt-in arguments; sports scene has no career store. Source/details/evidence in BOOST_HANDOFF.md and SPORTS_TEST_HANDOFF.md.

@@ -1,0 +1,1 @@
+PASS native 1280x800 Windows screenshots inspected: original blue primitive coupe, lamps/splitter/rear wing, correct AWD/Turbo identity, readable sequential parts buttons, visible world and driving HUD. Placeholder geometry remains boxy. No manual full-lap, controller or performance-profile claim.

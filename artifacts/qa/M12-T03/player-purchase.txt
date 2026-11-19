@@ -1,0 +1,1 @@
+PASS Windows player: four isolated valid-finish reward fixtures fund Stage 1 (400), gearbox (250), turbo kit (1900), street cooler (400); all installed with 250 credits remaining. Loaded driving produced real per-car boost; actual prerequisite/turbo/cooler/driving UI captures. No user progress seeded.

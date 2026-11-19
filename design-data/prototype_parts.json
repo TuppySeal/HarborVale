@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "status": "fictional_prototype_tuning",
+  "sale_location": "D01 player garage; all parts here for now",
+  "unlock_rule": "paid hardware prerequisites; career reputation gates deferred in one-event prototype",
+  "intercooler_rule": "complete matched net torque configuration with reduced typical warm-charge losses; no additional multiplier or heat/wear simulation claimed",
+  "gearbox": {
+    "id": "gearbox_stage1",
+    "reference_total_price": 350,
+    "shift_seconds_multiplier": 0.88,
+    "requires_engine_stage": 1
+  },
+  "turbo": {
+    "id": "turbo_stage2",
+    "path_id": "path_finch_turbo",
+    "stage": 2,
+    "requires_engine_stage": 1,
+    "requires_gearbox_stage": 1,
+    "included_intercooler": "basic"
+  },
+  "intercooler": {
+    "id": "intercooler_stage1",
+    "reference_price": 550,
+    "requires_engine_stage": 2,
+    "requires_turbo": true,
+    "configuration": {
+      "id": "cfg_finch_turbo_s2_ic1",
+      "aspiration": "turbocharged",
+      "idle_rpm": 900,
+      "redline_rpm": 6500,
+      "soft_limiter_rpm": 6400,
+      "upshift_rpm": 6200,
+      "downshift_rpm": 2200,
+      "launch_target_rpm": 1800,
+      "steady_wot_torque_curve_nm": [
+        [
+          900,
+          76
+        ],
+        [
+          1500,
+          99
+        ],
+        [
+          2500,
+          115
+        ],
+        [
+          3500,
+          158
+        ],
+        [
+          4500,
+          162
+        ],
+        [
+          5500,
+          150
+        ],
+        [
+          6200,
+          129
+        ],
+        [
+          6500,
+          114
+        ]
+      ],
+      "off_boost_torque_curve_nm": [
+        [
+          900,
+          76
+        ],
+        [
+          1500,
+          99
+        ],
+        [
+          2500,
+          115
+        ],
+        [
+          3500,
+          121
+        ],
+        [
+          4500,
+          125
+        ],
+        [
+          5500,
+          120
+        ],
+        [
+          6200,
+          108
+        ],
+        [
+          6500,
+          97
+        ]
+      ],
+      "boost_threshold_rpm": 2500,
+      "full_boost_rpm": 3500,
+      "spool_rise_seconds": 0.55,
+      "spool_fall_seconds": 0.25
+    }
+  }
+}

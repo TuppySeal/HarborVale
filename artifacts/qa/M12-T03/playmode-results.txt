@@ -1,0 +1,13 @@
+EDITOR-ONLY ISSUE K001 search indexing.
+PASS One-location shop locks car and excludes races
+PASS UI rejects turbo without paid prerequisites
+PASS Stage 1 bought
+PASS Gearbox purchase changes actual shift duration
+PASS Turbo kit installs complete boosted/off-boost configuration
+PASS Independent street intercooler installs matched curve and correct debit
+PASS Duplicate selected-part request cannot debit again
+PASS Recovery preserves turbo, cooler and supporting gearbox
+PASS Race start preserves build and excludes shop
+PASS Race reset clears transient spool, not paid hardware
+PASS Disk profile reload retains complete build and receipts
+PASS No gameplay runtime exceptions

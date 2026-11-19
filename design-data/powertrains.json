@@ -255,6 +255,256 @@
               }
             }
           ]
+        },
+        {
+          "id": "path_finch_turbo",
+          "display_name": "Supported mild turbo conversion",
+          "path_type": "aftermarket_turbo_conversion",
+          "conversion_begins_at_stage": 2,
+          "choice_locked_after_stage_1": false,
+          "stages": [
+            {
+              "stage": 1,
+              "paid_reference_price": 550,
+              "min_reputation": 0,
+              "required_transmission_stage": 0,
+              "included_hardware": [
+                "Baseline core-readiness check; repairs quoted separately",
+                "ECU and ignition calibration",
+                "Intake/exhaust breathing package"
+              ],
+              "configuration": {
+                "id": "cfg_finch_turbo_s1",
+                "aspiration": "naturally_aspirated",
+                "idle_rpm": 900,
+                "redline_rpm": 6500,
+                "soft_limiter_rpm": 6400,
+                "upshift_rpm": 6200,
+                "downshift_rpm": 2200,
+                "launch_target_rpm": 1800,
+                "steady_wot_torque_curve_nm": [
+                  [
+                    900,
+                    76
+                  ],
+                  [
+                    1500,
+                    99
+                  ],
+                  [
+                    2500,
+                    115
+                  ],
+                  [
+                    3500,
+                    121
+                  ],
+                  [
+                    4500,
+                    125
+                  ],
+                  [
+                    5500,
+                    120
+                  ],
+                  [
+                    6200,
+                    108
+                  ],
+                  [
+                    6500,
+                    97
+                  ]
+                ]
+              }
+            },
+            {
+              "stage": 2,
+              "paid_reference_price": 2500,
+              "min_reputation": 150,
+              "required_transmission_stage": 1,
+              "included_hardware": [
+                "Small turbo/manifold and oil lines",
+                "Basic intercooler and charge piping",
+                "Matched fueling and Stage 2 calibration"
+              ],
+              "configuration": {
+                "id": "cfg_finch_turbo_s2",
+                "aspiration": "turbocharged",
+                "idle_rpm": 900,
+                "redline_rpm": 6500,
+                "soft_limiter_rpm": 6400,
+                "upshift_rpm": 6200,
+                "downshift_rpm": 2200,
+                "launch_target_rpm": 1800,
+                "steady_wot_torque_curve_nm": [
+                  [
+                    900,
+                    76
+                  ],
+                  [
+                    1500,
+                    99
+                  ],
+                  [
+                    2500,
+                    115
+                  ],
+                  [
+                    3500,
+                    155
+                  ],
+                  [
+                    4500,
+                    158
+                  ],
+                  [
+                    5500,
+                    146
+                  ],
+                  [
+                    6200,
+                    125
+                  ],
+                  [
+                    6500,
+                    110
+                  ]
+                ],
+                "off_boost_torque_curve_nm": [
+                  [
+                    900,
+                    76
+                  ],
+                  [
+                    1500,
+                    99
+                  ],
+                  [
+                    2500,
+                    115
+                  ],
+                  [
+                    3500,
+                    121
+                  ],
+                  [
+                    4500,
+                    125
+                  ],
+                  [
+                    5500,
+                    120
+                  ],
+                  [
+                    6200,
+                    108
+                  ],
+                  [
+                    6500,
+                    97
+                  ]
+                ],
+                "boost_threshold_rpm": 2500,
+                "full_boost_rpm": 3500,
+                "spool_rise_seconds": 0.55,
+                "spool_fall_seconds": 0.25
+              }
+            },
+            {
+              "stage": 3,
+              "paid_reference_price": 4500,
+              "min_reputation": 500,
+              "required_transmission_stage": 2,
+              "included_hardware": [
+                "Higher-flow turbo hardware",
+                "Forged core and matched fueling",
+                "Stage 3 calibration; proposed future content"
+              ],
+              "configuration": {
+                "id": "cfg_finch_turbo_s3",
+                "aspiration": "turbocharged",
+                "idle_rpm": 900,
+                "redline_rpm": 6500,
+                "soft_limiter_rpm": 6400,
+                "upshift_rpm": 6200,
+                "downshift_rpm": 2200,
+                "launch_target_rpm": 1800,
+                "steady_wot_torque_curve_nm": [
+                  [
+                    900,
+                    78
+                  ],
+                  [
+                    1500,
+                    102
+                  ],
+                  [
+                    2500,
+                    119
+                  ],
+                  [
+                    3500,
+                    128
+                  ],
+                  [
+                    4500,
+                    160
+                  ],
+                  [
+                    5500,
+                    154
+                  ],
+                  [
+                    6200,
+                    136
+                  ],
+                  [
+                    6500,
+                    122
+                  ]
+                ],
+                "off_boost_torque_curve_nm": [
+                  [
+                    900,
+                    78
+                  ],
+                  [
+                    1500,
+                    102
+                  ],
+                  [
+                    2500,
+                    119
+                  ],
+                  [
+                    3500,
+                    128
+                  ],
+                  [
+                    4500,
+                    130
+                  ],
+                  [
+                    5500,
+                    125
+                  ],
+                  [
+                    6200,
+                    113
+                  ],
+                  [
+                    6500,
+                    101
+                  ]
+                ],
+                "boost_threshold_rpm": 3500,
+                "full_boost_rpm": 4500,
+                "spool_rise_seconds": 0.85,
+                "spool_fall_seconds": 0.25
+              }
+            }
+          ]
         }
       ]
     },

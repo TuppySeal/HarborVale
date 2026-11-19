@@ -10,8 +10,9 @@ public class DocksideTrialDirector:MonoBehaviour,IFinchRecoveryHandler {
  // Isolated editor probes set this before scene startup; players leave it null.
  public static string SavePathOverrideForTests;
  public bool ExternalModalOpen{get;set;}
- public static string LegacySavePath=>Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),"HarborVale","Prototype","race-progress-v1.json");
- public static string SavePath=>Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),"HarborVale","Prototype","race-progress-v2.json");
+ public static string OlderSavePath=>Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),"HarborVale","Prototype","race-progress-v1.json");
+ public static string LegacySavePath=>Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),"HarborVale","Prototype","race-progress-v2.json");
+ public static string SavePath=>Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),"HarborVale","Prototype","race-progress-v3.json");
  public bool Active=>Session!=null&&(Session.State==TrialState.Countdown||Session.State==TrialState.Running);
  [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]static void Hook(){if(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name!="HarborVale_CityMap")return;var root=new GameObject("First Lap | time trial");root.AddComponent<DocksideTrialDirector>();}
  void Start(){Initialize();}
@@ -19,7 +20,7 @@ public class DocksideTrialDirector:MonoBehaviour,IFinchRecoveryHandler {
   if(Definition!=null)return;var data=Resources.Load<TextAsset>("FirstDocksideTrial");if(data==null)throw new InvalidOperationException("Trial route missing");Definition=JsonUtility.FromJson<TrialDefinition>(data.text);Definition.Validate();vehicle=UnityEngine.Object.FindAnyObjectByType<FinchVehicle>();
   if(vehicle==null){var spec=UnityEngine.Object.FindAnyObjectByType<StarterCarSpecification>();if(spec==null)throw new InvalidOperationException("No starter vehicle");vehicle=spec.gameObject.AddComponent<FinchVehicle>();vehicle.Initialize();}
   vehicle.RecoveryHandler=this;
-  try{Store=new RaceProgressStore(saveOverride??SavePathOverrideForTests??SavePath,Definition,legacyFile:saveOverride==null&&SavePathOverrideForTests==null?LegacySavePath:null);}catch(Exception e){SaveError="Saved race progress could not be read.";Debug.LogWarning("Race progress unavailable: "+e.Message);}
+  try{Store=new RaceProgressStore(saveOverride??SavePathOverrideForTests??SavePath,Definition,legacyFile:saveOverride==null&&SavePathOverrideForTests==null?LegacySavePath:null,olderLegacyFile:saveOverride==null&&SavePathOverrideForTests==null?OlderSavePath:null);}catch(Exception e){SaveError="Saved race progress could not be read.";Debug.LogWarning("Race progress unavailable: "+e.Message);}
   previous=vehicle.transform.position;lastTickTime=Time.realtimeSinceStartupAsDouble;CreateVisuals();
  }
  Material Material(string name,Color color){var m=new Material(Shader.Find("Sprites/Default")){name=name,color=color};return m;}
@@ -78,4 +79,3 @@ public class DocksideTrialDirector:MonoBehaviour,IFinchRecoveryHandler {
  void OnDestroy(){if(vehicle!=null){vehicle.RecoveryHandler=null;vehicle.controlsLocked=false;}if(cyan!=null)Destroy(cyan);if(amber!=null)Destroy(amber);if(white!=null)Destroy(white);}
 }
 }
-

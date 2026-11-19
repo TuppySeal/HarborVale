@@ -165,8 +165,14 @@ Dependencies are task IDs separated by commas. A dependency is satisfied only wh
 | M10-T01 | Prepare release export | M09-T03 | not_started |
 | M10-T02 | Test clean release installation | M10-T01 | not_started |
 | M10-T03 | Package final handoff | M10-T02 | not_started |
+
 | M11-T01 | Author and verify labeled Unity city greybox | - | done |
-| M11-T02 | Expand and scale city with starter-car model | M11-T01 | done |
+| M11-T02 | Expand and scale curved street map with starter-car model | M11-T01 | done |
+| M11-T03 | Driveable stock Aster Finch in Unity city | M11-T02 | done |
+| M12-T01 | First Dockside time trial with saved race earnings | M11-T03 | done |
+| M12-T02 | Garage purchase and persistent Stage 1 Finch tune | M12-T01 | done |
+| M12-T03 | Functional Finch turbo, gearbox support and intercooler upgrades | M12-T02 | done |
+| M12-T04 | Sports test car with grip, downforce and sequential test upgrades | M12-T03 | done |
 
 ### M11-T01 — User-requested Unity map prototype
 
@@ -202,3 +208,11 @@ Accept when evt_dock_01 starts near the player, counts down with locked controls
 ### M12-T02 — First paid Finch garage tune
 Accept when a nearby garage opens only while stopped outside a race, quotes the design-data-derived Stage 1 fee and before/after torque curve, rejects insufficient funds/repeats/stale quotes, and atomically saves debit/receipt/installed tune. Valid v1 race receipts/earnings import once into a separate v2 profile; old files remain intact and later reloads do not duplicate funds. Failed save does not install a tune or debit cash. Reload/reset/recovery preserve the installed curve. Physics comparisons demonstrate a measurable stock-versus-Stage1 acceleration difference using authored curves. Check race purchases/modal locking, result flow, actual Windows UI/export, and leave real player profiles untouched by tests.
 
+
+### M12-T03 — Functional turbo/intercooler parts
+Accept when one garage sells real gearbox support, a compatible turbo Stage-2 package and a street intercooler with paid prerequisites. Imported authored steady/off-boost curves and exponential spool drive torque without double boost multiplication. Gearbox support reduces actual shift interruption; intercooler selects a complete matched curve that preserves off-boost behavior. Historical fees, Stage-1 payments and all race progress migrate to v3 atomically; rejects missing hardware, skips, duplicate/stale/insufficient purchases and failed-save installation. Native tests compare NA, turbo and upgraded-cooler power/acceleration/roll-on, per-car spool and shift/throttle decay. Verify actual Play Mode, Windows UI and restart. Supply completed/to-do checklist and preserve independent Claude project boundaries.
+
+
+
+### M12-T04 — Sports test car
+Separate city test scene with original sports visual, higher grip/brakes, AWD and speed-squared downforce. Same four sequential upgrades with stronger authored torque curves and per-car spool, free only in the test scene with no career transactions. Verify actual physics acceleration, grip/aero settings, prerequisites, recovery and Windows rendering/export. Preserve Finch settings and player saves.

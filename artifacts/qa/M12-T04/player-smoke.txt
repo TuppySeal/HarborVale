@@ -1,0 +1,1 @@
+PASS Windows sports scene: sequential upgrades, no skips, moving install rejection, 510 Nm installed, loaded driving/spool, recovery persistence, rendered model/UI and unchanged career save files. No trial instantiated.

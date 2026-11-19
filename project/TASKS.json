@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project_title": "Redline: From Rust to Riches",
   "project_stage": "implementation",
-  "updated_at": "2026-11-19T01:49:35.4014817Z",
+  "updated_at": "2026-11-19T02:40:03.341Z",
   "current_task_id": null,
   "next_task_id": null,
   "status_values": [
@@ -754,14 +754,65 @@
         "artifacts/qa/M12-T02/player-reload.txt",
         "artifacts/qa/M12-T02/visual-inspection.txt",
         "artifacts/qa/M12-T02/Garage_Installed_UI.png",
-        "project/GARAGE_HANDOFF.md"
+        "project/GARAGE_HANDOFF.md",
+        "project/GARAGE_GITHUB_VERIFICATION.json",
+        "artifacts/qa/M12-T02/install-verification.txt"
       ],
       "remaining_steps": [],
       "blockers": [],
       "updated_at": "2026-11-19T01:49:35.4014817Z"
+    },
+    {
+      "id": "M12-T03",
+      "title": "Functional Finch turbo, gearbox support and intercooler upgrades",
+      "milestone": "M12",
+      "depends_on": [
+        "M12-T02"
+      ],
+      "status": "done",
+      "spec_ref": "docs/05_BUILD_ROADMAP.md",
+      "acceptance_key": "M12-T03",
+      "evidence": [
+        "artifacts/qa/M12-T03/catalog-report.json",
+        "artifacts/qa/M12-T03/rule-physics-results.txt",
+        "artifacts/qa/M12-T03/playmode-results.txt",
+        "artifacts/qa/M12-T03/trial-regression.txt",
+        "artifacts/qa/M12-T03/player-build.txt",
+        "artifacts/qa/M12-T03/player-purchase.txt",
+        "artifacts/qa/M12-T03/player-reload.txt",
+        "artifacts/qa/M12-T03/visual-inspection.txt",
+        "artifacts/qa/M12-T03/install-verification.txt",
+        "project/BOOST_HANDOFF.md"
+      ],
+      "remaining_steps": [],
+      "blockers": [],
+      "updated_at": "2026-11-19T02:40:03.341Z"
+    },
+    {
+      "id": "M12-T04",
+      "title": "Sports test car with grip, downforce and sequential test upgrades",
+      "milestone": "M12",
+      "depends_on": [
+        "M12-T03"
+      ],
+      "status": "done",
+      "spec_ref": "docs/05_BUILD_ROADMAP.md",
+      "acceptance_key": "M12-T04",
+      "evidence": [
+        "artifacts/qa/M12-T04/physics-results.txt",
+        "artifacts/qa/M12-T04/player-build.txt",
+        "artifacts/qa/M12-T04/player-smoke.txt",
+        "artifacts/qa/M12-T04/visual-inspection.txt",
+        "artifacts/qa/M12-T04/Sports_Model.png",
+        "artifacts/qa/M12-T04/install-verification.txt",
+        "project/SPORTS_TEST_HANDOFF.md"
+      ],
+      "remaining_steps": [],
+      "blockers": [],
+      "updated_at": "2026-11-19T02:40:03.341Z"
     }
   ],
   "implementation_authorized": true,
   "current_design_amendment": "docs/12_CONFIRMED_FEATURE_CHOICES.md",
-  "authorization_scope": "Latest user next-step request: bounded garage and first paid tune"
+  "authorization_scope": "One-location functional parts plus separate sports test car/city with stronger matched upgrades; no career writes from sports tests"
 }

@@ -18,13 +18,10 @@ public class FinchDrivingHUD:MonoBehaviour {
   if(vehicle==null||vehicle.Engine==null)return;
   if(inspection){GUI.Box(new Rect(16,Screen.height-54,420,38),"MAP INSPECTION | TAB to return to driving");return;}
   var label=new GUIStyle(GUI.skin.label){fontSize=16};label.normal.textColor=Color.white;
-  GUI.Box(new Rect(16,16,690,106),"ASTER FINCH | "+(vehicle.InstalledPrototypeStage==1?"STAGE 1 NA":"STOCK 1.4")+" | FWD");
-  GUI.Label(new Rect(30,44,660,30),Mathf.RoundToInt(vehicle.SpeedKph)+" km/h    "+Mathf.RoundToInt(vehicle.Engine.Rpm)+" RPM    "+(vehicle.Engine.Gear<0?"R":vehicle.Engine.Gear.ToString())+(vehicle.Engine.Shifting?"   SHIFT":""),label);
+  GUI.Box(new Rect(16,16,690,106),vehicle.displayName+" | "+(vehicle.InstalledPrototypeStage>=2?"TURBO S2":vehicle.InstalledPrototypeStage==1?"STAGE 1 NA":(vehicle.PowertrainCarId=="car_apex_test"?"STOCK 2.0":"STOCK 1.4"))+" | "+vehicle.driveLabel);
+  GUI.Label(new Rect(30,44,660,30),Mathf.RoundToInt(vehicle.SpeedKph)+" km/h    "+Mathf.RoundToInt(vehicle.Engine.Rpm)+" RPM    "+(vehicle.Engine.Gear<0?"R":vehicle.Engine.Gear.ToString())+(vehicle.Engine.Shifting?"   SHIFT":"")+(vehicle.Engine.definition.IsTurbo?"   BOOST "+vehicle.Engine.BoostBar.ToString("F2")+" bar":""),label);
   GUI.Label(new Rect(30,77,660,36),"W / S accelerate, brake, reverse  |  A / D steer  |  Space handbrake\nR recover on road  |  C camera  |  Tab map inspection");
  }
  void OnDestroy(){if(engineAudio!=null&&engineAudio.clip!=null)Destroy(engineAudio.clip);}
 }
 }
-
-
-

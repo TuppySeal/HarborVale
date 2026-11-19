@@ -1,0 +1,28 @@
+{
+  "pass": true,
+  "prices": [
+    {
+      "id": "engine_stage1",
+      "price": 400
+    },
+    {
+      "id": "gearbox_stage1",
+      "price": 250
+    },
+    {
+      "id": "turbo_stage2",
+      "price": 1900
+    },
+    {
+      "id": "intercooler_stage1",
+      "price": 400
+    }
+  ],
+  "turboThresholdRpm": 2500,
+  "spoolTimeConstantSeconds": 0.55,
+  "steadyPeakKnotKw": [
+    84.08996323352235,
+    86.39379784265995
+  ],
+  "prototypeUnlock": "paid prerequisites; career rep gate deferred"
+}

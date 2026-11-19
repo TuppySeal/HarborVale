@@ -6,6 +6,8 @@ public class FinchVehicle:MonoBehaviour {
  public TextAsset stockDefinition;
  [Header("Accessible stock handling")]
  public float lowSpeedSteer=32,highSpeedSteer=7.5f,steeringResponse=2.4f,antiRoll=3800,aeroCdA=.88f;
+ public string PowertrainCarId="car_finch",displayName="ASTER FINCH",driveLabel="FWD";
+ public float frontDriveShare=1,forwardGrip=1.15f,lateralGrip=1.10f,downforceCoefficient=.35f;
  public bool playerInput=true,externalInput; public bool controlsLocked; public IFinchRecoveryHandler RecoveryHandler{get;set;}
  public float commandedPedal,commandedSteer;public bool commandedHandbrake;
  public Rigidbody Body{get;private set;}public WheelCollider[] Wheels{get;private set;}
@@ -34,7 +36,7 @@ public class FinchVehicle:MonoBehaviour {
   Wheels[0].ConfigureVehicleSubsteps(5,8,12);spawn=transform.position;spawnRotation=transform.rotation;
  }
  public int InstalledPrototypeStage{get;private set;}
- public void InstallPowertrain(FinchDefinition definition,int stage=0){Initialize();if(definition==null||definition.carId!="car_finch")throw new System.ArgumentException("Incompatible powertrain");Engine=new FinchPowertrain(definition);InstalledPrototypeStage=stage;}
+ public void InstallPowertrain(FinchDefinition definition,int stage=0){Initialize();if(definition==null||definition.carId!=PowertrainCarId)throw new System.ArgumentException("Incompatible powertrain");Engine=new FinchPowertrain(definition);InstalledPrototypeStage=stage;}
  void Awake(){Initialize();}
  void Update(){
   if(!externalInput){commandedPedal=playerInput&&!controlsLocked?FinchInput.Pedal:0;commandedSteer=playerInput&&!controlsLocked?FinchInput.Steer:0;commandedHandbrake=controlsLocked||!playerInput||!Application.isFocused||FinchInput.Held(KeyCode.Space);}
@@ -49,22 +51,22 @@ public class FinchVehicle:MonoBehaviour {
   bool reverse=pedal<0||(pedal==0&&Engine.Gear<0);
   steer=Mathf.MoveTowards(steer,Mathf.Clamp(commandedSteer,-1,1),steeringResponse*dt);handbrake=Mathf.MoveTowards(handbrake,commandedHandbrake?1:0,dt*6);
   Steering=steer*Mathf.Lerp(lowSpeedSteer,highSpeedSteer,Mathf.Clamp01(SpeedKph/130));
-  float torque=Engine.Step(forward,(Wheels[0].rpm+Wheels[1].rpm)*.5f,Throttle,reverse,dt);
+  float torque=Engine.Step(forward,(Wheels[0].rpm+Wheels[1].rpm)*.5f,Throttle,reverse,dt,GroundedWheels>0);
   // Avoid accelerating into the opposite direction until braking reaches walking speed.
   if(opposite)torque=0;
   GroundedWheels=0;float totalBrake=Engine.definition.brakeDeceleration*Body.mass*Engine.definition.wheelRadius;
   for(int i=0;i<4;i++){
    var w=Wheels[i];if(w.isGrounded)GroundedWheels++;
-   w.steerAngle=i<2?Steering:0;w.motorTorque=i<2?torque*.5f:0;
+   w.steerAngle=i<2?Steering:0;w.motorTorque=torque*(i<2?frontDriveShare:1-frontDriveShare)*.5f;
    float coastBrake=pedal==0?Engine.definition.massKg*9.81f*.012f*Engine.definition.wheelRadius/4:0;
    float hold=pedal==0&&Mathf.Abs(forward)<.35f?220:0;
    w.brakeTorque=Mathf.Max(totalBrake*Brake*(i<2?.325f:.175f),coastBrake,hold,i>=2?handbrake*1900:0);
-   var friction=w.sidewaysFriction;friction.stiffness=i<2?1.10f:Mathf.Lerp(1.10f,.55f,handbrake);w.sidewaysFriction=friction;
+   var friction=w.sidewaysFriction;friction.stiffness=i<2?lateralGrip:Mathf.Lerp(lateralGrip,.55f,handbrake);w.sidewaysFriction=friction;var longitudinal=w.forwardFriction;longitudinal.stiffness=forwardGrip;w.forwardFriction=longitudinal;
   }
   if(GroundedWheels>0){AntiRoll(0,1);AntiRoll(2,3);}
   Vector3 velocity=Body.linearVelocity;Body.AddForce(-velocity*velocity.magnitude*(.5f*1.225f*aeroCdA),ForceMode.Force);
   // Aerodynamic downforce is small; no artificial acceleration or yaw teleportation.
-  if(GroundedWheels>=2)Body.AddForce(-transform.up*velocity.sqrMagnitude*.35f,ForceMode.Force);
+  if(GroundedWheels>=2)Body.AddForce(-transform.up*velocity.sqrMagnitude*downforceCoefficient,ForceMode.Force);
  }
  void AntiRoll(int a,int b){
   float travelA=1,travelB=1;bool ga=Wheels[a].GetGroundHit(out var ha),gb=Wheels[b].GetGroundHit(out var hb);
@@ -74,10 +76,6 @@ public class FinchVehicle:MonoBehaviour {
  }
  void LateUpdate(){if(Wheels==null)return;for(int i=0;i<4;i++)if(visual[i]!=null){Wheels[i].GetWorldPose(out var p,out var q);visual[i].SetPositionAndRotation(p,q);}}
  public void ResetAt(Vector3 position,Quaternion rotation){Initialize();Body.linearVelocity=Vector3.zero;Body.angularVelocity=Vector3.zero;Body.position=position;Body.rotation=rotation;transform.SetPositionAndRotation(position,rotation);Engine.Reset();steer=0;commandedPedal=commandedSteer=0;foreach(var w in Wheels){w.motorTorque=0;w.brakeTorque=0;w.steerAngle=0;}Body.WakeUp();Physics.SyncTransforms();}
- public void Recover(){if(RecoveryHandler!=null&&RecoveryHandler.TryRecover(this))return;if(gameObject.scene.name=="HarborVale_CityMap"&&FinchDrivingBootstrap.TryRecovery(transform.position,transform.forward,out var p,out var q))ResetAt(p,q);else ResetAt(spawn+Vector3.up*.2f,spawnRotation);}
+ public void Recover(){if(RecoveryHandler!=null&&RecoveryHandler.TryRecover(this))return;if((gameObject.scene.name=="HarborVale_CityMap"||gameObject.scene.name=="HarborVale_SportsTest")&&FinchDrivingBootstrap.TryRecovery(transform.position,transform.forward,out var p,out var q))ResetAt(p,q);else ResetAt(spawn+Vector3.up*.2f,spawnRotation);}
 }
 }
-
-
-
-
