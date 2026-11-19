@@ -13,3 +13,5 @@ Evidence M12-T05: timer boundary fixtures; actual Windows mode menu, 47 transiti
 Claude supplied initial garage scripts, without a generated/verified scene. Read-only inspection found likely compile errors. Garage remains separate and unintegrated; follow-up prompt: CLAUDE_GARAGE_FINISH_PROMPT.md. No Claude project files were modified.
 
 Detailed completed/todo: FEATURE_CHECKLIST.md. Previous implementations and verification records remain in their handoffs; publication verification for this update follows after push. Existing user PackageManagerSettings.asset remains untracked and untouched.
+
+Implementation uploaded and remote-verified at aed745ce16c98c54f465c4a4c49024fca2ac685c. See LAUNCH_GITHUB_VERIFICATION.json.

@@ -1,0 +1,11 @@
+{
+  "implementation_commit": "aed745ce16c98c54f465c4a4c49024fca2ac685c",
+  "verified_remote_main_at_publication": "aed745ce16c98c54f465c4a4c49024fca2ac685c",
+  "verified_at": "2026-11-19T03:12:20.604Z",
+  "repository": "https://github.com/TuppySeal/HarborVale",
+  "player": "Builds/HarborVale-Play/HarborVale.exe",
+  "verification": "47 native Windows assertions plus timer fixtures, existing regressions, inspected UI and installed source/export hashes",
+  "preserved_untracked": [
+    "ProjectSettings/PackageManagerSettings.asset"
+  ]
+}
