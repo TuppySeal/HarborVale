@@ -2,8 +2,10 @@
 
 Justice explicitly authorized Codex to message Claude and Antigravity directly while away. Existing Windows app sessions used; no account/security settings changed.
 
-Claude: existing Garage prop pack session, request sent and response observed. Finish BrakeKit prefab/material-only export, clean Unity import, actual PNG renders and measured verification report. Scope C:/Users/Justice/Documents/HarborVale-Claude-Art only. MainDisc scale now .30/.008/.30, correct diameter; report thickness as actual .016m cylinder height. At initial review asset-only package absent, screenshot folders empty, clean import not yet executed. No main-game integration authorized for unverified assets.
+Antigravity completed native-v3/v4 review, approved the prototype interface and acknowledged all key issues resolved. Full report copied into QA. Its visual review does not establish live controller behavior or gameplay tests; Codex's independent 24 GUI and 47 transition tests are the runtime evidence.
 
-Antigravity: existing HarborVale Garage Interface Review, follow-up sent; Working observed. Review native-v4 screenshots, only write HarborVale-Antigravity-QA/GarageReview/GARAGE_REVIEW_V3.md and annotations. Do not modify game or launch Unity. Mark fixed items resolved; at most three real remaining visual issues. IMGUI scaling, keyboard hints do not prove other input support.
+Claude corrected source rotor scale but the filtered asset package was stale (.15m actual diameter on clean import), and renders/import measurements were still missing. Codex repaired a separate review copy, exported natively, clean-imported into a second fresh project and generated real images; technical checks passed. See artifacts/qa/M14-T01/brake-technical-review. Original Claude folders unchanged by Codex. The images exposed geometry quality problems, so asset is not integrated.
 
-Codex owns all gameplay, transactions, saves and final integration. Check file evidence after helpers finish; no agent completion text is sufficient alone.
+Latest task sent to Claude: revise ONLY brake kit geometry (annular rotor friction faces/internal vanes/hub bore/outer-rim caliper with opposed pads), saved meshes/materials/prefab and actual PNG. Work only inside HarborVale-Claude-Art, preferably isolated unlocked project. No new props/gameplay. Await RESULTS_GEOMETRY.md and actual files; independently verify. Existing Claude session Garage prop pack for Unity racing game; message accepted and composer cleared.
+
+Antigravity has no further task pending after its final report. Codex owns gameplay, transactions/saves, final integration and expanded-parts M14-T02. Keep task writes separate; no completion claim replaces file/runtime evidence.

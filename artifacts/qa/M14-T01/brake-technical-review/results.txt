@@ -1,0 +1,6 @@
+PASS Imported asset-only package into fresh Unity project
+PASS 23 renderers; zero null materials; six saved Standard materials
+PASS Rotor bounds.size (m): (0.3000, 0.0160, 0.3000)
+PASS No imported C# or UI/TMP dependencies
+PASS Rendered full and detail PNG via actual Unity camera
+LIMIT Static asset inspection only; no brake gameplay, draw-call or memory claims

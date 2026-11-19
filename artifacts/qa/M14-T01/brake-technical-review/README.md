@@ -1,0 +1,7 @@
+# Brake asset technical check — art revision required
+
+Original Claude source folder remains untouched. Original asset-only package imported into a new project failed actual renderer measurement: rotor diameter 0.15m, because package was filtered from an old full export. Current source prefab correctly has MainDisc scale .30/.008/.30. Copied corrected source into isolated .work/BrakeAssetReview, exported via Unity AssetDatabase.ExportPackage, then imported that new package into a second fresh .work/BrakeCleanImport project.
+
+Second fresh import passed: 23 renderers, zero null materials, six saved Standard materials, rotor bounds.size (.3000,.0160,.3000)m, no imported scripts/UI/TMP dependencies. Camera.Render PNGs included. The source runner initially used ImportPackage and quit before asynchronous import completed; corrected runner waits for actual prefab import then verifies/exits. This was verification orchestration, not a package corruption claim.
+
+Art inspection is NOT approved: upright fins appear on exposed friction face and caliper is too near disc center. Claude has received a focused geometry revision: annular friction faces, internal vanes, central bore, outer-rim caliper/opposed pads. No brake art integrated into main Assets. No physical brake upgrade exists yet. No triangle/draw-call/memory/performance claims established. Native successful import does not establish art quality or gameplay compatibility.

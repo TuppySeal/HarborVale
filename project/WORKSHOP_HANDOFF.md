@@ -11,3 +11,5 @@ Reviewed Claude-derived standalone project: reviewed-previews/ClaudeReview outsi
 Next authorized M14-T02: real expanded induction/brakes/tune catalog, paid v4 migration and isolated Apex test equivalents. Read EXPANDED_PARTS_IMPLEMENTATION_PLAN.md. Do not mistake a polished interface or preview effect for implemented superchargers/twins/flame tunes.
 
 Antigravity second review annotations identified clipped small labels and car-caption overlap. Fixed native label padding and shortened CURRENT BUILD; native-v4 captures inspected and all 24 GUI checks passed again. Actual number formatter was consistent; clipped comma descenders caused the apparent separator difference. A remaining footer-spacing preference is cosmetic. External brake package now exists with prefab/material-only inventory, but clean-import/render evidence is still in progress and no brake asset was integrated.
+
+Later external check: Antigravity final report now approved V4; full report saved in QA. Brake technical check completed independently, but art remains rejected pending geometry revision. See brake-technical-review/README.md and EXTERNAL_AGENT_COORDINATION.md.

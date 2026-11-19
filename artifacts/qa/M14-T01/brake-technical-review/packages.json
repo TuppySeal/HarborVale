@@ -1,0 +1,14 @@
+{
+  "original": {
+    "bytes": 75191,
+    "sha256": "b0f18f54b622bd9a62b4d85b6cfacaedddc294461bf8245c6aa888c6c7bd8359",
+    "actualDiameterM": 0.15
+  },
+  "reviewed": {
+    "bytes": 74895,
+    "sha256": "4427c343a04547356d0af23ecb208cbbb60eaac56441bccb4b097b96934dc0fe",
+    "actualDiameterM": 0.3
+  },
+  "artApproved": false,
+  "mainGameIntegrated": false
+}
