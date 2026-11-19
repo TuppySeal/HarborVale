@@ -1,0 +1,101 @@
+{
+  "asset": "Aster Tempest R",
+  "blender": "5.3.0",
+  "dimensions_m": {
+    "width": 1.965,
+    "length": 4.58,
+    "height": 1.165
+  },
+  "bounds_blender_m": {
+    "x": [
+      -0.982,
+      0.982
+    ],
+    "y_forward": [
+      -2.29,
+      2.29
+    ],
+    "z_up": [
+      0.0,
+      1.165
+    ]
+  },
+  "target": {
+    "length": 4.58,
+    "width_nominal": 1.96,
+    "height": 1.16,
+    "wheelbase": 2.76,
+    "track": 1.68,
+    "tire_radius": 0.345
+  },
+  "mesh_objects": 9,
+  "total_triangles": 76126,
+  "per_mesh": {
+    "Body": {
+      "verts": 26917,
+      "tris": 53278
+    },
+    "Caliper_FL": {
+      "verts": 112,
+      "tris": 220
+    },
+    "Caliper_FR": {
+      "verts": 112,
+      "tris": 220
+    },
+    "Caliper_RL": {
+      "verts": 112,
+      "tris": 220
+    },
+    "Caliper_RR": {
+      "verts": 112,
+      "tris": 220
+    },
+    "Wheel_FL": {
+      "verts": 2758,
+      "tris": 5492
+    },
+    "Wheel_FR": {
+      "verts": 2758,
+      "tris": 5492
+    },
+    "Wheel_RL": {
+      "verts": 2758,
+      "tris": 5492
+    },
+    "Wheel_RR": {
+      "verts": 2758,
+      "tris": 5492
+    }
+  },
+  "wheel_pivots": {
+    "Front left wheel pivot": [
+      -0.84,
+      1.38,
+      0.465
+    ],
+    "Front right wheel pivot": [
+      0.84,
+      1.38,
+      0.465
+    ],
+    "Rear left wheel pivot": [
+      -0.84,
+      -1.38,
+      0.465
+    ],
+    "Rear right wheel pivot": [
+      0.84,
+      -1.38,
+      0.465
+    ]
+  },
+  "wheel_pivot_note": "Blender coords (X right, Y forward, Z up) = Unity (X, Z, Y) after FBX; pivot at spec height 0.465, wheel mesh child offset -0.12 so tire touches ground.",
+  "fbx_export_axes": {
+    "forward": "-Z",
+    "up": "Y",
+    "bake_space_transform": true,
+    "scale": 1.0
+  },
+  "unity_import_tested": false
+}

@@ -12,7 +12,8 @@
         "naStage": 0,
         "gearboxStage": 0,
         "tireStage": 0
-      }
+      },
+      "modelId": "car_finch"
     },
     {
       "id": "club",
@@ -24,7 +25,8 @@
         "naStage": 1,
         "gearboxStage": 1,
         "tireStage": 1
-      }
+      },
+      "modelId": "car_coda"
     },
     {
       "id": "tuned",
@@ -38,7 +40,8 @@
         "induction": "small",
         "inductionStage": 1,
         "tireStage": 2
-      }
+      },
+      "modelId": "car_vector"
     }
   ],
   "replacementPrice": 1800,

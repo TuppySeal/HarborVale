@@ -14,7 +14,7 @@ public sealed class HarborValeLaunch:MonoBehaviour {
  static void Loaded(Scene scene,LoadSceneMode mode){
   if(scene.name!=MenuScene&&scene.name!=CityScene&&scene.name!=SportsScene&&scene.name!="Finch_HandlingTest")return;
   // All scene-specific systems initialize here, including when returning from the hub.
-  FinchDrivingBootstrap.StartDriving();DocksideTrialDirector.Hook();FinchGarage.Hook();ApexTestDrive.Hook();HarborValeGreybox.Workshop.ExpandedWorkshop.Hook();TrafficWorld.Hook();RivalRaceDirector.Hook();
+  FinchDrivingBootstrap.StartDriving();DocksideTrialDirector.Hook();FinchGarage.Hook();ApexTestDrive.Hook();HarborValeGreybox.Workshop.ExpandedWorkshop.Hook();TrafficWorld.Hook();RivalRaceDirector.Hook();PhysicalGarage.Hook();GarageFleetDisplay.Hook();
   if(Instance==null){var root=new GameObject("HarborVale | launch and mode selection");Instance=root.AddComponent<HarborValeLaunch>();DontDestroyOnLoad(root);}
   Instance.Message=null;
   if(scene.name==SportsScene&&!UnityEngine.Object.FindAnyObjectByType<SportsAccelerationHUD>())new GameObject("Sports | live acceleration tests").AddComponent<SportsAccelerationHUD>();
@@ -32,7 +32,7 @@ public sealed class HarborValeLaunch:MonoBehaviour {
   GUI.Label(new Rect(80,63,1120,80),"HARBOR VALE",title);GUI.Label(new Rect(84,146,1120,44),"Choose your drive",heading);
   GUI.Box(new Rect(80,226,540,330),"");GUI.Box(new Rect(660,226,540,330),"");GUI.Label(new Rect(108,252,480,40),"ASTER FINCH",heading);GUI.Label(new Rect(688,252,480,40),"ASTER APEX",heading);
   GUI.Label(new Rect(108,309,480,140),"Race First Lap, earn credits and buy parts at the player garage.\n\nYour paid upgrades and race progress carry over.",text);GUI.Label(new Rect(688,309,480,140),"AWD sports car with extra grip and downforce.\n\nTry stronger upgrades for free and compare live 0–100 times.",text);
-  GUI.enabled=!Busy;if(GUI.Button(new Rect(108,468,484,56),"Drive Finch · saved progress",button))Open(CityScene);if(GUI.Button(new Rect(688,468,484,56),"Test Apex · free upgrades",button))Open(SportsScene);if(GUI.Button(new Rect(1030,677,170,46),"Quit"))Application.Quit();GUI.enabled=true;
+  GUI.enabled=!Busy;if(GUI.Button(new Rect(108,468,484,56),"Drive Finch · saved progress",button))Open(CityScene);if(GUI.Button(new Rect(688,468,232,56),"Test Apex · free",button)){HarborValeGreybox.Workshop.ExpandedWorkshop.RequestedTestModel=null;Open(SportsScene);}if(GUI.Button(new Rect(930,468,242,56),"Test Tempest · free",button)){HarborValeGreybox.Workshop.ExpandedWorkshop.RequestedTestModel="car_tempest";Open(SportsScene);}if(GUI.Button(new Rect(1030,677,170,46),"Quit"))Application.Quit();GUI.enabled=true;
   GUI.Label(new Rect(84,588,1100,83),"W / S — accelerate, brake, reverse     A / D — steer     R — recover     C — camera\nRMB + mouse look / J-L side views / K rear view. Release to center.\nFinch: G opens the nearby garage. Apex: stop and press G for free test parts.",text);GUI.Label(new Rect(84,714,920,38),Busy?"Loading your drive…":"Apex test parts reset each visit. Your Finch credits stay separate.",text);GUI.matrix=old;
  }
 }

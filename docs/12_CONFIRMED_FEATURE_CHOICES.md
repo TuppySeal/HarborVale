@@ -53,3 +53,7 @@ User requested simple part previews, realistic sound pass, selectable tires and 
 
 ## M17-T01 implemented traffic and title stakes
 User authorized AI cars for cash races/pink slips and regular traffic. Implemented36 connected road loops with up to10 physical ambient cars,3 Finch-variant rivals on Dockside circuit, no-entry cash winnings/completion rewards, and explicitly confirmed pink slips on specific car identities/builds. Win/loss/title history commit atomically with money; closing/abandoning committed race forfeits, ties retain both titles. Last-car loss supplies an unstakeable/unmodifiable loaner; cash/time trials fund a NEW1800cr replacement, without reversing a loss. Existing prototype explicitly retained as an owned identity without invented purchase/service/mileage. v7 paid migration preserves old files/receipts. Traffic signals, overtaking, police, mileage/wear and full car market remain unimplemented. See project/RIVALS_HANDOFF.md for actual checks and manual limits.
+
+
+## M17-T02 owned garage and purchased donor engines
+User explicitly authorized a physical garage, additional cars with distinct specifications, AI bump recovery, an original high-power Claude/Blender sports car, bought-car engine swaps and a car/inventory drag-and-drop garage. Implemented whole-engine assemblies with fitted engine hardware, chassis retention, real prerequisites/labor and unique title-linked identity. Read project/INVENTORY_HANDOFF.md for verification and limits. No full loose-part inventory or mileage/wear/used-market simulation is claimed.

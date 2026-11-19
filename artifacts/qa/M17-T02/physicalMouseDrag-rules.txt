@@ -1,0 +1,35 @@
+PASS G opens owned-car and engine inventory board inside real garage
+PASS Actual paid supporting part: na_1
+PASS Actual paid supporting part: gearbox_1
+PASS Actual paid supporting part: gearbox_2
+PASS Actual paid supporting part: gearbox_3
+PASS Actual paid supporting part: brakes_1
+PASS Actual paid supporting part: brakes_2
+PASS Actual paid supporting part: tires_1
+PASS Actual paid supporting part: tires_2
+PASS Purchased V8 opens workshop
+PASS Actual paid supporting part: na_1
+PASS Actual paid supporting part: gearbox_1
+PASS Actual paid supporting part: induction_small_1
+PASS Actual paid supporting part: cooling_1
+PASS Car-to-car drag quotes compatible engine transfer
+PASS Nonblank native render: Engine_Transfer_Confirmation
+PASS Confirmed swap drives actual coupe chassis with tuned V8 calibration and mass
+PASS Swapped actor retains exactly four physics contacts
+PASS Drag to storage removes exact engine and leaves chassis owned
+PASS GUI rejects unsupported V8-to-Finch fitment
+PASS Nonblank native render: Garage_Engine_Inventory
+PASS Physical mouse drag from stored V8 to focused left car tile and confirmation commits correctly
+PASS GUI transfers preserve unique engine count
+PASS Nonblank native render: Garage_Swapped_Coupe
+PASS Actual native inventory reload retains swapped V8
+PASS Free Tempest test runs actual Blender car with >1000HP factory twin turbo
+PASS Tempest uses its own axle geometry with one physics rig
+PASS Tempest free workshop opens
+PASS Actual paid supporting part: na_1
+PASS Actual paid supporting part: gearbox_1
+PASS Actual paid supporting part: cooling_1
+PASS Nonblank native render: Tempest_Free_Tuning
+PASS Nonblank native render: Tempest_Blender_Model
+PASS Free Tempest tune leaves paid fleet save byte-identical
+PASS Native inventory run has no runtime errors

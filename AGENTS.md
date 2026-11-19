@@ -64,3 +64,7 @@ M16-T02: read project/FITMENT_HANDOFF.md.55 offers/18 tabs; original49 fees/curv
 
 ## Latest physical traffic, rival races and title ownership
 M17-T01: read project/RIVALS_HANDOFF.md. Latest Builds/HarborVale-Rivals. Production v7 imports v6 once; original paid workshop cache is historical original car, ActiveWorkshop selects real owned car/loaner. Fleet ownership, pending stakes, race rewards, per-car modifications and title transfers replay from ordered atomic shared receipts. Pink slips deliberately risk last car and closing forfeits; never restore lost title or sell/stake loaner. Keep recovery replacement a new identity. Source map and player physics unchanged; AI reuses four-contact dynamics. Preserve paid old records, gate validation, visible modal/confirmation, blocked-result-save guard and free Apex isolation. Traffic is prototype with no signals/overtaking/police.
+
+
+## Latest garage inventory and distinct models
+M17-T02: read project/INVENTORY_HANDOFF.md. Latest local Builds/HarborVale-GarageInventory. v9 engine inventory migrates validated older schemas read-only. Preserve unique assemblies, atomic idempotent swap/money/title links, frozen receipts and donor-power/receiver-chassis split. Source map is unchanged; physical D01 replacement is runtime. Tempest free test stays paid-save isolated. Claude original output must remain untouched. No full loose-part inventory is claimed.

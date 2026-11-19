@@ -6,9 +6,9 @@ public class FinchVehicle:MonoBehaviour {
  public TextAsset stockDefinition;
  [Header("Accessible stock handling")]
  public float lowSpeedSteer=32,highSpeedSteer=7.5f,steeringResponse=2.4f,antiRoll=3800,aeroCdA=.88f;
- public string PowertrainCarId="car_finch",displayName="ASTER FINCH",driveLabel="FWD";
+ public string EngineModelId;public string PowertrainCarId="car_finch",displayName="ASTER FINCH",driveLabel="FWD";
  public float differentialBias=1,differentialLock;public float DrivenWheelSlip{get;private set;}public bool IsBurningOut{get;private set;}public int DrivenGroundedWheels{get;private set;}
- public float rearLateralGripMultiplier=1;
+ public float rearLateralGripMultiplier=1;public float wheelBase=2.45f,wheelCenterHeight=.415f;
  public float frontDriveShare=1,forwardGrip=1.15f,lateralGrip=1.10f,downforceCoefficient=.35f;
  public bool countdownStagingAllowed{get;set;}public bool playerInput=true,externalInput; public bool controlsLocked; public IFinchRecoveryHandler RecoveryHandler{get;set;}
  public bool IsBrakeBoosting=>Engine!=null&&Engine.BrakeBoostHolding;public float commandedServiceBrake;public float commandedPedal,commandedSteer;public bool commandedHandbrake;
@@ -37,6 +37,7 @@ public class FinchVehicle:MonoBehaviour {
   }
   Wheels[0].ConfigureVehicleSubsteps(5,8,12);spawn=transform.position;spawnRotation=transform.rotation;
  }
+ public void ConfigureGeometry(Transform model,float spacing,float track,float radius,Vector3 shellSize,Vector3 shellCenter){Initialize();wheelBase=spacing;wheelCenterHeight=radius+.12f;string[] names={"Front left wheel pivot","Front right wheel pivot","Rear left wheel pivot","Rear right wheel pivot"};for(int i=0;i<4;i++){Wheels[i].transform.localPosition=new Vector3(i%2==0?-track/2:track/2,wheelCenterHeight,i<2?spacing/2:-spacing/2);Wheels[i].radius=radius;visual[i]=model.Find(names[i]);}var shell=GetComponent<BoxCollider>();if(shell!=null){shell.center=shellCenter;shell.size=shellSize;}wheelVisualsReady=false;Physics.SyncTransforms();}
  public int ResetSequence{get;private set;}
  public int InstalledPrototypeStage{get;private set;}
  public void InstallPowertrain(FinchDefinition definition,int stage=0){Initialize();if(definition==null||definition.carId!=PowertrainCarId)throw new System.ArgumentException("Incompatible powertrain");var mode=Engine.Mode;Engine=new FinchPowertrain(definition);Body.mass=definition.massKg;foreach(var wheel in Wheels)wheel.sprungMass=Body.mass/4;Engine.SetMode(mode);InstalledPrototypeStage=stage;}

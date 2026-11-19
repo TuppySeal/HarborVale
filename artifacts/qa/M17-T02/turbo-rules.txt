@@ -1,0 +1,32 @@
+PASS Boosted throttle arms without premature release
+PASS Lift uses actual pre-lift boost strength
+PASS Holding lift cannot retrigger release
+PASS No release after unboosted rev
+PASS Garage modal and suppressed input cancel release
+PASS NA and supercharger paths cannot release turbo sound
+PASS Recovery reset cannot release stale boost
+PASS Boost completely lost before lift cannot reuse old pressure
+PASS Finite unclipped original synthesis at 22050Hz
+MEASURE flutter bursts=6 at 22050
+PASS Flutter has multiple separated pressure pulses at 22050
+PASS Release ends in silence at 22050
+PASS Blow-off valve tail decays at 22050
+PASS Finite unclipped original synthesis at 44100Hz
+MEASURE flutter bursts=6 at 44100
+PASS Flutter has multiple separated pressure pulses at 44100
+PASS Release ends in silence at 44100
+PASS Blow-off valve tail decays at 44100
+PASS Finite unclipped original synthesis at 48000Hz
+MEASURE flutter bursts=6 at 48000
+PASS Flutter has multiple separated pressure pulses at 48000
+PASS Release ends in silence at 48000
+PASS Blow-off valve tail decays at 48000
+PASS Higher real pressure produces stronger release
+PASS Inactive turbo renders silence
+PASS Missing cosmetic preference defaults to BOV
+PASS Flutter preference saves and reloads
+PASS Preference write failure rejected
+PASS Failed preference save preserves prior bytes
+PASS Unknown future audio settings cannot be overwritten
+PASS Future preference remains unchanged
+PASS Invalid sound enum rejected

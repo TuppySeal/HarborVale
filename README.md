@@ -4,7 +4,7 @@
 
 This repository and its downloads are private. Sign in with a GitHub account that has access.
 
-Download **HarborVale-Rivals-Windows-x64.zip** from the release's Assets list, extract the entire ZIP, then run **HarborVale.exe** inside the extracted HarborVale folder. Keep HarborVale_Data and all DLLs beside it. Close older game versions first. The game runs on a Windows64-bit PC; GitHub does not run it in a browser.
+Download **HarborVale-GarageInventory-Windows-x64.zip** from the release's Assets list, extract the entire ZIP, then run **HarborVale.exe** inside the extracted HarborVale folder. Keep HarborVale_Data and all DLLs beside it. Close older game versions first. The game runs on a Windows64-bit PC; GitHub does not run it in a browser.
 
 ## AI rivals and traffic
 
@@ -29,6 +29,13 @@ Cleaner lighting/edge smoothing and a first art pass on17 existing Midtown plots
 
 ## Unity source
 
-Unity **6000.6.0f1**, built-in renderer. Open **Assets/HarborValeGreybox/Launch/Scenes/HarborVale_Hub.unity** and press Play. Installed local player: **Builds/HarborVale-Rivals/HarborVale.exe**. Builds and caches are excluded from Git; downloadable players are attached to GitHub Releases.
+Unity **6000.6.0f1**, built-in renderer. Open **Assets/HarborValeGreybox/Launch/Scenes/HarborVale_Hub.unity** and press Play. Installed local player: **Builds/HarborVale-GarageInventory/HarborVale.exe**. Builds and caches are excluded from Git; downloadable players are attached to GitHub Releases.
 
 Read project/STATUS.md, project/NEXT_TASK.md, project/RIVALS_HANDOFF.md and project/RELEASES.json for current progress, actual verification and download hashes. Earlier milestone handoffs preserve historical measurements and save migrations. Follow AGENTS.md before changes; do not run legacy scene exporters or reset paid saves.
+
+
+## Owned garage and engine swaps
+
+Run the latest player, choose Drive Finch, stop at PLAYER GARAGE and press **G**. The board shows owned cars, a rotating model and stored engine assemblies. **Upgrade parts** opens the staged shop; **Buy another car** opens the showroom. Drag engine handles into storage or onto another car, then confirm compatible mounts/ECU labor. Receiver keeps its gearbox, brakes, tires, suspension and drivetrain. Empty chassis cannot drive/race.
+
+Four new models: Coda CS I4 coupe, Vector Six I6 AWD sedan, Bastion GT V8 muscle and original Blender Tempest R twin-turbo V8 (~1,100HP). Main menu **Test Tempest / free** is isolated from paid saves. Engines keep installed power upgrades and follow the car in pink slips; loose engines stay owned. Read [inventory handoff](project/INVENTORY_HANDOFF.md).

@@ -1,0 +1,38 @@
+PASS Four model-specific profiles include Blender Tempest hypercar
+PASS Released v7 migrates read-only to v9 preserving money/identity/receipt amounts
+PASS Migration registers each genuinely fitted engine once, with no invented stored kits
+PASS Old save remains byte-identical
+PASS High donor torque requires receiver gearbox support before transplant
+PASS Pull and retry store same unique tuned assembly and leave donor engineless
+PASS Engineless owned car cannot be selected for driving
+PASS Removed assembly retains exact paid turbo/tune/cooler power state
+PASS Fitting charges labor once, selects receiver and keeps donor engine identity
+PASS Receiver retains gearbox, brakes and tire quality after engine transplant
+PASS Displaced receiver engine enters inventory without duplication
+PASS Hybrid powertrain uses V8 rev limits and mass delta with coupe chassis/gearing
+PASS Hybrid crank torque/HP is actual donor calibration, not a power multiplier
+PASS Direct car-to-car transfer commits both links and fee atomically/idempotently
+PASS Same request cannot be reused for another swap
+PASS Injected atomic engine removal failure reports error
+PASS Failed engine write preserves prior cash/car/engine links
+PASS Tempest has real factory twin-turbo torque/spool exceeding1000 crankHP
+PASS Compact Finch cannot accept unsupported Tempest V8 package
+PASS Tempest cross-fit requires gearbox3/brakes2/tires2 support
+PASS Pending race blocks engine removal
+PASS Pink-slip win transfers fitted engine ownership without copying assemblies
+PASS Complete inventory, transplanted engine links and per-car upgrades replay after reload
+PASS Forged duplicate engine link cannot override receipt history
+PASS Unknown future10 is rejected without overwriting from older backup
+PASS Removing last ready engine keeps chassis ownership and supplies free loaner
+PASS Loaner cannot be staked after engine removal
+PASS Loaner cannot donate a free duplicate engine
+PASS All swaps/ownership changes leave real v7 source unchanged
+PASS Actual swapped coupe retains frame geometry and four contacts with V8 mass/calibration
+PASS Physical side impulse/rotation activates AI rejoin recovery
+PASS Bumped dynamic AI physically reorients, rejoins lane and resumes driving
+PASS Ordinary bump recovery does not teleport AI or skip gates
+PASS Blender Tempest wheel pivot normalized to correct Unity axle: Front left wheel pivot
+PASS Blender Tempest wheel pivot normalized to correct Unity axle: Front right wheel pivot
+PASS Blender Tempest wheel pivot normalized to correct Unity axle: Rear left wheel pivot
+PASS Blender Tempest wheel pivot normalized to correct Unity axle: Rear right wheel pivot
+PASS Blender Tempest resource remains visual-only before controller installation
