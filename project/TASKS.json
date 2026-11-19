@@ -2,9 +2,9 @@
   "schema_version": 1,
   "project_title": "Redline: From Rust to Riches",
   "project_stage": "implementation",
-  "updated_at": "2026-11-19T15:40:11.069Z",
-  "current_task_id": null,
-  "next_task_id": null,
+  "updated_at": "2026-11-19T16:09:14.287Z",
+  "current_task_id": "M16-T02",
+  "next_task_id": "M16-T02",
   "status_values": [
     "not_started",
     "in_progress",
@@ -1118,9 +1118,27 @@
       ],
       "remaining_steps": [],
       "blockers": []
+    },
+    {
+      "id": "M16-T02",
+      "title": "Part previews, owned tire fitments, paid drivetrain conversions and grounded audio",
+      "milestone": "M16",
+      "status": "in_progress",
+      "depends_on": [
+        "M16-T01"
+      ],
+      "spec_ref": "project/FITMENT_HANDOFF.md",
+      "evidence": [
+        "project/FITMENT_HANDOFF.md",
+        "artifacts/qa/M16-T02/install-verification.json"
+      ],
+      "remaining_steps": [
+        "Push verified source and publish updated downloadable Windows release"
+      ],
+      "blockers": []
     }
   ],
   "implementation_authorized": true,
   "current_design_amendment": "docs/12_CONFIRMED_FEATURE_CHOICES.md",
-  "authorization_scope": "Finish isolated previews first, then prioritize a polished usable main garage GUI and compatible expanded real parts/tunes with disclosed power tradeoffs; M14-T03 chassis stages/settings, physical burnout, HP/estimated WHP/weight and tune-dependent brake boosting"
+  "authorization_scope": "Finish isolated previews first, then prioritize a polished usable main garage GUI and compatible expanded real parts/tunes with disclosed power tradeoffs; M14-T03 chassis stages/settings, physical burnout, HP/estimated WHP/weight and tune-dependent brake boosting; M16-T02 selected-part previews, road/drift/slick tire fitments, paid FWD/RWD/AWD conversions and grounded procedural SFX"
 }

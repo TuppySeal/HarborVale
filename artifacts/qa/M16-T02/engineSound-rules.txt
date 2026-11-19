@@ -1,0 +1,3 @@
+PASS Engine combustion responds to load/exhaust with finite signal at 22050
+PASS Engine combustion responds to load/exhaust with finite signal at 44100
+PASS Engine combustion responds to load/exhaust with finite signal at 48000

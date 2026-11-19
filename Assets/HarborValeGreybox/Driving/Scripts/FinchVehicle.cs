@@ -8,6 +8,7 @@ public class FinchVehicle:MonoBehaviour {
  public float lowSpeedSteer=32,highSpeedSteer=7.5f,steeringResponse=2.4f,antiRoll=3800,aeroCdA=.88f;
  public string PowertrainCarId="car_finch",displayName="ASTER FINCH",driveLabel="FWD";
  public float differentialBias=1,differentialLock;public float DrivenWheelSlip{get;private set;}public bool IsBurningOut{get;private set;}public int DrivenGroundedWheels{get;private set;}
+ public float rearLateralGripMultiplier=1;
  public float frontDriveShare=1,forwardGrip=1.15f,lateralGrip=1.10f,downforceCoefficient=.35f;
  public bool countdownStagingAllowed{get;set;}public bool playerInput=true,externalInput; public bool controlsLocked; public IFinchRecoveryHandler RecoveryHandler{get;set;}
  public bool IsBrakeBoosting=>Engine!=null&&Engine.BrakeBoostHolding;public float commandedServiceBrake;public float commandedPedal,commandedSteer;public bool commandedHandbrake;
@@ -52,7 +53,7 @@ public class FinchVehicle:MonoBehaviour {
  public void Tick(float dt){
   Initialize();float forward=ForwardSpeed;float pedal=Mathf.Clamp(commandedPedal,-1,1);
   bool opposite=pedal!=0&&Mathf.Sign(pedal)!=Mathf.Sign(forward)&&Mathf.Abs(forward)>1;
-  float service=Mathf.Clamp01(commandedServiceBrake);bool stage=service>.7f&&pedal>.5f&&SpeedKph<2.5f&&Engine.Gear==1&&!Engine.Shifting&&Wheels[0].isGrounded&&Wheels[1].isGrounded&&(!controlsLocked||countdownStagingAllowed)&&playerInput&&!commandedHandbrake;if(stage)stagingBrakeLatch=true;
+  float service=Mathf.Clamp01(commandedServiceBrake);bool stage=service>.7f&&pedal>.5f&&SpeedKph<2.5f&&Engine.Gear==1&&!Engine.Shifting&&GroundedDrivenAxle()&&(!controlsLocked||countdownStagingAllowed)&&playerInput&&!commandedHandbrake;if(stage)stagingBrakeLatch=true;
   if((pedal<=0||(controlsLocked&&!countdownStagingAllowed)||!playerInput||commandedHandbrake)&&Engine.BrakeBoostHolding){Engine.CancelStaging();Throttle=0;}
   float brakeDemand=Mathf.Max(opposite?Mathf.Abs(pedal):0,service);
   bool releaseStaging=Engine.BrakeBoostHolding&&!stage&&service<.2f&&pedal>.5f&&!controlsLocked&&playerInput;Brake=controlsLocked?1:releaseStaging?0:Mathf.MoveTowards(Brake,brakeDemand,dt*10);
@@ -74,13 +75,14 @@ public class FinchVehicle:MonoBehaviour {
    float coastBrake=pedal==0?Engine.definition.massKg*9.81f*.012f*Engine.definition.wheelRadius/4:0;
    float hold=pedal==0&&Mathf.Abs(forward)<.35f?220:0;
    w.brakeTorque=Mathf.Max(totalBrake*Brake*(i<2?.325f:.175f),coastBrake,hold,i>=2?handbrake*1900:0);
-   var friction=w.sidewaysFriction;friction.stiffness=i<2?lateralGrip:Mathf.Lerp(lateralGrip,.55f,handbrake);w.sidewaysFriction=friction;var longitudinal=w.forwardFriction;longitudinal.stiffness=forwardGrip;w.forwardFriction=longitudinal;
+   var friction=w.sidewaysFriction;friction.stiffness=i<2?lateralGrip:Mathf.Lerp(lateralGrip*rearLateralGripMultiplier,.55f,handbrake);w.sidewaysFriction=friction;var longitudinal=w.forwardFriction;longitudinal.stiffness=forwardGrip;w.forwardFriction=longitudinal;
   }
   if(GroundedWheels>0){AntiRoll(0,1);AntiRoll(2,3);}
   Vector3 velocity=Body.linearVelocity;Body.AddForce(-velocity*velocity.magnitude*(.5f*1.225f*aeroCdA),ForceMode.Force);
   // Aerodynamic downforce is small; no artificial acceleration or yaw teleportation.
   if(GroundedWheels>=2)Body.AddForce(-transform.up*velocity.sqrMagnitude*downforceCoefficient,ForceMode.Force);
  }
+ public bool GroundedDrivenAxle()=>(frontDriveShare>.01f&&Wheels[0].isGrounded&&Wheels[1].isGrounded)||(frontDriveShare<.99f&&Wheels[2].isGrounded&&Wheels[3].isGrounded);
  void AntiRoll(int a,int b){
   float travelA=1,travelB=1;bool ga=Wheels[a].GetGroundHit(out var ha),gb=Wheels[b].GetGroundHit(out var hb);
   if(ga)travelA=(-Wheels[a].transform.InverseTransformPoint(ha.point).y-Wheels[a].radius)/Wheels[a].suspensionDistance;

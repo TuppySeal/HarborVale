@@ -56,3 +56,7 @@ M15-T02–T04 complete. Read project/MAP_ART_HANDOFF.md. Latest player Builds/Ha
 
 ## Latest garage tabs and tire audio
 M16-T01 complete. Read project/TABS_TIRE_HANDOFF.md. Latest player Builds/HarborVale-GarageTabs.17 full-width tabs map every existing offer to one family; prerequisite navigation reveals its tab and install hotkey requires a visible selection. Keep49-offer balance/v5 receipts and free Apex isolation. Tire sound follows actual wheel slip/road speed rather than engine RPM; preserve real contact/modal/focus gates, audio-thread-local synthesis and no duplicate sources/physics. Native64/rules62/mixer-camera33 passed; subjective listening and physical UI input remain manual.
+
+
+## Latest tire fitments/drivetrains and previews
+M16-T02: read project/FITMENT_HANDOFF.md.55 offers/18 tabs; original49 fees/curves intact. v6 paid ledger imports v5 once read-only. Tire ownership/refits and paid drivetrain job receipts must replay atomically; do not overwrite unknown saves. Actual wheel allocation,grip,mass/efficiency now respond to choices. New part-preview resources have no active physics/audio and are disposed on close. Apex remains free/isolated. Latest player Builds/HarborVale-Fitments.

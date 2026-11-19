@@ -1,0 +1,43 @@
+PASS 55 offers include six tire/drivetrain choices
+PASS Real released v5 ledger imports once into materialized v6
+PASS Old v5 file remains byte-identical
+PASS Migration preserves identity, balance and all historical receipts
+PASS Legacy migration defaults to original drivetrain and owned road set
+PASS First drift set purchase owns and fits for exact fee
+PASS Paid tire request retry is idempotent
+PASS Owned tire refit records no extra charge
+PASS Free tire refit request retry is idempotent
+PASS Same transaction cannot be reused for another tire set
+PASS Unowned slicks cannot be fitted for free
+PASS Rejected quote leaves file byte-identical
+PASS Slick set ownership is separate and persistent
+PASS RWD kit charges once and selects layout atomically
+PASS Conversion transaction retry does not double-charge
+PASS Already-fitted conversion cannot charge again
+PASS Conversion retains compatible paid parts and owned tires
+PASS RWD mass/losses change without fabricating crank torque
+PASS Conversion, tire inventory and fitment replay after reload
+PASS Later v6 transactions never modify or reimport v5 source
+PASS Failed conversion commit reports failure
+PASS Failed write retains previous cash/build/receipt state
+PASS Unknown v7 profile cannot be overwritten using older backup
+PASS Unknown newer file remains unchanged
+PASS Cached inventory tampering cannot bypass receipt replay
+PASS Returning to stock layout is a new paid conversion job
+PASS Apex stock AWD preserves original mass and losses
+PASS Apex RWD changes mass and WHP losses without changing crank curve
+PASS Turbo release preference migrates without modifying old settings
+PASS New audio preference is not repeatedly imported
+PASS Actual motor torque is delivered to fwd wheels
+PASS fwd label and grounded launch contacts reflect layout
+PASS fwd persists through recovery
+PASS Actual motor torque is delivered to rwd wheels
+PASS rwd label and grounded launch contacts reflect layout
+PASS rwd persists through recovery
+PASS Actual motor torque is delivered to awd wheels
+PASS awd label and grounded launch contacts reflect layout
+PASS awd persists through recovery
+PASS Road tires retain original stock grip/curve
+PASS Drift tires have progressive rear breakaway and broader slide grip
+PASS Slicks increase dry peak grip and sharpen post-limit breakaway
+PASS Fitments retain one set of four wheel contacts

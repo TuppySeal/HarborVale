@@ -1,5 +1,5 @@
 {
-  "schema": 1,
+  "schema": 2,
   "notes": "Fictional matched complete net curves. New built-engine stages extend the previous bounded Finch Stage2 ceiling; stock and original paid configurations unchanged. No boost HP multiplier. Cooling 2/3 represent progressively improved matched warm-charge calibrations, not heat simulation.",
   "offers": [
     {
@@ -741,6 +741,84 @@
         "aero_2"
       ],
       "description": "Splitter and wing package with adjustable wing setting. Adds speed-dependent downforce, drag and hardware mass. More high-speed cornering support at the cost of drag and added mass.",
+      "apexOnly": false,
+      "powerLoss": 0
+    },
+    {
+      "id": "tire_road",
+      "name": "Road tire set",
+      "category": "Tires",
+      "description": "Refit the included road tires for free. Retains your purchased tire quality stage.",
+      "slot": "tirecompound",
+      "choice": "road",
+      "stage": 1,
+      "price": 0,
+      "prerequisites": [],
+      "apexOnly": false,
+      "powerLoss": 0
+    },
+    {
+      "id": "tire_drift",
+      "name": "Drift tire set",
+      "category": "Tires",
+      "description": "Predictable rear breakaway and a broad sliding-grip range. Buy once, then refit this owned set free while parked. Rear-drive conversion is useful for throttle-controlled slides; these tires do not add artificial yaw forces.",
+      "slot": "tirecompound",
+      "choice": "drift",
+      "stage": 1,
+      "price": 700,
+      "prerequisites": [],
+      "apexOnly": false,
+      "powerLoss": 0
+    },
+    {
+      "id": "tire_slick",
+      "name": "Dry-track slick tire set",
+      "category": "Tires",
+      "description": "High dry longitudinal/lateral grip with a sharper drop after the limit. Slicks help traction rather than make drifting easier. Buy once; refit free. No tire-temperature or wet-weather simulation is claimed.",
+      "slot": "tirecompound",
+      "choice": "slick",
+      "stage": 1,
+      "price": 1200,
+      "prerequisites": [],
+      "apexOnly": false,
+      "powerLoss": 0
+    },
+    {
+      "id": "drive_fwd",
+      "name": "FWD drivetrain conversion",
+      "category": "Drivetrain",
+      "description": "Matched FWD gearbox casing, shafts, differential mounts and installation labor for this fictional platform. Changes the actual driven wheels, mass and drivetrain losses. Engine and compatible purchased upgrades stay fitted. Every layout change is a paid workshop job; removed kits have no refund or spare inventory.",
+      "slot": "drivetrain",
+      "choice": "fwd",
+      "stage": 1,
+      "price": 2600,
+      "prerequisites": [],
+      "apexOnly": false,
+      "powerLoss": 0
+    },
+    {
+      "id": "drive_rwd",
+      "name": "RWD drivetrain conversion",
+      "category": "Drivetrain",
+      "description": "Matched RWD gearbox casing, shafts, differential mounts and installation labor for this fictional platform. Changes the actual driven wheels, mass and drivetrain losses. Engine and compatible purchased upgrades stay fitted. Every layout change is a paid workshop job; removed kits have no refund or spare inventory.",
+      "slot": "drivetrain",
+      "choice": "rwd",
+      "stage": 1,
+      "price": 3600,
+      "prerequisites": [],
+      "apexOnly": false,
+      "powerLoss": 0
+    },
+    {
+      "id": "drive_awd",
+      "name": "AWD drivetrain conversion",
+      "category": "Drivetrain",
+      "description": "Matched AWD gearbox casing, shafts, differential mounts and installation labor for this fictional platform. Changes the actual driven wheels, mass and drivetrain losses. Engine and compatible purchased upgrades stay fitted. Every layout change is a paid workshop job; removed kits have no refund or spare inventory.",
+      "slot": "drivetrain",
+      "choice": "awd",
+      "stage": 1,
+      "price": 5200,
+      "prerequisites": [],
       "apexOnly": false,
       "powerLoss": 0
     }
@@ -1531,6 +1609,16 @@
         3800,
         4000,
         4200
+      ],
+      "driveMass": [
+        0,
+        35,
+        70
+      ],
+      "driveEfficiencies": [
+        0.9,
+        0.88,
+        0.84
       ]
     },
     {
@@ -2322,6 +2410,16 @@
         4000,
         4200,
         4400
+      ],
+      "driveMass": [
+        -45,
+        -25,
+        0
+      ],
+      "driveEfficiencies": [
+        0.92,
+        0.91,
+        0.88
       ]
     }
   ]

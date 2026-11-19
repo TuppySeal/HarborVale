@@ -14,23 +14,23 @@ public sealed class UnsupportedProgressVersionException:IOException {public Unsu
 // One atomic receipt transaction commits all earned credits and record changes.
 // Prototype race earnings deliberately do not fabricate purchase/vehicle history.
 public sealed class RaceProgressStore {
- readonly string path,legacyPath,olderLegacyPath,oldestLegacyPath,ancientLegacyPath;readonly TrialDefinition definition;readonly Action beforeReplace;
+ readonly string path,legacyPath,olderLegacyPath,oldestLegacyPath,ancientLegacyPath,recentLegacyPath;readonly TrialDefinition definition;readonly Action beforeReplace;
  public RaceProgress Profile{get;private set;}public bool RecoveredBackup{get;private set;}
  public string PathName=>path;
- public RaceProgressStore(string file,TrialDefinition trial,Action faultBeforeReplace=null,string legacyFile=null,string olderLegacyFile=null,string oldestLegacyFile=null,string ancientLegacyFile=null){path=file;legacyPath=legacyFile;olderLegacyPath=olderLegacyFile;oldestLegacyPath=oldestLegacyFile;ancientLegacyPath=ancientLegacyFile;definition=trial;definition.Validate();beforeReplace=faultBeforeReplace;Directory.CreateDirectory(Path.GetDirectoryName(path));using(Lock()){Profile=Load();}}
+ public RaceProgressStore(string file,TrialDefinition trial,Action faultBeforeReplace=null,string legacyFile=null,string olderLegacyFile=null,string oldestLegacyFile=null,string ancientLegacyFile=null,string recentLegacyFile=null){path=file;legacyPath=legacyFile;olderLegacyPath=olderLegacyFile;oldestLegacyPath=oldestLegacyFile;ancientLegacyPath=ancientLegacyFile;recentLegacyPath=recentLegacyFile;definition=trial;definition.Validate();beforeReplace=faultBeforeReplace;Directory.CreateDirectory(Path.GetDirectoryName(path));using(Lock()){Profile=Load();}}
  FileStream Lock()=>new FileStream(path+".lock",FileMode.OpenOrCreate,FileAccess.ReadWrite,FileShare.None);
- RaceProgress Read(string file){var p=JsonUtility.FromJson<RaceProgress>(File.ReadAllText(file));if(p!=null&&p.version>5)throw new UnsupportedProgressVersionException();Validate(p);return p;}
+ RaceProgress Read(string file){var p=JsonUtility.FromJson<RaceProgress>(File.ReadAllText(file));if(p!=null&&p.version>6)throw new UnsupportedProgressVersionException();Validate(p);return p;}
  public void Refresh(){using(Lock()){Profile=Load();}}
  RaceProgress Load(){
   if(!File.Exists(path)&&!File.Exists(path+".bak")){
-   foreach(string legacy in new[]{legacyPath,olderLegacyPath,oldestLegacyPath,ancientLegacyPath})if(legacy!=null&&(File.Exists(legacy)||File.Exists(legacy+".bak"))){using(new FileStream(legacy+".lock",FileMode.OpenOrCreate,FileAccess.ReadWrite,FileShare.None)){try{var p=Read(legacy);RecoveredBackup=false;Write(p);return p;}catch(UnsupportedProgressVersionException){throw;}catch(Exception legacyError){try{var p=Read(legacy+".bak");RecoveredBackup=false;Write(p);return p;}catch(Exception){throw new IOException("Legacy race progress could not be imported. Existing files were preserved.",legacyError);}}}}
-   string id=Guid.NewGuid().ToString("N");return new RaceProgress{version=5,workshop=new WorkshopBuild(),profileId=id,prototypeCarId=id+":finch"};
+   foreach(string legacy in new[]{recentLegacyPath,legacyPath,olderLegacyPath,oldestLegacyPath,ancientLegacyPath})if(legacy!=null&&(File.Exists(legacy)||File.Exists(legacy+".bak"))){using(new FileStream(legacy+".lock",FileMode.OpenOrCreate,FileAccess.ReadWrite,FileShare.None)){try{var p=Read(legacy);RecoveredBackup=false;Write(p);return p;}catch(UnsupportedProgressVersionException){throw;}catch(Exception legacyError){try{var p=Read(legacy+".bak");RecoveredBackup=false;Write(p);return p;}catch(Exception){throw new IOException("Legacy race progress could not be imported. Existing files were preserved.",legacyError);}}}}
+   string id=Guid.NewGuid().ToString("N");return new RaceProgress{version=6,workshop=new WorkshopBuild(),profileId=id,prototypeCarId=id+":finch"};
   }
   Exception primary=null;try{var p=Read(path);RecoveredBackup=false;return p;}catch(UnsupportedProgressVersionException){throw;}catch(Exception e){primary=e;}
   try{var p=Read(path+".bak");RecoveredBackup=true;return p;}catch(Exception){throw new IOException("Race progress could not be read. Existing saves were preserved.",primary);}
  }
  void Validate(RaceProgress p,bool deriveWorkshop=false){
-  if(p==null||p.version<1||p.version>5||!Guid.TryParse(p.profileId,out _)||p.receipts==null||p.records==null||p.earnings<0||p.reputation<0||p.receipts.Count>100000)throw new InvalidDataException("Invalid race profile");
+  if(p==null||p.version<1||p.version>6||!Guid.TryParse(p.profileId,out _)||p.receipts==null||p.records==null||p.earnings<0||p.reputation<0||p.receipts.Count>100000)throw new InvalidDataException("Invalid race profile");
   var ids=new HashSet<string>();int credits=0,rep=0,count=0,best=0,bestRep=0;bool first=false;
   foreach(var receipt in p.receipts){
    if(receipt==null||!Guid.TryParse(receipt.runId,out _)||!ids.Add(receipt.runId)||receipt.eventId!=definition.id||receipt.milliseconds<=0||receipt.rank<0||receipt.rank>3)throw new InvalidDataException("Invalid race receipt");
@@ -45,23 +45,25 @@ public sealed class RaceProgressStore {
   if(p.version==1){if(p.spending!=null&&p.spending.Count>0)throw new InvalidDataException("Unexpected legacy spending");p.version=2;p.availableCredits=p.earnings;p.engineStage=0;p.prototypeCarId=p.profileId+":finch";p.spending=new List<TuneReceipt>();}
   if(p.version==2){if(p.gearboxStage!=0||p.intercoolerStage!=0||p.engineStage>1)throw new InvalidDataException("Invalid legacy build");p.version=3;}
   if(p.spending==null||p.prototypeCarId!=p.profileId+":finch"||p.engineStage<0||p.engineStage>2||p.gearboxStage<0||p.gearboxStage>1||p.intercoolerStage<0||p.intercoolerStage>1)throw new InvalidDataException("Invalid installed build");
-  int originalVersion=p.version;bool migrate=p.version<5;var catalog=WorkshopCatalog.Load("car_finch");var build=new WorkshopBuild();int spent=0;var transactions=new HashSet<string>();foreach(var purchase in p.spending){
-   if(purchase==null||!Guid.TryParse(purchase.transactionId,out _)||!transactions.Add(purchase.transactionId)||purchase.prototypeCarId!=p.prototypeCarId||(purchase.credits<0||(purchase.credits==0&&purchase.kind!="setup")))throw new InvalidDataException("Invalid part receipt");
+  int originalVersion=p.version;bool migrate=p.version<6;var catalog=WorkshopCatalog.Load("car_finch");if(migrate)FitmentTuning.NormalizeLegacy(p.workshop);var build=new WorkshopBuild();int spent=0;var transactions=new HashSet<string>();foreach(var purchase in p.spending){
+   if(purchase==null||!Guid.TryParse(purchase.transactionId,out _)||!transactions.Add(purchase.transactionId)||purchase.prototypeCarId!=p.prototypeCarId||(purchase.credits<0||(purchase.credits==0&&purchase.kind!="setup"&&purchase.kind!="fitment")))throw new InvalidDataException("Invalid part receipt");
    string kind=string.IsNullOrEmpty(purchase.kind)?"engine":purchase.kind;string id=null;
    if(kind=="engine"&&purchase.stage==1&&purchase.pathId=="path_finch_na"&&purchase.configId=="cfg_finch_na_s1")id="na_1";
    else if(kind=="gearbox"&&purchase.stage==1&&purchase.configId=="tx_finch_s1")id="gearbox_1";
    else if(kind=="engine"&&purchase.stage==2&&purchase.pathId=="path_finch_turbo"&&purchase.configId=="cfg_finch_turbo_s2")id="induction_small_1";
    else if(kind=="intercooler"&&purchase.stage==1&&purchase.pathId=="path_finch_turbo"&&purchase.configId=="cfg_finch_turbo_s2_ic1")id="cooling_1";
-   else if(kind=="workshop"&&originalVersion>=4&&purchase.configId==purchase.partId&&purchase.pathId=="workshop_v4"){id=purchase.partId;if(catalog.Find(id).stage!=purchase.stage)throw new InvalidDataException("Receipt stage mismatch");}
+   else if(kind=="workshop"&&originalVersion>=4&&purchase.configId==purchase.partId&&purchase.pathId=="workshop_v4"){id=purchase.partId;if(FitmentTuning.IsNew(catalog.Find(id))||catalog.Find(id).stage!=purchase.stage)throw new InvalidDataException("Receipt stage mismatch");}
+   else if(kind=="workshop"&&originalVersion>=6&&purchase.configId==purchase.partId&&purchase.pathId=="workshop_v6"){id=purchase.partId;if(!FitmentTuning.IsNew(catalog.Find(id))||catalog.Find(id).stage!=purchase.stage)throw new InvalidDataException("Fitment receipt stage mismatch");}
+   if(kind=="fitment"&&originalVersion>=6&&purchase.pathId=="workshop_v6"&&purchase.configId=="tire_fit_v1"&&purchase.stage==0&&purchase.credits==0){var tire=catalog.Find(purchase.partId);if(tire.slot!="tirecompound"||!FitmentTuning.Owns(build,tire.choice))throw new InvalidDataException("Cannot refit an unowned tire set");catalog.Apply(build,tire);continue;}
    if(kind=="setup"&&originalVersion>=5&&purchase.credits==0&&purchase.stage==0&&purchase.partId=="chassis_setup"&&purchase.configId=="setup_v1"&&purchase.pathId=="workshop_v5"){
     var setup=JsonUtility.FromJson<WorkshopSetup>(purchase.setupJson);if(setup==null||JsonUtility.ToJson(setup)!=purchase.setupJson)throw new InvalidDataException("Invalid setup receipt");ChassisTuning.ApplySetup(catalog,build,setup);continue;
    }
-   if(id==null)throw new InvalidDataException("Unsupported part receipt");try{catalog.Apply(build,catalog.Find(id));}catch(Exception e){throw new InvalidDataException("Part receipt skips prerequisite or is incompatible",e);}spent=checked(spent+purchase.credits);
+   if(id==null)throw new InvalidDataException("Unsupported part receipt");if(purchase.credits<=0)throw new InvalidDataException("Paid receipt requires a positive amount");if(catalog.Find(id).slot=="tirecompound"&&FitmentTuning.Owns(build,catalog.Find(id).choice))throw new InvalidDataException("Owned tire refit cannot be charged");try{catalog.Apply(build,catalog.Find(id));}catch(Exception e){throw new InvalidDataException("Part receipt skips prerequisite or is incompatible",e);}spent=checked(spent+purchase.credits);
   }
   int stage=build.induction!="none"?2:build.naStage>0?1:0,gearbox=Math.Min(1,build.gearboxStage),cooler=Math.Min(1,build.coolingStage);
   if(stage!=p.engineStage||gearbox!=p.gearboxStage||cooler!=p.intercoolerStage||p.availableCredits!=p.earnings-spent||p.availableCredits<0)throw new InvalidDataException("Spending/build balance mismatch");
   if(migrate&&originalVersion>=4&&!deriveWorkshop){if(p.workshop!=null&&p.workshop.setup==null)p.workshop.setup=new WorkshopSetup();if(p.workshop==null||JsonUtility.ToJson(p.workshop)!=JsonUtility.ToJson(build))throw new InvalidDataException("Legacy paid build does not match history");}
-  if(migrate||deriveWorkshop){p.workshop=build;p.version=5;}else if(p.workshop==null||JsonUtility.ToJson(p.workshop)!=JsonUtility.ToJson(build))throw new InvalidDataException("Workshop state disagrees with immutable receipt history");
+  if(migrate||deriveWorkshop){p.workshop=build;p.version=6;}else if(p.workshop==null||JsonUtility.ToJson(p.workshop)!=JsonUtility.ToJson(build))throw new InvalidDataException("Workshop state disagrees with immutable receipt history");
 
  }
  public TrialReceipt Settle(TrialSession session,out bool duplicate){
@@ -98,9 +100,9 @@ public sealed class RaceProgressStore {
   using(Lock()){
    var latest=Load();Profile=latest;foreach(var receipt in latest.spending)if(receipt.transactionId==request){if(receipt.partId!=partId||receipt.credits!=quotedPrice)throw new InvalidOperationException("Request no longer matches receipt");duplicate=true;return receipt;}
    var reason=catalog.Requirement(latest.workshop,offer);if(reason!=null)throw new InvalidOperationException(reason);
-   if(quotedPrice!=offer.price)throw new InvalidOperationException("Quote changed. Reopen workshop.");if(latest.availableCredits<offer.price)throw new InvalidOperationException("Not enough credits.");
+   int price=catalog.Price(latest.workshop,offer);if(quotedPrice!=price)throw new InvalidOperationException("Quote changed. Reopen workshop.");if(latest.availableCredits<price)throw new InvalidOperationException("Not enough credits.");
    var candidate=JsonUtility.FromJson<RaceProgress>(JsonUtility.ToJson(latest));catalog.Apply(candidate.workshop,offer);candidate.engineStage=candidate.workshop.induction!="none"?2:candidate.workshop.naStage>0?1:0;candidate.gearboxStage=Math.Min(1,candidate.workshop.gearboxStage);candidate.intercoolerStage=Math.Min(1,candidate.workshop.coolingStage);
-   var paid=new TuneReceipt{transactionId=request,prototypeCarId=candidate.prototypeCarId,partId=partId,configId=partId,pathId="workshop_v4",kind="workshop",stage=offer.stage,credits=offer.price,paidUtc=DateTime.UtcNow.ToString("o")};candidate.spending.Add(paid);candidate.availableCredits=checked(candidate.availableCredits-offer.price);Validate(candidate);Write(candidate);Profile=candidate;duplicate=false;return paid;
+   var paid=new TuneReceipt{transactionId=request,prototypeCarId=candidate.prototypeCarId,partId=partId,configId=price==0?"tire_fit_v1":partId,pathId=FitmentTuning.IsNew(offer)?"workshop_v6":"workshop_v4",kind=price==0?"fitment":"workshop",stage=price==0?0:offer.stage,credits=price,paidUtc=DateTime.UtcNow.ToString("o")};candidate.spending.Add(paid);candidate.availableCredits=checked(candidate.availableCredits-price);Validate(candidate);Write(candidate);Profile=candidate;duplicate=false;return paid;
   }
  }
  public TuneReceipt SaveWorkshopSetup(string request,WorkshopSetup setup,out bool duplicate){

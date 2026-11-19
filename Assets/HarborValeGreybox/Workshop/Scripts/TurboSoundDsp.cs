@@ -12,14 +12,14 @@ public sealed class TurboSoundDsp {
   double dt=1/sampleRate;level+=(Math.Max(0,gain)-level)*(1-Math.Exp(-dt/.035));rotor+=(Math.Max(0,Math.Min(1,speed))-rotor)*(1-Math.Exp(-dt/.075));double n=Noise();low+=(n-low)*(1-Math.Exp(-dt*2*Math.PI*700));air+=(n-air)*(1-Math.Exp(-dt*2*Math.PI*6200));double band=air-low;
   double pitch=(1500+4500*rotor)*Math.Max(.75,Math.Min(1.25,size));pitch=Math.Min(sampleRate*.4,pitch);phase=(phase+pitch/sampleRate)%1;
   // Air movement dominates; a small modulated harmonic provides the compressor edge without a pure sine siren.
-  resonance+=(n-resonance)*.0015;double whistle=Math.Sin(phase*Math.PI*2+resonance*.7)+.12*Math.Sin(phase*Math.PI*4);
+  resonance+=(n-resonance)*(1-Math.Exp(-dt*2*Math.PI*12));double whistle=.76*Math.Sin(phase*Math.PI*2+resonance*.7)+(pitch*2<sampleRate*.42?.08*Math.Sin(phase*Math.PI*4):0);
   double output=level*(band*.85+whistle*(.07+.10*rotor));
   if(releaseTime>=0){double t=releaseTime;releaseTime+=dt;double envelope=0,tone=0;
    if(mode==0){double length=.32+.30*releaseStrength;envelope=(1-Math.Exp(-t/.006))*Math.Exp(-t/(.09+.10*releaseStrength));tone=.045*Math.Sin(2*Math.PI*(3000*t-1150*t*t)*releaseScale);if(t>length)releaseTime=-1;}
    else {double cursor=0;int pulses=4+(int)(releaseStrength*3);double length=pulses*.055+.014*pulses*(pulses-1)/2;for(int i=0;i<pulses;i++){double period=.055+.014*i;double local=t-cursor;if(local>=0&&local<period){double p=local/(period*.72);if(p<1)envelope=Math.Pow(Math.Sin(p*Math.PI),1.6)*Math.Pow(.76,i);tone=.14*Math.Sin(2*Math.PI*(1100*t-300*t*t)*releaseScale);break;}cursor+=period;}if(t>length)releaseTime=-1;}
    if(cancelling){releaseFade*=Math.Exp(-dt/.006);if(releaseFade<.0001)releaseTime=-1;}output+=releaseFade*releaseStrength*.50*envelope*(band+tone);
   }
-  return (float)Math.Max(-.7,Math.Min(.7,output));
+  return (float)(.7*Math.Tanh(output/.7));
  }
  public static float[] Preview(TurboReleaseMode choice,int rate){var synth=new TurboSoundDsp(rate);var samples=new float[rate*3];for(int i=0;i<samples.Length;i++){float t=(float)i/rate;if(i==rate)synth.Release(choice,1.2f,1);samples[i]=synth.Sample(t<1?.075f*t:0,t<1?t:Math.Max(0,1-(t-1)*1.5f),1);}return samples;}
 }
