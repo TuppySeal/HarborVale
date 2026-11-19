@@ -1,0 +1,54 @@
+PASS Finch chassis shop opens through real modal
+PASS Parts browser returns after locked setup preview
+PASS Paid chassis install differential1
+PASS Paid chassis install differential2
+PASS Paid chassis install differential3
+PASS Paid chassis install suspension1
+PASS Paid chassis install suspension2
+PASS Paid chassis install suspension3
+PASS Paid chassis install gearing1
+PASS Paid chassis install gearing2
+PASS Paid chassis install gearing3
+PASS Paid chassis install aero1
+PASS Paid chassis install aero2
+PASS Paid chassis install aero3
+PASS Actual rigidbody and dyno definition include 22kg aero kit
+PASS Physical LSD bias and aero parameters applied
+PASS Parked adjustment persists without charge
+PASS Ride height and spring adjustment reach real wheel suspension
+PASS Final drive actually changes gearing
+PASS High-power launch hardware na_1
+PASS High-power launch hardware gearbox_1
+PASS High-power launch hardware induction_roots_1
+PASS High-power launch hardware induction_roots_2
+PASS High-power launch hardware na_2
+PASS High-power launch hardware intake_1
+PASS High-power launch hardware exhaust_1
+PASS High-power launch hardware na_3
+PASS High-power launch hardware gearbox_2
+PASS High-power launch hardware cooling_1
+PASS High-power launch hardware cooling_2
+PASS High-power launch hardware induction_roots_3
+PASS Brake plus accelerator holds tune-specific RPM without rolling
+PASS Smoke contains actual emitted particles
+PASS Actual loaded launch produces driven-tire smoke from measured slip
+PASS Effects do not duplicate wheel physics
+PASS Apex visit starts stock with no career account
+PASS Same chassis UI available in Apex
+PASS Free chassis install differential1
+PASS Free chassis install differential2
+PASS Free chassis install differential3
+PASS Free chassis install suspension1
+PASS Free chassis install suspension2
+PASS Free chassis install suspension3
+PASS Free chassis install gearing1
+PASS Free chassis install gearing2
+PASS Free chassis install gearing3
+PASS Free chassis install aero1
+PASS Free chassis install aero2
+PASS Free chassis install aero3
+PASS Apex adjustment free and temporary
+PASS Apex retains AWD identity and actual aero mass
+PASS Apex chassis testing cannot change paid Finch ledger
+PASS Finch hardware and adjusted setup reload after roundtrip
+PASS No native runtime errors

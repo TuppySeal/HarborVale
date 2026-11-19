@@ -1,0 +1,3 @@
+PASS Rendering retains four physical wheel contacts
+PASS Dynamic car is excluded from static city batches
+PASS No native runtime rendering errors

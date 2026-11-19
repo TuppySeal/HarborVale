@@ -1,0 +1,67 @@
+{
+  "baseline": {
+    "mode": "baseline",
+    "gpu": "NVIDIA GeForce RTX 5070",
+    "api": "Direct3D12",
+    "colorSpace": "Gamma",
+    "colliderDigest": "9CEC99D3EEF8C4543A58B5D9559E36A84923FF8C200D023F8AD3FC051B89E657",
+    "msaa": 2,
+    "staticRenderers": 0,
+    "batchedRenderers": 0,
+    "detailRenderers": 0,
+    "staticColliders": 1844,
+    "views": [
+      {
+        "view": "Street",
+        "meanFrameMs": 16.57761055555556,
+        "p95FrameMs": 17.0909,
+        "drawCalls": -1,
+        "batches": -1,
+        "setPasses": 169,
+        "frames": 180
+      },
+      {
+        "view": "District",
+        "meanFrameMs": 16.578561111111114,
+        "p95FrameMs": 17.1092,
+        "drawCalls": -1,
+        "batches": -1,
+        "setPasses": 205,
+        "frames": 180
+      }
+    ]
+  },
+  "enhanced": {
+    "mode": "enhanced",
+    "gpu": "NVIDIA GeForce RTX 5070",
+    "api": "Direct3D12",
+    "colorSpace": "Linear",
+    "colliderDigest": "9CEC99D3EEF8C4543A58B5D9559E36A84923FF8C200D023F8AD3FC051B89E657",
+    "msaa": 4,
+    "staticRenderers": 4249,
+    "batchedRenderers": 4247,
+    "detailRenderers": 1718,
+    "staticColliders": 1844,
+    "views": [
+      {
+        "view": "Street",
+        "meanFrameMs": 16.576700555555558,
+        "p95FrameMs": 17.1709,
+        "drawCalls": -1,
+        "batches": -1,
+        "setPasses": 116,
+        "frames": 180
+      },
+      {
+        "view": "District",
+        "meanFrameMs": 16.578091666666666,
+        "p95FrameMs": 17.0858,
+        "drawCalls": -1,
+        "batches": -1,
+        "setPasses": 173,
+        "frames": 180
+      }
+    ]
+  },
+  "interpretation": "Both views capped at 60 FPS. SetPass reductions measured; no uncapped FPS speedup claimed. Draw/batch counters unavailable (-1). Static renderer batch membership measured independently."
+}

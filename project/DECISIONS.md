@@ -109,3 +109,7 @@ User requests more realistic turbo audio and BOV or stututu choice. Provide orig
 
 ## D056 — Clean integrated driving presentation and safe look controls
 User requested audio/SFX/animation cleanup and side-looking while driving. Smooth existing audio and visual transitions without handling/economy changes. RMB drag plus J/L sides and K rear use separate controls; modal/focus/recovery release cursor and restore view. Native capture/PCM/geometry checks support the result; physical-input feel and subjective listening remain user review.
+
+
+## D057 — Separate render cleanup from original map art
+User requested Claude/Antigravity improve the map while Codex cleans rendering. Preserve existing geometry/physics and use scene-scoped built-in presentation; measured SetPass improvements do not imply uncapped FPS gain. Helpers work only in independent asset projects; no unverified scripts/package reports count as delivered art. Windows prompt prevented dispatch, recorded explicitly.

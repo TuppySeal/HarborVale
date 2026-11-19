@@ -44,3 +44,7 @@ M14-T04 complete. Read project/TURBO_AUDIO_HANDOFF.md. Latest player Builds/Harb
 
 ## Latest driving presentation/camera polish
 M14-T05 complete. Read project/AV_CAMERA_HANDOFF.md. Latest player Builds/HarborVale-PolishedDrive. RMB/J/L/K view controls must stay separate from vehicle steering and release cursor on modal/focus/disable/scene exit. Preserve visual-only wheel interpolation, real audio/slip/load gates, finite sample-rate ramps and scene fade. Paid v5/catalog49 and separate v1 turbo preference unchanged. Full-lap subjective listening and physical-input checks remain manual; no further gameplay expansion implied.
+
+
+## Latest rendering and map art coordination
+M15-T01 complete. Read project/RENDERING_HANDOFF.md. Latest player Builds/HarborVale-CleanRender. Source scene/geometry preserved; runtime batching must exclude dynamic Finch/Apex/StarterCarSpecification descendants. Keep detail layers28/29 free, map overview range restoration and real shader resource. Do not infer uncapped FPS from capped test. M15-T02/03 prepared but not dispatched because Windows prompt blocks UI; helpers only write isolated folders and never main map. Preserve existing user drafts. Paid v5, v1 turbo preference, catalog49 and all physical gameplay unchanged.

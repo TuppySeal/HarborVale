@@ -58,3 +58,6 @@ Do not interpret a check here as unperformed controller, full-campaign, frame-ra
 - [x] M14-T04: Original state-driven turbo spool/airflow, pressure-scaled BOV/flutter, garage preview/selection, separate saved Finch cosmetic preference and temporary Apex option; native audio verified.
 
 - [x] M14-T05: Sample-smoothed driving mix/transients, preview/scene fade, wheel render interpolation, synchronized flame fade, pooled skid segments, and safe chase/bonnet side/rear/mouse look; native captures and rules recorded.
+
+- [x] M15-T01: Linear lighting,4xMSAA, tonemap, reduced road shadow striping, static city batching/detail limits and bounded driving markers; native rendering/gameplay checks recorded.
+- [ ] M15-T02/03: Send prepared isolated roadside/building tasks to Claude/Antigravity, verify actual assets/previews, then review integration.

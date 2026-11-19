@@ -1,9 +1,7 @@
-# HarborVale — driving audio, effects and side-look polished
+# HarborVale — cleaner rendering installed; map art awaiting dispatch
 
-Canonical C:/Users/Justice/Documents/Unity/HarborVale, Unity6000.6.0f1. Latest executable Builds/HarborVale-PolishedDrive/HarborVale.exe. M14-T05 complete: smooth driving mix/transients, preview and scene fades, interpolated wheel visuals, fading flames and separated rubber segments. Camera: RMB drag; J/L sides; K rear; release to center. Chase and bonnet views supported with modal/focus/recovery handling and scenery checks.
+Canonical C:/Users/Justice/Documents/Unity/HarborVale, Unity6000.6.0f1. Latest executable Builds/HarborVale-CleanRender/HarborVale.exe. M15-T01 complete: Linear lighting,4xMSAA, soft tonemap, cleaner shadows/haze, measured static batching and readable driving markers. Source city, static Finch, handling scene and gameplay data preserved. Read RENDERING_HANDOFF.md.
 
-Read AV_CAMERA_HANDOFF.md. Native editor AV/camera rules33 plus prior regressions passed; Windows AV75, turbo32, workshop51, chassis54, transitions47 passed. Both cars' new views/effects captured and actual mixes have no saturated samples. Subjective sound/full-lap and physical input feel remain human checks. Install evidence artifacts/qa/M14-T05/install-verification.json.
+Editor13 + native rendering9/baseline3, AV75, workshop51, chassis54 and transitions47 passed. Static collision digest unchanged;4,247 renderers batched. SetPass169->116 street and205->173 district; both capped60 FPS, no FPS improvement claim. Exact installation evidence artifacts/qa/M15-T01/install-verification.json.
 
-Paid v5 state, v1 cosmetic preference,49-offer catalog, fees/curves and protected scenes/static model unchanged. Previous demos remain; new actual audio at Builds/Demos/PolishedDrive.
-
-Implementation uploaded and remote-verified at 96941836bab41767a36071a9096ff78424ef5aa7. See AV_CAMERA_GITHUB_VERIFICATION.json.
+Claude/Antigravity art folders/briefs prepared but NOT dispatched because Windows Security blocks app controls. User-requested Domain Bridge connected, same-PC browser also blocked. No firewall changes. Next: dismiss prompt, dispatch isolated art tasks, independently verify delivered assets. Paid v5 and separate turbo preference unchanged.

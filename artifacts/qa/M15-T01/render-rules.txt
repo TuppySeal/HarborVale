@@ -1,0 +1,13 @@
+PASS Driving marker height bounded at distance 1 / 720p
+PASS Driving marker height bounded at distance 1 / 1080p
+PASS Driving marker height bounded at distance 5 / 720p
+PASS Driving marker height bounded at distance 5 / 1080p
+PASS Driving marker height bounded at distance 20 / 720p
+PASS Driving marker height bounded at distance 20 / 1080p
+PASS Driving marker height bounded at distance 100 / 720p
+PASS Driving marker height bounded at distance 100 / 1080p
+PASS Zero-size marker cannot divide by zero
+PASS Saved source city retains authored geometry
+PASS Saved source city retains physical map colliders
+PASS Authored starter exists and is identified for exclusion from static batches
+PASS Presentation detail layers do not overwrite named project layers

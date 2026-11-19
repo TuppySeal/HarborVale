@@ -1,0 +1,9 @@
+PASS Linear color and four-sample edge smoothing enabled
+PASS Native tonemap shader supported and active
+PASS Static city geometry actually batched in player
+PASS Static detail distance budget applied
+PASS Rendering retains four physical wheel contacts
+PASS Dynamic car is excluded from static city batches
+PASS Map overview restores long range and disables driving fog
+PASS Driving render budget restores after map overview
+PASS No native runtime rendering errors

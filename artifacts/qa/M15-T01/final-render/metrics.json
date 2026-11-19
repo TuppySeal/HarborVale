@@ -1,0 +1,32 @@
+{
+    "mode": "enhanced",
+    "gpu": "NVIDIA GeForce RTX 5070",
+    "api": "Direct3D12",
+    "colorSpace": "Linear",
+    "colliderDigest": "9CEC99D3EEF8C4543A58B5D9559E36A84923FF8C200D023F8AD3FC051B89E657",
+    "msaa": 4,
+    "staticRenderers": 4249,
+    "batchedRenderers": 4247,
+    "detailRenderers": 1718,
+    "staticColliders": 1844,
+    "views": [
+        {
+            "view": "Street",
+            "meanFrameMs": 16.576700555555558,
+            "p95FrameMs": 17.1709,
+            "drawCalls": -1.0,
+            "batches": -1.0,
+            "setPasses": 116.0,
+            "frames": 180
+        },
+        {
+            "view": "District",
+            "meanFrameMs": 16.578091666666666,
+            "p95FrameMs": 17.0858,
+            "drawCalls": -1.0,
+            "batches": -1.0,
+            "setPasses": 173.0,
+            "frames": 180
+        }
+    ]
+}

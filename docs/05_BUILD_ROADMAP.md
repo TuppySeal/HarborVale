@@ -256,3 +256,7 @@ State-driven airflow, BOV/flutter, free garage audio preferences/previews, nativ
 
 ### M14-T05 — Driving audio, effects and camera polish (done)
 Sample-smoothed existing mix, preview/scene fades, wheel/flare/skid animation cleanup, RMB and J/L/K view controls. See project/AV_CAMERA_HANDOFF.md.
+
+
+### M15 — Cleaner rendering and isolated map art
+M15-T01 done: Linear/4xMSAA/tonemap, shadow cleanup and measured static batching on unchanged map. M15-T02 Claude roadside props and M15-T03 Antigravity building prototypes prepared but awaiting UI dispatch. See project/RENDERING_HANDOFF.md.

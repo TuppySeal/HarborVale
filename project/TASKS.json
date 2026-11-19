@@ -2,9 +2,9 @@
   "schema_version": 1,
   "project_title": "Redline: From Rust to Riches",
   "project_stage": "implementation",
-  "updated_at": "2026-11-19T09:12:04.489Z",
-  "current_task_id": null,
-  "next_task_id": null,
+  "updated_at": "2026-11-19T10:07:03.307Z",
+  "current_task_id": "M15-T02",
+  "next_task_id": "M15-T02",
   "status_values": [
     "not_started",
     "in_progress",
@@ -1012,6 +1012,60 @@
       ],
       "remaining_steps": [],
       "blockers": []
+    },
+    {
+      "id": "M15-T01",
+      "title": "Cleaner city rendering and measured static batching",
+      "status": "done",
+      "remaining_steps": [],
+      "milestone": "M15",
+      "depends_on": [
+        "M14-T05"
+      ],
+      "spec_ref": "project/RENDERING_HANDOFF.md",
+      "evidence": [
+        "project/RENDERING_HANDOFF.md",
+        "artifacts/qa/M15-T01/render-rules.txt",
+        "artifacts/qa/M15-T01/final-render/results.txt",
+        "artifacts/qa/M15-T01/install-verification.json"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "M15-T02",
+      "title": "Claude isolated roadside prop kit",
+      "status": "not_started",
+      "remaining_steps": [
+        "Dispatch TASK.md once Windows prompt is dismissed",
+        "Inspect actual native assets and rendered previews"
+      ],
+      "milestone": "M15",
+      "depends_on": [
+        "M14-T05"
+      ],
+      "spec_ref": "project/RENDERING_HANDOFF.md",
+      "evidence": [],
+      "blockers": [
+        "Windows network-access security dialog blocks external helper UI; assignments prepared separately"
+      ]
+    },
+    {
+      "id": "M15-T03",
+      "title": "Antigravity isolated building facade kit",
+      "status": "not_started",
+      "remaining_steps": [
+        "Dispatch TASK.md once Windows prompt is dismissed",
+        "Inspect actual native assets and rendered previews"
+      ],
+      "milestone": "M15",
+      "depends_on": [
+        "M14-T05"
+      ],
+      "spec_ref": "project/RENDERING_HANDOFF.md",
+      "evidence": [],
+      "blockers": [
+        "Windows network-access security dialog blocks external helper UI; assignments prepared separately"
+      ]
     }
   ],
   "implementation_authorized": true,
