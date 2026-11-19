@@ -48,3 +48,7 @@ M14-T05 complete. Read project/AV_CAMERA_HANDOFF.md. Latest player Builds/Harbor
 
 ## Latest rendering and map art coordination
 M15-T01 complete. Read project/RENDERING_HANDOFF.md. Latest player Builds/HarborVale-CleanRender. Source scene/geometry preserved; runtime batching must exclude dynamic Finch/Apex/StarterCarSpecification descendants. Keep detail layers28/29 free, map overview range restoration and real shader resource. Do not infer uncapped FPS from capped test. M15-T02/03 dispatched after the user dismissed the prompt; both helpers acknowledged. See project/map-art-coordination/DISPATCH.json. Helpers only write isolated folders and never main map; assets are not independently verified or integrated yet. Preserve prior user drafts. Paid v5, v1 turbo preference, catalog49 and all physical gameplay unchanged.
+
+
+## Latest reviewed map art
+M15-T02–T04 complete. Read project/MAP_ART_HANDOFF.md. Latest player Builds/HarborVale-CityArt.17 compatible Midtown plots use runtime apartment facades and51 visual-only forecourt props; source scene/roads/colliders/car physics unchanged. Never blindly rescale all buildings or rerun old source builders. Preserve placement IDs and static batching timing. Corrected roadside resources differ from the original Claude package. Native10/placement9/building41/prop38 plus clean import4 verified; do not fabricate a new garage regression pass from the unsupported batch ScreenCapture run. Active physical desktop input may conflict with helper UI; keep monitor settings unchanged and preserve drafts.

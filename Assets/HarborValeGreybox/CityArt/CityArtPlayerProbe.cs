@@ -1,0 +1,28 @@
+using System;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using HarborValeGreybox.Driving;
+using HarborValeGreybox.Racing;
+using HarborValeGreybox.Launch;
+namespace HarborValeGreybox.Presentation {
+public sealed class CityArtPlayerProbe:MonoBehaviour {
+ static string folder;List<string> checks=new List<string>();bool failed;float deadline;
+ [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]static void Prepare(){var a=Environment.GetCommandLineArgs();int i=Array.IndexOf(a,"--map-art-check-dir");folder=Debug.isDebugBuild&&i>=0&&i+1<a.Length?Path.GetFullPath(a[i+1]):null;if(folder!=null){Directory.CreateDirectory(folder);DocksideTrialDirector.SavePathOverrideForTests=Path.Combine(folder,"isolated-v5.json");}}
+ [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]static void Hook(){if(folder==null)return;var g=new GameObject("Reviewed art native checks");DontDestroyOnLoad(g);g.AddComponent<CityArtPlayerProbe>();}
+ void OnEnable(){Application.logMessageReceived+=Log;}void OnDisable(){Application.logMessageReceived-=Log;}
+ void Log(string text,string stack,LogType kind){if(kind==LogType.Exception||kind==LogType.Error){failed=true;checks.Add("FAIL runtime "+text);File.WriteAllLines(Path.Combine(folder,"results.txt"),checks);Application.Quit(1);}}
+ void Check(bool good,string text){checks.Add((good?"PASS ":"FAIL ")+text);File.WriteAllLines(Path.Combine(folder,"results.txt"),checks);if(!good){failed=true;Application.Quit(1);throw new Exception(text);}}
+ void Update(){if(deadline>0&&Time.realtimeSinceStartup>deadline)Check(false,"Art verification timeout");}
+ IEnumerator Start(){deadline=Time.realtimeSinceStartup+90;while(HarborValeLaunch.Instance==null)yield return null;HarborValeLaunch.Instance.Open(HarborValeLaunch.CityScene);while(FindAnyObjectByType<CityArtPlacement>()?.Ready!=true||FindAnyObjectByType<CityPresentation>()?.Ready!=true)yield return null;yield return new WaitForSecondsRealtime(1);var art=FindAnyObjectByType<CityArtPlacement>();var car=FindAnyObjectByType<FinchVehicle>();car.externalInput=true;car.commandedPedal=0;Check(art.Buildings==17&&art.Props==51,"17 existing Midtown plots have apartments and 51 forecourt props");Check(car.GetComponentsInChildren<WheelCollider>().Length==4,"Existing four physical wheel contacts retained");
+  var root=UnityEngine.SceneManagement.SceneManager.GetActiveScene().GetRootGameObjects().First(g=>g.name.StartsWith("HARBOR VALE | scaled"));var colliders=root.GetComponentsInChildren<Collider>().Where(c=>c.GetComponentInParent<StarterCarSpecification>()==null&&c.GetComponentInParent<FinchVehicle>()==null).ToArray();var strings=colliders.Select(c=>c.GetType().Name+"|"+c.name+"|"+c.transform.position.ToString("F4")+"|"+c.transform.rotation.ToString("F4")+"|"+c.transform.lossyScale.ToString("F4")).OrderBy(x=>x).ToArray();string digest;using(var hash=System.Security.Cryptography.SHA256.Create())digest=BitConverter.ToString(hash.ComputeHash(Encoding.UTF8.GetBytes(string.Join("\n",strings)))).Replace("-","");Check(colliders.Length==1844&&digest=="9CEC99D3EEF8C4543A58B5D9559E36A84923FF8C200D023F8AD3FC051B89E657","Native static collision digest unchanged from pre-art city");
+  var buildings=root.GetComponentsInChildren<Transform>().Where(t=>t.name.StartsWith("Reviewed apartment | ")).ToArray();Check(buildings.Length==17&&buildings.All(t=>t.GetComponent<MeshRenderer>().enabled&&t.GetComponent<MeshRenderer>().isPartOfStaticBatch),"Apartment renderers are visible and included in actual static batches");Check(buildings.All(t=>t.GetComponentsInChildren<Collider>().Length==0),"Imported building colliders do not duplicate existing map collision");Check(root.GetComponentsInChildren<Transform>().Where(t=>t.name.StartsWith("Reviewed forecourt")).All(t=>t.GetComponentsInChildren<Light>().Length==0),"Emissive forecourt lamps add no dynamic Lights");
+  var target=buildings[0];var b=target.GetComponent<Renderer>().bounds;var camera=Camera.main;camera.GetComponent<FinchChaseCamera>().enabled=false;camera.transform.position=b.center-target.forward*b.size.magnitude*.9f-target.right*b.size.x*.5f+Vector3.up*b.size.y*.2f;camera.transform.LookAt(b.center);camera.fieldOfView=52;yield return null;Capture(camera,"Midtown_Native.png");Check(new FileInfo(Path.Combine(folder,"Midtown_Native.png")).Length>10000,"Actual Windows render of integrated apartment and forecourt saved");
+  car.GetComponent<FinchDrivingHUD>().SetInspection(true);yield return new WaitForSecondsRealtime(.2f);Check(camera.farClipPlane>=8000&&!RenderSettings.fog,"Map overview retains full city range");car.GetComponent<FinchDrivingHUD>().SetInspection(false);yield return null;Check(camera.farClipPlane==3000&&RenderSettings.fog,"Returning to driving restores clean render profile");Check(!failed,"No native art integration runtime errors");Application.Quit(0);
+ }
+ void Capture(Camera camera,string file){var rt=new RenderTexture(1280,800,24,RenderTextureFormat.ARGBHalf,RenderTextureReadWrite.Linear){antiAliasing=4};rt.Create();camera.targetTexture=rt;camera.Render();var prior=RenderTexture.active;RenderTexture.active=rt;var tex=new Texture2D(1280,800,TextureFormat.RGB24,false,true);tex.ReadPixels(new Rect(0,0,1280,800),0,0);var pixels=tex.GetPixels();for(int i=0;i<pixels.Length;i++)pixels[i]=pixels[i].gamma;tex.SetPixels(pixels);tex.Apply();File.WriteAllBytes(Path.Combine(folder,file),tex.EncodeToPNG());RenderTexture.active=prior;camera.targetTexture=null;rt.Release();Destroy(rt);Destroy(tex);}
+}
+}

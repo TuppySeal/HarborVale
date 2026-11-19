@@ -1,6 +1,8 @@
+Current continuation: M15-T02–T04 art kits reviewed and a first Midtown pass installed. Latest player Builds/HarborVale-CityArt/HarborVale.exe; read MAP_ART_HANDOFF.md. Rendering comparison below records the earlier unchanged-map M15-T01 baseline.
+
 # Cleaner rendering and isolated map art — M15
 
-Canonical C:/Users/Justice/Documents/Unity/HarborVale; Unity6000.6.0f1. Latest installed Windows executable Builds/HarborVale-CleanRender/HarborVale.exe. M15-T01 complete. M15-T02/03 dispatched after user dismissed the Windows prompt. Both helpers acknowledged and began working; actual assets remain unverified. See project/map-art-coordination/DISPATCH.json. Domain Bridge was connected at user request. No firewall rules were changed by Codex. Never put connection credentials in Git.
+Canonical C:/Users/Justice/Documents/Unity/HarborVale; Unity6000.6.0f1. Latest installed Windows executable Builds/HarborVale-CleanRender/HarborVale.exe. M15-T01 complete. M15-T02/03 dispatched after user dismissed the Windows prompt. Both helpers acknowledged, delivered and were subsequently reviewed; see MAP_ART_HANDOFF.md for corrected copies and integration. See project/map-art-coordination/DISPATCH.json. Domain Bridge was connected at user request. No firewall rules were changed by Codex. Never put connection credentials in Git.
 
 ## Rendering changes
 
@@ -20,8 +22,8 @@ Repeat in disposable validation project: PresentationVerification.CompareRelease
 
 ## External helper continuation
 
-Prepared exact briefs under project/map-art-coordination. Claude: C:/Users/Justice/Documents/HarborVale-Claude-Art/CityDressing/TASK.md (four roadside props). Antigravity: C:/Users/Justice/Documents/HarborVale-Antigravity-QA/CityArchitecture/TASK.md (three building prototypes). Minimal separate Unity Project folders and read-only layout/current-street references exist there. Existing brake/garage work untouched. Both assignments have now been sent and acknowledged. Claude uses a new CityDressing session; Antigravity continued its completed garage-review conversation. Prior work/draft preserved. No main-map assets have been integrated yet.
+Prepared exact briefs under project/map-art-coordination. Claude: C:/Users/Justice/Documents/HarborVale-Claude-Art/CityDressing/TASK.md (four roadside props). Antigravity: C:/Users/Justice/Documents/HarborVale-Antigravity-QA/CityArchitecture/TASK.md (three building prototypes). Minimal separate Unity Project folders and read-only layout/current-street references exist there. Existing brake/garage work untouched. Both assignments have now been sent and acknowledged. Claude uses a new CityDressing session; Antigravity continued its completed garage-review conversation. Prior work/draft preserved. The later bounded Midtown art pass is documented in MAP_ART_HANDOFF.md.
 
 Each helper writes only its own folder, saves native meshes/materials/prefabs, actually runs its builder and renders previews, measures bounds/counts, and exports via AssetDatabase.ExportPackage. No Blender dependency, no downloaded art, no main project/pipeline/scene edits, no runtime car scripts. Independently inspect actual files, package contents and images before any main-map integration. Rebuilding source city would destroy manual edits; read EXPANSION_HANDOFF first and preserve dependencies/backups. Renderer is owned by Codex; helpers only create isolated art assets.
 
-Existing teal checkpoint arches remain prototype navigation geometry, including the near-camera overhead bar visible at spawn; this release does not replace that art. External buildings/roadside dressing are still pending.
+Existing teal checkpoint arches remain prototype navigation geometry, including the near-camera overhead bar visible at spawn; this release does not replace that art. The later first Midtown art pass adds reviewed architecture and forecourt props; other districts remain greybox.

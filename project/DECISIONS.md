@@ -113,3 +113,7 @@ User requested audio/SFX/animation cleanup and side-looking while driving. Smoot
 
 ## D057 — Separate render cleanup from original map art
 User requested Claude/Antigravity improve the map while Codex cleans rendering. Preserve existing geometry/physics and use scene-scoped built-in presentation; measured SetPass improvements do not imply uncapped FPS gain. Helpers work only in independent asset projects; no unverified scripts/package reports count as delivered art. Windows prompt prevented dispatch, recorded explicitly.
+
+
+## D058 — Review native art before a bounded map placement pass
+Correct helper assets in a separate copy, verify persistent native references/actual renders and clean package imports. Replace only17 compatible Midtown facades; preserve core plot identities and collision, keep forecourt props visual-only without dynamic lights. Broader city geometry/prop collision/performance needs deliberate subsequent work.

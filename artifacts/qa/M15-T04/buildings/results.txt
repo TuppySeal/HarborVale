@@ -1,0 +1,41 @@
+PASS Clean package imports exactly three building prefabs
+PASS Asset-only package has no editor scripts or inspection scene
+PASS Assets/CityArchitecture/Prefabs/Building_Apartment_12x14x15.prefab loads from clean import
+PASS Building_Apartment_12x14x15 identity root
+PASS Building_Apartment_12x14x15 grade-level pivot (footing at most 0.10m below grade): 0.000m
+PASS Building_Apartment_12x14x15 no runtime behaviours
+PASS Building_Apartment_12x14x15 no active light budget
+PASS Building_Apartment_12x14x15 optional simple collider is a named child without rigidbody
+PASS Building_Apartment_12x14x15 optional collider fits building core at ground level
+PASS Building_Apartment_12x14x15 all meshes are saved native assets
+PASS Building_Apartment_12x14x15 saved Standard materials survive clean import
+PASS Building_Apartment_12x14x15 submesh material slots complete
+PASS Building_Apartment_12x14x15 measured triangle budget 1860
+PASS Building_Apartment_12x14x15 measured height 15.00m
+PASS Building_Apartment_12x14x15 real clean-import render saved
+PASS Assets/CityArchitecture/Prefabs/Building_Storefront_8x10x7.prefab loads from clean import
+PASS Building_Storefront_8x10x7 identity root
+PASS Building_Storefront_8x10x7 grade-level pivot (footing at most 0.10m below grade): 0.000m
+PASS Building_Storefront_8x10x7 no runtime behaviours
+PASS Building_Storefront_8x10x7 no active light budget
+PASS Building_Storefront_8x10x7 optional simple collider is a named child without rigidbody
+PASS Building_Storefront_8x10x7 optional collider fits building core at ground level
+PASS Building_Storefront_8x10x7 all meshes are saved native assets
+PASS Building_Storefront_8x10x7 saved Standard materials survive clean import
+PASS Building_Storefront_8x10x7 submesh material slots complete
+PASS Building_Storefront_8x10x7 measured triangle budget 708
+PASS Building_Storefront_8x10x7 measured height 7.00m
+PASS Building_Storefront_8x10x7 real clean-import render saved
+PASS Assets/CityArchitecture/Prefabs/Building_Warehouse_12x12x8.prefab loads from clean import
+PASS Building_Warehouse_12x12x8 identity root
+PASS Building_Warehouse_12x12x8 grade-level pivot (footing at most 0.10m below grade): -0.100m
+PASS Building_Warehouse_12x12x8 no runtime behaviours
+PASS Building_Warehouse_12x12x8 no active light budget
+PASS Building_Warehouse_12x12x8 optional simple collider is a named child without rigidbody
+PASS Building_Warehouse_12x12x8 optional collider fits building core at ground level
+PASS Building_Warehouse_12x12x8 all meshes are saved native assets
+PASS Building_Warehouse_12x12x8 saved Standard materials survive clean import
+PASS Building_Warehouse_12x12x8 submesh material slots complete
+PASS Building_Warehouse_12x12x8 measured triangle budget 708
+PASS Building_Warehouse_12x12x8 measured height 8.10m
+PASS Building_Warehouse_12x12x8 real clean-import render saved

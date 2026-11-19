@@ -60,4 +60,6 @@ Do not interpret a check here as unperformed controller, full-campaign, frame-ra
 - [x] M14-T05: Sample-smoothed driving mix/transients, preview/scene fade, wheel render interpolation, synchronized flame fade, pooled skid segments, and safe chase/bonnet side/rear/mouse look; native captures and rules recorded.
 
 - [x] M15-T01: Linear lighting,4xMSAA, tonemap, reduced road shadow striping, static city batching/detail limits and bounded driving markers; native rendering/gameplay checks recorded.
-- [ ] M15-T02/03: Send prepared isolated roadside/building tasks to Claude/Antigravity, verify actual assets/previews, then review integration.
+- [x] M15-T02/03: Isolated roadside/building tasks sent, delivered and independently reviewed; corrected assets and first integration documented in MAP_ART_HANDOFF.md.
+
+- [x] M15-T02–T04: Reviewed building kit and corrected roadside kit, actual fresh import/native renders,17 Midtown facade replacements and51 forecourt props with preserved map collision.

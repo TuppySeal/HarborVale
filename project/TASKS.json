@@ -2,9 +2,9 @@
   "schema_version": 1,
   "project_title": "Redline: From Rust to Riches",
   "project_stage": "implementation",
-  "updated_at": "2026-11-19T10:25:58.799Z",
-  "current_task_id": "M15-T02",
-  "next_task_id": "M15-T03",
+  "updated_at": "2026-11-19T10:51:14.883Z",
+  "current_task_id": null,
+  "next_task_id": null,
   "status_values": [
     "not_started",
     "in_progress",
@@ -1034,19 +1034,16 @@
     {
       "id": "M15-T02",
       "title": "Claude isolated roadside prop kit",
-      "status": "in_progress",
-      "remaining_steps": [
-        "Await actual saved native assets and rendered previews",
-        "Independently check geometry, references, dimensions, package and visual quality",
-        "Review map placement in a disposable project before integration"
-      ],
+      "status": "done",
+      "remaining_steps": [],
       "milestone": "M15",
       "depends_on": [
         "M14-T05"
       ],
       "spec_ref": "project/RENDERING_HANDOFF.md",
       "evidence": [
-        "project/map-art-coordination/DISPATCH.json"
+        "project/MAP_ART_HANDOFF.md",
+        "artifacts/qa/M15-T04/install-verification.json"
       ],
       "blockers": [],
       "updated_at": "2026-11-19T10:25:58.799Z"
@@ -1054,22 +1051,37 @@
     {
       "id": "M15-T03",
       "title": "Antigravity isolated building facade kit",
-      "status": "in_progress",
-      "remaining_steps": [
-        "Await actual saved native assets and rendered previews",
-        "Independently check geometry, references, dimensions, package and visual quality",
-        "Review map placement in a disposable project before integration"
-      ],
+      "status": "done",
+      "remaining_steps": [],
       "milestone": "M15",
       "depends_on": [
         "M14-T05"
       ],
       "spec_ref": "project/RENDERING_HANDOFF.md",
       "evidence": [
-        "project/map-art-coordination/DISPATCH.json"
+        "project/MAP_ART_HANDOFF.md",
+        "artifacts/qa/M15-T04/install-verification.json"
       ],
       "blockers": [],
       "updated_at": "2026-11-19T10:25:58.799Z"
+    },
+    {
+      "id": "M15-T04",
+      "title": "First reviewed Midtown architecture and forecourt dressing pass",
+      "milestone": "M15",
+      "status": "done",
+      "depends_on": [
+        "M15-T01",
+        "M15-T02",
+        "M15-T03"
+      ],
+      "spec_ref": "project/MAP_ART_HANDOFF.md",
+      "evidence": [
+        "artifacts/qa/M15-T04/placement-rules.txt",
+        "artifacts/qa/M15-T04/native/results.txt"
+      ],
+      "remaining_steps": [],
+      "blockers": []
     }
   ],
   "implementation_authorized": true,

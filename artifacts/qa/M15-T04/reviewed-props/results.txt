@@ -1,0 +1,38 @@
+PASS Bollard_0.9m / Top source mesh exists
+PASS Bollard_0.9m / Base source mesh exists
+PASS Bollard_0.9m saved bottom at grade
+PASS Bollard_0.9m saved target height 0.9m
+PASS Bollard_0.9m identity root
+PASS Bollard_0.9m persistent native meshes survive prefab reload
+PASS Bollard_0.9m persistent materials survive prefab reload
+PASS Bollard_0.9m visual-only prefab without physics/scripts/lights
+PASS LowWall_4x1.2m / WallCube source mesh exists
+PASS LowWall_4x1.2m saved bottom at grade
+PASS LowWall_4x1.2m saved target height 1.2m
+PASS LowWall_4x1.2m identity root
+PASS LowWall_4x1.2m persistent native meshes survive prefab reload
+PASS LowWall_4x1.2m persistent materials survive prefab reload
+PASS LowWall_4x1.2m visual-only prefab without physics/scripts/lights
+PASS PlanterTree / Pot source mesh exists
+PASS PlanterTree / Trunk source mesh exists
+PASS PlanterTree / Canopy source mesh exists
+PASS PlanterTree saved bottom at grade
+PASS PlanterTree saved target height 4.5m
+PASS PlanterTree identity root
+PASS PlanterTree persistent native meshes survive prefab reload
+PASS PlanterTree persistent materials survive prefab reload
+PASS PlanterTree visual-only prefab without physics/scripts/lights
+PASS Tree trunk meets planter and canopy without gaps
+PASS Streetlamp_7m / Pole source mesh exists
+PASS Streetlamp_7m / Base source mesh exists
+PASS Streetlamp_7m / Head source mesh exists
+PASS Streetlamp_7m / Emissive lens source mesh exists
+PASS Streetlamp_7m saved bottom at grade
+PASS Streetlamp_7m saved target height 7m
+PASS Streetlamp_7m identity root
+PASS Streetlamp_7m persistent native meshes survive prefab reload
+PASS Streetlamp_7m persistent materials survive prefab reload
+PASS Streetlamp_7m visual-only prefab without physics/scripts/lights
+PASS Lamp pole meets ground and head at 7m
+PASS Lamp has emissive lens without a Light
+PASS Reviewed asset-only package exported natively

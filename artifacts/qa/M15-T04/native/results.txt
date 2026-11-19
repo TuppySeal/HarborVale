@@ -1,0 +1,10 @@
+PASS 17 existing Midtown plots have apartments and 51 forecourt props
+PASS Existing four physical wheel contacts retained
+PASS Native static collision digest unchanged from pre-art city
+PASS Apartment renderers are visible and included in actual static batches
+PASS Imported building colliders do not duplicate existing map collision
+PASS Emissive forecourt lamps add no dynamic Lights
+PASS Actual Windows render of integrated apartment and forecourt saved
+PASS Map overview retains full city range
+PASS Returning to driving restores clean render profile
+PASS No native art integration runtime errors

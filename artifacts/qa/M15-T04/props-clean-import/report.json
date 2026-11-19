@@ -1,0 +1,78 @@
+{
+    "props": [
+        {
+            "name": "Bollard_0.9m",
+            "min": {
+                "x": -0.20000000298023224,
+                "y": 0.0,
+                "z": -0.20000000298023224
+            },
+            "size": {
+                "x": 0.4000000059604645,
+                "y": 0.8999999761581421,
+                "z": 0.4000000059604645
+            },
+            "parts": [
+                "Top mesh=Assets/ReviewedRoadside/Meshes/Bollard_0.9m_Top.asset bounds=Center: (0.00, 0.15, 0.00), Extents: (0.12, 0.15, 0.12) position=(0.00, 0.60, 0.00) scale=(1.00, 1.00, 1.00)",
+                "Base mesh=Assets/ReviewedRoadside/Meshes/Bollard_0.9m_Base.asset bounds=Center: (0.00, 0.30, 0.00), Extents: (0.20, 0.30, 0.20) position=(0.00, 0.00, 0.00) scale=(1.00, 1.00, 1.00)"
+            ],
+            "issues": []
+        },
+        {
+            "name": "LowWall_4x1.2m",
+            "min": {
+                "x": -2.0,
+                "y": 0.0,
+                "z": -0.15000000596046448
+            },
+            "size": {
+                "x": 4.0,
+                "y": 1.2000000476837158,
+                "z": 0.30000001192092896
+            },
+            "parts": [
+                "WallCube mesh=Assets/ReviewedRoadside/Meshes/LowWall_4x1.2m_WallCube.asset bounds=Center: (0.00, 0.00, 0.00), Extents: (2.00, 0.60, 0.15) position=(0.00, 0.60, 0.00) scale=(1.00, 1.00, 1.00)"
+            ],
+            "issues": []
+        },
+        {
+            "name": "PlanterTree",
+            "min": {
+                "x": -1.0,
+                "y": 0.0,
+                "z": -1.0
+            },
+            "size": {
+                "x": 2.0,
+                "y": 4.5,
+                "z": 2.0
+            },
+            "parts": [
+                "Pot mesh=Assets/ReviewedRoadside/Meshes/PlanterTree_Pot.asset bounds=Center: (0.00, 0.00, 0.00), Extents: (0.40, 0.30, 0.40) position=(0.00, 0.30, 0.00) scale=(1.00, 1.00, 1.00)",
+                "Trunk mesh=Assets/ReviewedRoadside/Meshes/PlanterTree_Trunk.asset bounds=Center: (0.00, 1.25, 0.00), Extents: (0.15, 1.25, 0.15) position=(0.00, 0.60, 0.00) scale=(1.00, 1.00, 1.00)",
+                "Canopy mesh=Assets/ReviewedRoadside/Meshes/PlanterTree_Canopy.asset bounds=Center: (0.00, 0.00, 0.00), Extents: (1.00, 1.00, 1.00) position=(0.00, 3.50, 0.00) scale=(1.00, 1.00, 1.00)"
+            ],
+            "issues": []
+        },
+        {
+            "name": "Streetlamp_7m",
+            "min": {
+                "x": -0.30000001192092896,
+                "y": 0.0,
+                "z": -0.30000001192092896
+            },
+            "size": {
+                "x": 0.6000000238418579,
+                "y": 7.0,
+                "z": 0.6000000238418579
+            },
+            "parts": [
+                "Pole mesh=Assets/ReviewedRoadside/Meshes/Streetlamp_7m_Pole.asset bounds=Center: (0.00, 3.50, 0.00), Extents: (0.08, 3.50, 0.08) position=(0.00, 0.00, 0.00) scale=(1.00, 1.00, 1.00)",
+                "Base mesh=Assets/ReviewedRoadside/Meshes/Streetlamp_7m_Base.asset bounds=Center: (0.00, 0.10, 0.00), Extents: (0.30, 0.10, 0.30) position=(0.00, 0.00, 0.00) scale=(1.00, 1.00, 1.00)",
+                "Head mesh=Assets/ReviewedRoadside/Meshes/Streetlamp_7m_Head.asset bounds=Center: (0.00, 0.00, 0.00), Extents: (0.20, 0.25, 0.15) position=(0.00, 6.75, 0.00) scale=(1.00, 1.00, 1.00)",
+                "Emissive lens mesh=Assets/ReviewedRoadside/Meshes/Streetlamp_7m_Emissive_lens.asset bounds=Center: (0.00, 0.00, 0.00), Extents: (0.17, 0.01, 0.12) position=(0.00, 6.49, 0.00) scale=(1.00, 1.00, 1.00)"
+            ],
+            "issues": []
+        }
+    ]
+}
