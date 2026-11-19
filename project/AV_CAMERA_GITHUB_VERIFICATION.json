@@ -1,0 +1,8 @@
+{
+  "implementationCommit": "96941836bab41767a36071a9096ff78424ef5aa7",
+  "remoteMainVerified": "96941836bab41767a36071a9096ff78424ef5aa7",
+  "verifiedAt": "2026-11-19T09:14:03.095Z",
+  "player": "Builds/HarborVale-PolishedDrive/HarborVale.exe",
+  "evidence": "artifacts/qa/M14-T05/install-verification.json",
+  "note": "Player and actual audio captures installed locally. Executables, recordings, logs, test accounts and Unity caches excluded from Git. User PackageManagerSettings.asset preserved untracked."
+}

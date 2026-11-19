@@ -5,3 +5,5 @@ Canonical C:/Users/Justice/Documents/Unity/HarborVale, Unity6000.6.0f1. Latest e
 Read AV_CAMERA_HANDOFF.md. Native editor AV/camera rules33 plus prior regressions passed; Windows AV75, turbo32, workshop51, chassis54, transitions47 passed. Both cars' new views/effects captured and actual mixes have no saturated samples. Subjective sound/full-lap and physical input feel remain human checks. Install evidence artifacts/qa/M14-T05/install-verification.json.
 
 Paid v5 state, v1 cosmetic preference,49-offer catalog, fees/curves and protected scenes/static model unchanged. Previous demos remain; new actual audio at Builds/Demos/PolishedDrive.
+
+Implementation uploaded and remote-verified at 96941836bab41767a36071a9096ff78424ef5aa7. See AV_CAMERA_GITHUB_VERIFICATION.json.
