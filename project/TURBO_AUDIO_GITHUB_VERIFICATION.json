@@ -1,0 +1,9 @@
+{
+  "implementationCommit": "dcdf2e9120864d4e78df847e460ec5c59148f959",
+  "remoteMainVerified": "dcdf2e9120864d4e78df847e460ec5c59148f959",
+  "verifiedAt": "2026-11-19T08:42:02.373Z",
+  "player": "Builds/HarborVale-TurboAudio/HarborVale.exe",
+  "evidence": "artifacts/qa/M14-T04/install-verification.json",
+  "audioComparison": "Builds/Demos/TurboAudio/Blowoff-then-Flutter.m4a",
+  "note": "Player/audio installed locally. Executable, audio, test accounts, logs and Unity caches not included in Git. User PackageManagerSettings.asset preserved."
+}
