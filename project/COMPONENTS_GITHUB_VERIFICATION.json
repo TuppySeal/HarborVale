@@ -1,0 +1,32 @@
+{
+  "publishedAt": "2026-11-20T19:04:50Z",
+  "tag": "test-2026-11-20-parts-circuit",
+  "sourceCommit": "72adb27345e439b5a7d4637189b704b047c4eb3e",
+  "repository": "TuppySeal/HarborVale",
+  "private": true,
+  "url": "https://github.com/TuppySeal/HarborVale/releases/tag/test-2026-11-20-parts-circuit",
+  "latestUrl": "https://github.com/TuppySeal/HarborVale/releases/latest",
+  "releaseId": 453076407,
+  "assets": [
+    {
+      "name": "HarborVale-CityStakes-Windows-x64.zip",
+      "size": 70252630,
+      "sha256": "866d1b4d9f305a966c4282d65e97983d71bcb0468f2f38878ec4047ac6fd09fc",
+      "url": "https://github.com/TuppySeal/HarborVale/releases/download/test-2026-11-20-parts-circuit/HarborVale-CityStakes-Windows-x64.zip"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "size": 104,
+      "sha256": "08e1d5f70b559141272f6028cf60532faafd4e62fc33391bc679cb477a2e6639",
+      "url": "https://github.com/TuppySeal/HarborVale/releases/download/test-2026-11-20-parts-circuit/SHA256SUMS.txt"
+    }
+  ],
+  "packageVerification": {
+    "filename": "HarborVale-CityStakes-Windows-x64.zip",
+    "zipEntries": 252,
+    "verifiedPlayerFiles": 251,
+    "bytes": 70252630,
+    "sha256": "866d1b4d9f305a966c4282d65e97983d71bcb0468f2f38878ec4047ac6fd09fc",
+    "completeDirectoryVerified": true
+  }
+}

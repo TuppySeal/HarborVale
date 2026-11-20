@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project_title": "Redline: From Rust to Riches",
   "project_stage": "implementation",
-  "updated_at": "2026-11-20T19:04:06.099Z",
+  "updated_at": "2026-11-20T19:05:00.463Z",
   "current_task_id": "M17-T05",
   "next_task_id": "M17-T05",
   "status_values": [
@@ -1194,18 +1194,18 @@
       "id": "M17-T04",
       "title": "Paid removable engine hardware and eight-car entry-fee circuit",
       "milestone": "M17",
-      "status": "in_progress",
+      "status": "done",
       "depends_on": [
         "M17-T03"
       ],
       "spec_ref": "project/COMPONENTS_HANDOFF.md",
       "evidence": [
         "project/COMPONENTS_HANDOFF.md",
-        "artifacts/qa/M17-T04/install-verification.json"
+        "artifacts/qa/M17-T04/install-verification.json",
+        "https://github.com/TuppySeal/HarborVale/releases/tag/test-2026-11-20-parts-circuit",
+        "project/COMPONENTS_GITHUB_VERIFICATION.json"
       ],
-      "remaining_steps": [
-        "Push checked source and publish verified CityStakes ZIP"
-      ],
+      "remaining_steps": [],
       "blockers": []
     },
     {
