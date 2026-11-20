@@ -14,7 +14,7 @@ public sealed class HarborValeLaunch:MonoBehaviour {
  static void Loaded(Scene scene,LoadSceneMode mode){
   if(scene.name!=MenuScene&&scene.name!=CityScene&&scene.name!=SportsScene&&scene.name!="Finch_HandlingTest")return;
   // All scene-specific systems initialize here, including when returning from the hub.
-  FinchDrivingBootstrap.StartDriving();DocksideTrialDirector.Hook();FinchGarage.Hook();ApexTestDrive.Hook();HarborValeGreybox.Workshop.ExpandedWorkshop.Hook();TrafficWorld.Hook();RivalRaceDirector.Hook();CircuitRaceDirector.Hook();PhysicalGarage.Hook();GarageFleetDisplay.Hook();
+  HighwayRuntime.Hook();FinchDrivingBootstrap.StartDriving();DocksideTrialDirector.Hook();FinchGarage.Hook();ApexTestDrive.Hook();HarborValeGreybox.Workshop.ExpandedWorkshop.Hook();TrafficWorld.Hook();RivalRaceDirector.Hook();CircuitRaceDirector.Hook();PhysicalGarage.Hook();GarageFleetDisplay.Hook();
   if(Instance==null){var root=new GameObject("HarborVale | launch and mode selection");Instance=root.AddComponent<HarborValeLaunch>();DontDestroyOnLoad(root);}
   Instance.Message=null;DrivingSettingsView.Hook();DrivingSettingsView.Instance.Close();
   if(scene.name==SportsScene&&!UnityEngine.Object.FindAnyObjectByType<SportsAccelerationHUD>())new GameObject("Sports | live acceleration tests").AddComponent<SportsAccelerationHUD>();

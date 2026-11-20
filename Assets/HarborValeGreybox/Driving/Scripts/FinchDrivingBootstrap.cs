@@ -19,6 +19,7 @@ public static class FinchDrivingBootstrap {
  }
  public static void SetMapLabels(bool visible){foreach(var label in UnityEngine.Object.FindObjectsByType<MapLabel>(FindObjectsSortMode.None))label.GetComponent<Renderer>().enabled=visible;foreach(var annotation in UnityEngine.Object.FindObjectsByType<MapAnnotation>(FindObjectsSortMode.None))annotation.enabled=visible;}
  public static bool TryRecovery(Vector3 current,Vector3 heading,out Vector3 position,out Quaternion rotation){
+  if(HarborValeGreybox.Racing.HighwayRuntime.TryRecovery(current,heading,out position,out rotation))return true;
   if(recovery==null){var asset=Resources.Load<TextAsset>("FinchRoadRecovery");if(asset!=null)recovery=JsonUtility.FromJson<Recovery>(asset.text);}
   position=default;rotation=Quaternion.identity;if(recovery==null||recovery.anchors.Length==0)return false;
   Anchor nearest=null;float score=float.MaxValue;foreach(var a in recovery.anchors){float d=(new Vector2(a.x-current.x,a.z-current.z)).sqrMagnitude;if(d<score){score=d;nearest=a;}}

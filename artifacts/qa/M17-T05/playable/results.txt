@@ -1,0 +1,12 @@
+PASS Hub has no highway instance
+PASS City launches with actual player vehicle
+PASS City installs exactly one highway
+PASS Repeated highway hook does not duplicate geometry
+PASS Recovery recognizes elevated highway
+PASS Recovery does not pull a street-level car onto the overpass
+PASS Player car drives original city street, access ramp and highway: distance=1869m, peak=93.8km/h, airborneTicks=0
+PASS Highway route needs no recovery resets
+PASS Normal vehicle Recover stays on elevated highway
+PASS Leaving city unloads highway
+PASS Returning to city restores one highway
+PASS Highway native flow has no runtime errors
