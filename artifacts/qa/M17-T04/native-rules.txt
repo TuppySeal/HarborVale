@@ -1,0 +1,31 @@
+PASS Real G garage opens at stopped physical building
+PASS Actual sequential paid hardware: na_1
+PASS Actual sequential paid hardware: gearbox_1
+PASS Actual sequential paid hardware: induction_small_1
+PASS Actual sequential paid hardware: induction_small_2
+PASS Nonblank native render: Parts_Labor_Bench
+PASS GUI removal quote and paid confirmation commit real turbo kit
+PASS Removal charges250once and updates actual boost/powertrain
+PASS Nonblank native render: Stored_Turbo_Kit
+PASS GUI refits owned kit for labor
+PASS Refit restores Stage2 torque/boost and unique identity without repurchasing kit
+PASS Nonblank native render: Turbo_Refitted
+PASS Paid circuit opens while stopped
+PASS Unconfirmed entry cannot debit credits
+PASS Nonblank native render: Eight_Car_Entry_Menu
+PASS Confirmed eight-car entry charges3000and persists terms
+PASS Seven distinct physical AI rivals spawn with four contacts each
+PASS Live field includes supercharged muscle and Tempest exotic
+PASS Paid garage is blocked during committed circuit
+PASS Nonblank native render: Eight_Car_Starting_Grid
+PASS Nonblank native render: Eight_Car_Live_Circuit
+PASS Real native eight-car player run completes all37 gates
+PASS Actual native finish pays1000per beaten rival after3000entry
+PASS Native result retry cannot duplicate prize
+PASS Nonblank native render: Eight_Car_Cash_Result
+PASS Native components and circuit save reload validates
+PASS Can reopen event after valid result
+PASS Confirmed subsequent entry can be deliberately forfeited
+PASS Forfeit loses only entry fee and preserves car/kit ownership
+PASS Free Tempest remains byte-isolated from v10 paid components/circuit ledger
+PASS Components/circuit native run has no runtime errors

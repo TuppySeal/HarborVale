@@ -1,5 +1,7 @@
 # HarborVale — Windows racing prototype
 
+Latest: **Builds/HarborVale-CityStakes/HarborVale.exe**. G at garage -> **Remove / refit parts**. H -> **8-car paid circuit** (3000cr entry;1000per rival beaten). v10 paid saves migrate read-only. See project/COMPONENTS_HANDOFF.md. Highways/police are the next expansion.
+
 [**Download the latest Windows build**](https://github.com/TuppySeal/HarborVale/releases/latest)
 
 This repository and its downloads are private. Sign in with a GitHub account that has access.

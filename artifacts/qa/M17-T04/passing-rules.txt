@@ -1,0 +1,11 @@
+PASS Rival requests exactly full throttle on open straight without artificial95percent cap
+PASS Actual stock rival accelerates beyond70kmh under wheel physics
+PASS Planner retains four contacts and original engine/handling physics
+PASS Rival selects clear adjacent lane around slower physical traffic
+PASS Actual wheel-driven rival passes slow car and merges back ahead
+PASS Ordinary pass maintains physical separation without teleport recovery
+PASS Rival waits when opposing lane is occupied rather than forcing a pass
+PASS Stopped traffic produces real braking and safe stationary gap
+PASS Pass safety predicts closing speed using intended acceleration, not only current low speed
+PASS Passing is confined to right-hand travel lane and never creates off-road third lane
+PASS Speed planner anticipates tight bend using radius and braking distance

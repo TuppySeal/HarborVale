@@ -1,0 +1,6 @@
+MEASURE seconds=0 gates=0,0,0,0,0,0,0,0 recoveries=0,0,0,0,0,0,0,0
+MEASURE seconds=40 gates=9,12,9,13,10,11,9,11 recoveries=0,0,0,0,0,0,0,0
+MEASURE seconds=80 gates=21,26,21,27,24,25,20,25 recoveries=0,0,0,0,0,0,0,0
+PASS Eight actual wheel-driven cars complete ordered player circuit: playerGates=37,beaten=4,elapsed=115.13
+MEASURE overtakes=0,0,1,0,0,1,1,0 recoveries=0,0,0,0,0,0,0,0
+PASS Every car retains its own four wheel contacts, authored engine and dynamic body

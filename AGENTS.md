@@ -68,3 +68,7 @@ M17-T01: read project/RIVALS_HANDOFF.md. Latest Builds/HarborVale-Rivals. Produc
 
 ## Latest garage inventory and distinct models
 M17-T02: read project/INVENTORY_HANDOFF.md. Latest local Builds/HarborVale-GarageInventory. v9 engine inventory migrates validated older schemas read-only. Preserve unique assemblies, atomic idempotent swap/money/title links, frozen receipts and donor-power/receiver-chassis split. Source map is unchanged; physical D01 replacement is runtime. Tempest free test stays paid-save isolated. Claude original output must remain untouched. No full loose-part inventory is claimed.
+
+
+## Latest paid removable kits and City Stakes
+M17-T04: read project/COMPONENTS_HANDOFF.md. Production v10 imports validated v9/older read-only. Preserve component identity, stage, calibration, engine provenance and title propagation; detached kits stay owned. Atomic paid removal/refit,3000entry/1000per beaten rival (7max) and interruption-forfeit semantics. Latest local Builds/HarborVale-CityStakes. M17-T05 highway/patrol scope authorized but unfinished: read HIGHWAY_HANDOFF.md.

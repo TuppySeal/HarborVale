@@ -57,3 +57,7 @@ User authorized AI cars for cash races/pink slips and regular traffic. Implement
 
 ## M17-T02 owned garage and purchased donor engines
 User explicitly authorized a physical garage, additional cars with distinct specifications, AI bump recovery, an original high-power Claude/Blender sports car, bought-car engine swaps and a car/inventory drag-and-drop garage. Implemented whole-engine assemblies with fitted engine hardware, chassis retention, real prerequisites/labor and unique title-linked identity. Read project/INVENTORY_HANDOFF.md for verification and limits. No full loose-part inventory or mileage/wear/used-market simulation is claimed.
+
+
+## M17-T04–T05 clarified choices
+User confirmed in-game credits: eight-car circuit entry3000cr,1000per rival beaten (up to7). Added paid removal/refitting of real engine kits. User then authorized3+3 divided highway/heavier traffic personalities/lane changes/blinkers/highway race, always-present rare patrols with intermittent radar, city10mph/highway20mph-over enforcement and paid radar detector. Units should default mph with kph option. Current implementation/verification and planned scope are separated in COMPONENTS_HANDOFF.md / HIGHWAY_HANDOFF.md.

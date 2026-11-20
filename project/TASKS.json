@@ -2,9 +2,9 @@
   "schema_version": 1,
   "project_title": "Redline: From Rust to Riches",
   "project_stage": "implementation",
-  "updated_at": "2026-11-20T18:37:03.538Z",
-  "current_task_id": "M17-T04",
-  "next_task_id": "M17-T04",
+  "updated_at": "2026-11-20T19:04:06.099Z",
+  "current_task_id": "M17-T05",
+  "next_task_id": "M17-T05",
   "status_values": [
     "not_started",
     "in_progress",
@@ -1198,18 +1198,38 @@
       "depends_on": [
         "M17-T03"
       ],
-      "spec_ref": "project/RACE_AI_HANDOFF.md",
+      "spec_ref": "project/COMPONENTS_HANDOFF.md",
+      "evidence": [
+        "project/COMPONENTS_HANDOFF.md",
+        "artifacts/qa/M17-T04/install-verification.json"
+      ],
+      "remaining_steps": [
+        "Push checked source and publish verified CityStakes ZIP"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "M17-T05",
+      "title": "Divided highway, traffic personalities, highway race, persistent patrols/radar/fines and units",
+      "milestone": "M17",
+      "status": "in_progress",
+      "depends_on": [
+        "M17-T04"
+      ],
+      "spec_ref": "project/HIGHWAY_HANDOFF.md",
       "evidence": [],
       "remaining_steps": [
-        "Merge isolated v10 component backend",
-        "Add paid removal/refit inventory GUI",
-        "Add seven real circuit rivals with atomic3000entry and1000per beaten rival",
-        "Run save/physics/native verification and publish"
+        "Generate and validate connected3+3 highway with ramps/median",
+        "Add faster heavier lane-disciplined traffic personalities/blinkers",
+        "Add mph/kmh settings and speed limits",
+        "Add rare persistent police, intermittent radar, detector upgrade and physical PIT fines",
+        "Add highway race and validate migration/geometry/AI/native flows",
+        "Install protected-source build, push and publish"
       ],
       "blockers": []
     }
   ],
   "implementation_authorized": true,
   "current_design_amendment": "docs/12_CONFIRMED_FEATURE_CHOICES.md",
-  "authorization_scope": "Finish isolated previews first, then prioritize a polished usable main garage GUI and compatible expanded real parts/tunes with disclosed power tradeoffs; M14-T03 chassis stages/settings, physical burnout, HP/estimated WHP/weight and tune-dependent brake boosting; M16-T02 selected-part previews, road/drift/slick tire fitments, paid FWD/RWD/AWD conversions and grounded procedural SFX; M17-T01 physical ambient traffic, real AI cash races, explicit pink-slip title stakes, atomic per-car fleet and zero-car recovery; M17-T02 physical garage, new distinct cars including Claude/Blender Tempest, AI bump recovery, purchased donor engine swaps and drag-and-drop owned-car/engine inventory; M17-T03 smarter AI passing/full-throttle/corner planning; M17-T04 paid removable engine hardware and an eight-car in-game cash circuit with3000cr entry and1000cr per rival beaten"
+  "authorization_scope": "Finish isolated previews first, then prioritize a polished usable main garage GUI and compatible expanded real parts/tunes with disclosed power tradeoffs; M14-T03 chassis stages/settings, physical burnout, HP/estimated WHP/weight and tune-dependent brake boosting; M16-T02 selected-part previews, road/drift/slick tire fitments, paid FWD/RWD/AWD conversions and grounded procedural SFX; M17-T01 physical ambient traffic, real AI cash races, explicit pink-slip title stakes, atomic per-car fleet and zero-car recovery; M17-T02 physical garage, new distinct cars including Claude/Blender Tempest, AI bump recovery, purchased donor engine swaps and drag-and-drop owned-car/engine inventory; M17-T03 smarter AI passing/full-throttle/corner planning; M17-T04 paid removable engine hardware and an eight-car in-game cash circuit with3000cr entry and1000cr per rival beaten; M17-T05 connected3+3 highway/heavier traffic personalities/lane changes/blinkers, highway race, persistent rare police with intermittent radar, city10mph/highway20mph-over enforcement, radar-detector upgrade, speed-based PIT fines, mph-default/kph option"
 }
