@@ -2,8 +2,8 @@
   "schema_version": 1,
   "project_title": "Redline: From Rust to Riches",
   "project_stage": "implementation",
-  "updated_at": "2026-11-20T19:41:07.223Z",
-  "current_task_id": "M17-T06",
+  "updated_at": "2026-11-20T19:52:16.501Z",
+  "current_task_id": "M17-T05",
   "next_task_id": "M17-T05",
   "status_values": [
     "not_started",
@@ -1232,17 +1232,17 @@
       "id": "M17-T06",
       "title": "Fix NPC distance audio, spatial pan and dense mix; add mph/kmh settings",
       "milestone": "M17",
-      "status": "in_progress",
+      "status": "done",
       "depends_on": [
         "M17-T04"
       ],
       "spec_ref": "project/AUDIO_UNITS_HANDOFF.md",
       "evidence": [
-        "artifacts/qa/M17-T06/install-verification.json"
+        "artifacts/qa/M17-T06/install-verification.json",
+        "https://github.com/TuppySeal/HarborVale/releases/tag/test-2026-11-20-audio-distance",
+        "project/AUDIO_UNITS_GITHUB_VERIFICATION.json"
       ],
-      "remaining_steps": [
-        "Push checked source and publish audio/unit Windows ZIP"
-      ],
+      "remaining_steps": [],
       "blockers": []
     }
   ],
