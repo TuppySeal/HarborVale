@@ -1,37 +1,69 @@
 {
   "latest": {
-    "publishedAt": "2026-11-20T19:44:15Z",
-    "tag": "test-2026-11-20-audio-distance",
-    "sourceCommit": "fc637a336bc75dae9469e82c5d0d78f0224ced5f",
+    "publishedAt": "2026-11-20T20:40:38Z",
+    "tag": "test-2026-11-20-playable-highway",
+    "sourceCommit": "9323c7aec5f3aa0034ff2027cb3fd2a14e56e3db",
     "repository": "TuppySeal/HarborVale",
     "private": true,
-    "url": "https://github.com/TuppySeal/HarborVale/releases/tag/test-2026-11-20-audio-distance",
+    "url": "https://github.com/TuppySeal/HarborVale/releases/tag/test-2026-11-20-playable-highway",
     "latestUrl": "https://github.com/TuppySeal/HarborVale/releases/latest",
-    "releaseId": 453110723,
+    "releaseId": 453157903,
     "assets": [
       {
-        "name": "HarborVale-AudioUnits-Windows-x64.zip",
-        "size": 70260522,
-        "sha256": "58ed17e8a9a795fc216c61b4e258193ee0338a376e6ff9bbc42eb1aa418baead",
-        "url": "https://github.com/TuppySeal/HarborVale/releases/download/test-2026-11-20-audio-distance/HarborVale-AudioUnits-Windows-x64.zip"
+        "name": "HarborVale-Highway-Windows-x64.zip",
+        "size": 72638476,
+        "sha256": "bfdf115be0d93ecd77b87b8b1abe8ef7a9a5d14fd52a69473fcc3be489208d72",
+        "url": "https://github.com/TuppySeal/HarborVale/releases/download/test-2026-11-20-playable-highway/HarborVale-Highway-Windows-x64.zip"
       },
       {
         "name": "SHA256SUMS.txt",
-        "size": 104,
-        "sha256": "23d203edb6d05fa9f6ac62833ab2b7b6fff8e8485b2b0ef64ff8607e58ca2be2",
-        "url": "https://github.com/TuppySeal/HarborVale/releases/download/test-2026-11-20-audio-distance/SHA256SUMS.txt"
+        "size": 101,
+        "sha256": "7d242cd1fe196e3c5624d4ef91a9ec553f4a5cccb85b8ac5cf7cf28a07ae761b",
+        "url": "https://github.com/TuppySeal/HarborVale/releases/download/test-2026-11-20-playable-highway/SHA256SUMS.txt"
       }
     ],
     "packageVerification": {
-      "filename": "HarborVale-AudioUnits-Windows-x64.zip",
-      "bytes": 70260522,
-      "sha256": "58ed17e8a9a795fc216c61b4e258193ee0338a376e6ff9bbc42eb1aa418baead",
-      "completeDirectoryVerified": true,
       "zipEntries": 252,
-      "verifiedPlayerFiles": 251
+      "filename": "HarborVale-Highway-Windows-x64.zip",
+      "sha256": "bfdf115be0d93ecd77b87b8b1abe8ef7a9a5d14fd52a69473fcc3be489208d72",
+      "bytes": 72638476,
+      "verifiedPlayerFiles": 251,
+      "completeDirectoryVerified": true
     }
   },
   "history": [
+    {
+      "publishedAt": "2026-11-20T19:44:15Z",
+      "tag": "test-2026-11-20-audio-distance",
+      "sourceCommit": "fc637a336bc75dae9469e82c5d0d78f0224ced5f",
+      "repository": "TuppySeal/HarborVale",
+      "private": true,
+      "url": "https://github.com/TuppySeal/HarborVale/releases/tag/test-2026-11-20-audio-distance",
+      "latestUrl": "https://github.com/TuppySeal/HarborVale/releases/latest",
+      "releaseId": 453110723,
+      "assets": [
+        {
+          "name": "HarborVale-AudioUnits-Windows-x64.zip",
+          "size": 70260522,
+          "sha256": "58ed17e8a9a795fc216c61b4e258193ee0338a376e6ff9bbc42eb1aa418baead",
+          "url": "https://github.com/TuppySeal/HarborVale/releases/download/test-2026-11-20-audio-distance/HarborVale-AudioUnits-Windows-x64.zip"
+        },
+        {
+          "name": "SHA256SUMS.txt",
+          "size": 104,
+          "sha256": "23d203edb6d05fa9f6ac62833ab2b7b6fff8e8485b2b0ef64ff8607e58ca2be2",
+          "url": "https://github.com/TuppySeal/HarborVale/releases/download/test-2026-11-20-audio-distance/SHA256SUMS.txt"
+        }
+      ],
+      "packageVerification": {
+        "filename": "HarborVale-AudioUnits-Windows-x64.zip",
+        "bytes": 70260522,
+        "sha256": "58ed17e8a9a795fc216c61b4e258193ee0338a376e6ff9bbc42eb1aa418baead",
+        "completeDirectoryVerified": true,
+        "zipEntries": 252,
+        "verifiedPlayerFiles": 251
+      }
+    },
     {
       "publishedAt": "2026-11-20T19:04:50Z",
       "tag": "test-2026-11-20-parts-circuit",
