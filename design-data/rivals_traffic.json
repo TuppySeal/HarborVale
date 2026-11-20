@@ -5,7 +5,7 @@
     {
       "id": "rookie",
       "name": "Mara / Dockside Rookie",
-      "speedKph": 46,
+      "speedKph": 65,
       "winCredits": 650,
       "finishCredits": 150,
       "build": {
@@ -18,7 +18,7 @@
     {
       "id": "club",
       "name": "Theo / Harbor Club",
-      "speedKph": 63,
+      "speedKph": 85,
       "winCredits": 1000,
       "finishCredits": 200,
       "build": {
@@ -31,7 +31,7 @@
     {
       "id": "tuned",
       "name": "Sana / Night Runner",
-      "speedKph": 78,
+      "speedKph": 100,
       "winCredits": 1500,
       "finishCredits": 250,
       "build": {

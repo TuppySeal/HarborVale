@@ -1,0 +1,13 @@
+PASS Ambient traffic is physical and moving before race
+PASS Real H race panel opens
+PASS New club contract records85kmh cap with unchanged cash terms
+PASS AI difficulty change preserves money terms
+PASS Actual native render: Race_Opponent_In_Traffic
+PASS Real native opponent completes all37 ordered city gates with ambient traffic
+PASS Native opponent completes circuit without assisted teleport recovery
+PASS Native rival actually uses full throttle and exceeds75kmh
+PASS Actual native render: Race_Opponent_Finish
+PASS Native cash race can close with normal atomic forfeit
+PASS Stationary test player receives no fabricated finish reward
+PASS Real race ledger reload validates after AI run
+PASS Race AI native verification has no runtime errors

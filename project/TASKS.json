@@ -2,9 +2,9 @@
   "schema_version": 1,
   "project_title": "Redline: From Rust to Riches",
   "project_stage": "implementation",
-  "updated_at": "2026-11-19T22:41:33.555Z",
-  "current_task_id": "M17-T02",
-  "next_task_id": null,
+  "updated_at": "2026-11-19T23:55:21.414Z",
+  "current_task_id": "M17-T04",
+  "next_task_id": "M17-T04",
   "status_values": [
     "not_started",
     "in_progress",
@@ -1172,9 +1172,44 @@
       ],
       "remaining_steps": [],
       "blockers": []
+    },
+    {
+      "id": "M17-T03",
+      "title": "Smarter race AI acceleration, traffic passing and corner speed planning",
+      "milestone": "M17",
+      "status": "in_progress",
+      "depends_on": [
+        "M17-T02"
+      ],
+      "spec_ref": "project/RACE_AI_HANDOFF.md",
+      "evidence": [
+        "artifacts/qa/M17-T03/install-verification.json"
+      ],
+      "remaining_steps": [
+        "Publish checked AI source and Windows ZIP"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "M17-T04",
+      "title": "Paid removable engine hardware and eight-car entry-fee circuit",
+      "milestone": "M17",
+      "status": "in_progress",
+      "depends_on": [
+        "M17-T03"
+      ],
+      "spec_ref": "project/RACE_AI_HANDOFF.md",
+      "evidence": [],
+      "remaining_steps": [
+        "Merge isolated v10 component backend",
+        "Add paid removal/refit inventory GUI",
+        "Add seven real circuit rivals with atomic3000entry and1000per beaten rival",
+        "Run save/physics/native verification and publish"
+      ],
+      "blockers": []
     }
   ],
   "implementation_authorized": true,
   "current_design_amendment": "docs/12_CONFIRMED_FEATURE_CHOICES.md",
-  "authorization_scope": "Finish isolated previews first, then prioritize a polished usable main garage GUI and compatible expanded real parts/tunes with disclosed power tradeoffs; M14-T03 chassis stages/settings, physical burnout, HP/estimated WHP/weight and tune-dependent brake boosting; M16-T02 selected-part previews, road/drift/slick tire fitments, paid FWD/RWD/AWD conversions and grounded procedural SFX; M17-T01 physical ambient traffic, real AI cash races, explicit pink-slip title stakes, atomic per-car fleet and zero-car recovery; M17-T02 physical garage, new distinct cars including Claude/Blender Tempest, AI bump recovery, purchased donor engine swaps and drag-and-drop owned-car/engine inventory"
+  "authorization_scope": "Finish isolated previews first, then prioritize a polished usable main garage GUI and compatible expanded real parts/tunes with disclosed power tradeoffs; M14-T03 chassis stages/settings, physical burnout, HP/estimated WHP/weight and tune-dependent brake boosting; M16-T02 selected-part previews, road/drift/slick tire fitments, paid FWD/RWD/AWD conversions and grounded procedural SFX; M17-T01 physical ambient traffic, real AI cash races, explicit pink-slip title stakes, atomic per-car fleet and zero-car recovery; M17-T02 physical garage, new distinct cars including Claude/Blender Tempest, AI bump recovery, purchased donor engine swaps and drag-and-drop owned-car/engine inventory; M17-T03 smarter AI passing/full-throttle/corner planning; M17-T04 paid removable engine hardware and an eight-car in-game cash circuit with3000cr entry and1000cr per rival beaten"
 }

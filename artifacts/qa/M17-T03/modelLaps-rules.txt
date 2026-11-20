@@ -1,0 +1,4 @@
+PASS Aster Coda CS actual37-gate city circuit: gates=37,seconds=133.07,recoveries=0
+PASS Aster Vector Six actual37-gate city circuit: gates=37,seconds=132.27,recoveries=0
+PASS Aster Bastion GT actual37-gate city circuit: gates=37,seconds=132.61,recoveries=0
+PASS Aster Tempest R actual37-gate city circuit: gates=37,seconds=130.71,recoveries=0

@@ -1,0 +1,3 @@
+PASS rookie actual authored car/build circuit: gates=37,seconds=133.09,peakKph=64.0,fullThrottleTicks=1148,recoveries=0
+PASS club actual authored car/build circuit: gates=37,seconds=109.57,peakKph=84.0,fullThrottleTicks=1182,recoveries=0
+PASS tuned actual authored car/build circuit: gates=37,seconds=98.56,peakKph=98.8,fullThrottleTicks=1156,recoveries=0

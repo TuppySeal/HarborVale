@@ -39,3 +39,8 @@ Read project/STATUS.md, project/NEXT_TASK.md, project/RIVALS_HANDOFF.md and proj
 Run the latest player, choose Drive Finch, stop at PLAYER GARAGE and press **G**. The board shows owned cars, a rotating model and stored engine assemblies. **Upgrade parts** opens the staged shop; **Buy another car** opens the showroom. Drag engine handles into storage or onto another car, then confirm compatible mounts/ECU labor. Receiver keeps its gearbox, brakes, tires, suspension and drivetrain. Empty chassis cannot drive/race.
 
 Four new models: Coda CS I4 coupe, Vector Six I6 AWD sedan, Bastion GT V8 muscle and original Blender Tempest R twin-turbo V8 (~1,100HP). Main menu **Test Tempest / free** is isolated from paid saves. Engines keep installed power upgrades and follow the car in pink slips; loose engines stay owned. Read [inventory handoff](project/INVENTORY_HANDOFF.md).
+
+
+## Smarter rivals
+
+Latest local player Builds/HarborVale-RaceAI/HarborVale.exe. H races use full-throttle acceleration, corner/braking planning and clear-lane passing. New rookie/club/tuned limits65/85/100kmh; power/tires stay real. Read project/RACE_AI_HANDOFF.md.
