@@ -1,0 +1,26 @@
+PASS Three3.6m lanes each way,2.4m median and2m outer shoulders
+PASS Mainline maximum grade 3.40percent
+PASS Mainline minimum sampled radius 250.3m
+PASS Continuous expressway loop length 11039m per direction
+PASS Mainline/ramps stay finite inside existing terrain footprint
+MEASURE HW_R00 length=60.0m grade=0.77percent radius=Infinitym
+PASS Ramp HW_R00 grade below8.5percent
+PASS Ramp HW_R00 has sampled curved geometry
+MEASURE HW_R01 length=904.7m grade=8.12percent radius=47.5m
+PASS Ramp HW_R01 grade below8.5percent
+PASS Ramp HW_R01 has sampled curved geometry
+MEASURE HW_R02 length=1284.7m grade=8.00percent radius=46.7m
+PASS Ramp HW_R02 grade below8.5percent
+PASS Ramp HW_R02 has sampled curved geometry
+MEASURE HW_R03 length=2380.7m grade=5.18percent radius=21.1m
+PASS Ramp HW_R03 grade below8.5percent
+PASS Ramp HW_R03 has sampled curved geometry
+MEASURE HW_R04 length=1439.3m grade=2.41percent radius=29.5m
+PASS Ramp HW_R04 grade below8.5percent
+PASS Ramp HW_R04 has sampled curved geometry
+MEASURE HW_R05 length=1056.6m grade=3.75percent radius=13.3m
+PASS Ramp HW_R05 grade below8.5percent
+PASS Ramp HW_R05 has sampled curved geometry
+PASS North gateway joins original Plaza Boulevard endpoint without map rebuild
+PASS Ramp HW_R03 mainline crossing clearance 12.91m
+PASS Mph-based posted/enforcement source rules preserved

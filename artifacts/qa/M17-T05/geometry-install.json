@@ -1,0 +1,12 @@
+{
+  "runtimeHighwayInstalled": false,
+  "protectedSha256": {
+    "Assets/HarborValeGreybox/Driving/Scenes/Finch_HandlingTest.unity": "892FFFBE63F7CDA0CA02A8C57A950968C07C2E517D7F34549563CAF7BED65B3C",
+    "ProjectSettings/PackageManagerSettings.asset": "CD9FD5C2A1127735839FF32B0070E63783D4439BFC0A549173514BF0B8D62834",
+    "Assets/HarborValeGreybox/Expansion/Prefabs/AsterFinch.prefab": "2C7A52BB90C1154AE1D2A51DB0628046B09C665AE1B16161B957FA2CA4C5B2C9",
+    "Assets/HarborValeGreybox/Scenes/HarborVale_CityMap.unity": "0595A41B0020E52DC8F10AF98C41084DF88DCF01B19F4D2DDF5BF495468BD006"
+  },
+  "generated": "Assets/HarborValeGreybox/Highway/Generated/20261120-202206-518",
+  "originalCitySaved": false,
+  "checks": 30
+}

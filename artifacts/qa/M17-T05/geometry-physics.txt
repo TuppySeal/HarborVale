@@ -1,0 +1,30 @@
+PASS Mainline lane -10.2 samples=2208 surface gaps=0 body obstructions=0
+PASS Mainline lane -6.6 samples=2208 surface gaps=0 body obstructions=0
+PASS Mainline lane -3 samples=2208 surface gaps=0 body obstructions=0
+PASS Mainline lane 3 samples=2208 surface gaps=0 body obstructions=0
+PASS Mainline lane 6.6 samples=2208 surface gaps=0 body obstructions=0
+PASS Mainline lane 10.2 samples=2208 surface gaps=0 body obstructions=0
+PASS HW_R00 lane -1.8 samples=13 surface gaps=0 body obstructions=0
+PASS HW_R00 lane 1.8 samples=13 surface gaps=0 body obstructions=0
+PASS HW_R01 lane 0 samples=182 surface gaps=0 body obstructions=0
+PASS HW_R02 lane 0 samples=258 surface gaps=0 body obstructions=0
+PASS HW_R03 lane -1.8 samples=478 surface gaps=0 body obstructions=0
+PASS HW_R03 lane 1.8 samples=478 surface gaps=0 body obstructions=0
+PASS HW_R04 lane 0 samples=289 surface gaps=0 body obstructions=0
+PASS HW_R05 lane 0 samples=213 surface gaps=0 body obstructions=0
+PASS Mainline False lane -3.6 physical drive finish=True distance=11010.9 peakKph=108.1 upright=1.00 airborneTicks=0 index=0 position=(-1303.82, 123.40, 1547.07)
+PASS Mainline False lane 0 physical drive finish=True distance=10993.6 peakKph=108.1 upright=1.00 airborneTicks=0 index=0 position=(-1303.29, 123.40, 1544.32)
+PASS Mainline False lane 3.6 physical drive finish=True distance=10971.5 peakKph=108.1 upright=1.00 airborneTicks=0 index=0 position=(-1303.31, 123.40, 1540.71)
+PASS Mainline True lane -3.6 physical drive finish=True distance=11053.9 peakKph=108.1 upright=1.00 airborneTicks=0 index=0 position=(-1300.99, 123.40, 1552.99)
+PASS Mainline True lane 0 physical drive finish=True distance=11076.1 peakKph=108.1 upright=1.00 airborneTicks=0 index=0 position=(-1300.72, 123.40, 1556.59)
+PASS Mainline True lane 3.6 physical drive finish=True distance=11096.2 peakKph=108.1 upright=1.00 airborneTicks=0 index=0 position=(-1300.83, 123.40, 1560.19)
+PASS HW_R00 physical drive finish=True distance=25.4 peakKph=32.3 upright=1.00 airborneTicks=0 index=8 position=(141.80, 83.96, 1335.19)
+PASS HW_R01 physical drive finish=True distance=872.0 peakKph=34.8 upright=1.00 airborneTicks=0 index=177 position=(975.61, 123.40, 1539.80)
+PASS HW_R02 physical drive finish=True distance=1252.1 peakKph=36.5 upright=1.00 airborneTicks=0 index=253 position=(128.83, 84.35, 1382.42)
+PASS HW_R03 physical drive finish=True distance=2353.7 peakKph=34.8 upright=1.00 airborneTicks=0 index=473 position=(137.23, 147.00, 1689.45)
+PASS HW_R04 physical drive finish=True distance=1405.5 peakKph=34.9 upright=1.00 airborneTicks=0 index=284 position=(-1225.97, 123.40, 1560.20)
+PASS HW_R05 physical drive finish=True distance=1025.1 peakKph=34.8 upright=1.00 airborneTicks=0 index=208 position=(133.96, 146.94, 1730.93)
+PASS City to eastbound merge physical drive finish=True distance=1081.4 peakKph=34.8 upright=1.00 airborneTicks=0 index=219 position=(1125.35, 123.40, 1539.80)
+PASS Eastbound exit to city physical drive finish=True distance=1461.5 peakKph=36.5 upright=1.00 airborneTicks=0 index=295 position=(138.26, 83.90, 1324.64)
+PASS City flyover to westbound merge physical drive finish=True distance=4004.6 peakKph=34.9 upright=0.99 airborneTicks=0 index=804 position=(-1376.39, 123.06, 1550.02)
+PASS Westbound exit via flyover to city physical drive finish=True distance=3611.5 peakKph=34.9 upright=1.00 airborneTicks=0 index=728 position=(138.06, 83.90, 1324.73)

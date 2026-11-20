@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "highwayLimitMph": 70,
+  "cityLocalLimitMph": 30,
+  "cityBoulevardLimitMph": 40,
+  "rampLimitMph": 35,
+  "highwayToleranceMph": 20,
+  "cityToleranceMph": 10,
+  "cityTrafficCount": 18,
+  "highwayTrafficCount": 24,
+  "radarDetectorPrice": 1200,
+  "fineBaseCredits": 100,
+  "fineCreditsPerMph": 25,
+  "radarRangeM": 160,
+  "detectorRangeM": 280,
+  "escapeDistanceM": 400,
+  "escapeSeconds": 10
+}

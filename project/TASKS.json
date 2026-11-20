@@ -1219,7 +1219,7 @@
       "spec_ref": "project/HIGHWAY_HANDOFF.md",
       "evidence": [],
       "remaining_steps": [
-        "Generate and validate connected3+3 highway with ramps/median",
+        "Wire validated highway prefab into city runtime and verify native player access",
         "Add faster heavier lane-disciplined traffic personalities/blinkers",
         "Add mph/kmh settings and speed limits",
         "Add rare persistent police, intermittent radar, detector upgrade and physical PIT fines",
