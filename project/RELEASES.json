@@ -1,37 +1,69 @@
 {
   "latest": {
-    "publishedAt": "2026-11-19T22:41:18Z",
-    "tag": "test-2026-11-19-garage-inventory",
-    "sourceCommit": "5d52b3d04397257d71a532ef41d408bc1aa0fcf7",
+    "publishedAt": "2026-11-20T18:36:49Z",
+    "tag": "test-2026-11-19-race-ai",
+    "sourceCommit": "a36c353d8e80113946cbec24f58cb9c15746dd63",
     "repository": "TuppySeal/HarborVale",
     "private": true,
-    "url": "https://github.com/TuppySeal/HarborVale/releases/tag/test-2026-11-19-garage-inventory",
+    "url": "https://github.com/TuppySeal/HarborVale/releases/tag/test-2026-11-19-race-ai",
     "latestUrl": "https://github.com/TuppySeal/HarborVale/releases/latest",
-    "releaseId": 452020610,
+    "releaseId": 453051083,
     "assets": [
       {
-        "name": "HarborVale-GarageInventory-Windows-x64.zip",
-        "size": 70223202,
-        "sha256": "94abd96f988447a327b642e919cf5a0b7c7018120e6b02e5ef1ea126f91ef307",
-        "url": "https://github.com/TuppySeal/HarborVale/releases/download/test-2026-11-19-garage-inventory/HarborVale-GarageInventory-Windows-x64.zip"
+        "name": "HarborVale-RaceAI-Windows-x64.zip",
+        "size": 70228827,
+        "sha256": "1f2f5dffe944cae4d55910aba06f40439ff194842325a43ec44332a990a2798e",
+        "url": "https://github.com/TuppySeal/HarborVale/releases/download/test-2026-11-19-race-ai/HarborVale-RaceAI-Windows-x64.zip"
       },
       {
         "name": "SHA256SUMS.txt",
-        "size": 109,
-        "sha256": "fa201237fc8f52a742a85b8a9e5a4dad0d2a7ff0fc4db0882edc5733f4182212",
-        "url": "https://github.com/TuppySeal/HarborVale/releases/download/test-2026-11-19-garage-inventory/SHA256SUMS.txt"
+        "size": 100,
+        "sha256": "864eab8788c2846b4076c574cc6f5365ed1db0f7b9900e9ad21179880bb78979",
+        "url": "https://github.com/TuppySeal/HarborVale/releases/download/test-2026-11-19-race-ai/SHA256SUMS.txt"
       }
     ],
     "packageVerification": {
-      "sha256": "94abd96f988447a327b642e919cf5a0b7c7018120e6b02e5ef1ea126f91ef307",
-      "bytes": 70223202,
-      "verifiedPlayerFiles": 251,
       "zipEntries": 252,
-      "filename": "HarborVale-GarageInventory-Windows-x64.zip",
-      "completeDirectoryVerified": true
+      "verifiedPlayerFiles": 251,
+      "completeDirectoryVerified": true,
+      "bytes": 70228827,
+      "sha256": "1f2f5dffe944cae4d55910aba06f40439ff194842325a43ec44332a990a2798e",
+      "filename": "HarborVale-RaceAI-Windows-x64.zip"
     }
   },
   "history": [
+    {
+      "publishedAt": "2026-11-19T22:41:18Z",
+      "tag": "test-2026-11-19-garage-inventory",
+      "sourceCommit": "5d52b3d04397257d71a532ef41d408bc1aa0fcf7",
+      "repository": "TuppySeal/HarborVale",
+      "private": true,
+      "url": "https://github.com/TuppySeal/HarborVale/releases/tag/test-2026-11-19-garage-inventory",
+      "latestUrl": "https://github.com/TuppySeal/HarborVale/releases/latest",
+      "releaseId": 452020610,
+      "assets": [
+        {
+          "name": "HarborVale-GarageInventory-Windows-x64.zip",
+          "size": 70223202,
+          "sha256": "94abd96f988447a327b642e919cf5a0b7c7018120e6b02e5ef1ea126f91ef307",
+          "url": "https://github.com/TuppySeal/HarborVale/releases/download/test-2026-11-19-garage-inventory/HarborVale-GarageInventory-Windows-x64.zip"
+        },
+        {
+          "name": "SHA256SUMS.txt",
+          "size": 109,
+          "sha256": "fa201237fc8f52a742a85b8a9e5a4dad0d2a7ff0fc4db0882edc5733f4182212",
+          "url": "https://github.com/TuppySeal/HarborVale/releases/download/test-2026-11-19-garage-inventory/SHA256SUMS.txt"
+        }
+      ],
+      "packageVerification": {
+        "sha256": "94abd96f988447a327b642e919cf5a0b7c7018120e6b02e5ef1ea126f91ef307",
+        "bytes": 70223202,
+        "verifiedPlayerFiles": 251,
+        "zipEntries": 252,
+        "filename": "HarborVale-GarageInventory-Windows-x64.zip",
+        "completeDirectoryVerified": true
+      }
+    },
     {
       "publishedAt": "2026-11-19T17:52:20Z",
       "tag": "test-2026-11-19-rivals",

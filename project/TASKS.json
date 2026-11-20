@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project_title": "Redline: From Rust to Riches",
   "project_stage": "implementation",
-  "updated_at": "2026-11-19T23:55:21.414Z",
+  "updated_at": "2026-11-20T18:37:03.538Z",
   "current_task_id": "M17-T04",
   "next_task_id": "M17-T04",
   "status_values": [
@@ -1177,17 +1177,17 @@
       "id": "M17-T03",
       "title": "Smarter race AI acceleration, traffic passing and corner speed planning",
       "milestone": "M17",
-      "status": "in_progress",
+      "status": "done",
       "depends_on": [
         "M17-T02"
       ],
       "spec_ref": "project/RACE_AI_HANDOFF.md",
       "evidence": [
-        "artifacts/qa/M17-T03/install-verification.json"
+        "artifacts/qa/M17-T03/install-verification.json",
+        "https://github.com/TuppySeal/HarborVale/releases/tag/test-2026-11-19-race-ai",
+        "project/RACE_AI_GITHUB_VERIFICATION.json"
       ],
-      "remaining_steps": [
-        "Publish checked AI source and Windows ZIP"
-      ],
+      "remaining_steps": [],
       "blockers": []
     },
     {
