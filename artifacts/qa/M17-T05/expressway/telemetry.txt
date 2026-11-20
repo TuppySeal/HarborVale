@@ -1,0 +1,5 @@
+gate=0 index=501 kph=0.0 target=0.0 time=0.0 cars=13
+gate=11 index=855 kph=110.9 target=111.4 time=61.0 cars=25
+gate=25 index=1288 kph=173.2 target=220.0 time=121.1 cars=25
+gate=39 index=1732 kph=180.9 target=220.0 time=181.1 cars=25
+gate=57 index=114 kph=214.9 target=220.0 time=241.0 cars=25

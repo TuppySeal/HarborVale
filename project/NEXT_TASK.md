@@ -1,5 +1,3 @@
-# Continue highway traffic and patrol expansion
+# Expressway Showdown playable checkpoint
 
-Playable highway installed and native-tested. Latest Builds/HarborVale-Highway/HarborVale.exe. Launch City, drive north along Plaza Boulevard to EXPRESSWAY/NORTH GATE.12 native checks,9 city-art checks;20 source +30 geometry/physics checks retained. See HIGHWAY_HANDOFF.md and artifacts/qa/M17-T05/playable. City source scene and paid v10 profile unchanged.
-
-Next integrate faster/heavier lane-disciplined highway traffic with personas/lane changes/blinkers, then city density, patrol/radar/fines/detector and highway race. Isolated drafts .work/HighwayTrafficPrototype and .work/PoliceBackend require review/compile/tests, not blind installation. Preserve paid receipts/migration, manual map edits and user PackageManagerSettings.asset. Highway geometry present in native game; traffic/police/highway race still unfinished.
+Latest Windows player is Builds/HarborVale-Expressway/HarborVale.exe. In City follow Plaza Boulevard north to North Gate. Stop and press H for Vale / Tempest. See HIGHWAY_HANDOFF.md for traffic, patrols, detector/fines and the full loop. Automated native traffic lap completed. Manual chase/contact, detector UI, high-speed ramp feel and dense traffic performance remain playtest items. Keep the original city scene, existing car physics and v10 source save protected.

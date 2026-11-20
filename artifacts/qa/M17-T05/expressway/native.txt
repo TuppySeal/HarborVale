@@ -1,0 +1,9 @@
+PASS Four physical patrol cars
+PASS Patrol radar alternates on/off
+PASS Speed citation records debt exactly once
+PASS Rivals menu available
+PASS Tempest highway duel starts through normal race menu
+PASS Full expressway route and authored Tempest
+PASS Tempest completed physical traffic lap: gates=70 peak=214.9 lane changes=18
+PASS Tempest reaches race pace and changes lanes
+PASS Abandoned player run settles through normal ledger
