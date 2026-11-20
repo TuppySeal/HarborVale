@@ -1,0 +1,36 @@
+PASS Released v9 migrates to v10 preserving all historical money/receipts/car identity
+PASS Migration invents no loose kits and leaves old v9 bytes unchanged
+PASS Insufficient3000credit entry is rejected
+PASS Rejected entry cannot alter money/history
+PASS Cooling removal blocked while high-boost calibration requires it
+PASS Paid turbo removal and retry create one real Stage3 kit and charge250once
+PASS Turbo removal clears real boost/torque while retaining paid passive cooler
+PASS Owned Stage3 kit refits for labor only, without repaying preceding stages or duplicating identity
+PASS Refit restores exact authored boosted power
+PASS Conflicting component request cannot reuse committed ID
+PASS Repeated removal reuses same physical component unit
+PASS Injected component write failure is reported
+PASS Atomic failure preserves money/engine/part state
+PASS Circuit entry and retry charge3000once and freeze seven real rival builds
+PASS Circuit contains supercharged V8 muscle and original exotic sports rivals
+PASS Committed circuit blocks paid component changes
+PASS Committed circuit blocks engine removal
+PASS Committed circuit cannot overlap another race
+PASS Ordered finish timing counts only rivals actually finished ahead of
+PASS Beating three pays3000once and exactly breaks even
+PASS Beating seven pays7000gross for4000net after entry
+PASS Last place loses3000entry with no reward
+PASS Existing interruption/quit path forfeits circuit entry without losing car title
+PASS Cash circuit never stakes car or fitted engine ownership
+PASS Components and circuit settlements replay exactly after reload
+PASS Future schema11 is rejected without silent older-backup overwrite
+PASS All component/circuit operations preserve legacy source bytes
+PASS Supercharger removal uses actual NA engine curve rather than a visual-only toggle
+PASS Paid upgrade of refitted kit advances same unit to Stage2 without creating duplicate Stage1 spare
+PASS Whole-engine transplant carries registered fitted supercharger to coupe with same engine identity
+PASS V8 supercharger cannot fit unmatched compact engine calibration
+PASS Pink-slip title loss carries same fitted engine and registered supercharger ownership
+PASS Loose removed turbo remains player-owned when another car is lost in pinks
+PASS Kit identities, engine transplant and mixed pink ownership replay after reload
+PASS Forged duplicate component registry cannot override removal/fit history
+PASS Intake/exhaust labor removes actual installed hardware for75/100credits

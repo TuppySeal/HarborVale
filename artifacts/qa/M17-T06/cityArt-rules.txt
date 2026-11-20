@@ -1,0 +1,9 @@
+PASS Authored placement list contains existing Midtown plots only
+PASS All selected apartments and forecourt props placed
+PASS Original map/car collider components preserved and enabled
+PASS Presentation adds no physical contacts or obstacles
+PASS Generated art has one stable named root per item
+PASS All generated items remain within selected existing plots
+PASS Art adds no behaviours or per-lamp light sources
+PASS Every new mesh is persistent and readable for static batching
+PASS Actual saved-source city render includes reviewed art

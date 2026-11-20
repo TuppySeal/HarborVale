@@ -1,0 +1,10 @@
+PASS NPC signal stays audible inside two metres
+PASS NPC generated-signal gain strictly falls with listener distance
+PASS NPC generated engine has a hard silent range boundary
+PASS Actual procedural PCM changes from audible near to quiet mid to exactly silent far
+PASS Fresh display defaults to mph
+PASS Posted70mph and20mph tolerance convert to exact shared internal kmh
+PASS Metric preference writes atomically
+PASS Metric preference reloads and formats actual speed
+PASS Mph preference restores without changing internal speed
+PASS Unknown future display settings are preserved without overwrite

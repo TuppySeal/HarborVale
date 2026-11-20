@@ -1,0 +1,12 @@
+PASS Actual NPC pass-by pans to the correct listener side
+PASS Actual listener captures audible nearby NPC engine
+PASS Actual listener NPC level decreases substantially at25metres
+PASS Actual distant NPC engine is silent rather than constant background drone
+PASS Runtime NPC signal is gated outside52metres
+PASS NPC has one engine source without duplicate loops
+PASS Dense traffic limits audible engine budget to nearest six cars
+PASS Actual dense full-load NPC mix has no clipped samples
+PASS Actual Settings screen opens from menu
+PASS Native settings persists metric choice in isolated file
+PASS Settings page renders cleanly in actual player
+PASS NPC distance-audio native run has no runtime errors

@@ -20,10 +20,4 @@ public sealed class TrafficWorld:MonoBehaviour {
  public void ClearGrid(Vector3 start){foreach(var a in Agents.ToArray())if(a!=null&&!a.IsRival&&Vector3.Distance(a.transform.position,start)<70){Agents.Remove(a);Destroy(a.gameObject);}}
  void OnDestroy(){Agents.RemoveAll(a=>a==null||a.gameObject.scene==gameObject.scene);Player=null;}
 }
-public sealed class RoadEngineAudio:MonoBehaviour {
- public FinchVehicle Car;WorkshopAudioVoice voice;AudioClip clip;AudioSource source;
- void Start(){var g=new GameObject("AI spatial engine");g.transform.SetParent(transform,false);source=g.AddComponent<AudioSource>();source.spatialBlend=1;source.minDistance=3;source.maxDistance=65;source.rolloffMode=AudioRolloffMode.Linear;source.dopplerLevel=.35f;source.volume=.45f;source.loop=true;int rate=AudioSettings.outputSampleRate;clip=AudioClip.Create("AI original engine",rate,1,rate,false);source.clip=clip;voice=g.AddComponent<WorkshopAudioVoice>();voice.rate=rate;source.Play();}
- void Update(){if(voice==null||Car?.Engine==null)return;voice.hz=Car.Engine.Rpm/30;voice.cylinders=VehicleLineup.Cylinders(string.IsNullOrEmpty(Car.EngineModelId)?Car.PowertrainCarId:Car.EngineModelId);voice.engineLoad=Car.Throttle;voice.volume=.025f+.025f*Car.Throttle;voice.master=Application.isFocused?1:0;}
- void OnDestroy(){if(source!=null)source.Stop();if(clip!=null)Destroy(clip);}
-}
 }

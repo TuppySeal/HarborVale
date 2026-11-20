@@ -1,3 +1,3 @@
-# Continue highway and patrol expansion
+# Continue highway/patrol expansion
 
-Latest local Builds/HarborVale-CityStakes/HarborVale.exe. G garage ->Remove / refit parts; H ->8-car paid circuit. Complete source push/verified CityStakes release, then M17-T05 highway/patrol scope in HIGHWAY_HANDOFF.md. mph default with kmh conversion setting; highway70mph and20mph-over radar, city limits with10mph-over radar. Police always patrol but intermittently measure speed; rare in town. Preserve original city/assets, real physics and v10 paid history. Do not claim planned highways/police are implemented.
+Latest local Builds/HarborVale-AudioUnits/HarborVale.exe. NPC distance/pan/mix fix and mph/kmh settings are checked. Publish this audio checkpoint, then continue M17-T05 in HIGHWAY_HANDOFF.md / .work/HIGHWAY_IMPLEMENTATION_NOTES.md. Divided3+3 highway, connected ramps, heavier personality traffic/blinkers, highway race, always-roaming rare patrols with intermittent radar,10mph city/20mph highway tolerance, detector and fines still unfinished. Preserve paid schema10/receipts; future police schema11 must import read-only.
