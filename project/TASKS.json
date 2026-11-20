@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project_title": "Redline: From Rust to Riches",
   "project_stage": "implementation",
-  "updated_at": "2026-11-20T20:41:07.122Z",
+  "updated_at": "2026-11-20T21:05:33.997Z",
   "current_task_id": "M17-T05",
   "next_task_id": "M17-T05",
   "status_values": [
@@ -1221,14 +1221,14 @@
         "artifacts/qa/M17-T05/geometry-physics.txt",
         "artifacts/qa/M17-T05/playable/install-verification.json",
         "https://github.com/TuppySeal/HarborVale/releases/tag/test-2026-11-20-playable-highway",
-        "project/HIGHWAY_GITHUB_VERIFICATION.json"
+        "project/HIGHWAY_GITHUB_VERIFICATION.json",
+        "artifacts/qa/M17-T05/expressway/install-verification.json",
+        "https://github.com/TuppySeal/HarborVale/releases/tag/test-2026-11-20-expressway",
+        "project/EXPRESSWAY_GITHUB_VERIFICATION.json"
       ],
       "remaining_steps": [
-        "Add faster heavier lane-disciplined traffic personalities/blinkers",
-        "Add mph/kmh settings and speed limits",
-        "Add rare persistent police, intermittent radar, detector upgrade and physical PIT fines",
-        "Add highway race and validate migration/geometry/AI/native flows",
-        "Install protected-source build, push and publish"
+        "Manual patrol pursuit/contact and radar detector usability pass",
+        "Human driving and dense traffic performance pass"
       ],
       "blockers": []
     },

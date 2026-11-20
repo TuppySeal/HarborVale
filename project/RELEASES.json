@@ -1,37 +1,69 @@
 {
   "latest": {
-    "publishedAt": "2026-11-20T20:40:38Z",
-    "tag": "test-2026-11-20-playable-highway",
-    "sourceCommit": "9323c7aec5f3aa0034ff2027cb3fd2a14e56e3db",
+    "publishedAt": "2026-11-20T21:05:17Z",
+    "tag": "test-2026-11-20-expressway",
+    "sourceCommit": "725dd94d75479912638ee7cce8cf516d877f2596",
     "repository": "TuppySeal/HarborVale",
     "private": true,
-    "url": "https://github.com/TuppySeal/HarborVale/releases/tag/test-2026-11-20-playable-highway",
+    "url": "https://github.com/TuppySeal/HarborVale/releases/tag/test-2026-11-20-expressway",
     "latestUrl": "https://github.com/TuppySeal/HarborVale/releases/latest",
-    "releaseId": 453157903,
+    "releaseId": 453178120,
     "assets": [
       {
-        "name": "HarborVale-Highway-Windows-x64.zip",
-        "size": 72638476,
-        "sha256": "bfdf115be0d93ecd77b87b8b1abe8ef7a9a5d14fd52a69473fcc3be489208d72",
-        "url": "https://github.com/TuppySeal/HarborVale/releases/download/test-2026-11-20-playable-highway/HarborVale-Highway-Windows-x64.zip"
+        "name": "HarborVale-Expressway-Windows-x64.zip",
+        "size": 72659542,
+        "sha256": "bd01917ece6ba341656cdb39523b90f51c7d95f03b4a38ba79309a6bf35e8d24",
+        "url": "https://github.com/TuppySeal/HarborVale/releases/download/test-2026-11-20-expressway/HarborVale-Expressway-Windows-x64.zip"
       },
       {
         "name": "SHA256SUMS.txt",
-        "size": 101,
-        "sha256": "7d242cd1fe196e3c5624d4ef91a9ec553f4a5cccb85b8ac5cf7cf28a07ae761b",
-        "url": "https://github.com/TuppySeal/HarborVale/releases/download/test-2026-11-20-playable-highway/SHA256SUMS.txt"
+        "size": 104,
+        "sha256": "6dbcaaf2b73d82a49b3c9a12446616b186cf8f9da5c5f5338cfd925bab879e61",
+        "url": "https://github.com/TuppySeal/HarborVale/releases/download/test-2026-11-20-expressway/SHA256SUMS.txt"
       }
     ],
     "packageVerification": {
+      "filename": "HarborVale-Expressway-Windows-x64.zip",
+      "sha256": "bd01917ece6ba341656cdb39523b90f51c7d95f03b4a38ba79309a6bf35e8d24",
+      "completeDirectoryVerified": true,
+      "bytes": 72659542,
       "zipEntries": 252,
-      "filename": "HarborVale-Highway-Windows-x64.zip",
-      "sha256": "bfdf115be0d93ecd77b87b8b1abe8ef7a9a5d14fd52a69473fcc3be489208d72",
-      "bytes": 72638476,
-      "verifiedPlayerFiles": 251,
-      "completeDirectoryVerified": true
+      "verifiedPlayerFiles": 251
     }
   },
   "history": [
+    {
+      "publishedAt": "2026-11-20T20:40:38Z",
+      "tag": "test-2026-11-20-playable-highway",
+      "sourceCommit": "9323c7aec5f3aa0034ff2027cb3fd2a14e56e3db",
+      "repository": "TuppySeal/HarborVale",
+      "private": true,
+      "url": "https://github.com/TuppySeal/HarborVale/releases/tag/test-2026-11-20-playable-highway",
+      "latestUrl": "https://github.com/TuppySeal/HarborVale/releases/latest",
+      "releaseId": 453157903,
+      "assets": [
+        {
+          "name": "HarborVale-Highway-Windows-x64.zip",
+          "size": 72638476,
+          "sha256": "bfdf115be0d93ecd77b87b8b1abe8ef7a9a5d14fd52a69473fcc3be489208d72",
+          "url": "https://github.com/TuppySeal/HarborVale/releases/download/test-2026-11-20-playable-highway/HarborVale-Highway-Windows-x64.zip"
+        },
+        {
+          "name": "SHA256SUMS.txt",
+          "size": 101,
+          "sha256": "7d242cd1fe196e3c5624d4ef91a9ec553f4a5cccb85b8ac5cf7cf28a07ae761b",
+          "url": "https://github.com/TuppySeal/HarborVale/releases/download/test-2026-11-20-playable-highway/SHA256SUMS.txt"
+        }
+      ],
+      "packageVerification": {
+        "zipEntries": 252,
+        "filename": "HarborVale-Highway-Windows-x64.zip",
+        "sha256": "bfdf115be0d93ecd77b87b8b1abe8ef7a9a5d14fd52a69473fcc3be489208d72",
+        "bytes": 72638476,
+        "verifiedPlayerFiles": 251,
+        "completeDirectoryVerified": true
+      }
+    },
     {
       "publishedAt": "2026-11-20T19:44:15Z",
       "tag": "test-2026-11-20-audio-distance",

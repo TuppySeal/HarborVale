@@ -1,0 +1,32 @@
+{
+  "publishedAt": "2026-11-20T21:05:17Z",
+  "tag": "test-2026-11-20-expressway",
+  "sourceCommit": "725dd94d75479912638ee7cce8cf516d877f2596",
+  "repository": "TuppySeal/HarborVale",
+  "private": true,
+  "url": "https://github.com/TuppySeal/HarborVale/releases/tag/test-2026-11-20-expressway",
+  "latestUrl": "https://github.com/TuppySeal/HarborVale/releases/latest",
+  "releaseId": 453178120,
+  "assets": [
+    {
+      "name": "HarborVale-Expressway-Windows-x64.zip",
+      "size": 72659542,
+      "sha256": "bd01917ece6ba341656cdb39523b90f51c7d95f03b4a38ba79309a6bf35e8d24",
+      "url": "https://github.com/TuppySeal/HarborVale/releases/download/test-2026-11-20-expressway/HarborVale-Expressway-Windows-x64.zip"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "size": 104,
+      "sha256": "6dbcaaf2b73d82a49b3c9a12446616b186cf8f9da5c5f5338cfd925bab879e61",
+      "url": "https://github.com/TuppySeal/HarborVale/releases/download/test-2026-11-20-expressway/SHA256SUMS.txt"
+    }
+  ],
+  "packageVerification": {
+    "filename": "HarborVale-Expressway-Windows-x64.zip",
+    "sha256": "bd01917ece6ba341656cdb39523b90f51c7d95f03b4a38ba79309a6bf35e8d24",
+    "completeDirectoryVerified": true,
+    "bytes": 72659542,
+    "zipEntries": 252,
+    "verifiedPlayerFiles": 251
+  }
+}
